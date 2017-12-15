@@ -1,0 +1,15 @@
+.vs
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
+test.exe
+test_Data/
+UnityPlayer.dll
+fmodTsumTsum/.user/
+fmodTsumTsum/.cache/
+/fmodTsumTsum/.cache
+/fmodTsumTsum/.unsaved
+/fmod.log
