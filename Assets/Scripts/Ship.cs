@@ -34,7 +34,7 @@ public class Ship : Pawn
     public override void MoveHorizontal(float axisValue)
     {
         Vector2 newPosition = rb.position;
-        newPosition.x += axisValue * Speed;
+        newPosition.x += axisValue * Speed * Time.fixedDeltaTime;
         rb.position = newPosition;
     }
 
@@ -42,7 +42,7 @@ public class Ship : Pawn
     public override void MoveVertical(float axisValue)
     {
         Vector2 newPosition = rb.position;
-        newPosition.y += axisValue * Speed;
+        newPosition.y += axisValue * Speed * Time.fixedDeltaTime;
         rb.position = newPosition;
     }
 
