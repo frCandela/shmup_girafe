@@ -26,6 +26,4 @@ public class Pawn : MonoBehaviour
     public virtual void MoveHorizontal  ( float axisValue) {}
     public virtual void MoveVertical    ( float axisValue) {}
     public virtual void Fire() {}
-
-
 }

@@ -35,6 +35,4 @@ public class Controller : MonoBehaviour
             PossessedPawn = pawn;
         }
     }
-
-
 }
