@@ -32,9 +32,6 @@ public class GameManager : MonoBehaviour
     //Initializes the game for each level.
     void InitGame()
     {
-
-
-
         //Initialisation checks
         if(!InitStarterShip)
         {
