@@ -15,6 +15,14 @@ public class KeyboardController : Controller
 
     }
 
+    private void Update()
+    {
+        if (isPossessingPawn())
+        {
+
+            snapInCameraView();
+        }
+    }
 
     void FixedUpdate()
     {
@@ -23,13 +31,13 @@ public class KeyboardController : Controller
         //Handle player actions if a pawn is possessed
         if (isPossessingPawn())
         {
-            PossessedPawn.MoveHorizontal(Input.GetAxis("Horizontal"));
-            PossessedPawn.MoveVertical(Input.GetAxis("Vertical"));
+            PossessedPawn.MoveHorizontal(Input.GetAxisRaw("Horizontal"));
+            PossessedPawn.MoveVertical(Input.GetAxisRaw("Vertical"));
 
             if (Input.GetButton("Fire"))
                 PossessedPawn.Fire();
 
-            snapInCameraView();
+            //snapInCameraView();
         }
 
 
@@ -48,7 +56,7 @@ public class KeyboardController : Controller
         bool vSnapped = true;
         //Vertical snap
         if (playerPosition.y < camera.transform.position.y - heightCamera)
-            PossessedPawn.transform.position = new Vector3(playerPosition.x, camera.transform.position.y - heightCamera + 0.1F, playerPosition.z);
+            PossessedPawn.transform.position = new Vector3(playerPosition.x, camera.transform.position.y - heightCamera + 0.001F, playerPosition.z);
         else if (playerPosition.y > camera.transform.position.y + heightCamera)
             PossessedPawn.transform.position = new Vector3(playerPosition.x, camera.transform.position.y + heightCamera, playerPosition.z);
         else
