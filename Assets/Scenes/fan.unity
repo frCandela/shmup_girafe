@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitStarterShip: {fileID: 1602368822}
-  InitPlayerController: {fileID: 0}
+  InitPlayerController: {fileID: 531763772}
   InitMainCamera: {fileID: 454917178}
 --- !u!114 &454917184
 MonoBehaviour:
@@ -439,6 +439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 531763773}
   - component: {fileID: 531763774}
+  - component: {fileID: 531763772}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -446,6 +447,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &531763772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 531763771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ebdd940cf6d8554885d7c269d957e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &531763773
 Transform:
   m_ObjectHideFlags: 0
