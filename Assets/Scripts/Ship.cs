@@ -10,8 +10,12 @@ public class Ship : Pawn
 
     private Rigidbody2D rb;
 
-	// Use this for initialization
-	void Start ()
+    public AttackType attack;
+    float timerShoot = 0;
+    int currentShoot = 0;
+
+    // Use this for initialization
+    void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
         if (!rb)
@@ -27,8 +31,8 @@ public class Ship : Pawn
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        timerShoot -= Time.deltaTime;
+    }
 
     //Moves the Ship horizontally
     public override void MoveHorizontal(float axisValue)
@@ -49,7 +53,12 @@ public class Ship : Pawn
     //Makes the ship shoot ! 
     public override void Fire()
     {
-        print("PIOU!");
+        if (timerShoot < 0)
+        {
+            attack.Attack(transform, currentShoot);
+            timerShoot = 1 / attack.rate;
+            currentShoot = ++currentShoot % attack.bursts.Count;
+        }
     }
 
 }

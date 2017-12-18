@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public static Ship StarterShip { get; private set; }
-    public static PlayerContoller PlayerController { get; private set; }
+    public static Controller PlayerController { get; private set; }
     public static Camera MainCamera { get; private set; }
 
     public Ship InitStarterShip;
-    public PlayerContoller InitPlayerController;
+    public Controller InitPlayerController;
     public Camera InitMainCamera;
 
     //Awake is always called before any Start functions
