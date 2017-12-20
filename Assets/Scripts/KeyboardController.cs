@@ -37,10 +37,20 @@ public class KeyboardController : Controller
             if (Input.GetButton("Fire"))
                 PossessedPawn.Fire();
 
+            if (Input.GetButtonDown("Hack"))
+            {
+                hackShip();
+            }
+
             //snapInCameraView();
         }
 
 
+    }
+
+    private void hackShip()
+    {
+        TimeManager.doSlowMotion( 2, 0.5F);
     }
 
     private void snapInCameraView()
