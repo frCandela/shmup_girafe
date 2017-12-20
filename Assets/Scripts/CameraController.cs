@@ -7,7 +7,6 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float VerticalSpeed = 0.03f;
-
     public int shipCount = 0;
 
 
@@ -65,8 +64,6 @@ public class CameraController : MonoBehaviour
         float cameraZ = Mathf.Abs(camera.transform.position.z);
         float heightCamera = cameraZ * Mathf.Tan(Mathf.Deg2Rad * camera.fieldOfView / 2);
         float widthCamera = heightCamera * Screen.width / Screen.height;
-
-        Vector3 newPosition = targetPosition;
 
         //Vertical snap
         if (targetPosition.y < camera.transform.position.y - heightCamera)

@@ -1,15 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 //The player controller that can possess pawns
 public class KeyboardController : Controller
 {
+    public HackSelector HackSelectorPrefab;
+    private HackSelector hackSelector;
+
 
     // Use this for initialization
     void Start()
     {
+        //Initialisation checks
+        if (!HackSelectorPrefab)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+            throw new Exception("Error : no HackSelectorPrefab selected");
+        }
 
+        //Instanciates the hack selector
+        hackSelector = Instantiate(HackSelectorPrefab, transform.position, transform.rotation) as HackSelector;
+        hackSelector.enabled = false;
     }
 
     private void Update()
@@ -23,7 +36,6 @@ public class KeyboardController : Controller
                 hackShip();
 
             GameManager.MainCameraController.snapInCameraView(PossessedPawn);
-            //snapInCameraView();
         }
     }
 
@@ -40,29 +52,5 @@ public class KeyboardController : Controller
     private void hackShip()
     {
         TimeManager.doSlowMotion( 2, 0.1F);
-    }
-
-    private void snapInCameraView()
-    {
-        //Calculates the width and height of the plane cutting the camera frustum
-        Camera camera = GameManager.MainCameraController.GetComponent<Camera>();
-        Vector3 playerPosition = PossessedPawn.transform.position;
-
-        float cameraZ = Mathf.Abs(camera.transform.position.z);
-        float heightCamera = cameraZ * Mathf.Tan(Mathf.Deg2Rad * camera.fieldOfView / 2);
-        float widthCamera = heightCamera * Screen.width / Screen.height;
-
-        //Vertical snap
-        if (playerPosition.y < camera.transform.position.y - heightCamera)
-            PossessedPawn.transform.position = new Vector3(playerPosition.x, camera.transform.position.y - heightCamera + 0.001F, playerPosition.z);
-        else if (playerPosition.y > camera.transform.position.y + heightCamera)
-            PossessedPawn.transform.position = new Vector3(playerPosition.x, camera.transform.position.y + heightCamera, playerPosition.z);
-
-        //Horizontal snap
-        if (playerPosition.x < camera.transform.position.x - widthCamera)
-            PossessedPawn.transform.position = new Vector3(camera.transform.position.x - widthCamera, playerPosition.y, playerPosition.z);
-        else if (playerPosition.x > camera.transform.position.x + widthCamera)
-            PossessedPawn.transform.position = new Vector3(camera.transform.position.x + widthCamera, playerPosition.y, playerPosition.z);
- 
     }
 }
