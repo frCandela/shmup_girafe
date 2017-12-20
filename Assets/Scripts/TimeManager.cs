@@ -5,8 +5,9 @@ using UnityEngine;
 //TimeManager (Singleton pattern)
 public class TimeManager : MonoBehaviour
 {
-    private float timeScaleFactor;
-    private float slowDownDuration;
+    private static float m_slowDownDuration;
+    private static float m_timeElapsedSlowMo;
+
 
     public static TimeManager instance = null;
 
@@ -22,9 +23,35 @@ public class TimeManager : MonoBehaviour
         InitTime();
     }
 
+    private void Update()
+    {
+        m_timeElapsedSlowMo += Time.unscaledDeltaTime;
+
+        //Resets slow motion
+        if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
+            resetSlowMotion();
+    }
+
+    public static void resetSlowMotion()
+    {
+        Time.timeScale = 1F;
+        Time.fixedDeltaTime = Time.fixedUnscaledDeltaTime;
+        m_slowDownDuration = 0F;
+
+        print(Time.fixedDeltaTime);
+    }
+
     public static void doSlowMotion(float slowDownDuration, float timeScaleFactor)
     {
-        Time.timeScale = timeScaleFactor; 
+        resetSlowMotion();
+
+        Time.timeScale = timeScaleFactor;
+        m_slowDownDuration = slowDownDuration;
+        m_timeElapsedSlowMo = 0F;
+        Time.fixedDeltaTime = Time.fixedUnscaledDeltaTime * timeScaleFactor;
+
+        print(Time.fixedDeltaTime);
+
     }
 
     void InitTime()

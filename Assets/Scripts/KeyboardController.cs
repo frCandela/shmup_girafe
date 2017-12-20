@@ -19,6 +19,11 @@ public class KeyboardController : Controller
     {
         if (isPossessingPawn())
         {
+            if (Input.GetButton("Fire"))
+                PossessedPawn.Fire();
+
+            if (Input.GetButtonDown("Hack"))
+                hackShip();
 
             snapInCameraView();
         }
@@ -33,16 +38,6 @@ public class KeyboardController : Controller
         {
             PossessedPawn.MoveHorizontal(Input.GetAxisRaw("Horizontal"));
             PossessedPawn.MoveVertical(Input.GetAxisRaw("Vertical"));
-
-            if (Input.GetButton("Fire"))
-                PossessedPawn.Fire();
-
-            if (Input.GetButtonDown("Hack"))
-            {
-                hackShip();
-            }
-
-            //snapInCameraView();
         }
 
 
