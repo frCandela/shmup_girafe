@@ -22,7 +22,8 @@ public class KeyboardController : Controller
             if (Input.GetButtonDown("Hack"))
                 hackShip();
 
-            snapInCameraView();
+            GameManager.MainCameraController.snapInCameraView(PossessedPawn);
+            //snapInCameraView();
         }
     }
 
@@ -44,7 +45,7 @@ public class KeyboardController : Controller
     private void snapInCameraView()
     {
         //Calculates the width and height of the plane cutting the camera frustum
-        Camera camera = GameManager.MainCamera;
+        Camera camera = GameManager.MainCameraController.GetComponent<Camera>();
         Vector3 playerPosition = PossessedPawn.transform.position;
 
         float cameraZ = Mathf.Abs(camera.transform.position.z);

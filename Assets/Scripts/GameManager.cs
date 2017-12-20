@@ -10,11 +10,11 @@ public class GameManager : MonoBehaviour
 
     public static Ship StarterShip { get; private set; }
     public static Controller PlayerController { get; private set; }
-    public static Camera MainCamera { get; private set; }
+    public static CameraController MainCameraController { get; private set; }
 
     public Ship InitStarterShip;
     public Controller InitPlayerController;
-    public Camera InitMainCamera;
+    public CameraController InitMainCameraController;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             throw new Exception("Error : no player controller selected");
         }
 
-        if (!InitMainCamera)
+        if (!InitMainCameraController)
         {
             UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no main camera selected");
@@ -52,10 +52,11 @@ public class GameManager : MonoBehaviour
 
         StarterShip = InitStarterShip;
         PlayerController = InitPlayerController;
-        MainCamera = InitMainCamera;
+        MainCameraController = InitMainCameraController;
 
         //Initialize player
         PlayerController.Possess(StarterShip);
-    }
 
+
+    }
 }
