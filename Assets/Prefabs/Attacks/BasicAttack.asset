@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Name: BasicAttack
   m_EditorClassIdentifier: 
   type: 0
-  rate: 1
+  rate: 3
   bursts:
-  - bullets: 30
-    prefab: {fileID: 1451355967580388, guid: 62aec9b5c9206a4439edc739cedb6d8a, type: 2}
+  - bullets: 5
+    prefab: {fileID: 1819369158728894, guid: a6fd93259a52ada409e601f3da596e17, type: 2}
     type: 1
+  - bullets: 10
+    prefab: {fileID: 1451355967580388, guid: 62aec9b5c9206a4439edc739cedb6d8a, type: 2}
+    type: 0
   previewShip: {fileID: 0}
