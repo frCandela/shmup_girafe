@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 //The player controller that can possess pawns
 public class KeyboardController : Controller
 {
@@ -31,21 +28,17 @@ public class KeyboardController : Controller
 
     void FixedUpdate()
     {
-        
-
         //Handle player actions if a pawn is possessed
         if (isPossessingPawn())
         {
             PossessedPawn.MoveHorizontal(Input.GetAxisRaw("Horizontal"));
             PossessedPawn.MoveVertical(Input.GetAxisRaw("Vertical"));
         }
-
-
     }
 
     private void hackShip()
     {
-        TimeManager.doSlowMotion( 2, 0.5F);
+        TimeManager.doSlowMotion( 2, 0.1F);
     }
 
     private void snapInCameraView()
@@ -54,7 +47,7 @@ public class KeyboardController : Controller
         Camera camera = GameManager.MainCamera;
         Vector3 playerPosition = PossessedPawn.transform.position;
 
-        float cameraZ = Mathf.Abs(camera.transform.position.z - playerPosition.z);
+        float cameraZ = Mathf.Abs(camera.transform.position.z);
         float heightCamera = cameraZ * Mathf.Tan(Mathf.Deg2Rad * camera.fieldOfView / 2);
         float widthCamera = heightCamera * Screen.width / Screen.height;
 

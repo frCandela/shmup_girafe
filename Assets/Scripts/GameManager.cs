@@ -6,7 +6,6 @@ using UnityEngine;
 //GameManager (Singleton pattern)
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance = null;
 
     public static Ship StarterShip { get; private set; }
@@ -59,11 +58,4 @@ public class GameManager : MonoBehaviour
         PlayerController.Possess(StarterShip);
     }
 
-
-
-    //Update is called every frame.
-    void Update()
-    {
-
-    }
 }

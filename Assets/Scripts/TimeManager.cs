@@ -27,36 +27,30 @@ public class TimeManager : MonoBehaviour
     {
         m_timeElapsedSlowMo += Time.unscaledDeltaTime;
 
-        //Resets slow motion
+        
         if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
             resetSlowMotion();
     }
 
+    //Resets the slow motion
     public static void resetSlowMotion()
     {
         Time.timeScale = 1F;
         Time.fixedDeltaTime = Time.fixedUnscaledDeltaTime;
         m_slowDownDuration = 0F;
-
-        print(Time.fixedDeltaTime);
     }
 
     public static void doSlowMotion(float slowDownDuration, float timeScaleFactor)
     {
-        resetSlowMotion();
-
         Time.timeScale = timeScaleFactor;
         m_slowDownDuration = slowDownDuration;
         m_timeElapsedSlowMo = 0F;
         Time.fixedDeltaTime = Time.fixedUnscaledDeltaTime * timeScaleFactor;
-
-        print(Time.fixedDeltaTime);
-
     }
 
     void InitTime()
     {
-
+        resetSlowMotion();
     }
 
 }
