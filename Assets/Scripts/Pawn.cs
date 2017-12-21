@@ -5,10 +5,13 @@ using UnityEngine;
 //A pawn is a game object that can be possessed
 public class Pawn : MonoBehaviour
 {
+    private Controller controller;
+
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -16,10 +19,21 @@ public class Pawn : MonoBehaviour
 		
 	}
 
+
+
+    public void Possess(Controller newController)
+    {
+        controller = newController;
+    }    
+    
     //Reset the the ship behaviour to default
     public void UnPossess()
     {
-
+        if(controller)
+        {
+            controller.UnPossess();
+            controller = null;
+        }
     }
 
     //Default pawn actions

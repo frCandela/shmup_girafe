@@ -15,7 +15,7 @@ public class Ship : Pawn
     int currentShoot = 0;
 
     // Use this for initialization
-    void Start ()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         if (!rb)

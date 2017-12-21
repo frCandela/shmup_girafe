@@ -9,9 +9,8 @@ public class KeyboardController : Controller
     public HackSelector HackSelectorPrefab;
     private HackSelector hackSelector;
 
-
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         //Initialisation checks
         if (!HackSelectorPrefab)
@@ -22,7 +21,11 @@ public class KeyboardController : Controller
 
         //Instanciates the hack selector
         hackSelector = Instantiate(HackSelectorPrefab, transform.position, transform.rotation) as HackSelector;
-        hackSelector.enabled = false;
+    }
+
+    private void Start()
+    {
+        hackSelector.disable();
     }
 
     private void Update()
@@ -33,8 +36,8 @@ public class KeyboardController : Controller
                 PossessedPawn.Fire();
 
             if (Input.GetButtonDown("Hack"))
-                hackShip();
-
+                hackSelector.startHack(this);
+                
             GameManager.MainCameraController.snapInCameraView(PossessedPawn);
         }
     }
@@ -42,15 +45,10 @@ public class KeyboardController : Controller
     void FixedUpdate()
     {
         //Handle player actions if a pawn is possessed
-        if (isPossessingPawn())
+        if (isPossessingPawn() && ! hackSelector.isHacking() )
         {
             PossessedPawn.MoveHorizontal(Input.GetAxisRaw("Horizontal"));
             PossessedPawn.MoveVertical(Input.GetAxisRaw("Vertical"));
         }
-    }
-
-    private void hackShip()
-    {
-        TimeManager.doSlowMotion( 2, 0.1F);
     }
 }

@@ -27,7 +27,6 @@ public class TimeManager : MonoBehaviour
     {
         m_timeElapsedSlowMo += Time.unscaledDeltaTime;
 
-        
         if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
             resetSlowMotion();
     }

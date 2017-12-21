@@ -275,6 +275,7 @@
     <Compile Include="Assets\Scripts\MouseController.cs" />
     <Compile Include="Assets\Scripts\Pawn.cs" />
     <Compile Include="Assets\Scripts\Ship.cs" />
+    <Compile Include="Assets\Scripts\ShipCollection.cs" />
     <Compile Include="Assets\Scripts\TimeManager.cs" />
   </ItemGroup>
   <ItemGroup>

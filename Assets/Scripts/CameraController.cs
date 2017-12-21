@@ -7,9 +7,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float VerticalSpeed = 0.03f;
-    public int shipCount = 0;
-
-
+    public ShipCollection shipsInCameraView;
     private BoxCollider2D cameraTrigger;
 
     // Use this for initialization
@@ -18,6 +16,8 @@ public class CameraController : MonoBehaviour
         cameraTrigger = gameObject.AddComponent(typeof(BoxCollider2D)) as BoxCollider2D;
         cameraTrigger.isTrigger = true;
         resizeCameraTrigger();
+
+        shipsInCameraView = new ShipCollection();
     }
 	
     private void resizeCameraTrigger()
@@ -43,16 +43,21 @@ public class CameraController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Adds the ship to the shipsInCameraView dictionary
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if(ship)
-            shipCount++;
+        {
+            shipsInCameraView[ship] = ship;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if (ship)
-            shipCount--;
+        {
+            shipsInCameraView.Remove(ship);
+        }
     }
 
     public void snapInCameraView(Pawn target)
@@ -79,5 +84,4 @@ public class CameraController : MonoBehaviour
 
         target.transform.position = targetPosition;
     }
-
 }
