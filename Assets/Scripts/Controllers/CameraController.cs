@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraController : MonoBehaviour
 {
+    [Range(0.0f, 1.0f)]
     public float VerticalSpeed = 0.03f;
     public ShipCollection shipsInCameraView;
     private BoxCollider2D cameraTrigger;

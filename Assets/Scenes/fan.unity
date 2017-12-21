@@ -155,6 +155,10 @@ Prefab:
       propertyPath: m_Name
       value: Enemy_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1204534209778296, guid: f3e075df1f1ef7e49a4c1dafefef4215, type: 2}
+      propertyPath: m_TagString
+      value: Ennemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3e075df1f1ef7e49a4c1dafefef4215, type: 2}
   m_IsPrefabParent: 0
@@ -975,6 +979,7 @@ GameObject:
   - component: {fileID: 1602368824}
   - component: {fileID: 1602368823}
   - component: {fileID: 1602368825}
+  - component: {fileID: 1602368827}
   - component: {fileID: 1602368822}
   - component: {fileID: 1602368826}
   m_Layer: 0
@@ -995,8 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f89811622aab9640b47c3bbb175c154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-  Speed: 6
+  Speed: 6.3
   attack: {fileID: 11400000, guid: b3600fa9d203e6c4d8721b81dd36d709, type: 2}
 --- !u!212 &1602368823
 SpriteRenderer:
@@ -1090,6 +1094,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.6, y: 1.9}
   m_Direction: 1
+--- !u!114 &1602368827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1602368821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 299d438d84ca14e45843df8b5aae2f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1726824049
 GameObject:
   m_ObjectHideFlags: 0

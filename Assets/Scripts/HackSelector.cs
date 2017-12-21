@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// The hack selector is used to select and controll a ship in the camera view area
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class HackSelector : MonoBehaviour
 {
-    public float HackDuration = 3F;
-    public float HackMinimalDuration = 0.5F;
-    public float TimeScaleFactor = 0.1F;
+
+    [Range(0, 10)] public float HackDuration = 3F;
+    [Range(0, 10)] public float HackMinimalDuration = 0.5F;
+    [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
 
     private SpriteRenderer spriteRenderer;
 
@@ -70,11 +75,14 @@ public class HackSelector : MonoBehaviour
             //Updates the hack time
             timeElapsedHack += Time.unscaledDeltaTime;
 
+            //Hack duration reached without pressing the hack key again
             if (timeElapsedHack >= HackDuration)
                 disable();
 
+            //HACK !
             if (Input.GetButtonDown("Hack") && timeElapsedHack >= HackMinimalDuration)
             {
+                targetShip.gameObject.tag = this.gameObject.tag;
                 targetShip.UnPossess();
                 targetController.Possess(targetShip);
                 targetShip.transform.rotation = Quaternion.Euler(0F,0F,0F);

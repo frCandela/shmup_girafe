@@ -6,6 +6,7 @@ using UnityEngine;
 //A basic pawn for a spaceship in the game
 public class Ship : Pawn
 {
+    [Range(0.0f, 20.0f)]
     public float Speed = 0.5f;  //Movement speed of the ship
 
     private Rigidbody2D rb;
@@ -55,7 +56,7 @@ public class Ship : Pawn
     {
         if (timerShoot < 0)
         {
-            attack.Attack(transform, currentShoot);
+            attack.Attack(this.gameObject, currentShoot);
             timerShoot = 1 / attack.rate;
             currentShoot = ++currentShoot % attack.bursts.Count;
         }
