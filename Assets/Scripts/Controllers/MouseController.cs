@@ -18,7 +18,9 @@ public class MouseController : Controller
                 Debug.Log(hit.collider);
                 if (hit && hit.collider) {
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
+                    string t = target.tag;
                     target.tag = PossessedPawn.tag;
+                    PossessedPawn.tag = t;
                     target.UnPossess();
                     Possess(target);
                     target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);

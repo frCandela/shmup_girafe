@@ -7,7 +7,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [Range(0.0f, 1.0f)]
-    public float VerticalSpeed = 0.03f;
+    public float VerticalSpeed = 1f;
     public ShipCollection shipsInCameraView;
     private BoxCollider2D cameraTrigger;
 
@@ -38,7 +38,7 @@ public class CameraController : MonoBehaviour
     void FixedUpdate ()
     {
         Vector3 newPosition = transform.position;
-        newPosition.y += VerticalSpeed;
+        newPosition.y += VerticalSpeed * Time.fixedDeltaTime;
         transform.position = newPosition;
     }
 
