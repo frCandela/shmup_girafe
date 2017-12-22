@@ -41,6 +41,20 @@ public class AttackEditor : Editor {
             (Rect rect, int index, bool isActive, bool isFocused) => {
                 var element = list.serializedProperty.GetArrayElementAtIndex(index);
                 rect.y += 2;
+
+                EditorGUI.LabelField(new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight), "Direction");
+                element.FindPropertyRelative("angle").floatValue = CustomGUI.Knob(new Rect(rect.x + 5, rect.y + EditorGUIUtility.singleLineHeight, 40, 40), element.FindPropertyRelative("angle").floatValue, element.FindPropertyRelative("spread").floatValue);
+                EditorGUI.LabelField(new Rect(rect.x + 65, rect.y, 60, EditorGUIUtility.singleLineHeight), "Spread");
+                element.FindPropertyRelative("spread").floatValue = EditorGUI.Slider(new Rect(rect.x + 65, rect.y + EditorGUIUtility.singleLineHeight, rect.width - 65 - 80, EditorGUIUtility.singleLineHeight), element.FindPropertyRelative("spread").floatValue, 0, 360);
+                EditorGUI.PropertyField(
+                    new Rect(rect.x + 65, rect.y + EditorGUIUtility.singleLineHeight * 2 + 4, rect.width - 65 - 80, EditorGUIUtility.singleLineHeight),
+                    element.FindPropertyRelative("prefab"), GUIContent.none);
+                EditorGUI.LabelField(new Rect(rect.x + rect.width - 80, rect.y, 60, EditorGUIUtility.singleLineHeight), "Amount");
+                EditorGUI.PropertyField(
+                    new Rect(rect.x + rect.width - 30, rect.y, 30, EditorGUIUtility.singleLineHeight),
+                    element.FindPropertyRelative("amount"), GUIContent.none);
+
+                /*
                 EditorGUI.PropertyField(
                     new Rect(rect.x, rect.y, 100, EditorGUIUtility.singleLineHeight),
                     element.FindPropertyRelative("type"), GUIContent.none);
@@ -49,8 +63,10 @@ public class AttackEditor : Editor {
                     element.FindPropertyRelative("prefab"), GUIContent.none);
                 EditorGUI.PropertyField(
                     new Rect(rect.x + rect.width - 30, rect.y, 30, EditorGUIUtility.singleLineHeight),
-                    element.FindPropertyRelative("bullets"), GUIContent.none);
+                    element.FindPropertyRelative("bullets"), GUIContent.none);*/
             };
+
+        list.elementHeight = EditorGUIUtility.singleLineHeight + 40 + 6;
     }
 
     public GUIStyle modulePadding = new GUIStyle();
