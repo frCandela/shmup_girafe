@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 
 //GameManager (Singleton pattern)
 public class GameManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Ship InitStarterShip;
     public Controller InitPlayerController;
     public Camera InitMainCamera;
+    private PostProcessingBehaviour PostProcessing;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -32,9 +34,6 @@ public class GameManager : MonoBehaviour
     //Initializes the game for each level.
     void InitGame()
     {
-
-
-
         //Initialisation checks
         if(!InitStarterShip)
         {
@@ -58,8 +57,11 @@ public class GameManager : MonoBehaviour
         PlayerController = InitPlayerController;
         MainCamera = InitMainCamera;
 
+        PostProcessing = MainCamera.GetComponent<PostProcessingBehaviour>();
+
         //Initialize player
         PlayerController.Possess(StarterShip);
+        //ToogleHackEffect();
     }
 
 
@@ -68,5 +70,50 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    bool inHackEffect = false;
+    public void ToogleHackEffect() {
+        if(!inHackEffect) {
+            inHackEffect = true;
+            StopCoroutine(stopHack(1f));
+            StartCoroutine(startHack(1f));
+        }
+    }
+
+    IEnumerator startHack(float timing) {
+        Time.timeScale = 0.01f;
+        Time.fixedDeltaTime = 0.0001f;
+
+        UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
+        
+        float elapsedTime = 0;
+        while (elapsedTime < timing) {
+            set.contribution = Mathf.Lerp(0, 1, elapsedTime / timing);
+            PostProcessing.profile.userLut.settings = set;
+            elapsedTime += Time.unscaledDeltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        
+        set.contribution = 1;
+        PostProcessing.profile.userLut.settings = set;
+    }
+
+    IEnumerator stopHack(float timing) {
+        UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
+
+        float elapsedTime = 0;
+        while (elapsedTime < timing) {
+            set.contribution = Mathf.Lerp(1, 0, elapsedTime / timing);
+            PostProcessing.profile.userLut.settings = set;
+            elapsedTime += Time.unscaledDeltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.1f;
+
+        set.contribution = 0;
+        PostProcessing.profile.userLut.settings = set;
     }
 }

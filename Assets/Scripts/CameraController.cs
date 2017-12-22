@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    public float VerticalSpeed = 0.03f;
+    public float VerticalSpeed = 0.5f;
 
 	// Use this for initialization
 	void Start ()
@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
 	void FixedUpdate ()
     {
         Vector3 newPosition = transform.position;
-        newPosition.y += VerticalSpeed;
+        newPosition.y += VerticalSpeed * Time.fixedDeltaTime;
         transform.position = newPosition;
 
     }

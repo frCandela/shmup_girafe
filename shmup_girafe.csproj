@@ -274,6 +274,7 @@
     <Compile Include="Assets\Scripts\Pawn.cs" />
     <Compile Include="Assets\Scripts\PlayerContoller.cs" />
     <Compile Include="Assets\Scripts\Ship.cs" />
+    <Compile Include="Assets\Scripts\Turn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
