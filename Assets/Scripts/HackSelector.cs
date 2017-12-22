@@ -33,7 +33,7 @@ public class HackSelector : MonoBehaviour
         if ( ! targetShip)
         {
             TimeManager.doSlowMotion(HackDuration, TimeScaleFactor);
-
+            GameManager.instance.ToogleHackEffect();
             targetShip = (Ship)controller.PossessedPawn;
             targetController = controller;
 
@@ -77,7 +77,11 @@ public class HackSelector : MonoBehaviour
 
             //Hack duration reached without pressing the hack key again
             if (timeElapsedHack >= HackDuration)
+            {
+                GameManager.instance.ToogleHackEffect();
                 disable();
+            }
+                
 
             //HACK !
             if (Input.GetButtonDown("Hack") && timeElapsedHack >= HackMinimalDuration)
@@ -87,6 +91,7 @@ public class HackSelector : MonoBehaviour
                 targetController.Possess(targetShip);
                 targetShip.transform.rotation = Quaternion.Euler(0F,0F,0F);
                 TimeManager.resetSlowMotion();
+                GameManager.instance.ToogleHackEffect();
                 disable();
             }
         }

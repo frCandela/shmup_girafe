@@ -10,7 +10,6 @@ public class Health : MonoBehaviour
 
     public void takeDamage( int damage )
     {
-        print("BOOM");
         health -= damage;
         if (health <= 0)
             Destroy(this.gameObject);
