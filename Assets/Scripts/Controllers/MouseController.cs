@@ -6,7 +6,8 @@ public class MouseController : Controller {
 
 	void FixedUpdate () {
 
-        if (isPossessingPawn()) {
+        if (isPossessingPawn())
+        {
             PossessedPawn.transform.position = Vector3.MoveTowards(PossessedPawn.transform.position, transform.position, ((Ship)PossessedPawn).Speed * Time.fixedDeltaTime);
             //Vector3 dir = transform.position - PossessedPawn.transform.position;
             //dir.z = 0;

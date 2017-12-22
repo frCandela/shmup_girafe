@@ -9,15 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
-  m_Name: BasicAttack
+  m_Name: SlowAttack
   m_EditorClassIdentifier: 
   type: 0
-  rate: 3
+  rate: 1
   bursts:
-  - bullets: 5
-    prefab: {fileID: 1819369158728894, guid: a6fd93259a52ada409e601f3da596e17, type: 2}
-    type: 1
-  - bullets: 10
+  - bullets: 3
     prefab: {fileID: 1451355967580388, guid: 62aec9b5c9206a4439edc739cedb6d8a, type: 2}
-    type: 0
+    type: 1
   previewShip: {fileID: 0}

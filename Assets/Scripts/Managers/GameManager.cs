@@ -7,16 +7,15 @@ using UnityEngine.PostProcessing;
 //GameManager (Singleton pattern)
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager instance = null;
 
     public static Ship StarterShip { get; private set; }
     public static Controller PlayerController { get; private set; }
-    public static Camera MainCamera { get; private set; }
+    public static CameraController MainCameraController { get; private set; }
 
     public Ship InitStarterShip;
     public Controller InitPlayerController;
-    public Camera InitMainCamera;
+    public CameraController InitMainCameraController;
     private PostProcessingBehaviour PostProcessing;
 
     //Awake is always called before any Start functions
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour
             throw new Exception("Error : no player controller selected");
         }
 
-        if (!InitMainCamera)
+        if (!InitMainCameraController)
         {
             UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no main camera selected");
@@ -55,7 +54,7 @@ public class GameManager : MonoBehaviour
 
         StarterShip = InitStarterShip;
         PlayerController = InitPlayerController;
-        MainCamera = InitMainCamera;
+        MainCameraController = InitMainCameraController;
 
         PostProcessing = MainCamera.GetComponent<PostProcessingBehaviour>();
 
@@ -63,12 +62,6 @@ public class GameManager : MonoBehaviour
         PlayerController.Possess(StarterShip);
         //ToogleHackEffect();
     }
-
-
-
-    //Update is called every frame.
-    void Update()
-    {
 
     }
 
