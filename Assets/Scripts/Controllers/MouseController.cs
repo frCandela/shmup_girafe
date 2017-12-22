@@ -2,30 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseController : Controller {
+public class MouseController : Controller
+{
+    bool isHack = false;
 
-	void FixedUpdate () {
-
+    private void Update()
+    {
+        if (Input.GetButton("Fire"))
+        {
+            if(isHack)
+            {
+                isHack = false;
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
+                Debug.Log(hit);
+                Debug.Log(hit.collider);
+                if (hit && hit.collider) {
+                    Ship target = hit.collider.gameObject.GetComponent<Ship>();
+                    target.tag = PossessedPawn.tag;
+                    target.UnPossess();
+                    Possess(target);
+                    target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+                }
+                TimeManager.resetSlowMotion();
+                GameManager.instance.ToogleHackEffect();
+            }
+            else
+                PossessedPawn.Fire();
+        }
+        
+        if (Input.GetButton("Hack") && !isHack) {
+            isHack = true;
+            GameManager.instance.ToogleHackEffect();
+            TimeManager.doSlowMotion(3, 0.05f);
+        }
+    }
+    
+	void FixedUpdate ()
+    {
         if (isPossessingPawn())
         {
             PossessedPawn.transform.position = Vector3.MoveTowards(PossessedPawn.transform.position, transform.position, ((Ship)PossessedPawn).Speed * Time.fixedDeltaTime);
-            //Vector3 dir = transform.position - PossessedPawn.transform.position;
-            //dir.z = 0;
-            //if (dir.magnitude > 0.2f)
-            //    dir.Normalize();
-
-            //Debug.Log(dir);
-
-            //PossessedPawn.MoveHorizontal(dir.x);
-            //PossessedPawn.MoveVertical(dir.y);
-
-            if (Input.GetButton("Fire"))
-                PossessedPawn.Fire();
         }
-
     }
 
-    void OnGUI() {
+    void OnGUI()
+    {
         Camera c = Camera.main;
         Event e = Event.current;
         Vector2 mousePos = new Vector2(e.mousePosition.x, c.pixelHeight - e.mousePosition.y);

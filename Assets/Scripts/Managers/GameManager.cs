@@ -55,29 +55,25 @@ public class GameManager : MonoBehaviour
         StarterShip = InitStarterShip;
         PlayerController = InitPlayerController;
         MainCameraController = InitMainCameraController;
-
-        PostProcessing = MainCamera.GetComponent<PostProcessingBehaviour>();
+        PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         //Initialize player
         PlayerController.Possess(StarterShip);
-        //ToogleHackEffect();
-    }
-
     }
 
     bool inHackEffect = false;
     public void ToogleHackEffect() {
         if(!inHackEffect) {
-            inHackEffect = true;
             StopCoroutine(stopHack(1f));
             StartCoroutine(startHack(1f));
+        } else {
+            StopCoroutine(startHack(1f));
+            StartCoroutine(stopHack(1f));
         }
+        inHackEffect = !inHackEffect;
     }
 
     IEnumerator startHack(float timing) {
-        Time.timeScale = 0.01f;
-        Time.fixedDeltaTime = 0.0001f;
-
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
         
         float elapsedTime = 0;
@@ -102,9 +98,6 @@ public class GameManager : MonoBehaviour
             elapsedTime += Time.unscaledDeltaTime;
             yield return new WaitForEndOfFrame();
         }
-
-        Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.1f;
 
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
