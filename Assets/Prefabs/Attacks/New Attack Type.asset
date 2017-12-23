@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
-  m_Name: PlayerAttack
+  m_Name: New Attack Type
   m_EditorClassIdentifier: 
   type: 0
-  rate: 4
+  rate: 3.5266333
   bursts:
-  - amount: 1
-    spread: 0
-    angle: 0.00007513214
+  - amount: 3
+    spread: 146
+    angle: -57.619297
     prefab: {fileID: 1451355967580388, guid: 62aec9b5c9206a4439edc739cedb6d8a, type: 2}

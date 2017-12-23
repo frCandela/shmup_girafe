@@ -15,8 +15,19 @@ public class AttackEditor : Editor {
         EditorGUILayout.BeginVertical(EditorStyles.inspectorDefaultMargins, new GUILayoutOption[0]);
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (GUILayout.Button(new GUIContent("Open Editor..."), EditorStyles.miniButton, GUILayout.Width(110f)))
-            Debug.Log("Test");
+        if (GUILayout.Button(new GUIContent("Random"), EditorStyles.miniButton, GUILayout.Width(110f))) {
+            ((AttackType)target).rate = Random.Range(1f, 10f);
+            int nb = Random.Range(1, 10);
+            ((AttackType)target).bursts.Clear();
+            for (int i = 0; i < nb; i++) {
+                Burst b = new Burst();
+                b.amount = Random.Range(1, 15);
+                b.angle = Random.Range(0, 360);
+                b.spread = Random.Range(0, 360);
+                b.prefab = (GameObject)EditorGUIUtility.Load("Assets/Prefabs/Bullets/bullet.prefab"); ;
+                ((AttackType)target).bursts.Add(b);
+            }
+        }
         GUILayout.EndHorizontal();
         EditorGUILayout.EndVertical();
         EditorGUILayout.BeginVertical(EditorStyles.inspectorFullWidthMargins, new GUILayoutOption[0]);
@@ -53,17 +64,6 @@ public class AttackEditor : Editor {
                 EditorGUI.PropertyField(
                     new Rect(rect.x + rect.width - 30, rect.y, 30, EditorGUIUtility.singleLineHeight),
                     element.FindPropertyRelative("amount"), GUIContent.none);
-
-                /*
-                EditorGUI.PropertyField(
-                    new Rect(rect.x, rect.y, 100, EditorGUIUtility.singleLineHeight),
-                    element.FindPropertyRelative("type"), GUIContent.none);
-                EditorGUI.PropertyField(
-                    new Rect(rect.x + 105, rect.y, rect.width - 105 - 35, EditorGUIUtility.singleLineHeight),
-                    element.FindPropertyRelative("prefab"), GUIContent.none);
-                EditorGUI.PropertyField(
-                    new Rect(rect.x + rect.width - 30, rect.y, 30, EditorGUIUtility.singleLineHeight),
-                    element.FindPropertyRelative("bullets"), GUIContent.none);*/
             };
 
         list.elementHeight = EditorGUIUtility.singleLineHeight + 40 + 6;
@@ -79,7 +79,7 @@ public class AttackEditor : Editor {
         EditorGUIUtility.labelWidth -= 4f;
         EditorGUILayout.BeginVertical();
 
-        for(int i = 0; i < 2; i++) {
+        for(int i = 0; i <= 1; i++) {
             GUIContent content = new GUIContent();
             switch (i) {
                 case 0:
@@ -113,16 +113,7 @@ public class AttackEditor : Editor {
 
             switch(i) {
                 case 0:
-                    EditorGUILayout.BeginHorizontal(GUILayout.ExpandWidth(true));
-                    GUILayout.Label("Type:", GUILayout.Width(EditorGUIUtility.labelWidth - 5));
-                    
-                    string[] types = { "Type A", "Type B", "Type C"};
-                    ((AttackType)target).type = GUILayout.Toolbar(((AttackType)target).type, types, GUILayout.ExpandWidth(true));
-
-                    EditorGUILayout.EndHorizontal();
-
                     ((AttackType)target).rate = EditorGUILayout.FloatField("Rate", ((AttackType)target).rate);
-
                     break;
                 case 1:
                     list.DoLayoutList();

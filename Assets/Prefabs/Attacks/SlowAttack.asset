@@ -14,7 +14,11 @@ MonoBehaviour:
   type: 0
   rate: 1
   bursts:
-  - bullets: 3
+  - amount: 5
+    spread: 360
+    angle: 36.098385
     prefab: {fileID: 1451355967580388, guid: 62aec9b5c9206a4439edc739cedb6d8a, type: 2}
-    type: 1
-  previewShip: {fileID: 0}
+  - amount: 5
+    spread: 360
+    angle: 0.00007513214
+    prefab: {fileID: 1451355967580388, guid: 62aec9b5c9206a4439edc739cedb6d8a, type: 2}

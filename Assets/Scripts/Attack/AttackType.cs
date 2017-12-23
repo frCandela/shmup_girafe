@@ -26,19 +26,26 @@ public class Burst
     public GameObject prefab;
 
     public void Attack(GameObject shooter) {
-        if (spread == 360) {
-            amount++;
+        if(amount == 1) {
+            GameObject bullet = Object.Instantiate(prefab, shooter.transform.position, Quaternion.Euler(0, 0, shooter.transform.rotation.eulerAngles.z - angle));
+            Damage bulletDamage = bullet.GetComponent<Damage>();
+            if (bulletDamage) //Ignore damage tag
+                bulletDamage.tag = shooter.tag;
+            return;
         }
 
-        for (int i = 0; i < amount; i++) {
+        if (spread == 360)
+            amount++;
+        
+        for (int i = 0; i < amount; i++)
+        {
             GameObject bullet = Object.Instantiate(prefab, shooter.transform.position, Quaternion.Euler(0, 0, shooter.transform.rotation.eulerAngles.z - angle - spread / 2f + i * spread / Mathf.Max(1, amount - 1)));
             Damage bulletDamage = bullet.GetComponent<Damage>();
-            if (bulletDamage)//Ignore damage tag
+            if (bulletDamage) //Ignore damage tag
                 bulletDamage.tag = shooter.tag;
         }
 
-        if (spread == 360) {
+        if (spread == 360)
             amount--;
-        }
     }
 }
