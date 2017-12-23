@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bullets
+    uniqueID: 3451150551
+    locked: 0
+  - name: Entities
+    uniqueID: 2319605409
+    locked: 0

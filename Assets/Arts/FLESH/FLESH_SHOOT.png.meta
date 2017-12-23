@@ -1,21 +1,19 @@
 fileFormatVersion: 2
-guid: 99a848be8eb968a49b6d7917b9445673
-timeCreated: 1513733102
+guid: 7867812168748264cbb48bc457396ffc
+timeCreated: 1513733293
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FLESH_IDLE_0
-    21300002: FLESH_IDLE_1
-    21300004: FLESH_IDLE_2
-    21300006: FLESH_IDLE_3
-    21300008: FLESH_IDLE_4
-    21300010: FLESH_IDLE_5
-    21300012: FLESH_IDLE_6
-    21300014: FLESH_IDLE_7
-    21300016: FLESH_IDLE_8
-    21300018: FLESH_IDLE_9
-    21300020: FLESH_IDLE_10
-    21300022: FLESH_IDLE_11
+    21300000: FLESH_SHOOT_0
+    21300002: FLESH_SHOOT_1
+    21300004: FLESH_SHOOT_2
+    21300006: FLESH_SHOOT_3
+    21300008: FLESH_SHOOT_4
+    21300010: FLESH_SHOOT_5
+    21300012: FLESH_SHOOT_6
+    21300014: FLESH_SHOOT_7
+    21300016: FLESH_SHOOT_8
+    21300018: FLESH_SHOOT_9
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -58,7 +56,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 200
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -90,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FLESH_IDLE_0
+      name: FLESH_SHOOT_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 717
-        width: 203
-        height: 239
+        y: 1104
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,13 +102,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_1
+      name: FLESH_SHOOT_1
       rect:
         serializedVersion: 2
-        x: 203
-        y: 717
-        width: 203
-        height: 239
+        x: 212
+        y: 1104
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,27 +116,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_2
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 717
-        width: 203
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: FLESH_IDLE_3
+      name: FLESH_SHOOT_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 478
-        width: 203
-        height: 239
+        y: 828
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,13 +130,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_4
+      name: FLESH_SHOOT_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 478
-        width: 203
-        height: 239
+        x: 212
+        y: 828
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,27 +144,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_5
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 478
-        width: 203
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: FLESH_IDLE_6
+      name: FLESH_SHOOT_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 239
-        width: 203
-        height: 239
+        y: 552
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,13 +158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_7
+      name: FLESH_SHOOT_5
       rect:
         serializedVersion: 2
-        x: 203
-        y: 239
-        width: 203
-        height: 239
+        x: 212
+        y: 552
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,13 +172,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_8
+      name: FLESH_SHOOT_6
       rect:
         serializedVersion: 2
-        x: 406
-        y: 239
-        width: 203
-        height: 239
+        x: 0
+        y: 276
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,13 +186,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_9
+      name: FLESH_SHOOT_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 276
+        width: 212
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FLESH_SHOOT_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 203
-        height: 239
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,27 +214,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FLESH_IDLE_10
+      name: FLESH_SHOOT_9
       rect:
         serializedVersion: 2
-        x: 203
+        x: 212
         y: 0
-        width: 203
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: FLESH_IDLE_11
-      rect:
-        serializedVersion: 2
-        x: 406
-        y: 0
-        width: 203
-        height: 239
+        width: 212
+        height: 276
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

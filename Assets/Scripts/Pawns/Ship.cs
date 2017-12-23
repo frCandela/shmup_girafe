@@ -10,6 +10,7 @@ public class Ship : Pawn
     public float Speed = 0.5f;  //Movement speed of the ship
 
     private Rigidbody2D rb;
+    private Animator anim;
 
     public AttackType attack;
     float timerShoot = 0;
@@ -24,9 +25,9 @@ public class Ship : Pawn
             UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : Rigidbody2D not set");
         }
-
         rb.gravityScale = 0f;
-        
+
+        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -56,6 +57,8 @@ public class Ship : Pawn
     {
         if (timerShoot < 0)
         {
+            if (anim)
+                anim.SetTrigger("Shoot");
             attack.Attack(this.gameObject, currentShoot);
             timerShoot = 1 / attack.rate;
             currentShoot = ++currentShoot % attack.bursts.Count;
