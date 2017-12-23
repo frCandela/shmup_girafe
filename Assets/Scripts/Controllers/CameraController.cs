@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float VerticalSpeed = 1f;
     public ShipCollection shipsInCameraView;
+    public GameObject tunnelPrefab;
+    GameObject lastTunnel, toDelete;
     private BoxCollider2D cameraTrigger;
 
     // Use this for initialization
@@ -19,8 +21,19 @@ public class CameraController : MonoBehaviour
         resizeCameraTrigger();
 
         shipsInCameraView = new ShipCollection();
+
+        lastTunnel = Instantiate(tunnelPrefab, new Vector3(0, 0, 0), new Quaternion());
     }
-	
+
+    private void Update() {
+        if(transform.position.y > lastTunnel.transform.position.y + 10) {
+            if (toDelete)
+                Destroy(toDelete);
+            toDelete = lastTunnel;
+            lastTunnel = Instantiate(tunnelPrefab, lastTunnel.transform.position + new Vector3(0, 32.1f, 0), lastTunnel.transform.rotation);
+        }
+    }
+
     private void resizeCameraTrigger()
     {
         Camera camera = GetComponent<Camera>();
