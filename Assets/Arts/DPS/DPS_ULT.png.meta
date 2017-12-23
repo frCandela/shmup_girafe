@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 1f6f0ff9e62f3684698c9d55215dcc5d
+timeCreated: 1513991992
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DPS_ULT_0
+    21300002: DPS_ULT_1
+    21300004: DPS_ULT_2
+    21300006: DPS_ULT_3
+    21300008: DPS_ULT_4
+    21300010: DPS_ULT_5
+    21300012: DPS_ULT_6
+    21300014: DPS_ULT_7
+    21300016: DPS_ULT_8
+    21300018: DPS_ULT_9
+    21300020: DPS_ULT_10
+    21300022: DPS_ULT_11
+    21300024: DPS_ULT_12
+    21300026: DPS_ULT_13
+    21300028: DPS_ULT_14
+    21300030: DPS_ULT_15
+    21300032: DPS_ULT_16
+    21300034: DPS_ULT_17
+    21300036: DPS_ULT_18
+    21300038: DPS_ULT_19
+    21300040: DPS_ULT_20
+    21300042: DPS_ULT_21
+    21300044: DPS_ULT_22
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DPS_ULT_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3619
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3619
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_2
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 3619
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3102
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3102
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_5
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 3102
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2585
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_7
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2585
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_8
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 2585
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2068
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_10
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2068
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_11
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 2068
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1551
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_13
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1551
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_14
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1551
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_16
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1034
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_17
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1034
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 517
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_19
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 517
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_20
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 517
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_ULT_22
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 0
+        width: 664
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

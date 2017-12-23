@@ -24,7 +24,7 @@ public class AttackEditor : Editor {
                 b.amount = Random.Range(1, 15);
                 b.angle = Random.Range(0, 360);
                 b.spread = Random.Range(0, 360);
-                b.prefab = (GameObject)EditorGUIUtility.Load("Assets/Prefabs/Bullets/bullet.prefab"); ;
+                b.prefab = (GameObject)EditorGUIUtility.Load("Assets/Prefabs/Bullets/AgiBullet.prefab"); ;
                 ((AttackType)target).bursts.Add(b);
             }
         }

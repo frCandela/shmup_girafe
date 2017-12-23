@@ -9,12 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
-  m_Name: PlayerAttack
+  m_Name: AgiAttak
   m_EditorClassIdentifier: 
   type: 0
-  rate: 4
+  rate: 2
   bursts:
-  - amount: 1
-    spread: 0
-    angle: 0.00007513214
+  - amount: 5
+    spread: 79
+    angle: 0
+    prefab: {fileID: 1625712674743570, guid: 1c7216191b875e14e9cc1573634cded2, type: 2}
+  - amount: 5
+    spread: 71
+    angle: 90.00015
+    prefab: {fileID: 1625712674743570, guid: 1c7216191b875e14e9cc1573634cded2, type: 2}
+  - amount: 5
+    spread: 75
+    angle: -90
     prefab: {fileID: 1625712674743570, guid: 1c7216191b875e14e9cc1573634cded2, type: 2}

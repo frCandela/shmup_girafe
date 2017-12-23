@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 8eea55cb109107343a3510fbf41e200e
+timeCreated: 1513990708
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AGI_ULT_0
+    21300002: AGI_ULT_1
+    21300004: AGI_ULT_2
+    21300006: AGI_ULT_3
+    21300008: AGI_ULT_4
+    21300010: AGI_ULT_5
+    21300012: AGI_ULT_6
+    21300014: AGI_ULT_7
+    21300016: AGI_ULT_8
+    21300018: AGI_ULT_9
+    21300020: AGI_ULT_10
+    21300022: AGI_ULT_11
+    21300024: AGI_ULT_12
+    21300026: AGI_ULT_13
+    21300028: AGI_ULT_14
+    21300030: AGI_ULT_15
+    21300032: AGI_ULT_16
+    21300034: AGI_ULT_17
+    21300036: AGI_ULT_18
+    21300038: AGI_ULT_19
+    21300040: AGI_ULT_20
+    21300042: AGI_ULT_21
+    21300044: AGI_ULT_22
+    21300046: AGI_ULT_23
+    21300048: AGI_ULT_24
+    21300050: AGI_ULT_25
+    21300052: AGI_ULT_26
+    21300054: AGI_ULT_27
+    21300056: AGI_ULT_28
+    21300058: AGI_ULT_29
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AGI_ULT_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2880
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_2
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2880
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2560
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_5
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2560
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_7
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2240
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_8
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2240
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1920
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_11
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1920
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1600
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_14
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1600
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_16
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1280
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_17
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1280
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_19
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 960
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_20
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 960
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_22
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 640
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_23
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 640
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_25
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 320
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_26
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 320
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_28
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: AGI_ULT_29
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 330
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

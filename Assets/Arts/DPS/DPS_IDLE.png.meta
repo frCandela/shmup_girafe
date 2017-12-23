@@ -1,0 +1,535 @@
+fileFormatVersion: 2
+guid: 8985d9a5fe4ad1349a912e3cbc76518b
+timeCreated: 1513991963
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: DPS_IDLE_0
+    21300002: DPS_IDLE_1
+    21300004: DPS_IDLE_2
+    21300006: DPS_IDLE_3
+    21300008: DPS_IDLE_4
+    21300010: DPS_IDLE_5
+    21300012: DPS_IDLE_6
+    21300014: DPS_IDLE_7
+    21300016: DPS_IDLE_8
+    21300018: DPS_IDLE_9
+    21300020: DPS_IDLE_10
+    21300022: DPS_IDLE_11
+    21300024: DPS_IDLE_12
+    21300026: DPS_IDLE_13
+    21300028: DPS_IDLE_14
+    21300030: DPS_IDLE_15
+    21300032: DPS_IDLE_16
+    21300034: DPS_IDLE_17
+    21300036: DPS_IDLE_18
+    21300038: DPS_IDLE_19
+    21300040: DPS_IDLE_20
+    21300042: DPS_IDLE_21
+    21300044: DPS_IDLE_22
+    21300046: DPS_IDLE_23
+    21300048: DPS_IDLE_24
+    21300050: DPS_IDLE_25
+    21300052: DPS_IDLE_26
+    21300054: DPS_IDLE_27
+    21300056: DPS_IDLE_28
+    21300058: DPS_IDLE_29
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DPS_IDLE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4635
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_1
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 4635
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_2
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 4635
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4120
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_4
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 4120
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_5
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 4120
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3605
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_7
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 3605
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_8
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 3605
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3090
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_10
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 3090
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_11
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 3090
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2575
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_13
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 2575
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_14
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 2575
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2060
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_16
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 2060
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_17
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 2060
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1545
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_19
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1545
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_20
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1545
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1030
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_22
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1030
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_23
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1030
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 515
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_25
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 515
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_26
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 515
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_28
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 0
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DPS_IDLE_29
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 0
+        width: 671
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
