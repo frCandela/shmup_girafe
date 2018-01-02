@@ -25,7 +25,9 @@ public class CameraController : MonoBehaviour
         lastTunnel = Instantiate(tunnelPrefab, new Vector3(0, 0, 0), new Quaternion());
     }
 
-    private void Update() {
+    private void Update()
+    {
+        //Creates a new tunnel after the last one?
         if(transform.position.y > lastTunnel.transform.position.y + 10) {
             if (toDelete)
                 Destroy(toDelete);
