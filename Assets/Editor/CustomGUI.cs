@@ -2,11 +2,34 @@
 using UnityEngine;
 
 static class CustomGUI {
+    public static float Knob(float value) {
+        Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
+        return new KnobContext(pos, value, 0, Color.black, Color.red).GetValue();
+    }
+    public static float Knob(float value, Color pickerColor) {
+        Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
+        return new KnobContext(pos, value, 0, pickerColor, Color.red).GetValue();
+    }
     public static float Knob(float value, float spread) {
-        return new KnobContext(value, spread).GetValue();
+        Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
+        return new KnobContext(pos, value, spread, Color.black, Color.red).GetValue();
+    }
+    public static float Knob(float value, float spread, Color pickerColor, Color rangeColor) {
+        Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
+        return new KnobContext(pos, value, spread, pickerColor, rangeColor).GetValue();
+    }
+
+    public static float Knob(Rect pos, float value) {
+        return new KnobContext(pos, value, 0, Color.black, Color.red).GetValue();
+    }
+    public static float Knob(Rect pos, float value, Color pickerColor) {
+        return new KnobContext(pos, value, 0, pickerColor, Color.red).GetValue();
     }
     public static float Knob(Rect pos, float value, float spread) {
-        return new KnobContext(pos, value, spread).GetValue();
+        return new KnobContext(pos, value, spread, Color.black, Color.red).GetValue();
+    }
+    public static float Knob(Rect pos, float value, float spread, Color pickerColor, Color rangeColor) {
+        return new KnobContext(pos, value, spread, pickerColor, rangeColor).GetValue();
     }
 
     private class KnobState {
@@ -19,21 +42,17 @@ static class CustomGUI {
         Rect position;
         Vector2 knobSize;
         float spread;
+        Color pickerColor;
+        Color rangeColor;
 
-        public KnobContext(float value, float spread) {
-            this.value = value;
-            this.spread = spread;
-            this.position = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
+        public KnobContext(Rect position, float value, float spread, Color pickerColor, Color rangeColor) {
             this.id = GUIUtility.GetControlID(GetType().GetHashCode(), FocusType.Passive, position);
-            knobSize = new Vector2(40, 40);
-        }
-
-        public KnobContext(Rect position, float value, float spread) {
-            this.value = value;
-            this.spread = spread;
             this.position = position;
-            this.id = GUIUtility.GetControlID(GetType().GetHashCode(), FocusType.Passive, position);
-            knobSize = new Vector2(40, 40);
+            this.value = value;
+            this.spread = spread;
+            this.pickerColor = pickerColor;
+            this.rangeColor = rangeColor;
+            this.knobSize = new Vector2(40, 40);
         }
 
         public float GetValue() {
@@ -97,8 +116,8 @@ static class CustomGUI {
         }
 
         private float OnRepaint() {
-            this.DrawValueArc((float)((double)(value / 360f) * 3.14159274101257 * 2 + 3.14159274101257 / 2f * 3), Color.red, (spread / 360f) * 3.14159274101257f, true);
-            this.DrawValueArc((float)((double)(value / 360f) * 3.14159274101257 * 2 + 3.14159274101257 / 2f * 3), Color.black, 0.1f, false);
+            this.DrawValueArc((float)((double)(value / 360f) * 3.14159274101257 * 2 + 3.14159274101257 / 2f * 3), rangeColor, (spread / 360f) * 3.14159274101257f, true, Color.grey);
+            this.DrawValueArc((float)((double)(value / 360f) * 3.14159274101257 * 2 + 3.14159274101257 / 2f * 3), pickerColor, 0.1f, false, Color.grey);
             GUI.Label(new Rect((float)((double)this.position.x + 5.0), (float)((double)this.position.y + (double)this.knobSize.y / 2.0 - 8.0), this.position.width, 20f), value.ToString("0") + "°");
             return this.value;
         }
@@ -125,14 +144,14 @@ static class CustomGUI {
             GL.Vertex(point);
         }
 
-        private void DrawValueArc(float angle, Color col, float wide, bool clear) {
+        private void DrawValueArc(float angle, Color col, float wide, bool clear, Color clearColor) {
             if (Event.current.type != EventType.Repaint)
                 return;
             CreateKnobMaterial();
             knobMaterial.SetPass(0);
             if (clear) {
                 GL.Begin(GL.QUADS);
-                GL.Color(Color.grey);
+                GL.Color(clearColor);
                 this.VertexPointWithUV(new Vector3(this.position.x, this.position.y, 0.0f));
                 this.VertexPointWithUV(new Vector3(this.position.x + this.knobSize.x, this.position.y, 0.0f));
                 this.VertexPointWithUV(new Vector3(this.position.x + this.knobSize.x, this.position.y + this.knobSize.y, 0.0f));

@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Name: FleshAttack
   m_EditorClassIdentifier: 
   type: 0
-  rate: 1
+  rate: 2
   bursts:
-  - amount: 5
-    spread: 360
-    angle: 36.098385
+  - amount: 50
+    spread: 49
+    angle: 134.9999
     prefab: {fileID: 1465794500378430, guid: 88f1de739f10f884a97b4d4188688a54, type: 2}
-  - amount: 5
-    spread: 360
-    angle: 0.00007513214
+  - amount: 50
+    spread: 69
+    angle: -25.40767
     prefab: {fileID: 1625712674743570, guid: 1c7216191b875e14e9cc1573634cded2, type: 2}
   - amount: 5
-    spread: 360
-    angle: 0.00007513214
+    spread: 43
+    angle: 1.8280401
     prefab: {fileID: 1620326717983798, guid: cc2e6f013333fa34da16928e64d1c244, type: 2}

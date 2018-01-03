@@ -1,6 +1,23 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEditorInternal;
+
+[InitializeOnLoad]
+public static class SandboxTool {
+
+    static SandboxTool() {
+        EditorApplication.playModeStateChanged += ReturnPreviousScene;
+    }
+
+    private static void ReturnPreviousScene(PlayModeStateChange state) {
+        if (state == PlayModeStateChange.EnteredEditMode && EditorPrefs.GetBool("inSandbox")) {
+            EditorPrefs.SetBool("inSandbox", false);
+            EditorSceneManager.OpenScene(EditorPrefs.GetString("prevSandbox"));
+            EditorApplication.isPlaying = false;
+        }
+    }
+}
 
 [CustomEditor(typeof(AttackType), true)]
 public class AttackEditor : Editor {
@@ -114,6 +131,22 @@ public class AttackEditor : Editor {
             switch(i) {
                 case 0:
                     ((AttackType)target).rate = EditorGUILayout.FloatField("Rate", ((AttackType)target).rate);
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUILayout.LabelField("Sandbox", GUILayout.Width(EditorGUIUtility.labelWidth));
+                    bool sand = EditorPrefs.GetBool("inSandbox");
+                    if (GUILayout.Button(sand ? EditorGUIUtility.IconContent("PauseButton") : EditorGUIUtility.IconContent("PlayButton"), GUILayout.ExpandWidth(true))) {
+                        if (EditorApplication.isPlaying == true) {
+                            EditorApplication.isPlaying = false;
+                            return;
+                        }
+                        EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+                        EditorPrefs.SetBool("inSandbox", true);
+                        EditorPrefs.SetString("prevSandbox", EditorSceneManager.GetActiveScene().path);
+                        EditorSceneManager.OpenScene("Assets/Editor/sandbox.unity");
+                        EditorApplication.isPlaying = true;
+                        return;
+                    }
+                    EditorGUILayout.EndHorizontal();
                     break;
                 case 1:
                     list.DoLayoutList();
@@ -131,4 +164,6 @@ public class AttackEditor : Editor {
         GUILayout.EndVertical();
         GUILayout.FlexibleSpace();
     }
+
+    
 }
