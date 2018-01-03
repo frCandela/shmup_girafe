@@ -41,7 +41,9 @@ public class Burst
         {
             GameObject bullet = Object.Instantiate(prefab, shooter.transform.position, Quaternion.Euler(0, 0, shooter.transform.rotation.eulerAngles.z - angle - spread / 2f + i * spread / Mathf.Max(1, amount - 1)));
             Damage bulletDamage = bullet.GetComponent<Damage>();
-            if (bulletDamage) //Ignore damage tag
+
+            //Objects with shooter.tag dont get damaged
+            if (bulletDamage) 
                 bulletDamage.tag = shooter.tag;
         }
 

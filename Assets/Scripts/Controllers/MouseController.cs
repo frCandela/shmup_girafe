@@ -21,7 +21,7 @@ public class MouseController : Controller
                     string t = target.tag;
                     target.tag = PossessedPawn.tag;
                     PossessedPawn.tag = t;
-                    target.UnPossess();
+                    target.setPossessed(null);
                     Possess(target);
                     target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
                 }

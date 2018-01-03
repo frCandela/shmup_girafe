@@ -7,7 +7,7 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     //The pawn the controller is possessing
-    public Pawn PossessedPawn { get; private set; }
+    public Pawn PossessedPawn/* { get; private set; }*/;
 
     // Use this for initialization
     void Start ()
@@ -26,9 +26,12 @@ public class Controller : MonoBehaviour
     //Makes the controller possess a new pawn
     public void Possess(Pawn newPawn)
     {
-        newPawn.UnPossess();
-        newPawn.Possess(this);
+        if (newPawn.isPossessed())
+            newPawn.controller.UnPossess();
+        if(PossessedPawn)
+            PossessedPawn.setPossessed(null);
         PossessedPawn = newPawn;
+        newPawn.setPossessed(this);
     }
 
     public void UnPossess()
