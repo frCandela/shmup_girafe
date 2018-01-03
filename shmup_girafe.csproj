@@ -275,6 +275,7 @@
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\HackSelector.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\MainBar.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TimeManager.cs" />
     <Compile Include="Assets\Scripts\Pawns\Pawn.cs" />

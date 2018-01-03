@@ -36,19 +36,19 @@ public class GameManager : MonoBehaviour
         //Initialisation checks
         if(!InitStarterShip)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no starter ship selected");
         }
 
         if (!InitPlayerController)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no player controller selected");
         }
 
         if (!InitMainCameraController)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no main camera selected");
         }
 

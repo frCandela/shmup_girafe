@@ -22,7 +22,7 @@ public class Ship : Pawn
         rb = GetComponent<Rigidbody2D>();
         if (!rb)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : Rigidbody2D not set");
         }
         rb.gravityScale = 0f;

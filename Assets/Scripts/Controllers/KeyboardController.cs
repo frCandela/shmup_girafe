@@ -19,13 +19,13 @@ public class KeyboardController : Controller
         //Initialisation checks
         if (!HackSelectorPrefab)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no HackSelectorPrefab selected");
         }
         //Initialisation checks
         if (!VirusShipPrefab)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no VirusShipPrefab selected");
         }
         //Instanciates the hack selector
