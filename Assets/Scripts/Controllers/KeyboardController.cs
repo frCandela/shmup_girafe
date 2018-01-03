@@ -52,6 +52,12 @@ public class KeyboardController : Controller
                 
             //The ship cannot go out of the camera fov
             GameManager.MainCameraController.snapInCameraView(PossessedPawn);
+
+            Health currentHealth = PossessedPawn.GetComponent<Health>();
+            if (currentHealth)
+            {
+                GameManager.MainBar.setHealthBar(currentHealth.getHealthRatio());
+            }
         }
         else
         {

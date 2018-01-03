@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainBar : MonoBehaviour
 {
+    [Header("Images :")]
     public Image[] combo;
     public Image hackBar;
     public Image healthBar;
@@ -53,19 +54,24 @@ public class MainBar : MonoBehaviour
     //Set the health bar, value must be between 0F and 1F
     public void setHealthBar( float value )
     {
-        if(value >= 0F && value <= 1F)
+        if(value >= 0F && value <= 1F && value != healthBar.fillAmount)
+        {
             healthBar.fillAmount = value;
+            print(value);
+        }
+            
     }
 
     //Set the hack bar, value must be between 0F and 1F
     public void setHackBar(float value)
     {
-        if (value >= 0F && value <= 1F)
+        if (value >= 0F && value <= 1F && value != hackBar.fillAmount)
             hackBar.fillAmount = value;
     }
 
 }
 
+//Custom editor of the mainbar for debug only
 [CustomEditor(typeof(MainBar))]
 public class SliceEditor : Editor
 {
@@ -79,18 +85,20 @@ public class SliceEditor : Editor
 
         MainBar myMainBar = (MainBar)target;
 
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Editor :", EditorStyles.boldLabel);
+
         //Combo
         setCombo = EditorGUILayout.IntField("combo", setCombo);
         if (GUILayout.Button("setCombo"))
             myMainBar.setCombo(setCombo);
-
         //Health
-        setHealth = EditorGUILayout.FloatField("health", setHealth);
+        setHealth = EditorGUILayout.Slider("setHealth", setHealth, 0,1);
         if (GUILayout.Button("setHealth"))
             myMainBar.setHealthBar(setHealth);
 
         //Hack
-        setHack = EditorGUILayout.FloatField("hack", setHack);
+        setHack = EditorGUILayout.Slider("setHack", setHack, 0, 1);
         if (GUILayout.Button("setHack"))
             myMainBar.setHackBar(setHack);
     }

@@ -336,6 +336,7 @@ MonoBehaviour:
   InitStarterShip: {fileID: 1602368822}
   InitPlayerController: {fileID: 531763772}
   InitMainCameraController: {fileID: 454917184}
+  InitMainBar: {fileID: 638980210}
 --- !u!114 &454917184
 MonoBehaviour:
   m_ObjectHideFlags: 0

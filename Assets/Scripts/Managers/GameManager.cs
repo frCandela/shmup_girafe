@@ -9,13 +9,19 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
+    
     public static Ship StarterShip { get; private set; }
     public static Controller PlayerController { get; private set; }
     public static CameraController MainCameraController { get; private set; }
+    public static MainBar MainBar { get; private set; }
 
+    [Header("Initialisation:")]
     public Ship InitStarterShip;
     public Controller InitPlayerController;
     public CameraController InitMainCameraController;
+    public MainBar InitMainBar;
+
+
     private PostProcessingBehaviour PostProcessing;
 
     //Awake is always called before any Start functions
@@ -23,11 +29,13 @@ public class GameManager : MonoBehaviour
     {
         //Singleton pattern
         if (instance == null)
+        {
             instance = this;
+            InitGame();
+        } 
         else if (instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-        InitGame();
     }
 
     //Initializes the game for each level.
@@ -35,26 +43,18 @@ public class GameManager : MonoBehaviour
     {
         //Initialisation checks
         if(!InitStarterShip)
-        {
-            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no starter ship selected");
-        }
 
         if (!InitPlayerController)
-        {
-            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no player controller selected");
-        }
 
         if (!InitMainCameraController)
-        {
-            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no main camera selected");
-        }
 
         StarterShip = InitStarterShip;
         PlayerController = InitPlayerController;
         MainCameraController = InitMainCameraController;
+        MainBar = InitMainBar;
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         //Initialize player

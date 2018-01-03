@@ -86,14 +86,9 @@ public class HackSelector : MonoBehaviour
             //HACK !
             if (Input.GetButtonDown("Hack") && timeElapsedHack >= HackMinimalDuration)
             {
+                Destroy(targetController.PossessedPawn.gameObject);
                 targetShip.gameObject.tag = this.gameObject.tag;
-
-                /*targetShip.UnPossess();
-                targetController.PossessedPawn.UnPossess();
-                targetController.UnPossess();*/
-
                 targetController.Possess(targetShip);
-
                 targetShip.transform.rotation = Quaternion.Euler(0F,0F,0F);
                 TimeManager.resetSlowMotion();
                 GameManager.instance.ToogleHackEffect();
