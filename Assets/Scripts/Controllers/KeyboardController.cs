@@ -36,8 +36,6 @@ public class KeyboardController : Controller
 
     private void Start()
     {
-        hackSelector.disable();
-
         //Set the health bar
         GameManager.MainBar.health = PossessedPawn.GetComponent<Health>();
         GameManager.MainBar.hackSelector = hackSelector;

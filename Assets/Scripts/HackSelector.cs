@@ -13,6 +13,7 @@ public class HackSelector : MonoBehaviour
     [Range(0, 10)] public float HackDuration = 3F;
     [Range(0, 10)] public float HackMinimalDuration = 0.5F;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
+    [Range(0F, 100F)] public float hackMissPenalty = 10;
 
     [Tooltip("In Units peer second"), Range(0F, 10F)]
     public float refillSpeed = 1F;
@@ -22,11 +23,11 @@ public class HackSelector : MonoBehaviour
     private Ship targetShip;
     private Controller targetController;
 
-    private float timeElapsedHack;
 
+    private float timeElapsedHack;
     private float hackPower;
     private float maxHackPower = 100F;
-    private float hackMissPenalty = 10;
+    
 
 
     // Use this for initialization
@@ -34,6 +35,13 @@ public class HackSelector : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         hackPower = 0;
+    }
+
+    private void Start()
+    {
+        spriteRenderer.enabled = false;
+        targetShip = null;
+        targetController = null;
     }
 
     public void startHack( Controller controller )
@@ -53,6 +61,9 @@ public class HackSelector : MonoBehaviour
 
     public void disable()
     {
+        TimeManager.resetSlowMotion();
+        GameManager.instance.setHackEffect(false);
+
         spriteRenderer.enabled = false;
         targetShip = null;
         targetController = null;
@@ -92,13 +103,10 @@ public class HackSelector : MonoBehaviour
             //Hack duration reached without pressing the hack key again
             if (timeElapsedHack >= HackDuration)
             {
-                GameManager.instance.setHackEffect(false);
-
                 //Penalty when the hack is missed
                 hackPower -= hackMissPenalty;
                 if (hackPower <= 0)
                     hackPower = 0;
-
                 disable();
             }
                 
@@ -131,8 +139,6 @@ public class HackSelector : MonoBehaviour
                 }
 
                 //Reset managers
-                TimeManager.resetSlowMotion();
-                GameManager.instance.setHackEffect( false );
                 disable();
             }
         }
