@@ -7,8 +7,7 @@ using UnityEngine;
 public class KeyboardController : Controller
 {
     public HackSelector HackSelectorPrefab;
-    private HackSelector hackSelector;
-
+    public HackSelector hackSelector { get; private set; }
 
     public Ship VirusShipPrefab;
     private Ship virusShip;
@@ -38,6 +37,10 @@ public class KeyboardController : Controller
     private void Start()
     {
         hackSelector.disable();
+
+        //Set the health bar
+        GameManager.MainBar.health = PossessedPawn.GetComponent<Health>();
+        GameManager.MainBar.hackSelector = hackSelector;
     }
 
     private void Update()
@@ -52,19 +55,17 @@ public class KeyboardController : Controller
                 
             //The ship cannot go out of the camera fov
             GameManager.MainCameraController.snapInCameraView(PossessedPawn);
-
-            Health currentHealth = PossessedPawn.GetComponent<Health>();
-            if (currentHealth)
-            {
-                GameManager.MainBar.setHealthBar(currentHealth.getHealthRatio());
-            }
         }
         else
         {
             //Set the player to a virus
             virusShip.enabled = true;
+            GameManager.MainBar.health = virusShip.GetComponent<Health>();
             Possess(virusShip);
         }
+
+        //Update the hack bar
+        GameManager.MainBar.setHackBar(hackSelector.getHackPowerRatio());
     }
 
     void FixedUpdate()

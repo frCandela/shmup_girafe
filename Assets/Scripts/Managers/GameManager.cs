@@ -73,7 +73,22 @@ public class GameManager : MonoBehaviour
         inHackEffect = !inHackEffect;
     }
 
-    IEnumerator startHack(float timing) {
+    public void setHackEffect( bool state )
+    {
+        inHackEffect = state; //sweet legacy
+        if (state)
+        {
+            StopCoroutine(stopHack(1f));
+            StartCoroutine(startHack(1f));
+        }
+        else
+        {
+            StopCoroutine(startHack(1f));
+            StartCoroutine(stopHack(1f));
+        }
+    }
+
+        IEnumerator startHack(float timing) {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
         
         float elapsedTime = 0;

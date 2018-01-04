@@ -31,15 +31,12 @@ public class Health : MonoBehaviour
 
     public void takeDamage( int damage )
     {
-        //Imoortal objects don't take damage
+        //Immortal objects don't take damage
         if( ! immortal )
         {
             health -= damage;
             if (health <= 0)
-            {
-                //Destroy the object
                 Destroy(this.gameObject);
-            }
         }    
     }
 }

@@ -11,6 +11,10 @@ public class MainBar : MonoBehaviour
     public Image hackBar;
     public Image healthBar;
 
+    [Header("Linked gamebjects :")]
+    public HackSelector hackSelector;
+    public Health health;
+
     // Use this for initialization
     void Start ()
     {
@@ -36,7 +40,10 @@ public class MainBar : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		
+        if (health)
+            setHealthBar(health.getHealthRatio());
+        if (hackSelector)
+            ;
 	}
 
     //Set the combo images
@@ -55,11 +62,7 @@ public class MainBar : MonoBehaviour
     public void setHealthBar( float value )
     {
         if(value >= 0F && value <= 1F && value != healthBar.fillAmount)
-        {
-            healthBar.fillAmount = value;
-            print(value);
-        }
-            
+            healthBar.fillAmount = value;  
     }
 
     //Set the hack bar, value must be between 0F and 1F

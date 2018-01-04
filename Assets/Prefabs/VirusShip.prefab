@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  isHackable: 1
   Speed: 8.4
   attack: {fileID: 0}
 --- !u!212 &212535217106139462

@@ -6,6 +6,7 @@ using UnityEngine;
 //A basic pawn for a spaceship in the game
 public class Ship : Pawn
 {
+    [Header("Ship parameters:")]
     [Range(0.0f, 20.0f)]
     public float Speed = 0.5f;  //Movement speed of the ship
 

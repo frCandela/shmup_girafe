@@ -5,12 +5,15 @@ using UnityEngine;
 //A pawn is a game object that can be possessed
 public class Pawn : MonoBehaviour
 {
-    public Controller controller/* { get; private set; }*/;
+    public Controller controller { get; private set; }
+
+    [Header("Hack parameters:")]
+    public bool isHackable = true;
+    public float hackCost = 40F;
 
     // Use this for initialization
     void Start ()
     {
-
     }
 	
 	// Update is called once per frame
@@ -18,8 +21,6 @@ public class Pawn : MonoBehaviour
     {
 		
 	}
-
-
 
     public void setPossessed(Controller newController)
     {

@@ -155,6 +155,11 @@ Prefab:
       propertyPath: m_Name
       value: Enemy_2
       objectReference: {fileID: 0}
+    - target: {fileID: 114381008894366728, guid: f3e075df1f1ef7e49a4c1dafefef4215,
+        type: 2}
+      propertyPath: hackCost
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3e075df1f1ef7e49a4c1dafefef4215, type: 2}
   m_IsPrefabParent: 0
@@ -390,7 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebdd940cf6d8554885d7c269d957e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PossessedPawn: {fileID: 0}
   HackSelectorPrefab: {fileID: 114286509941851070, guid: c9516316598309243ac720017afca50f,
     type: 2}
   VirusShipPrefab: {fileID: 114664249371947100, guid: d0d43fde6d15957479d2af4ccbf33a9e,
@@ -553,6 +557,8 @@ MonoBehaviour:
   - {fileID: 2053491769}
   hackBar: {fileID: 1659222231}
   healthBar: {fileID: 346813975}
+  hackSelector: {fileID: 0}
+  health: {fileID: 0}
 --- !u!1001 &830592739
 Prefab:
   m_ObjectHideFlags: 0
@@ -961,7 +967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f89811622aab9640b47c3bbb175c154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  isHackable: 0
+  hackCost: 10
   Speed: 6.3
   attack: {fileID: 11400000, guid: b3600fa9d203e6c4d8721b81dd36d709, type: 2}
 --- !u!212 &1602368823

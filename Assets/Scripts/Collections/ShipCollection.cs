@@ -17,9 +17,10 @@ public class ShipCollection : Dictionary<Ship,Ship>
         {
             Ship newShip = pair.Value;
 
-            if (newShip != startShip && newShip.transform.position.x >= xMin)
-                if (!selectedShip || newShip.transform.position.x < selectedShip.transform.position.x)
-                    selectedShip = newShip;
+            if(newShip.isHackable)
+                if (newShip != startShip && newShip.transform.position.x >= xMin)
+                    if (!selectedShip || newShip.transform.position.x < selectedShip.transform.position.x)
+                        selectedShip = newShip;
         }
         return selectedShip ? selectedShip : startShip;
     }
@@ -34,10 +35,10 @@ public class ShipCollection : Dictionary<Ship,Ship>
         foreach (KeyValuePair<Ship, Ship> pair in this)
         {
             Ship newShip = pair.Value;
-
-            if (newShip != startShip && newShip.transform.position.x <= xMax)
-                if (!selectedShip || newShip.transform.position.x > selectedShip.transform.position.x)
-                    selectedShip = newShip;
+            if (newShip.isHackable)
+                if (newShip != startShip && newShip.transform.position.x <= xMax)
+                    if (!selectedShip || newShip.transform.position.x > selectedShip.transform.position.x)
+                        selectedShip = newShip;
         }
         return selectedShip ? selectedShip : startShip;
     }
@@ -52,10 +53,10 @@ public class ShipCollection : Dictionary<Ship,Ship>
         foreach (KeyValuePair<Ship, Ship> pair in this)
         {
             Ship newShip = pair.Value;
-
-            if (newShip != startShip && newShip.transform.position.y >= yMin)
-                if (!selectedShip || newShip.transform.position.y < selectedShip.transform.position.y)
-                    selectedShip = newShip;
+            if (newShip.isHackable)
+                if (newShip != startShip && newShip.transform.position.y >= yMin)
+                    if (!selectedShip || newShip.transform.position.y < selectedShip.transform.position.y)
+                        selectedShip = newShip;
         }
         return selectedShip ? selectedShip : startShip;
     }
@@ -70,10 +71,10 @@ public class ShipCollection : Dictionary<Ship,Ship>
         foreach (KeyValuePair<Ship, Ship> pair in this)
         {
             Ship newShip = pair.Value;
-
-            if (newShip != startShip && newShip.transform.position.y <= yMax)
-                if (!selectedShip || newShip.transform.position.y > selectedShip.transform.position.y)
-                    selectedShip = newShip;
+            if (newShip.isHackable)
+                if (newShip != startShip && newShip.transform.position.y <= yMax)
+                    if (!selectedShip || newShip.transform.position.y > selectedShip.transform.position.y)
+                        selectedShip = newShip;
         }
         return selectedShip ? selectedShip : startShip;
     }
