@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114106401502837776}
   - component: {fileID: 114740727988363658}
   - component: {fileID: 114406920894972296}
+  - component: {fileID: 114275314419638478}
   m_Layer: 8
   m_Name: DPS
   m_TagString: Ennemy
@@ -112,6 +113,17 @@ MonoBehaviour:
   controller: {fileID: 0}
   Speed: 3
   attack: {fileID: 11400000, guid: 6b2c3cf85fe173d4d993402e52ba1853, type: 2}
+--- !u!114 &114275314419638478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351586955025634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847130810de290e4eba916546582f0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114406920894972296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +137,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   immortal: 0
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114275314419638478}
+        m_MethodName: AddPoints
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114740727988363658
 MonoBehaviour:
   m_ObjectHideFlags: 1

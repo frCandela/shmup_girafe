@@ -1,30 +1,57 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEditorInternal;
 
-[CustomEditor(typeof(AttackType), true)]
-public class AttackEditor : Editor {
+[InitializeOnLoad]
+public static class SandboxTool
+{
 
-    public override bool UseDefaultMargins() {
+    static SandboxTool()
+    {
+        EditorApplication.playModeStateChanged += ReturnPreviousScene;
+    }
+
+    private static void ReturnPreviousScene(PlayModeStateChange state)
+    {
+        if (state == PlayModeStateChange.EnteredEditMode && EditorPrefs.GetBool("inSandbox"))
+        {
+            EditorPrefs.SetBool("inSandbox", false);
+            EditorSceneManager.OpenScene(EditorPrefs.GetString("prevSandbox"));
+            EditorApplication.isPlaying = false;
+        }
+    }
+}
+
+[CustomEditor(typeof(AttackType), true)]
+public class AttackEditor : Editor
+{
+
+    public override bool UseDefaultMargins()
+    {
         return false;
     }
 
-    public override void OnInspectorGUI() {
+    public override void OnInspectorGUI()
+    {
         serializedObject.Update();
 
         EditorGUILayout.BeginVertical(EditorStyles.inspectorDefaultMargins, new GUILayoutOption[0]);
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (GUILayout.Button(new GUIContent("Random"), EditorStyles.miniButton, GUILayout.Width(110f))) {
+        if (GUILayout.Button(new GUIContent("Random"), EditorStyles.miniButton, GUILayout.Width(110f)))
+        {
             ((AttackType)target).rate = Random.Range(1f, 10f);
             int nb = Random.Range(1, 10);
             ((AttackType)target).bursts.Clear();
-            for (int i = 0; i < nb; i++) {
+            for (int i = 0; i < nb; i++)
+            {
                 Burst b = new Burst();
                 b.amount = Random.Range(1, 15);
                 b.angle = Random.Range(0, 360);
                 b.spread = Random.Range(0, 360);
-                b.prefab = (GameObject)EditorGUIUtility.Load("Assets/Prefabs/Bullets/AgiBullet.prefab"); ;
+                b.prefab = (GameObject)EditorGUIUtility.Load("Assets/Prefabs/Bullets/AgiBullet.prefab");
+                ;
                 ((AttackType)target).bursts.Add(b);
             }
         }
@@ -39,17 +66,20 @@ public class AttackEditor : Editor {
         serializedObject.ApplyModifiedProperties();
     }
 
-    void OnEnable() {
+    void OnEnable()
+    {
         list = new ReorderableList(serializedObject,
                 serializedObject.FindProperty("bursts"),
                 true, true, true, true);
 
-        list.drawHeaderCallback = (Rect rect) => {
+        list.drawHeaderCallback = (Rect rect) =>
+        {
             EditorGUI.LabelField(rect, "Bursts");
         };
 
         list.drawElementCallback =
-            (Rect rect, int index, bool isActive, bool isFocused) => {
+            (Rect rect, int index, bool isActive, bool isFocused) =>
+            {
                 var element = list.serializedProperty.GetArrayElementAtIndex(index);
                 rect.y += 2;
 
@@ -72,16 +102,19 @@ public class AttackEditor : Editor {
     public GUIStyle modulePadding = new GUIStyle();
     public GUIStyle controlRectStyle = new GUIStyle();
     ReorderableList list;
-    public void drawGUI() {
+    public void drawGUI()
+    {
         GUILayout.BeginVertical("ShurikenEffectBg", new GUILayoutOption[0]);
 
         EditorGUIUtility.labelWidth = 0.0f;
         EditorGUIUtility.labelWidth -= 4f;
         EditorGUILayout.BeginVertical();
 
-        for(int i = 0; i <= 1; i++) {
+        for (int i = 0; i <= 1; i++)
+        {
             GUIContent content = new GUIContent();
-            switch (i) {
+            switch (i)
+            {
                 case 0:
                     content.text = "Global parameters";
                     content.tooltip = "Yahaha! You found me!";
@@ -94,10 +127,13 @@ public class AttackEditor : Editor {
             Rect rect;
             GUIStyle style;
 
-            if(i == 0) {
+            if (i == 0)
+            {
                 rect = GUILayoutUtility.GetRect(4f, 25f);
                 style = (GUIStyle)"ShurikenEmitterTitle";
-            } else {
+            }
+            else
+            {
                 rect = GUILayoutUtility.GetRect(4f, 15f);
                 style = (GUIStyle)"ShurikenModuleTitle";
             }
@@ -111,21 +147,41 @@ public class AttackEditor : Editor {
             position.height += 4f;
             GUI.Label(position, GUIContent.none, "ShurikenModuleBg");
 
-            switch(i) {
+            switch (i)
+            {
                 case 0:
                     ((AttackType)target).rate = EditorGUILayout.FloatField("Rate", ((AttackType)target).rate);
+                    EditorGUILayout.BeginHorizontal();
+                    EditorGUILayout.LabelField("Sandbox", GUILayout.Width(EditorGUIUtility.labelWidth));
+                    bool sand = EditorPrefs.GetBool("inSandbox");
+                    if (GUILayout.Button(sand ? EditorGUIUtility.IconContent("PauseButton") : EditorGUIUtility.IconContent("PlayButton"), GUILayout.ExpandWidth(true)))
+                    {
+                        if (EditorApplication.isPlaying == true)
+                        {
+                            EditorApplication.isPlaying = false;
+                            return;
+                        }
+                        EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+                        EditorPrefs.SetBool("inSandbox", true);
+                        EditorPrefs.SetString("prevSandbox", EditorSceneManager.GetActiveScene().path);
+                        EditorSceneManager.OpenScene("Assets/Editor/sandbox.unity");
+                        EditorApplication.isPlaying = true;
+                        return;
+                    }
+                    EditorGUILayout.EndHorizontal();
                     break;
                 case 1:
                     list.DoLayoutList();
                     break;
             }
-            
+
             EditorGUILayout.EndVertical();
-            
-            if (GUI.Toggle(rect, true, content, style)) {}
+
+            if (GUI.Toggle(rect, true, content, style))
+            { }
             GUILayout.Space(1f);
         }
-        
+
         GUILayout.Space(-1f);
         GUILayout.EndVertical();
         GUILayout.EndVertical();
