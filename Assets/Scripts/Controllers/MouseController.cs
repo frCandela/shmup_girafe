@@ -13,6 +13,7 @@ public class MouseController : Controller
     public bool infiniteDuration = false;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 20F)] public float hackRefillSpeed = 1F;
+    [Range(0F, 20F)] public float virusHackRefillSpeed = 1F;
 
     //Private hack parameters
     private float hackPower;
@@ -20,11 +21,10 @@ public class MouseController : Controller
     private float minHackPower = 100F;
     private bool isHacking = false;
 
-
     private void Start()
     {
         //ui initialisation
-        GameManager.MainBar.health = GetComponent<Health>();
+        GameManager.MainBar.health = PossessedPawn.GetComponent<Health>();
 
         //Hack parameters
         hackPower = 0;
@@ -40,7 +40,10 @@ public class MouseController : Controller
     private void Update()
     {
         //Refill the hack bar
-        hackPower += hackRefillSpeed * Time.deltaTime;
+        if( PossessedPawn == virusShip)
+            hackPower += virusHackRefillSpeed * Time.deltaTime;
+        else
+            hackPower += hackRefillSpeed * Time.deltaTime;
         if (hackPower > maxHackPower)
             hackPower = maxHackPower;
 
@@ -89,6 +92,7 @@ public class MouseController : Controller
                 PossessedPawn.Fire();
         }
 
+        //Starts the hack !
         if (Input.GetButton("Hack") && !isHacking && hackPower >= minHackPower)
         {
             isHacking = true;
@@ -101,6 +105,7 @@ public class MouseController : Controller
 
     void FixedUpdate()
     {
+        //Moves the pawn towards the mouse position
         if (isPossessingPawn())
         {
             PossessedPawn.transform.position = Vector3.MoveTowards(PossessedPawn.transform.position, transform.position, ((Ship)PossessedPawn).Speed * Time.fixedDeltaTime);

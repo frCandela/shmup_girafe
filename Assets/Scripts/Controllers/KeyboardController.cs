@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //The player controller that can possess pawns
+[Obsolete("Not used anymore", true)]
 public class KeyboardController : Controller
 {
     public HackSelector HackSelectorPrefab;

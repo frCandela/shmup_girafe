@@ -491,7 +491,8 @@ MonoBehaviour:
   HackDuration: 3
   infiniteDuration: 0
   TimeScaleFactor: 0.1
-  hackRefillSpeed: 10
+  hackRefillSpeed: 3
+  virusHackRefillSpeed: 20
 --- !u!4 &531763773
 Transform:
   m_ObjectHideFlags: 0

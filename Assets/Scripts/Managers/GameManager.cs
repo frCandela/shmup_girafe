@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
+        MainBar.health = StarterShip.GetComponent<Health>();
     }
 
     #region POST-EFFECT

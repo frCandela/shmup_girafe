@@ -43,12 +43,9 @@ public class MainBar : MonoBehaviour
         if (health)
             setHealthBar(health.getHealthRatio());
         if (hackSelector)
-            ;
+            setHackBar(hackSelector.getHackPowerRatio());
         else if (mouseController)
             setHackBar(mouseController.getHackPowerRatio());
-
-        print(mouseController.getHackPowerRatio());
-
     }
 
     //Set the combo images
