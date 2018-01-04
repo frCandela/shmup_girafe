@@ -20,10 +20,12 @@ public class GameManager : MonoBehaviour
     public CameraController InitMainCameraController;
     public MainBar InitMainBar;
 
-
     private PostProcessingBehaviour PostProcessing;
 
-    public static int score = 0;
+    public const int scorePeerHack = 10;
+
+    private static int score = 0;
+    private static int scoreMultiplier = 1;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -64,7 +66,11 @@ public class GameManager : MonoBehaviour
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.health = StarterShip.GetComponent<Health>();
+        MainBar.setCombo(0);
     }
+
+    public static void addHackScore(){ score += scorePeerHack * scoreMultiplier; }
+    public static int getScore(){ return score;}
 
     #region POST-EFFECT
     bool inHackEffect = false;

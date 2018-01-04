@@ -72,6 +72,7 @@ public class MouseController : Controller
                         if (hackPower < 0F)
                             hackPower = 0F;
                         GameManager.MainBar.health = target.GetComponent<Health>();
+                        GameManager.addHackScore();
 
                         //Destroy the old pawn
                         Health oldHealth = this.PossessedPawn.GetComponent<Health>();

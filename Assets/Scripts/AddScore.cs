@@ -6,7 +6,8 @@ public class AddScore : MonoBehaviour {
 
     public void AddPoints(int points)
     {
-        GameManager.score += points;
+        //Srry togi
+        //GameManager.score += points;
     }
 
 }
