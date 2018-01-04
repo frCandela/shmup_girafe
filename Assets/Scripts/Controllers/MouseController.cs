@@ -17,6 +17,7 @@ public class MouseController : Controller
     //Private hack parameters
     private float hackPower;
     private float maxHackPower = 100F;
+    private float minHackPower = 100F;
     private bool isHacking = false;
 
 
@@ -38,6 +39,11 @@ public class MouseController : Controller
 
     private void Update()
     {
+        //Refill the hack bar
+        hackPower += hackRefillSpeed * Time.deltaTime;
+        if (hackPower > maxHackPower)
+            hackPower = maxHackPower;
+
         //If the ship is destroyed, control the virus ship
         if (!isPossessingPawn())
         {
@@ -56,42 +62,42 @@ public class MouseController : Controller
                 {
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
 
-                    //misc
-                    hackPower -= target.hackCost;
-                    GameManager.MainBar.health = target.GetComponent<Health>();
+                    if(target.hackCost <= hackPower)
+                    {
+                        //misc
+                        hackPower -= target.hackCost;
+                        if (hackPower < 0F)
+                            hackPower = 0F;
+                        GameManager.MainBar.health = target.GetComponent<Health>();
 
-                    //Destroy the old pawn
-                    Health oldHealth = this.PossessedPawn.GetComponent<Health>();
-                    if (!oldHealth || !oldHealth.immortal)//Don't destroy immortal objects 
-                        Destroy(this.PossessedPawn.gameObject);
+                        //Destroy the old pawn
+                        Health oldHealth = this.PossessedPawn.GetComponent<Health>();
+                        if (!oldHealth || !oldHealth.immortal)//Don't destroy immortal objects 
+                            Destroy(this.PossessedPawn.gameObject);
 
-                    //Possess the new ship
-                    target.gameObject.tag = this.gameObject.tag;
-                    this.Possess(target);
-                    target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
-
-                    /*string t = target.tag;
-                    target.tag = PossessedPawn.tag;
-                    PossessedPawn.tag = t;
-                    target.setPossessed(null);
-                    Possess(target);
-                    target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
-                    GameManager.MainBar.health = target.GetComponent<Health>();*/
+                        //Possess the new ship
+                        target.gameObject.tag = this.gameObject.tag;
+                        this.Possess(target);
+                        target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+                    }
                 }
+
                 TimeManager.resetSlowMotion();
-                GameManager.instance.ToogleHackEffect();
+                GameManager.instance.setHackEffect(false);
             }
             else
                 PossessedPawn.Fire();
         }
 
-        if (Input.GetButton("Hack") && !isHacking)
+        if (Input.GetButton("Hack") && !isHacking && hackPower >= minHackPower)
         {
             isHacking = true;
             GameManager.instance.ToogleHackEffect();
             TimeManager.doSlowMotion(3, 0.05f);
         }
     }
+
+    public float getHackPowerRatio() { return hackPower / maxHackPower; }
 
     void FixedUpdate()
     {

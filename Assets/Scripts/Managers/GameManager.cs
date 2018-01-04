@@ -61,6 +61,9 @@ public class GameManager : MonoBehaviour
 
         //Initialize player
         PlayerController.Possess(StarterShip);
+
+        //initialise ui
+        MainBar.mouseController = (MouseController)PlayerController;
     }
 
     #region POST-EFFECT

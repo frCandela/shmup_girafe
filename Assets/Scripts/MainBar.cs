@@ -12,6 +12,7 @@ public class MainBar : MonoBehaviour
 
     [Header("Linked gamebjects :")]
     public HackSelector hackSelector;
+    public MouseController mouseController;
     public Health health;
 
     // Use this for initialization
@@ -43,7 +44,12 @@ public class MainBar : MonoBehaviour
             setHealthBar(health.getHealthRatio());
         if (hackSelector)
             ;
-	}
+        else if (mouseController)
+            setHackBar(mouseController.getHackPowerRatio());
+
+        print(mouseController.getHackPowerRatio());
+
+    }
 
     //Set the combo images
     public void setCombo(int value)

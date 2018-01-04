@@ -399,7 +399,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 454917177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -483,15 +483,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 531763771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd94bab122c26094193ec344b052b311, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ebdd940cf6d8554885d7c269d957e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HackSelectorPrefab: {fileID: 114286509941851070, guid: c9516316598309243ac720017afca50f,
+    type: 2}
   VirusShipPrefab: {fileID: 114664249371947100, guid: d0d43fde6d15957479d2af4ccbf33a9e,
     type: 2}
-  HackDuration: 3
-  infiniteDuration: 0
-  TimeScaleFactor: 0.1
-  hackRefillSpeed: 10
 --- !u!4 &531763773
 Transform:
   m_ObjectHideFlags: 0
@@ -647,7 +645,6 @@ MonoBehaviour:
   hackBar: {fileID: 346813975}
   healthBar: {fileID: 1659222231}
   hackSelector: {fileID: 0}
-  mouseController: {fileID: 0}
   health: {fileID: 0}
 --- !u!1 &837484003
 GameObject:
@@ -1431,8 +1428,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764852591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.59654, y: -2.1298, z: -0.53975}
-  m_LocalScale: {x: 3.2099998, y: 3.2099996, z: 3.2099996}
+  m_LocalPosition: {x: 0.4930117, y: 2.0962226, z: -0.026434172}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 390732857}
   - {fileID: 282169365}
