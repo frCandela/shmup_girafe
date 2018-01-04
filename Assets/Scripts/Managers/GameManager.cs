@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public CameraController InitMainCameraController;
     private PostProcessingBehaviour PostProcessing;
 
+    public int score = 0;
+
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -34,7 +36,7 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         //Initialisation checks
-        if(!InitStarterShip)
+        if (!InitStarterShip)
         {
             UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : no starter ship selected");
@@ -61,38 +63,47 @@ public class GameManager : MonoBehaviour
         PlayerController.Possess(StarterShip);
     }
 
+    #region POST-EFFECT
     bool inHackEffect = false;
-    public void ToogleHackEffect() {
-        if(!inHackEffect) {
+    public void ToogleHackEffect()
+    {
+        if (!inHackEffect)
+        {
             StopCoroutine(stopHack(1f));
             StartCoroutine(startHack(1f));
-        } else {
+        }
+        else
+        {
             StopCoroutine(startHack(1f));
             StartCoroutine(stopHack(1f));
         }
         inHackEffect = !inHackEffect;
     }
 
-    IEnumerator startHack(float timing) {
+    IEnumerator startHack(float timing)
+    {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
-        
+
         float elapsedTime = 0;
-        while (elapsedTime < timing) {
+        while (elapsedTime < timing)
+        {
             set.contribution = Mathf.Lerp(0, 1, elapsedTime / timing);
             PostProcessing.profile.userLut.settings = set;
             elapsedTime += Time.unscaledDeltaTime;
             yield return new WaitForEndOfFrame();
         }
-        
+
         set.contribution = 1;
         PostProcessing.profile.userLut.settings = set;
     }
 
-    IEnumerator stopHack(float timing) {
+    IEnumerator stopHack(float timing)
+    {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
 
         float elapsedTime = 0;
-        while (elapsedTime < timing) {
+        while (elapsedTime < timing)
+        {
             set.contribution = Mathf.Lerp(1, 0, elapsedTime / timing);
             PostProcessing.profile.userLut.settings = set;
             elapsedTime += Time.unscaledDeltaTime;
@@ -102,4 +113,5 @@ public class GameManager : MonoBehaviour
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
     }
+    #endregion
 }

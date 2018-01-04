@@ -4,19 +4,33 @@ using UnityEngine;
 
 public class MouseController : Controller
 {
+    public Ship VirusShipPrefab;
+    private Ship virusShip;
+
     bool isHack = false;
+
+    private void Start()
+    {
+        virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
+        virusShip.enabled = false;
+    }
 
     private void Update()
     {
+        if (!isPossessingPawn())
+        {
+            virusShip.enabled = true;
+            Possess(virusShip);
+        }
+
         if (Input.GetButton("Fire"))
         {
-            if(isHack)
+            if (isHack)
             {
                 isHack = false;
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)), Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
-                Debug.Log(hit);
-                Debug.Log(hit.collider);
-                if (hit && hit.collider) {
+                if (hit && hit.collider)
+                {
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
                     string t = target.tag;
                     target.tag = PossessedPawn.tag;
@@ -31,15 +45,16 @@ public class MouseController : Controller
             else
                 PossessedPawn.Fire();
         }
-        
-        if (Input.GetButton("Hack") && !isHack) {
+
+        if (Input.GetButton("Hack") && !isHack)
+        {
             isHack = true;
             GameManager.instance.ToogleHackEffect();
             TimeManager.doSlowMotion(3, 0.05f);
         }
     }
-    
-	void FixedUpdate ()
+
+    void FixedUpdate()
     {
         if (isPossessingPawn())
         {

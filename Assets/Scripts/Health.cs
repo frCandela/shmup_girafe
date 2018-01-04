@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     [Range(0, 100)] public int health = 100;
+    bool dead = false;
 
     public bool immortal = false;
+
+    public UnityEvent onDie;
 
     private void Start()
     {
@@ -22,8 +26,10 @@ public class Health : MonoBehaviour
         if( ! immortal )
         {
             health -= damage;
-            if (health <= 0)
+            if (health <= 0 && !dead)
             {
+                onDie.Invoke();
+                dead = true; // Prevent multiple die before destroy
                 //Destroy the object
                 Destroy(this.gameObject);
             }

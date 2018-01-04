@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114455568282592022}
   - component: {fileID: 114877082372555166}
   - component: {fileID: 114428674037629796}
+  - component: {fileID: 114952956820891654}
   m_Layer: 8
   m_Name: Agi
   m_TagString: Ennemy
@@ -111,6 +112,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   immortal: 0
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114952956820891654}
+        m_MethodName: AddPoints
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114455568282592022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +154,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PossessedPawn: {fileID: 0}
+--- !u!114 &114952956820891654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992339935611322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847130810de290e4eba916546582f0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212656868904562388
 SpriteRenderer:
   m_ObjectHideFlags: 1

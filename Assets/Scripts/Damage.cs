@@ -8,7 +8,6 @@ public class Damage : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("test");
         Health health = collision.gameObject.GetComponent<Health>();
         if (health && collision.gameObject.tag != this.tag)
         {

@@ -14,11 +14,11 @@ MonoBehaviour:
   type: 0
   rate: 2
   bursts:
-  - amount: 50
+  - amount: 5
     spread: 49
     angle: 134.9999
     prefab: {fileID: 1465794500378430, guid: 88f1de739f10f884a97b4d4188688a54, type: 2}
-  - amount: 50
+  - amount: 5
     spread: 69
     angle: -25.40767
     prefab: {fileID: 1625712674743570, guid: 1c7216191b875e14e9cc1573634cded2, type: 2}
