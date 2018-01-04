@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f89811622aab9640b47c3bbb175c154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  isHackable: 1
+  hackCost: 100
   Speed: 3
   attack: {fileID: 11400000, guid: c9bb7a25d42df084f834100dae7c43a1, type: 2}
 --- !u!114 &114186631056893290
@@ -164,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9fcad0cdada864085434aa69b8d439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PossessedPawn: {fileID: 0}
 --- !u!212 &212674753708351604
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -11,6 +11,7 @@ public class HackSelector : MonoBehaviour
 {
     [Header("Hack parameters:")]
     [Range(0, 10)] public float HackDuration = 3F;
+    public bool infiniteDuration = false;
     [Range(0, 10)] public float HackMinimalDuration = 0.5F;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackMissPenalty = 10;
@@ -35,6 +36,9 @@ public class HackSelector : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         hackPower = 0;
+
+        if (infiniteDuration)
+            HackDuration = float.MaxValue;
     }
 
     private void Start()

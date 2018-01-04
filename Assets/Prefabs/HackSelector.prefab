@@ -52,10 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cb2d0418127f45448c53bb0677f0934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HackDuration: 3
+  HackDuration: 10
+  infiniteDuration: 1
   HackMinimalDuration: 0.5
   TimeScaleFactor: 0.1
-  refillSpeed: 10
+  hackMissPenalty: 10
+  refillSpeed: 1
 --- !u!212 &212382573855736148
 SpriteRenderer:
   m_ObjectHideFlags: 1
