@@ -55,7 +55,7 @@ MonoBehaviour:
   HackDuration: 3
   HackMinimalDuration: 0.5
   TimeScaleFactor: 0.1
-  refillSpeed: 5
+  refillSpeed: 10
 --- !u!212 &212382573855736148
 SpriteRenderer:
   m_ObjectHideFlags: 1
