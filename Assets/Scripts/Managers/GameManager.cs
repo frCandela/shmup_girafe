@@ -8,23 +8,22 @@ using UnityEngine.PostProcessing;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-
     
     public static Ship StarterShip { get; private set; }
-    public static Controller PlayerController { get; private set; }
+    public static MouseController PlayerController { get; private set; }
     public static CameraController MainCameraController { get; private set; }
     public static MainBar MainBar { get; private set; }
 
     [Header("Initialisation:")]
     public Ship InitStarterShip;
-    public Controller InitPlayerController;
+    public MouseController InitPlayerController;
     public CameraController InitMainCameraController;
     public MainBar InitMainBar;
 
 
     private PostProcessingBehaviour PostProcessing;
 
-    public int score = 0;
+    public static int score = 0;
 
     //Awake is always called before any Start functions
     void Awake()

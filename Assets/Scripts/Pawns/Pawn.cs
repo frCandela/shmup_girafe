@@ -9,7 +9,10 @@ public class Pawn : MonoBehaviour
 
     [Header("Hack parameters:")]
     public bool isHackable = true;
-    public float hackCost = 40F;
+    [Range(0.0f, 100.0f)] public float hackCost = 100F;
+    [Range(0.0f, 100.0f),Tooltip("Hack power gained by the player when the ships is destroyed")]
+    public float hackbonus = 100F;
+
 
     // Use this for initialization
     void Start ()
@@ -34,4 +37,9 @@ public class Pawn : MonoBehaviour
     public virtual void MoveHorizontal  ( float axisValue) {}
     public virtual void MoveVertical    ( float axisValue) {}
     public virtual void Fire() {}
+
+    private void OnDestroy()
+    {
+        GameManager.PlayerController.addHackPower(hackbonus);
+    }
 }

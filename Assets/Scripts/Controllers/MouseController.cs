@@ -102,6 +102,12 @@ public class MouseController : Controller
     }
 
     public float getHackPowerRatio() { return hackPower / maxHackPower; }
+    public void addHackPower( float value )
+    {
+        hackPower += value;
+        if (hackPower > maxHackPower)
+            hackPower = maxHackPower;
+    }
 
     void FixedUpdate()
     {
@@ -121,11 +127,11 @@ public class MouseController : Controller
 
         transform.position = new Vector3(p.x, p.y, 0);
 
-        GUILayout.BeginArea(new Rect(20, 20, 250, 120));
+        /*GUILayout.BeginArea(new Rect(20, 20, 250, 120));
         GUILayout.Label("Screen pixels: " + c.pixelWidth + ":" + c.pixelHeight);
         GUILayout.Label("Mouse position: " + mousePos);
         GUILayout.Label("World position: " + p.ToString("F3"));
-        GUILayout.EndArea();
+        GUILayout.EndArea();*/
     }
 
 }

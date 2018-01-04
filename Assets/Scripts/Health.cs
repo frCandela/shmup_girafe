@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
 
     public bool immortal = false;
 
-    public UnityEvent onDie;
+    //public UnityEvent onDie;
 
     private int maxHealth;
 
@@ -42,9 +42,8 @@ public class Health : MonoBehaviour
             health -= damage;
             if (health <= 0 && !dead)
             {
-                onDie.Invoke();
+                //onDie.Invoke();
                 dead = true; // Prevent multiple die before destroy
-
                 Destroy(this.gameObject);//Destroy the object
             }
         }

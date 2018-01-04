@@ -7,6 +7,7 @@ using UnityEngine;
 public class Ship : Pawn
 {
     [Header("Ship parameters:")]
+
     [Range(0.0f, 20.0f)]
     public float Speed = 0.5f;  //Movement speed of the ship
 
@@ -22,10 +23,7 @@ public class Ship : Pawn
     {
         rb = GetComponent<Rigidbody2D>();
         if (!rb)
-        {
-            //UnityEditor.EditorApplication.isPlaying = false;
             throw new Exception("Error : Rigidbody2D not set");
-        }
         rb.gravityScale = 0f;
 
         anim = GetComponent<Animator>();
@@ -65,5 +63,4 @@ public class Ship : Pawn
             currentShoot = ++currentShoot % attack.bursts.Count;
         }
     }
-
 }
