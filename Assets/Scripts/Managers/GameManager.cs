@@ -82,16 +82,19 @@ public class GameManager : MonoBehaviour
 
     public void setHackEffect( bool state )
     {
-        inHackEffect = state; //sweet legacy
-        if (state)
+        if(inHackEffect != state)
         {
-            StopCoroutine(stopHack(1f));
-            StartCoroutine(startHack(1f));
-        }
-        else
-        {
-            StopCoroutine(startHack(1f));
-            StartCoroutine(stopHack(1f));
+            inHackEffect = state;
+            if (state)
+            {
+                StopCoroutine(stopHack(1f));
+                StartCoroutine(startHack(1f));
+            }
+            else
+            {
+                StopCoroutine(startHack(1f));
+                StartCoroutine(stopHack(1f));
+            }
         }
     }
     

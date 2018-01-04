@@ -57,7 +57,6 @@ public class KeyboardController : Controller
         else
         {
             hackSelector.disable();
-
             //Set the player to a virus
             virusShip.enabled = true;
             GameManager.MainBar.health = virusShip.GetComponent<Health>();
