@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -73,7 +72,7 @@ public class MainBar : MonoBehaviour
     }
 
 }
-
+/*
 //Custom editor of the mainbar for debug only
 [CustomEditor(typeof(MainBar))]
 public class SliceEditor : Editor
@@ -105,4 +104,4 @@ public class SliceEditor : Editor
         if (GUILayout.Button("setHack"))
             myMainBar.setHackBar(setHack);
     }
-}
+}*/

@@ -14,10 +14,7 @@ public class SpawnBehavior : PlayableBehaviour
         if (Application.isPlaying)
         {
             if (!spawner)
-            {
-                UnityEditor.EditorApplication.isPlaying = false;
                 throw new UnityException("No Spawner");
-            }
 
             foreach (Spawn s in data)
                 spawner.Spawn(s.enemy, s.position);
