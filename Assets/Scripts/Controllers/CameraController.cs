@@ -6,11 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraController : MonoBehaviour
 {
-    [Range(0.0f, 1.0f)]
+    [Range(0.0f, 10.0f)]
     public float VerticalSpeed = 1f;
     public ShipCollection shipsInCameraView;
     public GameObject tunnelPrefab;
     GameObject lastTunnel, toDelete;
+
     private BoxCollider2D cameraTrigger;
 
     // Use this for initialization
@@ -32,7 +33,7 @@ public class CameraController : MonoBehaviour
             if (toDelete)
                 Destroy(toDelete);
             toDelete = lastTunnel;
-            lastTunnel = Instantiate(tunnelPrefab, lastTunnel.transform.position + new Vector3(0, 32.1f, 0), lastTunnel.transform.rotation);
+            lastTunnel = Instantiate(tunnelPrefab, lastTunnel.transform.position + new Vector3(0, 3.2F*32.1f, 0), lastTunnel.transform.rotation);
         }
     }
 

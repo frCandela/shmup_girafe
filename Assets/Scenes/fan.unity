@@ -540,7 +540,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794923ef7fa889f4aa7f384f3d33756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VerticalSpeed: 0.511
+  VerticalSpeed: 1
   tunnelPrefab: {fileID: 1088843695409090, guid: c2a184766bffa854cbc5f2985a6a4283,
     type: 2}
 --- !u!114 &454917185
@@ -2118,7 +2118,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 073a04dd8681d724a8193b2a84184ebe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 073a04dd8681d724a8193b2a84184ebe, type: 3}
@@ -2189,6 +2189,10 @@ Prefab:
     - target: {fileID: 100000, guid: 073a04dd8681d724a8193b2a84184ebe, type: 3}
       propertyPath: m_Name
       value: background1_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 073a04dd8681d724a8193b2a84184ebe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 073a04dd8681d724a8193b2a84184ebe, type: 3}
