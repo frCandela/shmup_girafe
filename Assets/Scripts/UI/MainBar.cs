@@ -7,22 +7,14 @@ public class MainBar : MonoBehaviour
 {
     [Header("Images :")]
     public Image[] combo;
+    public Image[] healthPoints;
     public Image hackBar;
     public Image healthPoint;
-
-
-    public Transform healthBarOrigin;
-    public float divider = 0.4F;
 
     [Header("Linked gamebjects :")]
     public HackSelector hackSelector;
     public MouseController mouseController;
     public Health health;
-
-    private Image[] healthPoints;
-    private const int maxHealth = 20;
-
-
 
     // Use this for initialization
     void Start ()
@@ -34,18 +26,6 @@ public class MainBar : MonoBehaviour
             hackBar.fillMethod = Image.FillMethod.Horizontal;
             hackBar.fillOrigin = 0;
             hackBar.fillAmount = 1F;
-        }
-        
-        healthPoints = new Image[maxHealth];
-        for (int i = 0; i < maxHealth; ++i)
-        {
-            RectTransform rt = (RectTransform)healthPoint.transform;
-            Vector3 position = healthBarOrigin.position +  new Vector3( i * rt.rect.width*healthPoint.transform.localScale.x* divider, 0, 0) ;
-
-            Image newHealthPoint = Instantiate(healthPoint, position, transform.rotation);
-            healthPoints[i] = newHealthPoint;
-            newHealthPoint.transform.SetParent(transform);
-            newHealthPoint.name = "healthPoint" + i;
         }
     }
 	
@@ -74,7 +54,7 @@ public class MainBar : MonoBehaviour
     //Set the health bar, value must be between 0F and 1F
     public void setHealthBar(int value)
     {
-        for (int i = 0; i < maxHealth; ++i)
+        for (int i = 0; i < healthPoints.Length; ++i)
         {
             if (i < value)
                 healthPoints[i].enabled = true;
