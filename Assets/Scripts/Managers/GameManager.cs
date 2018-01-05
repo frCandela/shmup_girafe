@@ -23,9 +23,12 @@ public class GameManager : MonoBehaviour
     private PostProcessingBehaviour PostProcessing;
 
     public const int scorePeerHack = 10;
+    public const int hackPerCombo = 5;
 
     private static int score = 0;
-    private static int scoreMultiplier = 1;
+    private static int hackCount = 0;
+    private static int comboMultiplier = 0;
+    private static int maxCombo = 4;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -62,6 +65,7 @@ public class GameManager : MonoBehaviour
 
         //Initialize player
         PlayerController.Possess(StarterShip);
+        PlayerController.onHack.AddListener(hackOccured);
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
@@ -69,7 +73,21 @@ public class GameManager : MonoBehaviour
         MainBar.setCombo(0);
     }
 
-    public static void addHackScore(){ score += scorePeerHack * scoreMultiplier; }
+    public static void hackOccured()
+    {
+        //Add score
+        score += scorePeerHack *(int) Mathf.Pow(2, comboMultiplier);
+
+        //Increment combo multiplier
+        if ( ++hackCount >= hackPerCombo && comboMultiplier < maxCombo)
+        {
+            hackCount = 0;
+            ++comboMultiplier;
+            MainBar.setCombo(comboMultiplier);
+        }
+        
+    }
+
     public static int getScore(){ return score;}
 
     #region POST-EFFECT

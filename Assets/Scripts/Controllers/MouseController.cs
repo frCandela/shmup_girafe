@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MouseController : Controller
 {
@@ -12,8 +13,10 @@ public class MouseController : Controller
     public float HackDuration = 3F;
     public bool infiniteDuration = false;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
-    [Range(0F, 20F)] public float hackRefillSpeed = 1F;
-    [Range(0F, 20F)] public float virusHackRefillSpeed = 1F;
+    [Range(0F, 100F)] public float hackRefillSpeed = 1F;
+    [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
+
+    public UnityEvent onHack;
 
     //Private hack parameters
     private float hackPower;
@@ -55,6 +58,7 @@ public class MouseController : Controller
             Possess(virusShip);
         }
 
+        //Player press Fire
         if (Input.GetButton("Fire"))
         {
             if (isHacking)
@@ -72,7 +76,6 @@ public class MouseController : Controller
                         if (hackPower < 0F)
                             hackPower = 0F;
                         GameManager.MainBar.health = target.GetComponent<Health>();
-                        GameManager.addHackScore();
 
                         //Destroy the old pawn
                         Health oldHealth = this.PossessedPawn.GetComponent<Health>();
@@ -83,6 +86,9 @@ public class MouseController : Controller
                         target.gameObject.tag = this.gameObject.tag;
                         this.Possess(target);
                         target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+
+                        onHack.Invoke();
+
                     }
                 }
 

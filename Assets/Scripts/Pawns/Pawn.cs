@@ -11,7 +11,7 @@ public class Pawn : MonoBehaviour
     public bool isHackable = true;
     [Range(0.0f, 100.0f)] public float hackCost = 100F;
     [Range(0.0f, 100.0f),Tooltip("Hack power gained by the player when the ships is destroyed")]
-    public float hackbonus = 100F;
+    public float hackbonus = 10F;
 
     // Use this for initialization
     void Start ()
