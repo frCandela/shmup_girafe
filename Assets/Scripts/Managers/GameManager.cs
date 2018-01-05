@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
     public const int scorePeerHack = 10;
     public const int hackPerCombo = 5;
 
-    private static int score = 0;
-    private static int hackCount = 0;
-    private static int comboMultiplier = 0;
-    private static int maxCombo = 4;
+    private int score = 0;
+    private int hackCount = 0;
+    private int comboMultiplier = 0;
+    private const int maxCombo = 3;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -66,14 +66,20 @@ public class GameManager : MonoBehaviour
         //Initialize player
         PlayerController.Possess(StarterShip);
         PlayerController.onHack.AddListener(hackOccured);
+        PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.health = StarterShip.GetComponent<Health>();
-        MainBar.setCombo(0);
+        MainBar.setCombo(1);
+
+        //Init variables
+        score = 0;
+        hackCount = 0;
+        comboMultiplier = 0;
     }
 
-    public static void hackOccured()
+    public void hackOccured()
     {
         //Add score
         score += scorePeerHack *(int) Mathf.Pow(2, comboMultiplier);
@@ -83,12 +89,19 @@ public class GameManager : MonoBehaviour
         {
             hackCount = 0;
             ++comboMultiplier;
-            MainBar.setCombo(comboMultiplier);
+            MainBar.setCombo(comboMultiplier+1);
         }
-        
     }
 
-    public static int getScore(){ return score;}
+    public void playerBecameVirus()
+    {
+        //Reset the combo
+        hackCount = 0;
+        comboMultiplier = 0;
+        MainBar.setCombo(comboMultiplier + 1);
+    }
+
+    public int getScore(){ return score;}
 
     #region POST-EFFECT
     bool inHackEffect = false;

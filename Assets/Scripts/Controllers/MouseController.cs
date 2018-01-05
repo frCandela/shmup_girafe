@@ -16,7 +16,10 @@ public class MouseController : Controller
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
     [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
 
+    //Events
     public UnityEvent onHack;
+    public UnityEvent onBecomeVirus;
+
 
     //Private hack parameters
     private float hackPower;
@@ -53,12 +56,15 @@ public class MouseController : Controller
         //If the ship is destroyed, control the virus ship
         if (!isPossessingPawn())
         {
+            onBecomeVirus.Invoke();
             GameManager.MainBar.health = virusShip.GetComponent<Health>();
             virusShip.enabled = true;
             Possess(virusShip);
         }
 
-        //Player press Fire
+        if (Input.GetButtonDown("Hack"))
+            onHack.Invoke();
+
         if (Input.GetButton("Fire"))
         {
             if (isHacking)

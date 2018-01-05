@@ -14,6 +14,6 @@ public class ScoreText : MonoBehaviour
 
     void Update()
     {
-        text.text = string.Format("SCORE: {0:D10}", GameManager.getScore());
+        text.text = string.Format("SCORE: {0:D10}", GameManager.instance.getScore());
     }
 }
