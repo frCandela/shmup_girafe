@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114106401502837776}
   - component: {fileID: 114740727988363658}
   - component: {fileID: 114406920894972296}
-  - component: {fileID: 114275314419638478}
   m_Layer: 8
   m_Name: DPS
   m_TagString: Ennemy
@@ -40,8 +39,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351586955025634}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: -2.9687896, y: 5.828432, z: 0.026434172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,8 +78,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013420702, y: -0.004038425}
-  m_Size: {x: 1.5370898, y: 0.9191279}
+  m_Offset: {x: 0.003933312, y: -0.00837648}
+  m_Size: {x: 1.6932812, y: 1.2228295}
   m_Direction: 1
 --- !u!95 &95883281414310080
 Animator:
@@ -112,19 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHackable: 1
   hackCost: 100
-  Speed: 3
+  hackbonus: 100
+  Speed: 5
   attack: {fileID: 11400000, guid: 6b2c3cf85fe173d4d993402e52ba1853, type: 2}
---- !u!114 &114275314419638478
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1351586955025634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847130810de290e4eba916546582f0c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114406920894972296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,22 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299d438d84ca14e45843df8b5aae2f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   immortal: 0
+  health: 7
   onDie:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114275314419638478}
-        m_MethodName: AddPoints
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114740727988363658

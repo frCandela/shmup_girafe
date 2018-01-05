@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: TankAttack
   m_EditorClassIdentifier: 
   type: 0
-  rate: 1
+  rate: 0.5
   bursts:
-  - amount: 5
-    spread: 114
+  - amount: 6
+    spread: 78
     angle: 0
     prefab: {fileID: 1465794500378430, guid: 88f1de739f10f884a97b4d4188688a54, type: 2}

@@ -7,9 +7,7 @@ using UnityEngine;
 public class Ship : Pawn
 {
     [Header("Ship parameters:")]
-
-    [Range(0.0f, 20.0f)]
-    public float Speed = 0.5f;  //Movement speed of the ship
+    [Range(0.0f, 20.0f)]public float Speed = 0.5f;  //Movement speed of the ship
 
     private Rigidbody2D rb;
     private Animator anim;

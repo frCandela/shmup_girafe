@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114455568282592022}
   - component: {fileID: 114877082372555166}
   - component: {fileID: 114428674037629796}
-  - component: {fileID: 114952956820891654}
   m_Layer: 8
   m_Name: Agi
   m_TagString: Ennemy
@@ -40,8 +39,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992339935611322}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: 2.4885442, y: 5.260869, z: 0.026434172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,9 +78,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011558831, y: -0.0058995485}
-  m_Size: {x: 0.960168, y: 1.1313164}
-  m_Direction: 0
+  m_Offset: {x: -0.00030637614, y: 0.069117434}
+  m_Size: {x: 1.807852, y: 1.2677404}
+  m_Direction: 1
 --- !u!95 &95390059661707202
 Animator:
   serializedVersion: 3
@@ -110,22 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299d438d84ca14e45843df8b5aae2f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   immortal: 0
+  health: 5
   onDie:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114952956820891654}
-        m_MethodName: AddPoints
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114455568282592022
@@ -141,7 +129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHackable: 1
   hackCost: 100
-  Speed: 3
+  hackbonus: 100
+  Speed: 8
   attack: {fileID: 11400000, guid: 372e503777d6178459a67beb6f8f7c9d, type: 2}
 --- !u!114 &114877082372555166
 MonoBehaviour:
@@ -152,17 +141,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec9fcad0cdada864085434aa69b8d439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114952956820891654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1992339935611322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847130810de290e4eba916546582f0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212656868904562388

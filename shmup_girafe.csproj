@@ -264,7 +264,6 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\Scripts\AddScore.cs" />
     <Compile Include="Assets\Scripts\Attack\AttackType.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Collections\ShipCollection.cs" />
@@ -276,7 +275,6 @@
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\HackSelector.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
-    <Compile Include="Assets\Scripts\MainBar.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TimeManager.cs" />
     <Compile Include="Assets\Scripts\Pawns\Pawn.cs" />
@@ -287,6 +285,7 @@
     <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
     <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
     <Compile Include="Assets\Scripts\Turn.cs" />
+    <Compile Include="Assets\Scripts\UI\MainBar.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
   </ItemGroup>
   <ItemGroup>

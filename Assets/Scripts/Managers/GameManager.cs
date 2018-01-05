@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
     public int getScore(){ return score;}
 
     #region POST-EFFECT
+
     bool inHackEffect = false;
     public void ToogleHackEffect()
     {

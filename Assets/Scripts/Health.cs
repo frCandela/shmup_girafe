@@ -6,14 +6,15 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    [Range(0, 100)] public int health = 100;
-    bool dead = false;
-
+    [Header("Images :")]
     public bool immortal = false;
+    [Range(0, 100)] public int health = 10;
+
+    private int maxHealth;
 
     public UnityEvent onDie;
 
-    private int maxHealth;
+    private bool dead = false;
 
     private void Start()
     {

@@ -9,6 +9,7 @@ public class MainBar : MonoBehaviour
     public Image[] combo;
     public Image hackBar;
     public Image healthBar;
+    public Image healthPoint;
 
     [Header("Linked gamebjects :")]
     public HackSelector hackSelector;
