@@ -62,9 +62,6 @@ public class MouseController : Controller
             Possess(virusShip);
         }
 
-        if (Input.GetButtonDown("Hack"))
-            onHack.Invoke();
-
         if (Input.GetButton("Fire"))
         {
             if (isHacking)
