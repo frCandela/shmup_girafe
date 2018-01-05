@@ -8,26 +8,25 @@ public class MainBar : MonoBehaviour
     [Header("Images :")]
     public Image[] combo;
     public Image hackBar;
-    public Image healthBar;
     public Image healthPoint;
+
+
+    public Transform healthBarOrigin;
+    public float divider = 0.4F;
 
     [Header("Linked gamebjects :")]
     public HackSelector hackSelector;
     public MouseController mouseController;
     public Health health;
 
+    private Image[] healthPoints;
+    private const int maxHealth = 20;
+
+
+
     // Use this for initialization
     void Start ()
     {
-        //set the healthBar
-        if (healthBar)
-        {
-            healthBar.type = Image.Type.Filled;
-            healthBar.fillMethod = Image.FillMethod.Horizontal;
-            healthBar.fillOrigin = 0;
-            healthBar.fillAmount = 1F;
-        }
-
         //set the hackBar
         if (hackBar)
         {
@@ -36,13 +35,25 @@ public class MainBar : MonoBehaviour
             hackBar.fillOrigin = 0;
             hackBar.fillAmount = 1F;
         }
+        
+        healthPoints = new Image[maxHealth];
+        for (int i = 0; i < maxHealth; ++i)
+        {
+            RectTransform rt = (RectTransform)healthPoint.transform;
+            Vector3 position = healthBarOrigin.position +  new Vector3( i * rt.rect.width*healthPoint.transform.localScale.x* divider, 0, 0) ;
+
+            Image newHealthPoint = Instantiate(healthPoint, position, transform.rotation);
+            healthPoints[i] = newHealthPoint;
+            newHealthPoint.transform.SetParent(transform);
+            newHealthPoint.name = "healthPoint" + i;
+        }
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
         if (health)
-            setHealthBar(health.getHealthRatio());
+            setHealthBar(health.health);
         if (hackSelector)
             setHackBar(hackSelector.getHackPowerRatio());
         else if (mouseController)
@@ -60,12 +71,16 @@ public class MainBar : MonoBehaviour
                 combo[i].enabled = false;
         }
     }
-
     //Set the health bar, value must be between 0F and 1F
-    public void setHealthBar( float value )
+    public void setHealthBar(int value)
     {
-        if(value >= 0F && value <= 1F && value != healthBar.fillAmount)
-            healthBar.fillAmount = value;  
+        for (int i = 0; i < maxHealth; ++i)
+        {
+            if (i < value)
+                healthPoints[i].enabled = true;
+            else
+                healthPoints[i].enabled = false;
+        }
     }
 
     //Set the hack bar, value must be between 0F and 1F
@@ -82,7 +97,7 @@ public class MainBar : MonoBehaviour
 public class SliceEditor : Editor
 {
     public int setCombo;
-    public float setHealth;
+    public int setHealth;
     public float setHack;
 
     public override void OnInspectorGUI()
@@ -98,8 +113,9 @@ public class SliceEditor : Editor
         setCombo = EditorGUILayout.IntField("combo", setCombo);
         if (GUILayout.Button("setCombo"))
             myMainBar.setCombo(setCombo);
+        
         //Health
-        setHealth = EditorGUILayout.Slider("setHealth", setHealth, 0,1);
+        setHealth =(int) EditorGUILayout.Slider("setHealth", setHealth, 0,1);
         if (GUILayout.Button("setHealth"))
             myMainBar.setHealthBar(setHealth);
 
