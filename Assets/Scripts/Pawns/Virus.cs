@@ -2,16 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//When the player 
+[RequireComponent(typeof(Animator))]
 public class VirusShip : Ship
 {
+    private  float glitchTimer;
+    private float glitchDelta;
+
+    private void Start()
+    {
+        glitchTimer = 0F;
+        glitchDelta = 0F;
+    }
+
     private void Update()
     {
          if ( ! isPossessed() )
         {
             this.enabled = false;
         }
-            
+
+         //Glitch animation
+        glitchTimer += Time.deltaTime;
+        if (glitchTimer >= glitchDelta)
+        {
+            anim.SetTrigger("glitch");
+            glitchTimer = 0F;
+            glitchDelta = Random.Range(0, 3f);
+        }
+        
+
+
+
     }
 
     private void OnEnable()

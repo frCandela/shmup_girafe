@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4428681170866686}
   - component: {fileID: 50977752139751704}
-  - component: {fileID: 212535217106139462}
-  - component: {fileID: 60032726406194798}
   - component: {fileID: 114260992827503272}
   - component: {fileID: 114664249371947100}
+  - component: {fileID: 95519488051150046}
+  - component: {fileID: 212750728400253798}
+  - component: {fileID: 61568427593623356}
   m_Layer: 0
   m_Name: VirusShip
   m_TagString: Player
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939672186106990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.76, y: -1.95, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalPosition: {x: -3.28, y: 10.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &60032726406194798
-PolygonCollider2D:
+--- !u!61 &61568427593623356
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,24 +77,36 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.044811964, y: 0.117200375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.32, y: 1.32}
-    newSize: {x: 1.32, y: 1.32}
+    oldSize: {x: 1.23, y: 1.25}
+    newSize: {x: 1.23, y: 1.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.02, y: 0.65999997}
-      - {x: -0.65999997, y: -0.59999996}
-      - {x: -0.65999997, y: -0.65999997}
-      - {x: 0.65999997, y: -0.65999997}
-      - {x: 0.65999997, y: -0.62}
-      - {x: 0.02, y: 0.65999997}
+  serializedVersion: 2
+  m_Size: {x: 1.0990114, y: 1.0155993}
+  m_EdgeRadius: 0
+--- !u!95 &95519488051150046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939672186106990}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48f5414b22374a641be539b416018d15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114260992827503272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,8 +118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299d438d84ca14e45843df8b5aae2f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   immortal: 1
+  health: 100
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114664249371947100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,11 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096fa1233db2d7643baafe5d969ee168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   isHackable: 1
+  hackCost: 100
+  hackbonus: 10
   Speed: 8.4
   attack: {fileID: 0}
---- !u!212 &212535217106139462
+--- !u!212 &212750728400253798
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,12 +175,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 02d1d94a44029da4f91aa7e773b2b39b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da8111a81aa1bc14487b59065b9ada5a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.32, y: 1.32}
+  m_Size: {x: 1.23, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
