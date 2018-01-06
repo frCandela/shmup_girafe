@@ -13,8 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   rate: 1.5
+  timerShoot: 0.59996396
+  currentShoot: 0
   bursts:
-  - amount: 3
+  - amount: 1
     spread: 10
     angle: 0
     prefab: {fileID: 1620326717983798, guid: cc2e6f013333fa34da16928e64d1c244, type: 2}

@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         PlayerController.Possess(StarterShip);
         PlayerController.onHack.AddListener(hackOccured);
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
-        PlayerController.onTakeDamage.AddListener(virusHit);
+        PlayerController.onTakeDamage.AddListener(playerHit);
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         comboMultiplier = 0;
     }
 
-    private void virusHit()
+    private void playerHit()
     {
         if (PlayerController.isVirus())
         {
@@ -96,8 +96,6 @@ public class GameManager : MonoBehaviour
             if (score < 0)
                 score = 0;
         }
-            
-
     }
 
     private void hackOccured()

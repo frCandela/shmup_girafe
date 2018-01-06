@@ -26,7 +26,8 @@ public class Pawn : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        controller.onTakeDamage.Invoke();
+        if(controller)
+            controller.onTakeDamage.Invoke();
     }
 
     public void setPossessed(Controller newController)

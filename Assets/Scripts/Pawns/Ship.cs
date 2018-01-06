@@ -5,6 +5,7 @@ using UnityEngine;
 
 //A basic pawn for a spaceship in the game
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Attack))]
 public class Ship : Pawn
 {
     [Header("Ship parameters:")]
@@ -13,9 +14,7 @@ public class Ship : Pawn
     private Rigidbody2D rb;
     protected Animator anim;
 
-    public AttackType attack;
-    float timerShoot = 0;
-    int currentShoot = 0;
+    protected Attack attack;
 
     // Use this for initialization
     void Awake()
@@ -27,11 +26,10 @@ public class Ship : Pawn
 
         anim = GetComponent<Animator>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Start()
     {
-        timerShoot -= Time.deltaTime;
+        attack = GetComponent<Attack>();
     }
 
     //Moves the Ship horizontally
@@ -53,13 +51,8 @@ public class Ship : Pawn
     //Makes the ship shoot ! 
     public override void Fire()
     {
-        if (timerShoot < 0)
-        {
-            if (anim)
-                anim.SetTrigger("Shoot");
-            attack.Attack(this.gameObject, currentShoot);
-            timerShoot = 1 / attack.rate;
-            currentShoot = ++currentShoot % attack.bursts.Count;
-        }
+        if (anim)
+            anim.SetTrigger("Shoot");
+        attack.Fire(this.gameObject, transform);
     }
 }

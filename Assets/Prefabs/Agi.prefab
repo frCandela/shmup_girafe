@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114455568282592022}
   - component: {fileID: 114877082372555166}
   - component: {fileID: 114428674037629796}
+  - component: {fileID: 114621167545418758}
   m_Layer: 8
   m_Name: Agi
   m_TagString: Ennemy
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1992339935611322}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 2.4885442, y: 5.260869, z: 0.026434172}
+  m_LocalPosition: {x: 0.05, y: 5.07, z: 0.026434172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,9 +130,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHackable: 1
   hackCost: 100
-  hackbonus: 100
+  hackbonus: 10
   Speed: 8
-  attack: {fileID: 11400000, guid: 372e503777d6178459a67beb6f8f7c9d, type: 2}
+--- !u!114 &114621167545418758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992339935611322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3adb87ec3671684b85e2b752857c42a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: {fileID: 11400000, guid: 372e503777d6178459a67beb6f8f7c9d, type: 2}
 --- !u!114 &114877082372555166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,6 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9fcad0cdada864085434aa69b8d439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!212 &212656868904562388
 SpriteRenderer:
   m_ObjectHideFlags: 1

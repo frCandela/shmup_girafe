@@ -29,10 +29,11 @@ public class VirusShip : Ship
             glitchTimer = 0F;
             glitchDelta = Random.Range(0, 3f);
         }
-        
+    }
 
-
-
+    //Makes the ship shoot ! 
+    public override void Fire()
+    {
     }
 
     private void OnEnable()
