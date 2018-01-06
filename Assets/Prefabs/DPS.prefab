@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 114902661856517662}
   m_Layer: 8
   m_Name: DPS
-  m_TagString: Untagged
+  m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647051280827648}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.3080001, y: -0.273, z: 0}
+  m_LocalPosition: {x: 0.199, y: -0.273, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4125881613613886}
@@ -134,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1881413810030756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.296, y: 0.329, z: 0}
+  m_LocalPosition: {x: -0.215, y: 0.329, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4125881613613886}
@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1302683091840148}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.296, y: -0.282, z: 0}
+  m_LocalPosition: {x: -0.201, y: -0.282, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4125881613613886}
@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372256347710910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.308, y: 0.326, z: 0}
+  m_LocalPosition: {x: 0.202, y: 0.326, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4125881613613886}
@@ -286,7 +286,8 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
-  Speed: 15
+  Speed: 5
+  canBeStunned: 1
   cannonPosition: {fileID: 4473357877139156}
   cannonPosition2: {fileID: 4690998034521930}
   cannonPosition3: {fileID: 4678738130884302}

@@ -14,14 +14,14 @@ public class VirusShip : Ship
         glitchDelta = 0F;
     }
 
-    private void Update()
+    protected override void virtualUpdate()
     {
-         if ( ! isPossessed() )
-        {
-            this.enabled = false;
-        }
+        base.virtualUpdate();
 
-         //Glitch animation
+        if (!isPossessed())
+            this.enabled = false;
+
+        //Glitch animation
         glitchTimer += Time.deltaTime;
         if (glitchTimer >= glitchDelta)
         {

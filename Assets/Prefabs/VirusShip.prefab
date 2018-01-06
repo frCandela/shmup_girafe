@@ -140,7 +140,7 @@ MonoBehaviour:
   hackCost: 100
   hackbonus: 10
   Speed: 8.4
-  attack: {fileID: 0}
+  canBeStunned: 0
 --- !u!212 &212750728400253798
 SpriteRenderer:
   m_ObjectHideFlags: 1

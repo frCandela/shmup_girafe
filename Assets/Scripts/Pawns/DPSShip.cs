@@ -12,9 +12,9 @@ public class DPSShip : Ship
     public Transform cannonPosition3;
     public Transform cannonPosition4;
 
-    private Attack attack2;
-    private Attack attack3;
-    private Attack attack4;
+    protected Attack attack2;
+    protected Attack attack3;
+    protected Attack attack4;
 
     private void Start()
     {
@@ -28,13 +28,16 @@ public class DPSShip : Ship
     //Makes the ship shoot ! 
     public override void Fire()
     {
-        if (anim)
-            anim.SetTrigger("Shoot");
+        if ( ! IsStunned())
+        {
+            if (anim)
+                anim.SetTrigger("Shoot");
 
-        attack.Fire(this.gameObject, cannonPosition);
-        attack2.Fire(this.gameObject, cannonPosition2);
-        attack3.Fire(this.gameObject, cannonPosition3);
-        attack4.Fire(this.gameObject, cannonPosition4);
+            attack.Fire(this.gameObject, cannonPosition);
+            attack2.Fire(this.gameObject, cannonPosition2);
+            attack3.Fire(this.gameObject, cannonPosition3);
+            attack4.Fire(this.gameObject, cannonPosition4);
+        }
     }
 
 }

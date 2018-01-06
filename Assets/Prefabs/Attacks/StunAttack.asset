@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
-  m_Name: TankAttack
+  m_Name: StunAttack
   m_EditorClassIdentifier: 
-  rate: 0.8
+  rate: 0.5
   bursts:
-  - amount: 6
-    spread: 111
+  - amount: 1
+    spread: 0
     angle: 0
-    prefab: {fileID: 1465794500378430, guid: 88f1de739f10f884a97b4d4188688a54, type: 2}
+    prefab: {fileID: 1465794500378430, guid: fc9df16e23ae68d45ae46a1f8f649b61, type: 2}

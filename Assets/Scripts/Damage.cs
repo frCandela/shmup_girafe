@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Damage : MonoBehaviour {
 
     [Range(0, 100)] public int damage = 100;
+    [Range(0, 10)] public float stunDuration = 0F;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,13 +18,16 @@ public class Damage : MonoBehaviour {
                 health.takeDamage(damage);
                 Destroy(this.gameObject);
             }
-            Pawn pawn = collision.gameObject.GetComponent<Pawn>();
-            if (pawn)
+
+            Ship ship = collision.gameObject.GetComponent<Ship>();
+            if (ship)
             {
-                pawn.takeDamage(damage);
+                ship.takeDamage(damage);
+
+                //Stun
+                if(stunDuration > 0 )
+                    ship.Stun(stunDuration);
             }
         }
-
-
     }
 }

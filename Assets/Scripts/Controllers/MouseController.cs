@@ -72,7 +72,8 @@ public class MouseController : Controller
                 {
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
 
-                    if(target.hackCost <= hackPower)
+
+                    if(target.hackCost <= hackPower && target != PossessedPawn)
                     {
                         //misc
                         hackPower -= target.hackCost;
@@ -125,9 +126,7 @@ public class MouseController : Controller
     {
         //Moves the pawn towards the mouse position
         if (isPossessingPawn())
-        {
-            PossessedPawn.transform.position = Vector3.MoveTowards(PossessedPawn.transform.position, transform.position, ((Ship)PossessedPawn).Speed * Time.fixedDeltaTime);
-        }
+            PossessedPawn.MoveTowards(transform.position);
     }
 
     void OnGUI()

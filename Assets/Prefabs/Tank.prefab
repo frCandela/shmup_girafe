@@ -113,7 +113,7 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
-  Speed: 3
+  Speed: 4
 --- !u!114 &114644398733863882
 MonoBehaviour:
   m_ObjectHideFlags: 1

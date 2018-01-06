@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114241635372821202}
   m_Layer: 8
   m_Name: StarterShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   hackCost: 100
   hackbonus: 10
   Speed: 15
+  canBeStunned: 1
 --- !u!114 &114979676994656424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299d438d84ca14e45843df8b5aae2f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  immortal: 0
+  immortal: 1
   health: 7
   onDie:
     m_PersistentCalls:

@@ -11,10 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
   m_Name: AgiAttak
   m_EditorClassIdentifier: 
-  type: 0
   rate: 2
   bursts:
-  - amount: 2
-    spread: 30
+  - amount: 1
+    spread: 0
     angle: 0
     prefab: {fileID: 1625712674743570, guid: 1c7216191b875e14e9cc1573634cded2, type: 2}

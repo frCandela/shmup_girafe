@@ -13,16 +13,12 @@ public class Pawn : MonoBehaviour
     [Range(0.0f, 100.0f),Tooltip("Hack power gained by the player when the ships is destroyed")]
     public float hackbonus = 10F;
 
-    // Use this for initialization
-    void Start ()
+    protected virtual void virtualUpdate(){}
+
+    private void Update()
     {
+        virtualUpdate();
     }
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     public void takeDamage(int damage)
     {
@@ -42,6 +38,8 @@ public class Pawn : MonoBehaviour
     //Default pawn actions
     public virtual void MoveHorizontal  ( float axisValue) {}
     public virtual void MoveVertical    ( float axisValue) {}
+    public virtual void MoveTowards(Vector3 point){}
+
     public virtual void Fire() {}
 
     private void OnDestroy()
