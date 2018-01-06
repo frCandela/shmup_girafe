@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private PostProcessingBehaviour PostProcessing;
 
     public const int scorePeerHack = 10;
+    public const int scoreLossHitVirus = 10;
     public const int hackPerCombo = 5;
 
     private int score = 0;
@@ -37,15 +38,22 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            InitGame();
+            AwakeGame();
         } 
         else if (instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
     }
+    private void Start()
+    {
+        if (instance == this)
+        {
+            //
+        }
+    }
 
     //Initializes the game for each level.
-    void InitGame()
+    void AwakeGame()
     {
         //Initialisation checks
         if (!InitStarterShip)
@@ -67,6 +75,7 @@ public class GameManager : MonoBehaviour
         PlayerController.Possess(StarterShip);
         PlayerController.onHack.AddListener(hackOccured);
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
+        PlayerController.onTakeDamage.AddListener(virusHit);
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
@@ -79,7 +88,19 @@ public class GameManager : MonoBehaviour
         comboMultiplier = 0;
     }
 
-    public void hackOccured()
+    private void virusHit()
+    {
+        if (PlayerController.isVirus())
+        {
+            score -= scoreLossHitVirus;
+            if (score < 0)
+                score = 0;
+        }
+            
+
+    }
+
+    private void hackOccured()
     {
         //Add score
         score += scorePeerHack *(int) Mathf.Pow(2, comboMultiplier);

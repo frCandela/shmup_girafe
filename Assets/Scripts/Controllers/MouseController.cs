@@ -20,7 +20,6 @@ public class MouseController : Controller
     public UnityEvent onHack;
     public UnityEvent onBecomeVirus;
 
-
     //Private hack parameters
     private float hackPower;
     private float maxHackPower = 100F;
@@ -59,6 +58,7 @@ public class MouseController : Controller
             onBecomeVirus.Invoke();
             GameManager.MainBar.health = virusShip.GetComponent<Health>();
             virusShip.enabled = true;
+
             Possess(virusShip);
         }
 
@@ -110,6 +110,8 @@ public class MouseController : Controller
             TimeManager.doSlowMotion(3, 0.05f);
         }
     }
+
+    public bool isVirus() { return virusShip.enabled; }
 
     public float getHackPowerRatio() { return hackPower / maxHackPower; }
     public void addHackPower( float value )

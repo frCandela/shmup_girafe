@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     private int maxHealth;
 
     public UnityEvent onDie;
+    
 
     private bool dead = false;
 

@@ -9,7 +9,8 @@ public class Bullet : MonoBehaviour {
 
     public float lifetime = 3;
 
-    void Update() {
+    void Update()
+    {
         this.transform.position += this.transform.up * Time.deltaTime * speed;
 
         lifetime -= Time.deltaTime;

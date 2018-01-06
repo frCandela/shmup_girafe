@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 //A controller is a script used to control a pawn
@@ -8,6 +9,8 @@ public class Controller : MonoBehaviour
 {
     //The pawn the controller is possessing
     public Pawn PossessedPawn { get; private set; }
+
+    public UnityEvent onTakeDamage;
 
     // Use this for initialization
     void Start ()

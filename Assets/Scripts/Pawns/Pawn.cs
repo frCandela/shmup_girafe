@@ -24,10 +24,16 @@ public class Pawn : MonoBehaviour
 		
 	}
 
+    public void takeDamage(int damage)
+    {
+        controller.onTakeDamage.Invoke();
+    }
+
     public void setPossessed(Controller newController)
     {
         controller = newController;
-    }    
+    }   
+    
 
     //Return true if the controller is possessed
     public bool isPossessed() { return controller; }
