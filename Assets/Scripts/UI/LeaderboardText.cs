@@ -4,17 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
-public class ScoreText : MonoBehaviour
-{
+public class LeaderboardText : MonoBehaviour {
     private Text text;
 
-    void Start()
-    {
+    void Start() {
         text = GetComponent<Text>();
+        UpdateScore(0);
     }
 
-    public void Update()
-    {
-        text.text = string.Format("SCORE: {0:D10}", GameManager.instance.getScore());
+    public void UpdateScore(int i) {
+        StartCoroutine(OnlineScore.GetScores(text, i));
     }
 }

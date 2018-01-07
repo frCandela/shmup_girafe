@@ -5,10 +5,9 @@ using UnityEngine;
 using UnityEngine.PostProcessing;
 
 //GameManager (Singleton pattern)
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
-    
+
     public static Ship StarterShip { get; private set; }
     public static MouseController PlayerController { get; private set; }
     public static CameraController MainCameraController { get; private set; }
@@ -27,6 +26,7 @@ public class GameManager : MonoBehaviour
     public const int hackPerCombo = 5;
 
     private int score = 0;
+    private int[] scores = new int[5];
     private int hackCount = 0;
     private int comboMultiplier = 0;
     private const int maxCombo = 3;
@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
 
         //Init variables
         score = 0;
+        scores = new int[5];
         hackCount = 0;
         comboMultiplier = 0;
     }
@@ -121,6 +122,7 @@ public class GameManager : MonoBehaviour
     }
 
     public int getScore(){ return score;}
+    public void saveScore(int check) { scores[check] = score; }
 
     #region POST-EFFECT
 

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shmup_girafe", "shmup_girafe.csproj", "{760127A1-A19C-C18A-8EAB-A85B93846951}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shmup_girafe.Editor", "shmup_girafe.Editor.csproj", "{E8509BEC-DB12-F534-0102-F9D2883DA1E3}"
