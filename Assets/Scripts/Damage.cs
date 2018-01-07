@@ -29,5 +29,8 @@ public class Damage : MonoBehaviour {
                     ship.Stun(stunDuration);
             }
         }
+        if (collision.gameObject.tag == "Killer") {
+            Destroy(this.gameObject);
+        }
     }
 }
