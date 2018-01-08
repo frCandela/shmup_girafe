@@ -49,9 +49,9 @@ public class Ship : Pawn
         }
     }
 
-    protected override void virtualUpdate()
+    protected override void Update()
     {
-        base.virtualUpdate();
+        base.Update();
 
         stunTimer -= Time.deltaTime;
         if (stunTimer <= 0)

@@ -14,9 +14,9 @@ public class VirusShip : Ship
         glitchDelta = 0F;
     }
 
-    protected override void virtualUpdate()
+    protected override void Update()
     {
-        base.virtualUpdate();
+        base.Update();
 
         if (!isPossessed())
             this.enabled = false;

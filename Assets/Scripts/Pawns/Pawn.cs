@@ -13,11 +13,8 @@ public class Pawn : MonoBehaviour
     [Range(0.0f, 100.0f),Tooltip("Hack power gained by the player when the ships is destroyed")]
     public float hackbonus = 10F;
 
-    protected virtual void virtualUpdate(){}
-
-    private void Update()
+    protected virtual void Update()
     {
-        virtualUpdate();
     }
 
     public void takeDamage(int damage)
