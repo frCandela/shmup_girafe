@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50877535059127906}
   - component: {fileID: 70818305139544968}
   - component: {fileID: 114406920894972296}
+  - component: {fileID: 114964515329419696}
   - component: {fileID: 114778934615674300}
   - component: {fileID: 114579768677809532}
   - component: {fileID: 114499869075381154}
@@ -257,7 +258,18 @@ MonoBehaviour:
   health: 7
   onDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114964515329419696}
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114499869075381154
@@ -320,6 +332,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: {fileID: 11400000, guid: 6b2c3cf85fe173d4d993402e52ba1853, type: 2}
+--- !u!114 &114964515329419696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351586955025634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d599b899b6bbb4e95cf1e4dbc59daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212344798526154072
 SpriteRenderer:
   m_ObjectHideFlags: 1

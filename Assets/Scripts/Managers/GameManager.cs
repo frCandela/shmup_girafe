@@ -120,7 +120,8 @@ public class GameManager : MonoBehaviour {
         MainBar.setCombo(comboMultiplier + 1);
     }
 
-    public int getScore(){ return score;}
+    public int getScore(){ return score; }
+    public void addScore(int points) { score += points; }
     public void saveScore(int check) { scores[check] = score; }
 
     #region POST-EFFECT

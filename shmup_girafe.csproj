@@ -285,6 +285,7 @@
     <Compile Include="Assets\Scripts\Pawns\Ship.cs" />
     <Compile Include="Assets\Scripts\Pawns\Virus.cs" />
     <Compile Include="Assets\Scripts\Pawns\VirusShip.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Spawn\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Spawn\CheckpointBehavior.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnBehavior.cs" />

@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 70053976390590026}
   - component: {fileID: 114432525842708064}
   - component: {fileID: 114679996411580636}
+  - component: {fileID: 114150236669439400}
   - component: {fileID: 114595454234554930}
   - component: {fileID: 114588785287576140}
   - component: {fileID: 114357292445308770}
@@ -158,6 +159,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114150236669439400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646188998978992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d599b899b6bbb4e95cf1e4dbc59daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114357292445308770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,6 +225,7 @@ MonoBehaviour:
   hackCost: 100
   hackbonus: 10
   Speed: 10
+  canBeStunned: 1
   cannonPosition: {fileID: 4305163887705294}
   cannonPosition2: {fileID: 4000633499706040}
 --- !u!114 &114679996411580636
@@ -230,7 +243,18 @@ MonoBehaviour:
   health: 5
   onDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114150236669439400}
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!212 &212113796635507458

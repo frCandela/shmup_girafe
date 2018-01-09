@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     GameObject lastTunnel, toDelete;
 
     private BoxCollider2D cameraTrigger;
+    public float trauma;
 
     // Use this for initialization
     void Start ()
@@ -28,13 +29,27 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        trauma -= Time.deltaTime * 0.2f;
+        trauma = Mathf.Clamp(trauma, 0, 1);
+
+        float shake = trauma * trauma * trauma;
+
+        transform.rotation = Quaternion.Euler(new Vector3(
+            shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 0) - 0.5f) * 15,
+            shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 1) - 0.5f) * 15,
+            shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 2) - 0.5f) * 15));
+
         //Creates a new tunnel after the last one?
-        if(transform.position.y > lastTunnel.transform.position.y + 10) {
+        if (transform.position.y > lastTunnel.transform.position.y + 10) {
             if (toDelete)
                 Destroy(toDelete);
             toDelete = lastTunnel;
             lastTunnel = Instantiate(tunnelPrefab, lastTunnel.transform.position + new Vector3(0, 3.2F*32.1f, 0), lastTunnel.transform.rotation);
         }
+    }
+
+    public void Shake(float amount) {
+        trauma += amount;
     }
 
     private void resizeCameraTrigger()
@@ -69,8 +84,6 @@ public class CameraController : MonoBehaviour
         Bullet bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet)
             bullet.notInCameraView = false;
-
-
     }
 
     //Object leaving the camera view
