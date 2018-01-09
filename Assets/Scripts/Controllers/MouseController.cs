@@ -101,17 +101,19 @@ public class MouseController : Controller
                 }
 
                 TimeManager.resetSlowMotion();
-                GameManager.instance.setHackEffect(false);
             }
             else
                 PossessedPawn.Fire();
+        }
+        
+        if(isHacking && !TimeManager.inSlowMotion()) {
+            isHacking = false;
         }
 
         //Starts the hack !
         if (Input.GetButton("Hack") && !isHacking && hackPower >= minHackPower)
         {
             isHacking = true;
-            GameManager.instance.ToogleHackEffect();
             TimeManager.doSlowMotion(3, 0.05f);
         }
     }
@@ -141,12 +143,6 @@ public class MouseController : Controller
         Vector3 p = c.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, - GameManager.MainCameraController.transform.position.z));
 
         transform.position = new Vector3(p.x, p.y, 0);
-
-        /*GUILayout.BeginArea(new Rect(20, 20, 250, 120));
-        GUILayout.Label("Screen pixels: " + c.pixelWidth + ":" + c.pixelHeight);
-        GUILayout.Label("Mouse position: " + mousePos);
-        GUILayout.Label("World position: " + p.ToString("F3"));
-        GUILayout.EndArea();*/
     }
 
 }

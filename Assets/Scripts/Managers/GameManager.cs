@@ -80,6 +80,11 @@ public class GameManager : MonoBehaviour {
         scores = new int[5];
         hackCount = 0;
         comboMultiplier = 0;
+
+        //Post Processing reset
+        UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
+        set.contribution = 0;
+        PostProcessing.profile.userLut.settings = set;
     }
 
     //When the player is hit by a bullet
@@ -121,21 +126,6 @@ public class GameManager : MonoBehaviour {
     #region POST-EFFECT
 
     bool inHackEffect = false;
-    public void ToogleHackEffect()
-    {
-        if (!inHackEffect)
-        {
-            StopCoroutine(stopHack(1f));
-            StartCoroutine(startHack(1f));
-        }
-        else
-        {
-            StopCoroutine(startHack(1f));
-            StartCoroutine(stopHack(1f));
-        }
-        inHackEffect = !inHackEffect;
-    }
-
     public void setHackEffect( bool state )
     {
         if(inHackEffect != state)

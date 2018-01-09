@@ -8,6 +8,7 @@ public class TimeManager : MonoBehaviour
     private static float m_slowDownDuration;
     private static float m_timeElapsedSlowMo;
 
+    private static bool m_inSlowMo = false;
 
     public static TimeManager instance = null;
 
@@ -37,6 +38,9 @@ public class TimeManager : MonoBehaviour
         Time.timeScale = 1F;
         Time.fixedDeltaTime = Time.fixedUnscaledDeltaTime;
         m_slowDownDuration = 0F;
+        m_inSlowMo = false;
+        if (GameManager.instance)
+            GameManager.instance.setHackEffect(false);
     }
 
     public static void doSlowMotion(float slowDownDuration, float timeScaleFactor)
@@ -44,7 +48,14 @@ public class TimeManager : MonoBehaviour
         Time.timeScale = timeScaleFactor;
         m_slowDownDuration = slowDownDuration;
         m_timeElapsedSlowMo = 0F;
+        m_inSlowMo = true;
         Time.fixedDeltaTime = Time.fixedUnscaledDeltaTime * timeScaleFactor;
+        if (GameManager.instance)
+            GameManager.instance.setHackEffect(true);
+    }
+
+    public static bool inSlowMotion() {
+        return m_inSlowMo;
     }
 
     void InitTime()
