@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114234416029424492}
   - component: {fileID: 114129248263478540}
   - component: {fileID: 58436751843917154}
+  - component: {fileID: 50719474431657034}
   m_Layer: 0
   m_Name: DPSBullet
   m_TagString: Untagged
@@ -43,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50719474431657034
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1620326717983798}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58436751843917154
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -70,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  stunDuration: 0
 --- !u!114 &114234416029424492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   lifetime: 3
+  notInCameraView: 0
 --- !u!212 &212675666388719702
 SpriteRenderer:
   m_ObjectHideFlags: 1

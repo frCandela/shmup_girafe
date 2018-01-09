@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour {
     private PostProcessingBehaviour PostProcessing;
 
     public const int scorePeerHack = 10;
-    public const int scoreLossHitVirus = 10;
-    public const int hackPerCombo = 5;
+    public const int scoreLossHitVirus = 1;
+    public const int hackPerCombo = 1;
 
     private int score = 0;
     private int[] scores = new int[5];
@@ -43,13 +43,6 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-    }
-    private void Start()
-    {
-        if (instance == this)
-        {
-            //
-        }
     }
 
     //Initializes the game for each level.
@@ -89,6 +82,7 @@ public class GameManager : MonoBehaviour {
         comboMultiplier = 0;
     }
 
+    //When the player is hit by a bullet
     private void playerHit()
     {
         if (PlayerController.isVirus())

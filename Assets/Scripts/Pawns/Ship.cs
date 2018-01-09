@@ -59,13 +59,11 @@ public class Ship : Pawn
             Health otherHealth = ship.GetComponent<Health>();
             Health myHealth = GetComponent<Health>();
 
+            //Checks if no ship is already destroyed
             if( ! myHealth.isDead() && ! otherHealth.isDead())
             {
                 int otherHealthValue = otherHealth.health;
                 int myHealthValue = myHealth.health;
-
-                print(otherHealthValue + " " + myHealthValue);
-
                 otherHealth.takeDamage(myHealthValue);
                 myHealth.takeDamage(otherHealthValue);
             }

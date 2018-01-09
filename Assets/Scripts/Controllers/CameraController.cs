@@ -58,23 +58,30 @@ public class CameraController : MonoBehaviour
         transform.position = newPosition;
     }
 
+    //Object entering the camera view
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Adds the ship to the shipsInCameraView dictionary
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if(ship)
-        {
             shipsInCameraView[ship] = ship;
-        }
+
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        if (bullet)
+            bullet.notInCameraView = false;
+
+
     }
 
+    //Object leaving the camera view
     private void OnTriggerExit2D(Collider2D collision)
     {
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if (ship)
-        {
             shipsInCameraView.Remove(ship);
-        }
+
+        if (collision.gameObject.GetComponent<Bullet>())
+            Destroy(collision.gameObject);
     }
 
     public void snapInCameraView(Pawn target)
