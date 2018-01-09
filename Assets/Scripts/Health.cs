@@ -29,6 +29,11 @@ public class Health : MonoBehaviour
         maxHealth = health;
     }
 
+    public void RestoreHealth()
+    {
+        health = maxHealth;
+    }
+
     //Returns the health scaled between 0 and 1
     public float getHealthRatio()
     {

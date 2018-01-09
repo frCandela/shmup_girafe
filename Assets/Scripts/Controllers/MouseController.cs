@@ -91,6 +91,10 @@ public class MouseController : Controller
                         this.Possess(target);
                         target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
 
+                        Health targetHealth = target.GetComponent<Health>();
+                        if (targetHealth)
+                            targetHealth.RestoreHealth();
+
                         onHack.Invoke();
 
                     }
@@ -125,7 +129,7 @@ public class MouseController : Controller
     void FixedUpdate()
     {
         //Moves the pawn towards the mouse position
-        if (isPossessingPawn())
+        if (isPossessingPawn() &&  ! isHacking )
             PossessedPawn.MoveTowards(transform.position);
     }
 
