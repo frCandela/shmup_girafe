@@ -49,10 +49,34 @@ public class Ship : Pawn
         }
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Collision with other ships
+        Ship ship = collision.gameObject.GetComponent<Ship>();
+        if (ship)
+        {
+            Health otherHealth = ship.GetComponent<Health>();
+            Health myHealth = GetComponent<Health>();
+
+            if( ! myHealth.isDead() && ! otherHealth.isDead())
+            {
+                int otherHealthValue = otherHealth.health;
+                int myHealthValue = myHealth.health;
+
+                print(otherHealthValue + " " + myHealthValue);
+
+                otherHealth.takeDamage(myHealthValue);
+                myHealth.takeDamage(otherHealthValue);
+            }
+        }
+    }
+
     protected override void Update()
     {
         base.Update();
 
+        //Stun
         stunTimer -= Time.deltaTime;
         if (stunTimer <= 0)
         {

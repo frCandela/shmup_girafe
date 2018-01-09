@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
 
     private bool dead = false;
 
+    public bool isDead() { return dead;  }
+
     private void Start()
     {
         if (immortal)
