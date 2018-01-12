@@ -105,8 +105,12 @@ public class MouseController : Controller
             else
                 PossessedPawn.Fire();
         }
-        
-        if(isHacking && !TimeManager.inSlowMotion()) {
+
+        if (Input.GetButtonUp("Fire"))
+            PossessedPawn.UnFire();
+
+
+        if (isHacking && !TimeManager.inSlowMotion()) {
             isHacking = false;
         }
 

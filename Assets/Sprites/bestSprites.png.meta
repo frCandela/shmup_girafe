@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 02d1d94a44029da4f91aa7e773b2b39b
-timeCreated: 1515168987
+timeCreated: 1515767893
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,8 @@ TextureImporter:
     21300004: bestSprites_2
     21300006: bestSprites_3
     21300008: bestSprites_4
+    21300010: bestSprites_5
+    21300012: bestSprites_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -155,6 +157,34 @@ TextureImporter:
         y: 326
         width: 161
         height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bestSprites_5
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 36
+        width: 258
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bestSprites_6
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 67
+        width: 142
+        height: 142
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

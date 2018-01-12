@@ -6,12 +6,15 @@ using UnityEngine;
 //A basic pawn for a spaceship in the game
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(Attack))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Health))]
 public class Ship : Pawn
 {
     [Header("Ship parameters:")]
     [Range(0.0f, 20.0f)]public float Speed = 0.5f;  //Movement speed of the ship
 
-    private Rigidbody2D rb;
+   
+
 
     //Stun
     public bool canBeStunned = true;
@@ -20,6 +23,8 @@ public class Ship : Pawn
 
     protected Animator anim;
     protected Attack attack;
+    protected Rigidbody2D rb;
+    protected Health health;
 
     // Use this for initialization
     void Awake()
@@ -30,6 +35,7 @@ public class Ship : Pawn
         rb.gravityScale = 0f;
 
         anim = GetComponent<Animator>();
+        health = GetComponent<Health>();
     }
 
     private void Start()

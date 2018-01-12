@@ -283,6 +283,7 @@
     <Compile Include="Assets\Scripts\Pawns\DPSShip.cs" />
     <Compile Include="Assets\Scripts\Pawns\Pawn.cs" />
     <Compile Include="Assets\Scripts\Pawns\Ship.cs" />
+    <Compile Include="Assets\Scripts\Pawns\TankShip.cs" />
     <Compile Include="Assets\Scripts\Pawns\Virus.cs" />
     <Compile Include="Assets\Scripts\Pawns\VirusShip.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
