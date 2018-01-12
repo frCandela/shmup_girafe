@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: bd2959eb92cd35e44bed5b76af0d3427
-timeCreated: 1515169461
+timeCreated: 1515756086
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -100,9 +100,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7
-        y: 1035
+        y: 1030
         width: 3351
-        height: 1024
+        height: 1037
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,10 +113,10 @@ TextureImporter:
       name: jauges_2
       rect:
         serializedVersion: 2
-        x: 1082
-        y: 489
-        width: 1489
-        height: 128
+        x: 1104
+        y: 462
+        width: 1411
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,10 +127,10 @@ TextureImporter:
       name: jauges_3
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 459
-        width: 203
-        height: 100
+        x: 2758
+        y: 657
+        width: 160
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: jauges_4
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 320
-        width: 858
-        height: 67
+        x: 1075
+        y: 297
+        width: 856
+        height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: jauges_5
       rect:
         serializedVersion: 2
-        x: 71
-        y: 487
-        width: 450
-        height: 450
+        x: 69
+        y: 510
+        width: 401
+        height: 395
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 2, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: jauges_1
       rect:
         serializedVersion: 2
-        x: 522
-        y: 488
-        width: 446
-        height: 449
+        x: 567
+        y: 510
+        width: 397
+        height: 393
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: jauges_6
       rect:
         serializedVersion: 2
-        x: 521
-        y: 39
-        width: 449
-        height: 448
+        x: 567
+        y: 9
+        width: 398
+        height: 406
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,25 +198,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 70
-        y: 39
-        width: 447
-        height: 448
+        y: 8
+        width: 400
+        height: 407
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: jauges_8
-      rect:
-        serializedVersion: 2
-        x: 2071
-        y: 253
-        width: 247
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
