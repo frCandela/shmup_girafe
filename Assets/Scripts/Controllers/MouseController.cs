@@ -40,6 +40,15 @@ public class MouseController : Controller
         //Virus ship
         virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
         virusShip.enabled = false;
+
+
+        //Set events on the possesed ship
+        if(PossessedPawn)
+        {
+            Ship ship = (Ship)PossessedPawn;
+            ship.GetComponent<Health>().onTakeDamage.AddListener(ship.GetComponent<Blink>().StartBlink);
+        }
+        
     }
 
     private void Update()
@@ -90,6 +99,9 @@ public class MouseController : Controller
                         target.gameObject.tag = this.gameObject.tag;
                         this.Possess(target);
                         target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+
+                        //Set events
+                        target.GetComponent<Health>().onTakeDamage.AddListener(target.GetComponent<Blink>().StartBlink);
 
                         Health targetHealth = target.GetComponent<Health>();
                         if (targetHealth)

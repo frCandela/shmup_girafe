@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
+
 public class MainBar : MonoBehaviour
 {
     [Header("Images :")]
@@ -71,7 +75,7 @@ public class MainBar : MonoBehaviour
     }
 
 }
-/*
+#if UNITY_EDITOR
 //Custom editor of the mainbar for debug only
 [CustomEditor(typeof(MainBar))]
 public class SliceEditor : Editor
@@ -104,4 +108,5 @@ public class SliceEditor : Editor
         if (GUILayout.Button("setHack"))
             myMainBar.setHackBar(setHack);
     }
-}*/
+}
+#endif

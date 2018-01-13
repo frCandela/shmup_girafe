@@ -10,12 +10,15 @@ public class Health : MonoBehaviour
     public bool immortal = false;
     [Range(0, 100)] public int health = 10;
 
-    private int maxHealth;
-
-    public UnityEvent onDie;
     
+    //Events
+    public UnityEvent onDie;
+    public UnityEvent onTakeDamage;
 
+    //Private parameters
+    private int maxHealth;
     private bool dead = false;
+
 
     public bool isDead() { return dead;  }
 
@@ -48,6 +51,7 @@ public class Health : MonoBehaviour
         //Immortal objects don't take damage
         if (!immortal)
         {
+            onTakeDamage.Invoke();
             health -= damage;
             if (health <= 0 && !dead)
             {

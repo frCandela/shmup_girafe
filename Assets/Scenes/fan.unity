@@ -149,7 +149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4930657254882684, guid: ccede54dae575404f8ce2a541cd375a2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114979676994656424, guid: ccede54dae575404f8ce2a541cd375a2,
         type: 2}
@@ -1287,7 +1287,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &531763774
 SpriteRenderer:
@@ -1738,7 +1738,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &934273774 stripped
 Transform:
@@ -2304,6 +2304,7 @@ GameObject:
   - component: {fileID: 1202823109}
   - component: {fileID: 1202823108}
   - component: {fileID: 1202823107}
+  - component: {fileID: 1202823110}
   m_Layer: 8
   m_Name: Tank
   m_TagString: Player
@@ -2366,6 +2367,37 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1202823110}
+        m_MethodName: StartBlink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1202823110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202823106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f306c3646639ed74fb092862dc404f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkDuration: 1
+  BlinkFrequency: 10
+  SpriteRenderers:
+  - {fileID: 1202823115}
 --- !u!114 &1202823111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2380,7 +2412,7 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
-  Speed: 4.9
+  Speed: 5
   canBeStunned: 1
   chargeCircle: {fileID: 1570346319}
   targetSprite: {fileID: 1950219252}
@@ -2499,6 +2531,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1737236364}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1001 &1284832470
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.2979965
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.5051455
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.026434172
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125881613613886, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1312692159
 Prefab:
   m_ObjectHideFlags: 0
@@ -2918,7 +2992,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570346318}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3273,7 +3347,7 @@ RectTransform:
   m_Children:
   - {fileID: 638980209}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3924,7 +3998,7 @@ Transform:
   - {fileID: 1570346320}
   - {fileID: 1950219251}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &1925611115
 GameObject:
