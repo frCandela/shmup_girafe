@@ -69,6 +69,8 @@ public class GameManager : MonoBehaviour {
         PlayerController.onHack.AddListener(hackOccured);
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
+        StarterShip.isPlayerControlled = true;
+
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
@@ -85,6 +87,14 @@ public class GameManager : MonoBehaviour {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
+    }
+
+    private void Start()
+    {
+        if (instance == this)
+        {
+            StarterShip.setHackAnim(true);
+        }
     }
 
     //When the player is hit by a bullet

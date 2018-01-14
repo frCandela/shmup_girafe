@@ -48,8 +48,8 @@ public class TankShip : Ship
         if(isCharging)
         {
             rb.transform.position = Vector3.MoveTowards(rb.transform.position, targetCharge, Time.fixedDeltaTime * chargeSpeed);
-            
-            if(rb.transform.position == targetCharge)
+            //rotateTowardTarget();
+            if (rb.transform.position == targetCharge)
                 stopCharge();
         }
     }
@@ -68,8 +68,19 @@ public class TankShip : Ship
 
             //Set the target sprite position
             targetSprite.transform.position = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
-        }
 
+            rotateTowardTarget(targetSprite.transform.position);
+        }
+        else if(isPlayerControlled)
+            rotateTowardTarget(getMouseWorldPosition());
+    }
+
+    //Rotate the ship towards the targetSprite object
+    private void rotateTowardTarget(Vector3 target )
+    {
+        float sign = (target.x < transform.position.x ? 1.0f : -1.0f);
+        float angle = sign * Vector3.Angle(Vector2.up, target - transform.position) + 180f;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     //When the player press the FIRE key

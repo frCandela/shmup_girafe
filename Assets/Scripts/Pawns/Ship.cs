@@ -5,6 +5,7 @@ using UnityEngine;
 
 //A basic pawn for a spaceship in the game
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Attack))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Health))]
@@ -16,6 +17,8 @@ public class Ship : Pawn
 
     //Stun
     public bool canBeStunned = true;
+    public bool isPlayerControlled = false;
+
     private float stunTimer;
     private bool stunned;
 
@@ -23,6 +26,7 @@ public class Ship : Pawn
     protected Animator anim;
     protected Attack attack;
     protected Health health;
+    protected SpriteRenderer sprite;
 
     // Use this for initialization
     void Awake()
@@ -36,6 +40,7 @@ public class Ship : Pawn
         anim = GetComponent<Animator>();
         attack = GetComponent<Attack>();
         health = GetComponent<Health>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Start()

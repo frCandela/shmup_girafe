@@ -98,6 +98,7 @@ public class MouseController : Controller
                         target.gameObject.tag = this.gameObject.tag;
                         this.Possess(target);
                         target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+                        target.isPlayerControlled = true;
 
                         //Set events
                         target.GetComponent<Health>().onTakeDamage.AddListener(target.GetComponent<Blink>().StartBlink);
