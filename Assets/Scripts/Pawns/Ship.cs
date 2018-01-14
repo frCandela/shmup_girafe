@@ -8,42 +8,44 @@ using UnityEngine;
 [RequireComponent(typeof(Attack))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Health))]
+
 public class Ship : Pawn
 {
     [Header("Ship parameters:")]
     [Range(0.0f, 20.0f)]public float Speed = 0.5f;  //Movement speed of the ship
-
-   
-
 
     //Stun
     public bool canBeStunned = true;
     private float stunTimer;
     private bool stunned;
 
+    protected Rigidbody2D rb;
     protected Animator anim;
     protected Attack attack;
-    protected Rigidbody2D rb;
     protected Health health;
 
     // Use this for initialization
     void Awake()
     {
+        //Set components
         rb = GetComponent<Rigidbody2D>();
         if (!rb)
             throw new Exception("Error : Rigidbody2D not set");
         rb.gravityScale = 0f;
 
         anim = GetComponent<Animator>();
+        attack = GetComponent<Attack>();
         health = GetComponent<Health>();
     }
 
     private void Start()
     {
-        attack = GetComponent<Attack>();
+        
         stunTimer = 0F;
         stunned = false;
     }
+
+    public void setHackAnim( bool state){anim.SetBool("Hacked", state);}
 
     public bool IsStunned() { return stunned;  }
     public void Stun( float stunDuration )

@@ -48,7 +48,6 @@ public class MouseController : Controller
             Ship ship = (Ship)PossessedPawn;
             ship.GetComponent<Health>().onTakeDamage.AddListener(ship.GetComponent<Blink>().StartBlink);
         }
-        
     }
 
     private void Update()
@@ -103,9 +102,13 @@ public class MouseController : Controller
                         //Set events
                         target.GetComponent<Health>().onTakeDamage.AddListener(target.GetComponent<Blink>().StartBlink);
 
+                        //Set Health
                         Health targetHealth = target.GetComponent<Health>();
                         if (targetHealth)
                             targetHealth.RestoreHealth();
+
+                        //Set anim
+                        target.setHackAnim(true);
 
                         onHack.Invoke();
 
