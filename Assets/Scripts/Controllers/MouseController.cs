@@ -81,7 +81,7 @@ public class MouseController : Controller
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
 
 
-                    if(target.hackCost <= hackPower && target != PossessedPawn)
+                    if(target.hackCost <= hackPower && target != PossessedPawn && target.isHackable)
                     {
                         //misc
                         hackPower -= target.hackCost;

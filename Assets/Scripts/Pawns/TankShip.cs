@@ -24,8 +24,9 @@ public class TankShip : Ship
     //Charge parameters
     private bool isCharging = false;
     private Vector3 targetCharge;
-    private bool wasImmortal;
 
+    private bool oldImmortal;
+    private bool oldCanBeStunned;
 
     // Use this for initialization
     void Start ()
@@ -38,7 +39,8 @@ public class TankShip : Ship
 
         updateChargeCicleSize();
 
-        wasImmortal = health.immortal;
+        oldImmortal = health.immortal;
+        oldCanBeStunned = canBeStunned;
     }
 
     private void FixedUpdate()
@@ -135,8 +137,8 @@ public class TankShip : Ship
     private void stopCharge()
     {
         isCharging = false;
-        health.immortal = wasImmortal;
-        canBeStunned = true;
+        health.immortal = oldImmortal;
+        canBeStunned = oldCanBeStunned;
     }
 
     //Updates the scale of the charge circle
