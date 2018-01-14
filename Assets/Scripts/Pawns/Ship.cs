@@ -40,7 +40,6 @@ public class Ship : Pawn
 
     private void Start()
     {
-        
         stunTimer = 0F;
         stunned = false;
     }

@@ -126,6 +126,7 @@ public class TankShip : Ship
     {
         isCharging = true;
         health.immortal = true;
+        canBeStunned = false;
 
         //Cap the distance according to the loadedChargeDistance
         targetCharge = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
@@ -135,6 +136,7 @@ public class TankShip : Ship
     {
         isCharging = false;
         health.immortal = wasImmortal;
+        canBeStunned = true;
     }
 
     //Updates the scale of the charge circle
