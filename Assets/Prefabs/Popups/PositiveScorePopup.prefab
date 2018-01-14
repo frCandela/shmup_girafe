@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50219499381416906}
   - component: {fileID: 114227281323599926}
   m_Layer: 0
-  m_Name: Popup
+  m_Name: PositiveScorePopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.7352941, b: 0.24847879, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

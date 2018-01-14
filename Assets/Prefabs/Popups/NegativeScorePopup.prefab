@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50219499381416906}
   - component: {fileID: 114227281323599926}
   m_Layer: 0
-  m_Name: Popup
+  m_Name: NegativeScorePopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
