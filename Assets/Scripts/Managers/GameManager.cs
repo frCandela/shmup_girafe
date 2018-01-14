@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
 
     public const int scoreLossHitVirus = 1;
     public const int hackPerCombo = 1;
+    public int scorePeerHack = 50;
 
     private int score = 0;
     private int[] scores = new int[5];
@@ -59,7 +60,6 @@ public class GameManager : MonoBehaviour {
         if (!TextPopupsGen)
             throw new Exception("Error : no TextPopupsGenerator selected");
         
-
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         //Initialize player
@@ -115,6 +115,9 @@ public class GameManager : MonoBehaviour {
             ++comboMultiplier;
             MainBar.setCombo(comboMultiplier+1);
         }
+
+        int scoreGained = addScore(scorePeerHack);
+        TextPopupsGen.generateScorePopup(scoreGained.ToString(), PlayerController.PossessedPawn.transform.position);
     }
 
     public void playerBecameVirus()
