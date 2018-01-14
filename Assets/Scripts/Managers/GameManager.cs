@@ -103,6 +103,8 @@ public class GameManager : MonoBehaviour {
             score -= scoreLossHitVirus;
             if (score < 0)
                 score = 0;
+
+            TextPopupsGen.generateScorePopup( - scoreLossHitVirus, PlayerController.PossessedPawn.transform.position); 
         }
     }
 
@@ -117,7 +119,7 @@ public class GameManager : MonoBehaviour {
         }
 
         int scoreGained = addScore(scorePeerHack);
-        TextPopupsGen.generateScorePopup(scoreGained.ToString(), PlayerController.PossessedPawn.transform.position);
+        TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
     }
 
     public void playerBecameVirus()
@@ -129,9 +131,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public int getScore(){ return score; }
-    public int addScore(int points)
+
+    //Returns the score effectively gained by the player
+    public int addScore(int rawScore)
     {
-        int scoreGained = (int)Mathf.Pow(2f, comboMultiplier) * points;
+        int scoreGained = (int)Mathf.Pow(2f, comboMultiplier) * rawScore;
         score += scoreGained;
         return scoreGained;
     }

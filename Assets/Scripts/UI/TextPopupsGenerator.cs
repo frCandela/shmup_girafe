@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -9,19 +10,30 @@ using UnityEditor;
 
 public class TextPopupsGenerator : MonoBehaviour
 {
-    public GameObject scorePopupPrefab;
+    public GameObject positiveScorePopupPrefab;
+    public GameObject negativeScorePopupPrefab;
 
-    public void generateScorePopup( string text, Vector3 position)
+    private void Start()
     {
-        if(scorePopupPrefab)
-        {
-            GameObject popup = Instantiate(scorePopupPrefab, transform);
+        if (!positiveScorePopupPrefab)
+            throw new Exception("Error : no positiveScorePopupPrefab selected");
+        if (!negativeScorePopupPrefab)
+            throw new Exception("Error : no negativeScorePopupPrefab selected");
+    }
 
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(position);
-            popup.transform.position = screenPos;
-            popup.GetComponent<Text>().text = text;
+    public void generateScorePopup(int value, Vector3 position)
+    {
+        GameObject popup;
+        if (value > 0)
+            popup = Instantiate(positiveScorePopupPrefab, transform);
+        else if (value < 0)
+            popup = Instantiate(negativeScorePopupPrefab, transform);
+        else
+            return;
 
-        }
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(position);
+        popup.transform.position = screenPos;
+        popup.GetComponent<Text>().text = value.ToString();
     }
 }
 
@@ -43,7 +55,7 @@ public class TextPopupsGeneratorEditor : Editor
         EditorGUILayout.LabelField("Editor :", EditorStyles.boldLabel);
         EditorGUILayout.Vector2Field("position", position);
         if (GUILayout.Button("test"))
-            myTextPopupsGenerator.generateScorePopup("yolo", position);
+            myTextPopupsGenerator.generateScorePopup(42, position);
     }
 }
 #endif
