@@ -38,8 +38,8 @@ public class KeyboardController : Controller
     private void Start()
     {
         //Set the health bar
-        GameManager.MainBar.health = PossessedPawn.GetComponent<Health>();
-        GameManager.MainBar.hackSelector = hackSelector;
+        GameManager.instance.MainBar.health = PossessedPawn.GetComponent<Health>();
+        GameManager.instance.MainBar.hackSelector = hackSelector;
     }
 
     private void Update()
@@ -53,7 +53,7 @@ public class KeyboardController : Controller
                 hackSelector.startHack(this);
                 
             //The ship cannot go out of the camera fov
-            GameManager.MainCameraController.snapInCameraView(PossessedPawn);
+            GameManager.instance.MainCameraController.snapInCameraView(PossessedPawn);
         }
         else
         {
@@ -61,12 +61,12 @@ public class KeyboardController : Controller
 
             //Set the player to a virus
             virusShip.enabled = true;
-            GameManager.MainBar.health = virusShip.GetComponent<Health>();
+            GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
             Possess(virusShip);
         }
 
         //Update the hack bar
-        GameManager.MainBar.setHackBar(hackSelector.getHackPowerRatio());
+        GameManager.instance.MainBar.setHackBar(hackSelector.getHackPowerRatio());
     }
 
     void FixedUpdate()

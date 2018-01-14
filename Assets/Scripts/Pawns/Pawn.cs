@@ -43,6 +43,6 @@ public class Pawn : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.PlayerController.addHackPower(hackbonus);
+        GameManager.instance.PlayerController.addHackPower(hackbonus);
     }
 }

@@ -19,7 +19,6 @@ public class TankShip : Ship
     private bool loadingCharge = false;
     private float loadedChargeDistance = 0f;
     private float initialSize = 0f;
-    private float chargeTimer = 0f;
 
     //Charge parameters
     private bool isCharging = false;

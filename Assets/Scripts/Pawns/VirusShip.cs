@@ -5,12 +5,6 @@ using UnityEngine;
 //When the player 
 public class Virus : Ship
 {
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
     private void OnEnable()
     {
         GetComponent<SpriteRenderer>().enabled = false;

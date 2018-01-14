@@ -29,7 +29,7 @@ public class MouseController : Controller
     private void Start()
     {
         //ui initialisation
-        GameManager.MainBar.health = PossessedPawn.GetComponent<Health>();
+        GameManager.instance.MainBar.health = PossessedPawn.GetComponent<Health>();
 
         //Hack parameters
         hackPower = 0;
@@ -64,7 +64,7 @@ public class MouseController : Controller
         if (!isPossessingPawn())
         {
             onBecomeVirus.Invoke();
-            GameManager.MainBar.health = virusShip.GetComponent<Health>();
+            GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
             virusShip.enabled = true;
 
             Possess(virusShip);
@@ -75,7 +75,7 @@ public class MouseController : Controller
             if (isHacking)
             {
                 isHacking = false;
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -GameManager.MainCameraController.transform.position.z)), Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -GameManager.instance.MainCameraController.transform.position.z)), Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
                 if (hit && hit.collider)
                 {
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
@@ -87,7 +87,7 @@ public class MouseController : Controller
                         hackPower -= target.hackCost;
                         if (hackPower < 0F)
                             hackPower = 0F;
-                        GameManager.MainBar.health = target.GetComponent<Health>();
+                        GameManager.instance.MainBar.health = target.GetComponent<Health>();
 
                         //Destroy the old pawn
                         Health oldHealth = this.PossessedPawn.GetComponent<Health>();
@@ -160,7 +160,7 @@ public class MouseController : Controller
         Camera c = Camera.main;
         Event e = Event.current;
         Vector2 mousePos = new Vector2(e.mousePosition.x, c.pixelHeight - e.mousePosition.y);
-        Vector3 p = c.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, - GameManager.MainCameraController.transform.position.z));
+        Vector3 p = c.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, - GameManager.instance.MainCameraController.transform.position.z));
 
         transform.position = new Vector3(p.x, p.y, 0);
     }

@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646188998978992}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 4.64, y: 9.47, z: 0.026434172}
+  m_LocalPosition: {x: 4.64, y: 9.47, z: 0.02643417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000633499706040}
@@ -243,6 +243,7 @@ MonoBehaviour:
   hackbonus: 10
   Speed: 10
   canBeStunned: 1
+  isPlayerControlled: 0
   cannonPosition: {fileID: 4305163887705294}
   cannonPosition2: {fileID: 4000633499706040}
 --- !u!114 &114664487797022586
@@ -282,7 +283,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 15
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

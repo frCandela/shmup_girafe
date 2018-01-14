@@ -296,7 +296,9 @@
     <Compile Include="Assets\Scripts\Turn.cs" />
     <Compile Include="Assets\Scripts\UI\LeaderboardText.cs" />
     <Compile Include="Assets\Scripts\UI\MainBar.cs" />
+    <Compile Include="Assets\Scripts\UI\Popup.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
+    <Compile Include="Assets\Scripts\UI\TextPopupsGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

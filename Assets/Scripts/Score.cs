@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Score : MonoBehaviour {
 
-	public void AddScore(int point) {
-        GameManager.instance.addScore(point);
+	public void AddScore(int point)
+    {
+         int effectiveScore = GameManager.instance.addScore(point);
+        GameManager.instance.TextPopupsGen.generateScorePopup(effectiveScore.ToString(), transform.position);
     }
-
 }

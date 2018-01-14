@@ -8,20 +8,21 @@ using UnityEngine.PostProcessing;
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
-    public static Ship StarterShip { get; private set; }
+    /*public static Ship StarterShip { get; private set; }
     public static MouseController PlayerController { get; private set; }
     public static CameraController MainCameraController { get; private set; }
-    public static MainBar MainBar { get; private set; }
+    public static MainBar MainBar { get; private set; }*/
 
     [Header("Initialisation:")]
-    public Ship InitStarterShip;
-    public MouseController InitPlayerController;
-    public CameraController InitMainCameraController;
-    public MainBar InitMainBar;
+    public Ship StarterShip;
+    public MouseController PlayerController;
+    public CameraController MainCameraController;
+    public MainBar MainBar;
+    public TextPopupsGenerator TextPopupsGen;
+
 
     private PostProcessingBehaviour PostProcessing;
 
-    public const int scorePeerHack = 10;
     public const int scoreLossHitVirus = 1;
     public const int hackPerCombo = 1;
 
@@ -49,19 +50,16 @@ public class GameManager : MonoBehaviour {
     void AwakeGame()
     {
         //Initialisation checks
-        if (!InitStarterShip)
+        if (!StarterShip)
             throw new Exception("Error : no starter ship selected");
-
-        if (!InitPlayerController)
+        if (!PlayerController)
             throw new Exception("Error : no player controller selected");
-
-        if (!InitMainCameraController)
+        if (!MainCameraController)
             throw new Exception("Error : no main camera selected");
+        if (!TextPopupsGen)
+            throw new Exception("Error : no TextPopupsGenerator selected");
+        
 
-        StarterShip = InitStarterShip;
-        PlayerController = InitPlayerController;
-        MainCameraController = InitMainCameraController;
-        MainBar = InitMainBar;
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         //Initialize player
@@ -110,9 +108,6 @@ public class GameManager : MonoBehaviour {
 
     private void hackOccured()
     {
-        //Add score
-        score += scorePeerHack *(int) Mathf.Pow(2, comboMultiplier);
-
         //Increment combo multiplier
         if ( ++hackCount >= hackPerCombo && comboMultiplier < maxCombo)
         {
@@ -125,13 +120,18 @@ public class GameManager : MonoBehaviour {
     public void playerBecameVirus()
     {
         //Reset the combo
-        hackCount = 0;
+        hackCount = -1;
         comboMultiplier = 0;
-        MainBar.setCombo(comboMultiplier + 1);
+        MainBar.setCombo(comboMultiplier+1);
     }
 
     public int getScore(){ return score; }
-    public void addScore(int points) { score += points; }
+    public int addScore(int points)
+    {
+        int scoreGained = (int)Mathf.Pow(2f, comboMultiplier) * points;
+        score += scoreGained;
+        return scoreGained;
+    }
     public void saveScore(int check) { scores[check] = score; }
 
     #region POST-EFFECT

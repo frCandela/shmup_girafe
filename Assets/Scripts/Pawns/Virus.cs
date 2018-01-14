@@ -39,7 +39,7 @@ public class VirusShip : Ship
     private void OnEnable()
     {
         //Set the VirusShip at the camera position
-        Vector3 newPosition = GameManager.MainCameraController.transform.position;
+        Vector3 newPosition = GameManager.instance.MainCameraController.transform.position;
         newPosition.z = 0;
         transform.position = newPosition;
 

@@ -86,16 +86,16 @@ public class HackSelector : MonoBehaviour
             if (Input.GetButtonDown("Horizontal"))
             {
                 if (Input.GetAxisRaw("Horizontal") > 0F)
-                    targetShip = GameManager.MainCameraController.shipsInCameraView.rightShipFrom(targetShip);
+                    targetShip = GameManager.instance.MainCameraController.shipsInCameraView.rightShipFrom(targetShip);
                 else
-                    targetShip = GameManager.MainCameraController.shipsInCameraView.leftShipFrom(targetShip);
+                    targetShip = GameManager.instance.MainCameraController.shipsInCameraView.leftShipFrom(targetShip);
             }
             else if (Input.GetButtonDown("Vertical"))
             {
                 if (Input.GetAxisRaw("Vertical") > 0F)
-                    targetShip = GameManager.MainCameraController.shipsInCameraView.upperShipFrom(targetShip);
+                    targetShip = GameManager.instance.MainCameraController.shipsInCameraView.upperShipFrom(targetShip);
                 else
-                    targetShip = GameManager.MainCameraController.shipsInCameraView.lowerShipFrom(targetShip);
+                    targetShip = GameManager.instance.MainCameraController.shipsInCameraView.lowerShipFrom(targetShip);
             }
 
             //Set the hack selector position
@@ -122,7 +122,7 @@ public class HackSelector : MonoBehaviour
                 {
                     //misc
                     hackPower -= targetShip.hackCost;
-                    GameManager.MainBar.health = targetShip.GetComponent<Health>();
+                    GameManager.instance.MainBar.health = targetShip.GetComponent<Health>();
 
                     //Destroy the old pawn
                     Health oldHealth = targetController.PossessedPawn.GetComponent<Health>();
