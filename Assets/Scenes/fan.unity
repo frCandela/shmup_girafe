@@ -2224,6 +2224,7 @@ MonoBehaviour:
   hackbonus: 10
   Speed: 5
   canBeStunned: 1
+  isPlayerControlled: 0
   chargeCircle: {fileID: 1570346319}
   targetSprite: {fileID: 1950219252}
   maxDistance: 10
@@ -2320,7 +2321,7 @@ SpriteRenderer:
   m_SortingLayerID: -1975361887
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4a190469107f5d43b73dadab42edf82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dba338443376c0c40ada2fa0ce49af98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -3213,11 +3214,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4065365775213712, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4065365775213712, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.82
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
