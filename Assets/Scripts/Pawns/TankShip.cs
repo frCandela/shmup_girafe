@@ -9,11 +9,16 @@ public class TankShip : Ship
     public SpriteRenderer chargeCircle;
     public SpriteRenderer targetSprite;
 
-    [Header("chargeParameters")]
+    [Header("Charge Parameters")]
     public float maxDistance = 15f;
     public float initialDistance = 1f;
     public float loadDuration = 1;
     public float chargeSpeed = 20F;
+
+    [Header("Charge IA")]
+    public ChargePattern pattern;
+    private float timerPattern = 0;
+    private int currentCharge = 0;
 
     //Loading charge parameters
     private bool loadingCharge = false;
@@ -40,6 +45,9 @@ public class TankShip : Ship
 
         oldImmortal = health.immortal;
         oldCanBeStunned = canBeStunned;
+        if (pattern)
+            timerPattern = 1 / pattern.rate;
+        else Debug.LogWarning("No pattern for " + name);
     }
 
     private void FixedUpdate()
@@ -56,21 +64,33 @@ public class TankShip : Ship
     protected override void Update()
     {
         base.Update();
-        if (loadingCharge)
-        {
-            //Load the ChargeDistance slowly
-            loadedChargeDistance += Time.deltaTime * (maxDistance - initialDistance) / loadDuration;
-            if (loadedChargeDistance > maxDistance)
-                loadedChargeDistance = maxDistance;
-            updateChargeCicleSize();
+        if (isPlayerControlled) {
+            if (loadingCharge) {
+                //Load the ChargeDistance slowly
+                loadedChargeDistance += Time.deltaTime * (maxDistance - initialDistance) / loadDuration;
+                if (loadedChargeDistance > maxDistance)
+                    loadedChargeDistance = maxDistance;
+                updateChargeCicleSize();
 
-            //Set the target sprite position
-            targetSprite.transform.position = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
+                //Set the target sprite position
+                targetSprite.transform.position = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
 
-            rotateTowardTarget(targetSprite.transform.position);
+                rotateTowardTarget(targetSprite.transform.position);
+            } else rotateTowardTarget(getMouseWorldPosition());
+        } else if(pattern) {
+            timerPattern -= Time.deltaTime;
+
+            if (timerPattern < 0) {
+                if (currentCharge < pattern.charges.Count) {
+                    loadedChargeDistance = pattern.charges[currentCharge].distance;
+                    startCharge(transform.position + Quaternion.Euler(0, 0, -(pattern.charges[currentCharge].angle + 180)) * Vector3.up * 20);
+                }
+
+                timerPattern = 1 / pattern.rate;
+                currentCharge = ++currentCharge % pattern.charges.Count;
+            } else if (timerPattern < (1 / pattern.rate) - 0.1f)
+                transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, -(pattern.charges[currentCharge].angle + 180)), transform.rotation, 0.85f);
         }
-        else if(isPlayerControlled)
-            rotateTowardTarget(getMouseWorldPosition());
     }
 
     //Rotate the ship towards the targetSprite object
@@ -104,7 +124,7 @@ public class TankShip : Ship
     {
         if(loadingCharge)
         {
-            startCharge();
+            startCharge(getMouseWorldPosition());
             stopLoadingCharge();
         }
     }
@@ -141,14 +161,14 @@ public class TankShip : Ship
         return mousePos;
     }
 
-    private void startCharge()
+    private void startCharge(Vector3 target)
     {
         isCharging = true;
         health.immortal = true;
         canBeStunned = false;
 
         //Cap the distance according to the loadedChargeDistance
-        targetCharge = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
+        targetCharge = Vector3.MoveTowards(transform.position, target, loadedChargeDistance);
     }
 
     private void stopCharge()

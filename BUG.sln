@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUG", "BUG.csproj", "{8AE2A048-A5E1-D93B-1B14-EE8CE67A064D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUG.Editor", "BUG.Editor.csproj", "{A21778D2-1F51-3EC4-599D-2138604FA035}"

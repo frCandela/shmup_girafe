@@ -8,42 +8,42 @@ static class CustomGUI
     #region KNOB
 
     #region CONSTRUCTOR
-    public static float Knob(float value)
+    public static float Knob(float value, bool up = true)
     {
         Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
-        return new KnobContext(pos, value, 0, Color.black, Color.red).GetValue();
+        return new KnobContext(pos, value, 0, Color.black, Color.red, up).GetValue();
     }
-    public static float Knob(float value, Color pickerColor)
+    public static float Knob(float value, Color pickerColor, bool up = true)
     {
         Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
-        return new KnobContext(pos, value, 0, pickerColor, Color.red).GetValue();
+        return new KnobContext(pos, value, 0, pickerColor, Color.red, up).GetValue();
     }
-    public static float Knob(float value, float spread)
+    public static float Knob(float value, float spread, bool up = true)
     {
         Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
-        return new KnobContext(pos, value, spread, Color.black, Color.red).GetValue();
+        return new KnobContext(pos, value, spread, Color.black, Color.red, up).GetValue();
     }
-    public static float Knob(float value, float spread, Color pickerColor, Color rangeColor)
+    public static float Knob(float value, float spread, Color pickerColor, Color rangeColor, bool up = true)
     {
         Rect pos = EditorGUILayout.GetControlRect(false, 40, GUILayout.Width(40));
-        return new KnobContext(pos, value, spread, pickerColor, rangeColor).GetValue();
+        return new KnobContext(pos, value, spread, pickerColor, rangeColor, up).GetValue();
     }
 
-    public static float Knob(Rect pos, float value)
+    public static float Knob(Rect pos, float value, bool up = true)
     {
-        return new KnobContext(pos, value, 0, Color.black, Color.red).GetValue();
+        return new KnobContext(pos, value, 0, Color.black, Color.red, up).GetValue();
     }
-    public static float Knob(Rect pos, float value, Color pickerColor)
+    public static float Knob(Rect pos, float value, Color pickerColor, bool up = true)
     {
-        return new KnobContext(pos, value, 0, pickerColor, Color.red).GetValue();
+        return new KnobContext(pos, value, 0, pickerColor, Color.red, up).GetValue();
     }
-    public static float Knob(Rect pos, float value, float spread)
+    public static float Knob(Rect pos, float value, float spread, bool up = true)
     {
-        return new KnobContext(pos, value, spread, Color.black, Color.red).GetValue();
+        return new KnobContext(pos, value, spread, Color.black, Color.red, up).GetValue();
     }
-    public static float Knob(Rect pos, float value, float spread, Color pickerColor, Color rangeColor)
+    public static float Knob(Rect pos, float value, float spread, Color pickerColor, Color rangeColor, bool up = true)
     {
-        return new KnobContext(pos, value, spread, pickerColor, rangeColor).GetValue();
+        return new KnobContext(pos, value, spread, pickerColor, rangeColor, up).GetValue();
     }
     #endregion
 
@@ -62,8 +62,9 @@ static class CustomGUI
         float spread;
         Color pickerColor;
         Color rangeColor;
+        bool up;
 
-        public KnobContext(Rect position, float value, float spread, Color pickerColor, Color rangeColor)
+        public KnobContext(Rect position, float value, float spread, Color pickerColor, Color rangeColor, bool up = true)
         {
             this.id = GUIUtility.GetControlID(GetType().GetHashCode(), FocusType.Passive, position);
             this.position = position;
@@ -72,6 +73,7 @@ static class CustomGUI
             this.pickerColor = pickerColor;
             this.rangeColor = rangeColor;
             this.knobSize = new Vector2(40, 40);
+            this.up = up;
         }
 
         public float GetValue()
@@ -103,7 +105,7 @@ static class CustomGUI
             GUIUtility.hotControl = this.id;
             this.state().isDragging = true;
             Event.current.Use();
-            float res = Mathf.Atan2((this.position.y + this.knobSize.y / 2f) - Event.current.mousePosition.y, (this.position.x + this.knobSize.x / 2f) - Event.current.mousePosition.x) / Mathf.PI * 180f - 90;
+            float res = Mathf.Atan2((this.position.y + this.knobSize.y / 2f) - Event.current.mousePosition.y, (this.position.x + this.knobSize.x / 2f) - Event.current.mousePosition.x) / Mathf.PI * 180f + 90 * (up?-1:1);
             if (res <= -180)
             {
                 res += 360;
@@ -130,7 +132,7 @@ static class CustomGUI
                 return this.value;
             GUI.changed = true;
             Event.current.Use();
-            float res = Mathf.Atan2((this.position.y + this.knobSize.y / 2f) - Event.current.mousePosition.y, (this.position.x + this.knobSize.x / 2f) - Event.current.mousePosition.x) / Mathf.PI * 180f - 90;
+            float res = Mathf.Atan2((this.position.y + this.knobSize.y / 2f) - Event.current.mousePosition.y, (this.position.x + this.knobSize.x / 2f) - Event.current.mousePosition.x) / Mathf.PI * 180f + 90 * (up ? -1 : 1);
             if (res <= -180)
             {
                 res += 360;
@@ -140,8 +142,8 @@ static class CustomGUI
 
         private float OnRepaint()
         {
-            this.DrawValueArc((float)((double)(value / 360f) * Mathf.PI * 2 + Mathf.PI / 2f * 3), rangeColor, (spread / 360f) * Mathf.PI, true, Color.grey);
-            this.DrawValueArc((float)((double)(value / 360f) * Mathf.PI * 2 + Mathf.PI / 2f * 3), pickerColor, 0.1f, false, Color.grey);
+            this.DrawValueArc((float)((double)(value / 360f) * Mathf.PI * 2 + Mathf.PI / 2f * (up ? 3 : 1)), rangeColor, (spread / 360f) * Mathf.PI, true, Color.grey);
+            this.DrawValueArc((float)((double)(value / 360f) * Mathf.PI * 2 + Mathf.PI / 2f * (up ? 3 : 1)), pickerColor, 0.1f, false, Color.grey);
             GUI.Label(new Rect((float)((double)this.position.x + 5.0), (float)((double)this.position.y + (double)this.knobSize.y / 2.0 - 8.0), this.position.width, 20f), value.ToString("0") + "°");
             return this.value;
         }
