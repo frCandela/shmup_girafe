@@ -33,7 +33,7 @@ public class TextPopupsGenerator : MonoBehaviour
 
         Vector3 screenPos = Camera.main.WorldToScreenPoint(position);
         popup.transform.position = screenPos;
-        popup.GetComponent<Text>().text = value.ToString();
+        popup.GetComponent<Text>().text = "+" + value.ToString();
     }
 }
 

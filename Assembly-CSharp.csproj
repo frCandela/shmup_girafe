@@ -121,8 +121,6 @@
      <Compile Include="Assets\Scripts\Pawns\Virus.cs" />
      <Compile Include="Assets\Scripts\Pawns\VirusShip.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
-     <Compile Include="Assets\Scripts\Spawn\Checkpoint.cs" />
-     <Compile Include="Assets\Scripts\Spawn\CheckpointBehavior.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnBehavior.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
      <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
