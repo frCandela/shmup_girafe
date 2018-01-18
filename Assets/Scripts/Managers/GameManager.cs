@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour {
     public static MainBar MainBar { get; private set; }*/
 
     [Header("Initialisation:")]
-    public Ship StarterShip;
     public MouseController PlayerController;
     public CameraController MainCameraController;
     public MainBar MainBar;
@@ -60,9 +59,6 @@ public class GameManager : MonoBehaviour {
     //Initializes the game for each level.
     void AwakeGame()
     {
-        //Initialisation checks
-        if (!StarterShip)
-            throw new Exception("Error : no starter ship selected");
         if (!PlayerController)
             throw new Exception("Error : no player controller selected");
         if (!MainCameraController)
@@ -72,17 +68,14 @@ public class GameManager : MonoBehaviour {
         
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
-        //Initialize player
-        PlayerController.Possess(StarterShip);
+        PlayerController.PossessVirus();
+        PlayerController.addHackPower(50);
         PlayerController.onHack.AddListener(hackOccured);
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
-        StarterShip.isPlayerControlled = true;
-
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.health = StarterShip.GetComponent<Health>();
         MainBar.setCombo(0);
         MainBar.setMulti(1);
 
@@ -103,14 +96,6 @@ public class GameManager : MonoBehaviour {
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
         Leaderboard.UpdateScore(checkpointId);
-    }
-
-    private void Start()
-    {
-        if (instance == this)
-        {
-            StarterShip.setHackAnim(true);
-        }
     }
 
     private void Update()
