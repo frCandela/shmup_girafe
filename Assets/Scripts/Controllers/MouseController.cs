@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class MouseController : Controller
 {
+    public float screenLimit = 7f;
+
     [Header("GameObjects")]
     public Ship VirusShipPrefab;
     private Ship virusShip;
@@ -161,6 +163,8 @@ public class MouseController : Controller
         Event e = Event.current;
         Vector2 mousePos = new Vector2(e.mousePosition.x, c.pixelHeight - e.mousePosition.y);
         Vector3 p = c.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, - GameManager.instance.MainCameraController.transform.position.z));
+
+        p.x = Mathf.Clamp(p.x, -screenLimit, screenLimit);
 
         transform.position = new Vector3(p.x, p.y, 0);
     }
