@@ -217,7 +217,7 @@ MonoBehaviour:
     position: {x: -0.6, y: 0.3}
     col: {r: 1, g: 0.8705958, b: 0, a: 0.58586526}
   - enemy: {fileID: 1513906721902264, guid: 7ae4bbac7e62cd34486959a2e1b1d3cb, type: 2}
-    position: {x: 0, y: -0.5}
+    position: {x: -0.013333334, y: -0.44}
     col: {r: 1, g: 0, b: 0.69648075, a: 0.5137331}
 --- !u!114 &114904516650091174
 MonoBehaviour:
