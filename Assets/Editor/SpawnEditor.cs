@@ -18,6 +18,10 @@ public class SpawnEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("spawner"));
+        float min = serializedObject.FindProperty("multiplierMin").intValue, max = serializedObject.FindProperty("multiplierMax").intValue;
+        EditorGUILayout.MinMaxSlider("WIP Multiplier range [" + Mathf.Pow(2, min) + "," + Mathf.Pow(2, max) + "]", ref min, ref max, 0, 3);
+        serializedObject.FindProperty("multiplierMin").intValue = (int)min;
+        serializedObject.FindProperty("multiplierMax").intValue = (int)max;
 
         EditorGUILayout.BeginHorizontal();
 

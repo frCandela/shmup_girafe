@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 public class SpawnClip : PlayableAsset
 {
     public ExposedReference<Spawner> spawner;
+    public int multiplierMin, multiplierMax;
     public List<Spawn> enemies;
 
     public SpawnBehavior template = new SpawnBehavior();
