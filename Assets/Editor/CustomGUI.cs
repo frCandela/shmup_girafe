@@ -372,7 +372,9 @@ static class CustomGUI
             GL.Vertex(new Vector3(pos.x - 18, pos.y + 18, 0));
             GL.End();
 
-            GUI.Label(new Rect(pos.x - 6f, pos.y - 8f, 20f, 20f), text);
+            GUIStyle style = GUIStyle.none;
+            style.alignment = TextAnchor.MiddleCenter;
+            GUI.Label(new Rect(pos.x - 18f, pos.y - 18f, 36f, 36f), text, style);
         }
 
         private List<Vector2> OnRepaint()

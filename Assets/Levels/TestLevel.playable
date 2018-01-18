@@ -33,6 +33,8 @@ MonoBehaviour:
   spawner:
     exposedName: 9fa64ad376f169b4b8a90e900de94493
     defaultValue: {fileID: 0}
+  multiplierMin: 0
+  multiplierMax: 0
   enemies:
   - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
     position: {x: 0, y: 0.5}
@@ -58,7 +60,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1778877366, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: Playable Track
+  m_Name: Niveau 1
   m_EditorClassIdentifier: 
   m_Locked: 0
   m_Muted: 0
@@ -111,7 +113,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Grosse Vague
+    m_DisplayName: Vague 1
     m_Version: 1
   - m_Start: 12.283333333333333
     m_ClipIn: 0
@@ -157,7 +159,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Grosse Vague
+    m_DisplayName: Vague 2
     m_Version: 1
 --- !u!114 &114508417103837078
 MonoBehaviour:
@@ -203,6 +205,8 @@ MonoBehaviour:
   spawner:
     exposedName: 2acd40b5c318b9544a3dde19ba4cd577
     defaultValue: {fileID: 0}
+  multiplierMin: 0
+  multiplierMax: 0
   enemies:
   - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
     position: {x: 0, y: 0.5}
@@ -228,7 +232,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1778877366, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
-  m_Name: Playable Track1
+  m_Name: Checkpoint
   m_EditorClassIdentifier: 
   m_Locked: 0
   m_Muted: 0
