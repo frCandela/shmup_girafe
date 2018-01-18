@@ -9,10 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
-  m_Name: FleshAttack_jonas
+  m_Name: FleshAttack_x1
   m_EditorClassIdentifier: 
   rate: 1.5
   bursts:
+  - amount: 1
+    spread: 0
+    angle: 30.465546
+    prefab: {fileID: 1465794500378430, guid: 79f8239c03c544132a05afe52d0f70a0, type: 2}
   - amount: 1
     spread: 0
     angle: 0
@@ -20,8 +24,4 @@ MonoBehaviour:
   - amount: 1
     spread: 0
     angle: -29.744886
-    prefab: {fileID: 1465794500378430, guid: 79f8239c03c544132a05afe52d0f70a0, type: 2}
-  - amount: 1
-    spread: 0
-    angle: 30.465546
     prefab: {fileID: 1465794500378430, guid: 79f8239c03c544132a05afe52d0f70a0, type: 2}

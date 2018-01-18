@@ -491,6 +491,12 @@ Prefab:
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 114501749922989286, guid: 2e15bbfd036654a3192ea76fefad3d7d,
+        type: 2}
+      propertyPath: pattern
+      value: 
+      objectReference: {fileID: 11400000, guid: dece014b3a0e3434baeba5e18b650faf,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e15bbfd036654a3192ea76fefad3d7d, type: 2}
   m_IsPrefabParent: 0
@@ -935,6 +941,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1088843695409090, guid: c2a184766bffa854cbc5f2985a6a4283, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2a184766bffa854cbc5f2985a6a4283, type: 2}
   m_IsPrefabParent: 0
@@ -1352,6 +1362,12 @@ MonoBehaviour:
   BlinkDuration: 1
   BlinkFrequency: 10
   SpriteRenderers: []
+--- !u!114 &620446927 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114579768677809532, guid: ced52118b1627404490e9b9cf9cca2a2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1262210191}
+  m_Script: {fileID: 11500000, guid: e9af5403f0fe7c0439c211e03290bdf2, type: 3}
 --- !u!1001 &683439793
 Prefab:
   m_ObjectHideFlags: 0
@@ -1807,6 +1823,11 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &897870752 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1088843695409090, guid: c2a184766bffa854cbc5f2985a6a4283,
+    type: 2}
+  m_PrefabInternal: {fileID: 405837051}
 --- !u!1001 &1189799023
 Prefab:
   m_ObjectHideFlags: 0
@@ -1942,6 +1963,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1024872792337874, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
   m_PrefabInternal: {fileID: 73086649}
+--- !u!114 &1211754817 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114708004960594924, guid: bdebec36fcf96445184889ed13943d6d,
+    type: 2}
+  m_PrefabInternal: {fileID: 73086649}
+  m_Script: {fileID: 11500000, guid: 096fa1233db2d7643baafe5d969ee168, type: 3}
 --- !u!114 &1211754821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,8 +2231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VerticalSpeed: 1
-  tunnelPrefab: {fileID: 1088843695409090, guid: c2a184766bffa854cbc5f2985a6a4283,
-    type: 2}
+  tunnelPrefab: {fileID: 897870752}
   trauma: 0
 --- !u!81 &1490660655
 AudioListener:
@@ -2263,7 +2289,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1490660651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -25}
+  m_LocalPosition: {x: 0, y: 0, z: -32.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1803487319}
@@ -2512,8 +2538,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  VirusShipPrefab: {fileID: 114708004960594924, guid: bdebec36fcf96445184889ed13943d6d,
-    type: 2}
+  screenLimit: 10
+  VirusShipPrefab: {fileID: 1211754817}
   HackDuration: 3
   infiniteDuration: 0
   TimeScaleFactor: 0.1
@@ -2867,6 +2893,7 @@ MonoBehaviour:
   hackSelector: {fileID: 0}
   mouseController: {fileID: 0}
   health: {fileID: 0}
+  multi: {fileID: 0}
 --- !u!1 &1890942801
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,7 +3008,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1149673689666166, guid: ccede54dae575404f8ce2a541cd375a2, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccede54dae575404f8ce2a541cd375a2, type: 2}
@@ -3053,7 +3080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc9498271beb1b41809885692d46548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarterShip: {fileID: 2006707166}
+  StarterShip: {fileID: 620446927}
   PlayerController: {fileID: 1795357195}
   MainCameraController: {fileID: 1490660654}
   MainBar: {fileID: 1816558674}
@@ -3072,12 +3099,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2006707166 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114501749922989286, guid: 2e15bbfd036654a3192ea76fefad3d7d,
-    type: 2}
-  m_PrefabInternal: {fileID: 214249482}
-  m_Script: {fileID: 11500000, guid: 2037f11e17a71694dad4cce7bfe29ebf, type: 3}
 --- !u!1 &2048017838
 GameObject:
   m_ObjectHideFlags: 0

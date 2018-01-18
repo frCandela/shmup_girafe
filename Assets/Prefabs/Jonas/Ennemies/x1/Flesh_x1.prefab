@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 114327742626344956}
   - component: {fileID: 114843351824256386}
   m_Layer: 8
-  m_Name: Flesh_Jonas
+  m_Name: Flesh_x1
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

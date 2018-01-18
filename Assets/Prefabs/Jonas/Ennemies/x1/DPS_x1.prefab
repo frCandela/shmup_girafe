@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 114902661856517662}
   - component: {fileID: 114787943915931856}
   m_Layer: 8
-  m_Name: DPS_Jonas
+  m_Name: DPS_x1
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
