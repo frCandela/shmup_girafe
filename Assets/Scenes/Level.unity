@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794923ef7fa889f4aa7f384f3d33756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VerticalSpeed: 0.5
+  VerticalSpeed: 1
   tunnelPrefab: {fileID: 1088843695409090, guid: c2a184766bffa854cbc5f2985a6a4283,
     type: 2}
   trauma: 0
@@ -787,7 +787,7 @@ MonoBehaviour:
   HackDuration: 3
   infiniteDuration: 0
   TimeScaleFactor: 0.1
-  hackRefillSpeed: 5
+  hackRefillSpeed: 20
   virusHackRefillSpeed: 15
   onHack:
     m_PersistentCalls:
@@ -1218,8 +1218,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910301822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 590, y: 332, z: 0}
-  m_LocalScale: {x: 1.475, y: 1.475, z: 1.475}
+  m_LocalPosition: {x: 512, y: 288, z: 0}
+  m_LocalScale: {x: 1.28, y: 1.28, z: 1.28}
   m_Children:
   - {fileID: 928354307}
   - {fileID: 1310092358}
@@ -1259,7 +1259,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928354306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29992676, y: 94.79324, z: 0}
+  m_LocalPosition: {x: -0.29992676, y: 94.75756, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 910301826}
@@ -1563,6 +1563,7 @@ PlayableDirector:
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
+    - aa7fa9a0b9ec543d49acc87b21aaffdb: {fileID: 454917183}
     - 9fa64ad376f169b4b8a90e900de94493: {fileID: 454917183}
     - 3075d5abf06fa1a408f44acd1f0fe97f: {fileID: 454917183}
     - 0d1d077b23844bc409388bd09ce7ecb0: {fileID: 928354308}
@@ -1571,6 +1572,10 @@ PlayableDirector:
     - 2acd40b5c318b9544a3dde19ba4cd577: {fileID: 454917183}
     - dbc67994797bd4af091ce7f9a8172c62: {fileID: 454917183}
     - e0257016ea94b4ae2a9257c2e123f24f: {fileID: 454917183}
+    - cb495fbb0a7d64176ad9f8615107093f: {fileID: 454917183}
+    - f87f2d61e30334ef2b844f7b7e0f53fa: {fileID: 454917183}
+    - 98089e33aa7a545b19e37f18781ce4b8: {fileID: 454917183}
+    - 460cad843cf304e2c833ceefda81ba4b: {fileID: 454917183}
     - e1248a8a935eec9419b8787eb3570473: {fileID: 928354308}
 --- !u!114 &1301998661
 MonoBehaviour:
@@ -1588,7 +1593,12 @@ MonoBehaviour:
   MainCameraController: {fileID: 454917184}
   MainBar: {fileID: 1310092359}
   TextPopupsGen: {fileID: 896299611}
-  scorePeerHack: 50
+  Leaderboard: {fileID: 928354308}
+  director: {fileID: 1301998660}
+  timelines:
+  - {fileID: 11400000, guid: 46be15e22223d43338436a7707f32abf, type: 2}
+  scorePeerHack: 500
+  checkpointRefreshTime: 5
 --- !u!114 &1301998662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1638,7 +1648,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1310092357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -264.3, y: -176.68475, z: 3.8637416}
+  m_LocalPosition: {x: -264.3, y: -176.6, z: 3.8637416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75190819}
