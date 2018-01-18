@@ -1,22 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pawns/VirusShip.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pawns/Virus.cs">
     <Files>
-      <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="42" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="49" Column="1" />
-      <File FileName="Assets/Editor/AttackEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/KeyboardController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/HackSelector.cs" Line="1" Column="1" />
-      <File FileName="Assets/Editor/CustomGUI.cs" Line="1" Column="1" />
-      <File FileName="Assets/PostProcessing/Editor/Attributes/PostProcessingModelEditorAttribute.cs" Line="1" Column="1" />
-      <File FileName="Assets/PostProcessing/Editor/PropertyDrawers/GetSetDrawer.cs" Line="1" Column="1" />
-      <File FileName="Assets/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" Line="1" Column="1" />
-      <File FileName="Assets/PostProcessing/Editor/PropertyDrawers/TrackballGroupDrawer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Spawn/CheckpointBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="48" Column="17" />
+      <File FileName="Assets/Scripts/Attack/Attack.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Turn.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="16" Column="21" />
+      <File FileName="Assets/Scripts/UI/MainBar.cs" Line="50" Column="1" />
       <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pawns/VirusShip.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="42" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="167" Column="6" />
+      <File FileName="Assets/Scripts/UI/Popup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/TextPopupsGenerator.cs" Line="36" Column="49" />
+      <File FileName="Assets/Scripts/Score.cs" Line="10" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
