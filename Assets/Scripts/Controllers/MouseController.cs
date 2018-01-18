@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,31 +24,27 @@ public class MouseController : Controller
     public UnityEvent onBecomeVirus;
 
     //Private hack parameters
-    private float hackPower;
+    private float hackPower = 0;
     private float maxHackPower = 100F;
     private float minHackPower = 100F;
     private bool isHacking = false;
 
     private void Start()
     {
-        //ui initialisation
-        GameManager.instance.MainBar.health = PossessedPawn.GetComponent<Health>();
-
         //Hack parameters
-        hackPower = 0;
         isHacking = false;
         if (infiniteDuration)
             HackDuration = float.MaxValue;
 
         //Virus ship
-        virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
-        virusShip.enabled = false;
-
+        if (!virusShip)
+            virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
 
         //Set events on the possesed ship
-        if(PossessedPawn)
+        if (PossessedPawn && PossessedPawn != virusShip)
         {
             Ship ship = (Ship)PossessedPawn;
+            GameManager.instance.MainBar.health = ship.GetComponent<Health>();
             ship.GetComponent<Health>().onTakeDamage.AddListener(ship.GetComponent<Blink>().StartBlink);
         }
     }
@@ -66,10 +63,7 @@ public class MouseController : Controller
         if (!isPossessingPawn())
         {
             onBecomeVirus.Invoke();
-            GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
-            virusShip.enabled = true;
-            virusShip.transform.position = transform.position;
-            Possess(virusShip);
+            PossessVirus();
         }
 
         if (Input.GetButton("Fire"))
@@ -138,6 +132,16 @@ public class MouseController : Controller
             isHacking = true;
             TimeManager.doSlowMotion(3, 0.05f);
         }
+    }
+
+    internal void PossessVirus() {
+        if(!virusShip)
+            virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
+
+        GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
+        virusShip.enabled = true;
+        virusShip.transform.position = transform.position;
+        Possess(virusShip);
     }
 
     public bool isVirus() { return virusShip.enabled; }
