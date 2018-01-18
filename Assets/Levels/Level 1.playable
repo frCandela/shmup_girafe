@@ -183,7 +183,7 @@ MonoBehaviour:
     angle: 180
     col: {r: 1, g: 0, b: 0, a: 0.634}
   - enemy: {fileID: 1351586955025634, guid: ef1719837f257544a9e84251db0675a7, type: 2}
-    position: {x: -0.053333335, y: -0.648}
+    position: {x: -0.013333334, y: -0.136}
     angle: 90
     col: {r: 1, g: 0.3729108, b: 0, a: 0.55089855}
   - enemy: {fileID: 1671544709107808, guid: b5eac0020ce62e84cb4c455e4c7529b3, type: 2}
@@ -194,7 +194,3 @@ MonoBehaviour:
     position: {x: -0.6, y: 0.3}
     angle: 140
     col: {r: 1, g: 0.8705958, b: 0, a: 0.58586526}
-  - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
-    position: {x: -0.013333334, y: -0.144}
-    angle: -173
-    col: {r: 1, g: 0, b: 0.69648075, a: 0.5137331}

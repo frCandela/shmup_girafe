@@ -8,6 +8,10 @@ public class SpawnEditor : Editor
 {
     SpawnClip playable;
 
+    public SpawnEditor() {
+        Undo.undoRedoPerformed += this.Repaint;
+    }
+
     public override void OnInspectorGUI()
     {
         playable = (SpawnClip)this.target;
@@ -46,7 +50,7 @@ public class SpawnEditor : Editor
                 break;
             }
             SerializedProperty enemy = serializedObject.FindProperty("enemies").GetArrayElementAtIndex(i);
-            EditorGUILayout.ObjectField(enemy.FindPropertyRelative("enemy"), typeof(GameObject), GUIContent.none, GUILayout.ExpandWidth(true));
+            EditorGUILayout.ObjectField(enemy.FindPropertyRelative("enemy"), typeof(GameObject), GUIContent.none, GUILayout.Width(150));
             enemy.FindPropertyRelative("angle").intValue = (int)CustomGUI.Knob(enemy.FindPropertyRelative("angle").intValue, Color.red);
             EditorGUILayout.EndHorizontal();
         }
@@ -56,7 +60,11 @@ public class SpawnEditor : Editor
         List<Vector2> pos = playable.enemies.ConvertAll(getPos);
         List<int> angle = playable.enemies.ConvertAll(getAngle);
         List<Color> col = playable.enemies.ConvertAll(getCol);
+        EditorGUI.BeginChangeCheck();
         pos = CustomGUI.Grid(pos, angle, col, GUILayout.Width(150), GUILayout.Height(250));
+        if(EditorGUI.EndChangeCheck()) {
+            Undo.RecordObject(playable, "Modify Spawn");
+        }
         for (int i = 0; i < playable.enemies.Count; i++)
             playable.enemies[i].position = new Vector2((pos[i].x - 75) / 75f, (pos[i].y - 125) / 125f);
         EditorGUILayout.EndVertical();

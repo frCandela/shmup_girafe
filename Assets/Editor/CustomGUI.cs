@@ -104,12 +104,11 @@ static class CustomGUI
                 return this.value;
             GUIUtility.hotControl = this.id;
             this.state().isDragging = true;
+            GUI.changed = true;
             Event.current.Use();
             float res = Mathf.Atan2((this.position.y + this.knobSize.y / 2f) - Event.current.mousePosition.y, (this.position.x + this.knobSize.x / 2f) - Event.current.mousePosition.x) / Mathf.PI * 180f + 90 * (up?-1:1);
             if (res <= -180)
-            {
                 res += 360;
-            }
             return res;
         }
 
@@ -134,9 +133,7 @@ static class CustomGUI
             Event.current.Use();
             float res = Mathf.Atan2((this.position.y + this.knobSize.y / 2f) - Event.current.mousePosition.y, (this.position.x + this.knobSize.x / 2f) - Event.current.mousePosition.x) / Mathf.PI * 180f + 90 * (up ? -1 : 1);
             if (res <= -180)
-            {
                 res += 360;
-            }
             return res;
         }
 
@@ -274,6 +271,7 @@ static class CustomGUI
         {
             if (!this.position.Contains(Event.current.mousePosition))
                 return this.value;
+
             this.state().current = -1;
             for (int i = 0; i < value.Count; i++)
             {
@@ -288,6 +286,7 @@ static class CustomGUI
 
             GUIUtility.hotControl = this.id;
             this.state().isDragging = true;
+            GUI.changed = true;
             Event.current.Use();
 
             value[this.state().current] = Event.current.mousePosition - new Vector2(position.x, position.y);
