@@ -12,11 +12,16 @@ public class Blink : MonoBehaviour
     public float BlinkDuration = 1;
     public float BlinkFrequency = 10;
     public SpriteRenderer[] SpriteRenderers;
+    public Health shipHealth;
 
     //Private parameters
     private float BlinkEndTime;
     private float BlinkDeltaTime;
     private bool BlinkState;
+
+    private void Awake() {
+        shipHealth = GetComponent<Health>();
+    }
 
     private void Start()
     {
@@ -33,8 +38,10 @@ public class Blink : MonoBehaviour
             BlinkState = !BlinkState;
             yield return new WaitForSeconds(BlinkDeltaTime);
         }
-            foreach (SpriteRenderer renderer in SpriteRenderers)
-                renderer.enabled = true;
+        foreach (SpriteRenderer renderer in SpriteRenderers)
+            renderer.enabled = true;
+
+        shipHealth.immortal = false;
     }
 
     //Initialize and stard a blink coroutine
@@ -46,6 +53,7 @@ public class Blink : MonoBehaviour
             BlinkEndTime = Time.time + BlinkDuration;
             BlinkDeltaTime = 1f / BlinkFrequency;
             BlinkState = false;
+            shipHealth.immortal = true;
             StartCoroutine("BlinkCoroutine");
         }
     }

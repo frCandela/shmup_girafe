@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 //GameManager (Singleton pattern)
 public class GameManager : MonoBehaviour {
@@ -19,7 +21,10 @@ public class GameManager : MonoBehaviour {
     public CameraController MainCameraController;
     public MainBar MainBar;
     public TextPopupsGenerator TextPopupsGen;
+    public LeaderboardText Leaderboard;
 
+    public PlayableDirector director;
+    public TimelineAsset[] timelines;
 
     private PostProcessingBehaviour PostProcessing;
 
@@ -32,6 +37,11 @@ public class GameManager : MonoBehaviour {
     private int hackCount = 0;
     private int comboMultiplier = 0;
     private const int maxCombo = 3;
+
+    private float timerCheckpoint;
+    public float checkpointRefreshTime = 5;
+    private const int checkpointCount = 5;
+    private int checkpointId = 0;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -86,6 +96,13 @@ public class GameManager : MonoBehaviour {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
+
+        director.playableAsset = timelines[0];
+        director.Play();
+
+        timerCheckpoint = checkpointRefreshTime;
+        checkpointId = 0;
+        Leaderboard.UpdateScore(checkpointId);
     }
 
     private void Start()
@@ -93,6 +110,19 @@ public class GameManager : MonoBehaviour {
         if (instance == this)
         {
             StarterShip.setHackAnim(true);
+        }
+    }
+
+    private void Update()
+    {
+        timerCheckpoint -= Time.deltaTime;
+        if(timerCheckpoint < 0)
+        {
+            timerCheckpoint = checkpointRefreshTime;
+            checkpointId++;
+            if (checkpointId >= checkpointCount)
+                checkpointId = checkpointCount - 1;
+            Leaderboard.UpdateScore(checkpointId);
         }
     }
 
@@ -116,6 +146,9 @@ public class GameManager : MonoBehaviour {
         {
             hackCount = 0;
             ++comboMultiplier;
+
+            director.playableAsset = timelines[comboMultiplier];
+            director.Play();
         }
 
         MainBar.setCombo(hackCount);
@@ -130,7 +163,12 @@ public class GameManager : MonoBehaviour {
         //Reset the combo
         hackCount = -1;
         comboMultiplier = 0;
-        MainBar.setCombo(comboMultiplier+1);
+        MainBar.setCombo(hackCount + 1);
+        MainBar.setMulti(getMulti());
+
+        director.playableAsset = timelines[0];
+        director.initialTime = -4;
+        director.Play();
     }
 
     public int getScore(){ return score; }

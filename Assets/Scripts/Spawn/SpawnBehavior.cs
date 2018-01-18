@@ -17,7 +17,7 @@ public class SpawnBehavior : PlayableBehaviour
                 throw new UnityException("No Spawner");
 
             foreach (Spawn s in data)
-                spawner.Spawn(s.enemy, s.position);
+                spawner.Spawn(s.enemy, s.position, -s.angle);
             playable.SetDone(true);
         }
     }

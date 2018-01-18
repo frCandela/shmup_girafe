@@ -215,10 +215,10 @@ static class CustomGUI
     #region GRID
 
     #region CONSTRUCTOR
-    public static List<Vector2> Grid(List<Vector2> value, List<Color> col, params GUILayoutOption[] options)
+    public static List<Vector2> Grid(List<Vector2> value, List<int> angle, List<Color> col, params GUILayoutOption[] options)
     {
         Rect pos = EditorGUILayout.GetControlRect(options);
-        return new GridContext(pos, value, col).GetValue();
+        return new GridContext(pos, value, angle, col).GetValue();
     }
     #endregion
 
@@ -235,14 +235,16 @@ static class CustomGUI
         Rect position;
 
         List<Vector2> value;
+        List<int> angle;
         List<Color> colors;
 
-        public GridContext(Rect position, List<Vector2> value, List<Color> colors)
+        public GridContext(Rect position, List<Vector2> value, List<int> angle, List<Color> colors)
         {
             this.id = GUIUtility.GetControlID(GetType().GetHashCode(), FocusType.Passive, position);
             this.position = position;
 
             this.value = value;
+            this.angle = angle;
             this.colors = colors;
         }
 
@@ -344,7 +346,16 @@ static class CustomGUI
             wireMaterial.SetInt("_HandleZTest", (int)CompareFunction.Always);
         }
 
-        private void drawPawn(Vector2 pos, Color col, string text)
+        private Vector3 GetUVForPoint(Vector3 point, Vector3 pos) {
+            return new Vector3((point.x - pos.x + 18) / 36f, (point.y - pos.y + 18) / 36f);
+        }
+
+        private void VertexPointWithUV(Vector3 point, Vector3 pos) {
+            GL.TexCoord(this.GetUVForPoint(point, pos));
+            GL.Vertex(point);
+        }
+
+        private void drawPawn(Vector2 pos, float angle, Color col, string text)
         {
             pawnMaterial.SetPass(0);
             GL.Begin(GL.QUADS);
@@ -358,6 +369,19 @@ static class CustomGUI
             GL.TexCoord(new Vector2(0, 1));
             GL.Vertex(new Vector3(pos.x - 18, pos.y + 18, 0));
             GL.End();
+
+
+            GL.Begin(GL.TRIANGLES);
+            GL.Color(Color.red);
+            //GL.TexCoord(new Vector2(0.5f, 0.5f));
+            //GL.Vertex(new Vector3(pos.x, pos.y, 0));
+
+            VertexPointWithUV(new Vector3(pos.x + Mathf.Cos(angle) * 10, pos.y + Mathf.Sin(angle) * 10, 0), pos);
+
+            VertexPointWithUV(new Vector3(pos.x + Mathf.Cos(angle + 0.4f) * 18, pos.y + Mathf.Sin(angle + 0.4f) * 18, 0), pos);
+            VertexPointWithUV(new Vector3(pos.x + Mathf.Cos(angle - 0.4f) * 18, pos.y + Mathf.Sin(angle - 0.4f) * 18, 0), pos);
+            GL.End();
+
 
             pawnColorMaterial.SetPass(0);
             GL.Begin(GL.QUADS);
@@ -397,7 +421,7 @@ static class CustomGUI
             GL.PopMatrix();
 
             for (int i = 0; i < value.Count; i++)
-                drawPawn(value[i], colors[i], "" + (char)('A' + i));
+                drawPawn(value[i], (angle[i] / 360f) * Mathf.PI * 2f - Mathf.PI / 2f, colors[i], "" + (char)('A' + i));
             
             GUI.EndClip();
             return this.value;

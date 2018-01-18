@@ -7,9 +7,8 @@ using UnityEngine.UI;
 public class LeaderboardText : MonoBehaviour {
     private Text text;
 
-    void Start() {
+    void Awake() {
         text = GetComponent<Text>();
-        UpdateScore(0);
     }
 
     public void UpdateScore(int i) {

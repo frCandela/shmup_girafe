@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 337831424, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  m_NextId: 0
+  m_Tracks:
+  - {fileID: 114332203664738206}
+  m_FixedDuration: 6.783333333332
+  m_EditorSettings:
+    fps: 60
+  m_DurationMode: 0
+--- !u!114 &114318558171729408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 9fa64ad376f169b4b8a90e900de94493
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
+    position: {x: 0, y: 0.5}
+    angle: 180
+    col: {r: 1, g: 0, b: 0, a: 0.634}
+  - enemy: {fileID: 1351586955025634, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+    position: {x: 0, y: 0}
+    angle: 180
+    col: {r: 1, g: 0.3729108, b: 0, a: 0.5411765}
+  - enemy: {fileID: 1671544709107808, guid: b5eac0020ce62e84cb4c455e4c7529b3, type: 2}
+    position: {x: 0.6, y: 0.3}
+    angle: 180
+    col: {r: 0, g: 0.9459119, b: 1, a: 0.5397127}
+  - enemy: {fileID: 1671544709107808, guid: b5eac0020ce62e84cb4c455e4c7529b3, type: 2}
+    position: {x: -0.6, y: 0.3}
+    angle: 180
+    col: {r: 1, g: 0.8705958, b: 0, a: 0.58586526}
+  - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
+    position: {x: 0.013333334, y: -0.512}
+    angle: 180
+    col: {r: 1, g: 0, b: 0.69648075, a: 0.5137331}
+--- !u!114 &114332203664738206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778877366, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: Spawn
+  m_EditorClassIdentifier: 
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_AnimClip: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Start: 0
+    m_ClipIn: 0
+    m_Asset: {fileID: 114807005080856060}
+    m_UnderlyingAsset: {fileID: 114807005080856060}
+    m_Duration: 8.816666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114332203664738206}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Vague 1
+    m_Version: 1
+  - m_Start: 12.283333333333333
+    m_ClipIn: 0
+    m_Asset: {fileID: 114318558171729408}
+    m_UnderlyingAsset: {fileID: 114807005080856060}
+    m_Duration: 13.383333333333333
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114332203664738206}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Vague 2
+    m_Version: 1
+--- !u!114 &114807005080856060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 2acd40b5c318b9544a3dde19ba4cd577
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
+    position: {x: -0.013333334, y: 0.68}
+    angle: 180
+    col: {r: 1, g: 0, b: 0, a: 0.634}
+  - enemy: {fileID: 1351586955025634, guid: ef1719837f257544a9e84251db0675a7, type: 2}
+    position: {x: -0.053333335, y: -0.648}
+    angle: 90
+    col: {r: 1, g: 0.3729108, b: 0, a: 0.55089855}
+  - enemy: {fileID: 1671544709107808, guid: b5eac0020ce62e84cb4c455e4c7529b3, type: 2}
+    position: {x: 0.6, y: 0.3}
+    angle: -135
+    col: {r: 0, g: 0.9459119, b: 1, a: 0.5397127}
+  - enemy: {fileID: 1671544709107808, guid: b5eac0020ce62e84cb4c455e4c7529b3, type: 2}
+    position: {x: -0.6, y: 0.3}
+    angle: 140
+    col: {r: 1, g: 0.8705958, b: 0, a: 0.58586526}
+  - enemy: {fileID: 1201508606819798, guid: 264c9d70ead1c954b98633b085f04472, type: 2}
+    position: {x: -0.013333334, y: -0.144}
+    angle: -173
+    col: {r: 1, g: 0, b: 0.69648075, a: 0.5137331}

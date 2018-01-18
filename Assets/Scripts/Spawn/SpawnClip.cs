@@ -7,7 +7,6 @@ using UnityEngine.Playables;
 public class SpawnClip : PlayableAsset
 {
     public ExposedReference<Spawner> spawner;
-    public int multiplierMin, multiplierMax;
     public List<Spawn> enemies;
 
     public SpawnBehavior template = new SpawnBehavior();
@@ -29,6 +28,8 @@ public class Spawn
     public GameObject enemy;
     [SerializeField]
     public Vector2 position;
+    [SerializeField]
+    public int angle;
 #if UNITY_EDITOR
     [SerializeField]
     public Color col;

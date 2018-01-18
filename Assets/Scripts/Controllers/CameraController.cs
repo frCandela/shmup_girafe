@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
             if (toDelete)
                 Destroy(toDelete);
             toDelete = lastTunnel;
-            lastTunnel = Instantiate(tunnelPrefab, lastTunnel.transform.position + new Vector3(0, 1.5F*20f, 0), lastTunnel.transform.rotation);
+            lastTunnel = Instantiate(tunnelPrefab, lastTunnel.transform.position + new Vector3(0, 39.37f, 0), lastTunnel.transform.rotation);
         }
     }
 

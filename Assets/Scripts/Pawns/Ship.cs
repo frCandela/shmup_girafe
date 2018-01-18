@@ -134,4 +134,9 @@ public class Ship : Pawn
             attack.Fire(this.gameObject, transform);
         }
     }
+
+    public override void UnFire() {
+        if(attack)
+            attack.Reset();
+    }
 }

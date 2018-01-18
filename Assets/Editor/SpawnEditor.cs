@@ -18,10 +18,6 @@ public class SpawnEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("spawner"));
-        float min = serializedObject.FindProperty("multiplierMin").intValue, max = serializedObject.FindProperty("multiplierMax").intValue;
-        EditorGUILayout.MinMaxSlider("WIP Multiplier range [" + Mathf.Pow(2, min) + "," + Mathf.Pow(2, max) + "]", ref min, ref max, 0, 3);
-        serializedObject.FindProperty("multiplierMin").intValue = (int)min;
-        serializedObject.FindProperty("multiplierMax").intValue = (int)max;
 
         EditorGUILayout.BeginHorizontal();
 
@@ -31,6 +27,7 @@ public class SpawnEditor : Editor
             Spawn sp = new Spawn();
             sp.position = UnityEngine.Random.insideUnitCircle;
             sp.col = UnityEngine.Random.ColorHSV(0, 1, 1, 1, 1, 1, 0.5f, 0.6f);
+            sp.angle = 180;
             playable.enemies.Add(sp);
             serializedObject.ApplyModifiedProperties();
             serializedObject.Update();
@@ -38,6 +35,8 @@ public class SpawnEditor : Editor
 
         for (int i = 0; i < playable.enemies.Count; i++)
         {
+            EditorGUILayout.Space();
+
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Delete " + (char)('A' + (char)i), GUILayout.Width(60)))
             {
@@ -46,24 +45,32 @@ public class SpawnEditor : Editor
                 serializedObject.Update();
                 break;
             }
-            EditorGUILayout.ObjectField(serializedObject.FindProperty("enemies").GetArrayElementAtIndex(i).FindPropertyRelative("enemy"), typeof(GameObject), GUIContent.none, GUILayout.ExpandWidth(true));
+            SerializedProperty enemy = serializedObject.FindProperty("enemies").GetArrayElementAtIndex(i);
+            EditorGUILayout.ObjectField(enemy.FindPropertyRelative("enemy"), typeof(GameObject), GUIContent.none, GUILayout.ExpandWidth(true));
+            enemy.FindPropertyRelative("angle").intValue = (int)CustomGUI.Knob(enemy.FindPropertyRelative("angle").intValue, Color.red);
             EditorGUILayout.EndHorizontal();
         }
 
         EditorGUILayout.EndVertical();
         EditorGUILayout.BeginVertical(GUILayout.MinWidth(150), GUILayout.Width(150));
         List<Vector2> pos = playable.enemies.ConvertAll(getPos);
+        List<int> angle = playable.enemies.ConvertAll(getAngle);
         List<Color> col = playable.enemies.ConvertAll(getCol);
-        pos = CustomGUI.Grid(pos, col, GUILayout.Width(150), GUILayout.Height(250));
+        pos = CustomGUI.Grid(pos, angle, col, GUILayout.Width(150), GUILayout.Height(250));
         for (int i = 0; i < playable.enemies.Count; i++)
             playable.enemies[i].position = new Vector2((pos[i].x - 75) / 75f, (pos[i].y - 125) / 125f);
         EditorGUILayout.EndVertical();
         EditorGUILayout.EndHorizontal();
 
+        EditorGUILayout.Space();
+
         serializedObject.ApplyModifiedProperties();
 
-        this.DrawDefaultInspector();
+        showDefault = EditorGUILayout.Toggle("Show advanced configuration", showDefault);
+        if(showDefault)
+            this.DrawDefaultInspector();
     }
+    static bool showDefault = false;
 
     private Vector2 getPos(Spawn input)
     {
@@ -71,6 +78,11 @@ public class SpawnEditor : Editor
 
         return res;
     }
+
+    private int getAngle(Spawn input) {
+        return input.angle;
+    }
+
     private Color getCol(Spawn input)
     {
         return input.col;
