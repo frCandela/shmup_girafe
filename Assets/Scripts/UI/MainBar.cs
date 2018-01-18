@@ -19,6 +19,7 @@ public class MainBar : MonoBehaviour
     public HackSelector hackSelector;
     public MouseController mouseController;
     public Health health;
+    public Text multi;
 
     // Use this for initialization
     void Start ()
@@ -42,6 +43,11 @@ public class MainBar : MonoBehaviour
             setHackBar(hackSelector.getHackPowerRatio());
         else if (mouseController)
             setHackBar(mouseController.getHackPowerRatio());
+    }
+
+    //Set the multiplierText
+    public void setMulti(int value) {
+        multi.text = "x" + value;
     }
 
     //Set the combo images

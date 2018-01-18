@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
     private PostProcessingBehaviour PostProcessing;
 
     public const int scoreLossHitVirus = 1;
-    public const int hackPerCombo = 1;
+    public const int hackPerCombo = 4;
     public int scorePeerHack = 50;
 
     private int score = 0;
@@ -73,7 +73,8 @@ public class GameManager : MonoBehaviour {
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.health = StarterShip.GetComponent<Health>();
-        MainBar.setCombo(1);
+        MainBar.setCombo(0);
+        MainBar.setMulti(1);
 
         //Init variables
         score = 0;
@@ -115,8 +116,10 @@ public class GameManager : MonoBehaviour {
         {
             hackCount = 0;
             ++comboMultiplier;
-            MainBar.setCombo(comboMultiplier+1);
         }
+
+        MainBar.setCombo(hackCount);
+        MainBar.setMulti(getMulti());
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
@@ -132,10 +135,12 @@ public class GameManager : MonoBehaviour {
 
     public int getScore(){ return score; }
 
+    public int getMulti() { return (int)Mathf.Pow(2f, comboMultiplier);}
+
     //Returns the score effectively gained by the player
     public int addScore(int rawScore)
     {
-        int scoreGained = (int)Mathf.Pow(2f, comboMultiplier) * rawScore;
+        int scoreGained = getMulti() * rawScore;
         score += scoreGained;
         return scoreGained;
     }
