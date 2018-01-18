@@ -210,6 +210,7 @@ MonoBehaviour:
   initialDistance: 1
   loadDuration: 1
   chargeSpeed: 30
+  pattern: {fileID: 11400000, guid: 34065d88f1c94a845b5102c188888c16, type: 2}
 --- !u!114 &114518344704141090
 MonoBehaviour:
   m_ObjectHideFlags: 1

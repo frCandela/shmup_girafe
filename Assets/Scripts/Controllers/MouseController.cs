@@ -67,8 +67,10 @@ public class MouseController : Controller
         {
             onBecomeVirus.Invoke();
             GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
+            GameManager.instance.MainBar.setCombo(0);
+            GameManager.instance.MainBar.setMulti(1);
             virusShip.enabled = true;
-
+            virusShip.transform.position = transform.position;
             Possess(virusShip);
         }
 
