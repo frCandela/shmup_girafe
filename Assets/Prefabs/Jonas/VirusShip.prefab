@@ -9,22 +9,22 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1939672186106990}
+  m_RootGameObject: {fileID: 1024872792337874}
   m_IsPrefabParent: 1
---- !u!1 &1939672186106990
+--- !u!1 &1024872792337874
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4428681170866686}
-  - component: {fileID: 50977752139751704}
-  - component: {fileID: 114260992827503272}
-  - component: {fileID: 114664249371947100}
-  - component: {fileID: 95519488051150046}
-  - component: {fileID: 212750728400253798}
-  - component: {fileID: 61568427593623356}
+  - component: {fileID: 4634272954382646}
+  - component: {fileID: 50150358434819556}
+  - component: {fileID: 114117157822653960}
+  - component: {fileID: 114708004960594924}
+  - component: {fileID: 95024271419405900}
+  - component: {fileID: 212655479108382476}
+  - component: {fileID: 61375117386959030}
   m_Layer: 0
   m_Name: VirusShip
   m_TagString: Player
@@ -32,26 +32,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4428681170866686
+--- !u!4 &4634272954382646
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.7894243, y: 11.221277, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50977752139751704
+--- !u!50 &50150358434819556
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -65,12 +65,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61568427593623356
+--- !u!61 &61375117386959030
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -90,13 +90,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.64}
   m_EdgeRadius: 0
---- !u!95 &95519488051150046
+--- !u!95 &95024271419405900
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 48f5414b22374a641be539b416018d15, type: 2}
@@ -107,19 +107,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114260992827503272
+--- !u!114 &114117157822653960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 299d438d84ca14e45843df8b5aae2f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   immortal: 1
-  health: 100
+  health: 0
   onDie:
     m_PersistentCalls:
       m_Calls: []
@@ -130,12 +130,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114664249371947100
+--- !u!114 &114708004960594924
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 096fa1233db2d7643baafe5d969ee168, type: 3}
@@ -143,16 +143,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHackable: 1
   hackCost: 100
-  hackbonus: 10
-  Speed: 8.4
+  hackbonus: 0
+  Speed: 20
   canBeStunned: 0
   isPlayerControlled: 0
---- !u!212 &212750728400253798
+--- !u!212 &212655479108382476
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1939672186106990}
+  m_GameObject: {fileID: 1024872792337874}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
