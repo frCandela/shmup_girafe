@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024872792337874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.7894243, y: 11.221277, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immortal: 1
-  health: 100
+  health: 0
   onDie:
     m_PersistentCalls:
       m_Calls: []
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isHackable: 1
   hackCost: 100
-  hackbonus: 10
+  hackbonus: 0
   Speed: 20
   canBeStunned: 0
   isPlayerControlled: 0

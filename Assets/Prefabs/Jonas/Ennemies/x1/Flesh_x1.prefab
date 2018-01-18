@@ -44,7 +44,7 @@ Transform:
   m_GameObject: {fileID: 1671544709107808}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 3.2, y: 5.97, z: 0.026434172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
-  Speed: 20
+  Speed: 12
   canBeStunned: 1
   isPlayerControlled: 0
 --- !u!114 &114283961945086644
