@@ -16,6 +16,7 @@ public class Popup : MonoBehaviour
     //Components
     private Rigidbody2D rb;
     private Text text;
+    private float initialScale;
 
     //Private attributes
     private float fadeOutTimer;
@@ -33,6 +34,9 @@ public class Popup : MonoBehaviour
         rb.velocity = new Vector2(Random.Range(-PopupSpeed.x, PopupSpeed.x), Random.Range(0, PopupSpeed.y));
 
         fadeOutTimer = 0f;
+        initialScale = transform.localScale.x;
+
+        print(initialScale);
     }
 	
 	// Update is called once per frame
@@ -51,7 +55,7 @@ public class Popup : MonoBehaviour
         // scaleFadeOut
         if (scaleFadeOut)
         {
-            float scaleValue = 1f - fadeOutTimer / lifeTime;
+            float scaleValue = initialScale*(1f - fadeOutTimer / lifeTime);
             transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
         }
 
