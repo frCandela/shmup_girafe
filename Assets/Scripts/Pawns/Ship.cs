@@ -47,7 +47,6 @@ public class Ship : Pawn
     {
         stunTimer = 0F;
         stunned = false;
-       
     }
 
     public void setHackAnim( bool state){anim.SetBool("Hacked", state);}

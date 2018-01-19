@@ -202,7 +202,7 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  Speed: 10
+  Speed: 6
   canBeStunned: 1
   isPlayerControlled: 0
   chargeCircle: {fileID: 212798350263293616}
@@ -211,6 +211,7 @@ MonoBehaviour:
   initialDistance: 1
   loadDuration: 1
   chargeSpeed: 30
+  deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 712e3bd8eb25a4959abd312184896f41, type: 2}
 --- !u!114 &114518344704141090
 MonoBehaviour:
@@ -299,7 +300,7 @@ SpriteRenderer:
   m_Size: {x: 1.42, y: 1.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!212 &212798350263293616
 SpriteRenderer:
