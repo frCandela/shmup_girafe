@@ -90,7 +90,6 @@ public class TankShip : Ship
                 //Rotates the character back 
                 Vector3 rotation = transform.rotation.eulerAngles;
                 rotation = Vector3.RotateTowards(rotation, new Vector3(0, 0, 180), deltaRotationSpeed, deltaRotationSpeed);
-                print(rotation);
                 transform.rotation = Quaternion.Euler( rotation );
 
             }

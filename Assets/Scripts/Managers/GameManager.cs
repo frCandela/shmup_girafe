@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
     private PostProcessingBehaviour PostProcessing;
 
     public const int scoreLossHitVirus = 1;
-    public const int hackPerCombo = 4;
+    public int hackPerCombo = 2;
     public int scorePeerHack = 50;
 
     private int score = 0;
@@ -74,16 +74,20 @@ public class GameManager : MonoBehaviour {
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
 
-        //initialise ui
-        MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.setCombo(0);
-        MainBar.setMulti(1);
+
 
         //Init variables
         score = 0;
         scores = new int[5];
-        hackCount = 0;
+        hackCount = -1;
+        hackPerCombo = 2;
         comboMultiplier = 0;
+
+        //initialise ui
+        MainBar.mouseController = (MouseController)PlayerController;
+        MainBar.setCombo(0);
+        MainBar.setMulti(1);
+        MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -100,6 +104,8 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
+        print(hackCount + " " + hackPerCombo);
+
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
@@ -127,10 +133,13 @@ public class GameManager : MonoBehaviour {
     private void hackOccured()
     {
         //Increment combo multiplier
-        if ( ++hackCount >= hackPerCombo && comboMultiplier < maxCombo)
+        if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
             ++comboMultiplier;
+            ++hackPerCombo;
+
+            MainBar.setSegments(comboMultiplier + 2);
 
             director.playableAsset = timelines[comboMultiplier];
             director.Play();
@@ -148,8 +157,10 @@ public class GameManager : MonoBehaviour {
         //Reset the combo
         hackCount = -1;
         comboMultiplier = 0;
+
         MainBar.setCombo(hackCount + 1);
         MainBar.setMulti(getMulti());
+        MainBar.setSegments(2);
 
         director.playableAsset = timelines[0];
         director.initialTime = -4;
