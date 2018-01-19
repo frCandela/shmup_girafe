@@ -1,19 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pawns/Virus.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="48" Column="17" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="135" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Attack/Attack.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Turn.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/MainBar.cs" Line="50" Column="1" />
+      <File FileName="Assets/Scripts/UI/MainBar.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/EnemyController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="42" Column="1" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="167" Column="6" />
       <File FileName="Assets/Scripts/UI/Popup.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/TextPopupsGenerator.cs" Line="36" Column="49" />
-      <File FileName="Assets/Scripts/Score.cs" Line="10" Column="44" />
+      <File FileName="Assets/Scripts/UI/TextPopupsGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Score.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

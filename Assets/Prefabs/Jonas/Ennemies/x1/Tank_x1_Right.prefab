@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114410754506266730}
   - component: {fileID: 114341212322532646}
   m_Layer: 8
-  m_Name: Tank_x1
+  m_Name: Tank_x1_Right
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   BlinkFrequency: 10
   SpriteRenderers:
   - {fileID: 212861779368781380}
+  shipHealth: {fileID: 0}
 --- !u!114 &114410754506266730
 MonoBehaviour:
   m_ObjectHideFlags: 1
