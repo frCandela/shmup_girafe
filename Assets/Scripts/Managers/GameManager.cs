@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
     private PostProcessingBehaviour PostProcessing;
 
     public const int scoreLossHitVirus = 1;
-    public const int hackPerCombo = 4;
+    public int hackPerCombo = 2;
     public int scorePeerHack = 50;
 
     private int score = 0;
@@ -74,16 +74,18 @@ public class GameManager : MonoBehaviour {
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
 
-        //initialise ui
-        MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.setCombo(0);
-        MainBar.setMulti(1);
-
         //Init variables
         score = 0;
         scores = new int[5];
         hackCount = 0;
+        hackPerCombo = 1;
         comboMultiplier = 0;
+
+        //initialise ui
+        MainBar.mouseController = (MouseController)PlayerController;
+        MainBar.setCombo(0);
+        MainBar.setMulti(getMulti());
+        MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -100,6 +102,7 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
+
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
@@ -127,17 +130,20 @@ public class GameManager : MonoBehaviour {
     private void hackOccured()
     {
         //Increment combo multiplier
-        if ( ++hackCount >= hackPerCombo && comboMultiplier < maxCombo)
+        if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
             ++comboMultiplier;
+            ++hackPerCombo;
+
+            MainBar.setSegments(comboMultiplier + 1);
+            MainBar.setMulti(getMulti());
 
             director.playableAsset = timelines[comboMultiplier];
             director.Play();
         }
 
         MainBar.setCombo(hackCount);
-        MainBar.setMulti(getMulti());
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
@@ -146,9 +152,11 @@ public class GameManager : MonoBehaviour {
     public void playerBecameVirus()
     {
         //Reset the combo
-        hackCount = -1;
+        hackCount = 0;
         comboMultiplier = 0;
+
         MainBar.setCombo(hackCount + 1);
+        MainBar.setSegments(1); 
         MainBar.setMulti(getMulti());
 
         director.playableAsset = timelines[0];

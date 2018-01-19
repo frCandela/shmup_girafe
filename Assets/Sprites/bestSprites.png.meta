@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 02d1d94a44029da4f91aa7e773b2b39b
-timeCreated: 1516359139
+timeCreated: 1516369522
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,7 +17,7 @@ TextureImporter:
     21300020: ChargeCircle
     21300022: target
     21300024: enptyCircle
-    21300026: bestSprites_13
+    21300026: combo1_0
     21300028: combo2_0
     21300030: combo3_0
     21300032: combo3_1
@@ -222,7 +222,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: bestSprites_13
+      name: combo1_0
       rect:
         serializedVersion: 2
         x: 34
