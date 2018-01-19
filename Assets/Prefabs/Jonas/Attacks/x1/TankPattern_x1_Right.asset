@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 0.5
   charges:
-  - distance: 3
+  - distance: 5
     angle: -74.53877
-  - distance: 2
+  - distance: 4
     angle: 74.74488
-  - distance: 1
+  - distance: 3
     angle: 0

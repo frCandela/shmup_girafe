@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 58436751843917154}
   - component: {fileID: 50719474431657034}
   m_Layer: 0
-  m_Name: DPSBullet_x1
+  m_Name: DPSBullet_x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
