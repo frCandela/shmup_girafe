@@ -74,19 +74,17 @@ public class GameManager : MonoBehaviour {
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
 
-
-
         //Init variables
         score = 0;
         scores = new int[5];
-        hackCount = -1;
-        hackPerCombo = 2;
+        hackCount = 0;
+        hackPerCombo = 1;
         comboMultiplier = 0;
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.setCombo(0);
-        MainBar.setMulti(1);
+        MainBar.setMulti(getMulti());
         MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
@@ -104,7 +102,6 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-        print(hackCount + " " + hackPerCombo);
 
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
@@ -139,14 +136,14 @@ public class GameManager : MonoBehaviour {
             ++comboMultiplier;
             ++hackPerCombo;
 
-            MainBar.setSegments(comboMultiplier + 2);
+            MainBar.setSegments(comboMultiplier + 1);
+            MainBar.setMulti(getMulti());
 
             director.playableAsset = timelines[comboMultiplier];
             director.Play();
         }
 
         MainBar.setCombo(hackCount);
-        MainBar.setMulti(getMulti());
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
@@ -155,12 +152,12 @@ public class GameManager : MonoBehaviour {
     public void playerBecameVirus()
     {
         //Reset the combo
-        hackCount = -1;
+        hackCount = 0;
         comboMultiplier = 0;
 
         MainBar.setCombo(hackCount + 1);
+        MainBar.setSegments(1); 
         MainBar.setMulti(getMulti());
-        MainBar.setSegments(2);
 
         director.playableAsset = timelines[0];
         director.initialTime = -4;

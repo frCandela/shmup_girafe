@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class MainBar : MonoBehaviour
 {
     [Header("Images :")]
+    public Image[] combo1;
     public Image[] combo2;
     public Image[] combo3;
     public Image[] combo4;
@@ -29,7 +30,7 @@ public class MainBar : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        selectedCombo = combo2;
+        selectedCombo = combo1;
 
         //set the hackBar
         if (hackBar)
@@ -60,16 +61,18 @@ public class MainBar : MonoBehaviour
 
     public void setSegments( int nbSegments)
     {
+        print("setSeg " + nbSegments);
         for (int i = 0; i < selectedCombo.Length; ++i)
             selectedCombo[i].enabled = false;
-
-        if (nbSegments == 2)
+        if (nbSegments == 1)
+            selectedCombo = combo1;
+        else if (nbSegments == 2)
             selectedCombo = combo2;
-        if (nbSegments == 3)
+        else if(nbSegments == 3)
             selectedCombo = combo3;
-        if (nbSegments == 4)
+        else if(nbSegments == 4)
             selectedCombo = combo4;
-        if (nbSegments == 5)
+        else if(nbSegments == 5)
             selectedCombo = combo5;
     }
 
@@ -117,6 +120,7 @@ public class SliceEditor : Editor
     public int setHealth;
     public float setHack;
 
+    public int setMulti;
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -125,8 +129,8 @@ public class SliceEditor : Editor
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Editor :", EditorStyles.boldLabel);
-
-        //Multi
+        
+        //Segments
         setSegments = EditorGUILayout.IntField("setSegments", setSegments);
         if (GUILayout.Button("setSegments"))
             myMainBar.setSegments(setSegments);
@@ -145,6 +149,11 @@ public class SliceEditor : Editor
         setHack = EditorGUILayout.Slider("setHack", setHack, 0, 1);
         if (GUILayout.Button("setHack"))
             myMainBar.setHackBar(setHack);
+
+        //Hack
+        setMulti = EditorGUILayout.IntField("setMulti", setMulti);
+        if (GUILayout.Button("setMulti"))
+            myMainBar.setMulti(setMulti);
     }
 }
 #endif
