@@ -115,9 +115,10 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
-  Speed: 12
+  playerSpeed: 0.5
   canBeStunned: 1
   isPlayerControlled: 0
+  scrollingSpeed: 0
 --- !u!114 &114283961945086644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d599b899b6bbb4e95cf1e4dbc59daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 250
 --- !u!114 &114327742626344956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +161,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114283961945086644}
         m_MethodName: AddScore
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

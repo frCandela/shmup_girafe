@@ -262,7 +262,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114964515329419696}
         m_MethodName: AddScore
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -304,9 +304,10 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  Speed: 15
+  playerSpeed: 0.5
   canBeStunned: 1
   isPlayerControlled: 0
+  scrollingSpeed: 0
   cannonPosition: {fileID: 4473357877139156}
   cannonPosition2: {fileID: 4690998034521930}
   cannonPosition3: {fileID: 4678738130884302}
@@ -366,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d599b899b6bbb4e95cf1e4dbc59daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 1000
 --- !u!212 &212344798526154072
 SpriteRenderer:
   m_ObjectHideFlags: 1
