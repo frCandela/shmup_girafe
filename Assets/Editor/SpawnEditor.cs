@@ -22,7 +22,7 @@ public class SpawnEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("spawner"));
-
+        
         EditorGUILayout.BeginHorizontal();
 
         EditorGUILayout.BeginVertical(GUILayout.ExpandWidth(true));

@@ -202,7 +202,7 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  Speed: 10
+  Speed: 6
   canBeStunned: 1
   isPlayerControlled: 0
   chargeCircle: {fileID: 212798350263293616}
