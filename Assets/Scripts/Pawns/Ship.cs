@@ -19,6 +19,9 @@ public class Ship : Pawn
     public bool canBeStunned = true;
     public bool isPlayerControlled = false;
 
+    //Speed
+    public float scrollingSpeed;
+
     private float stunTimer;
     private bool stunned;
 
@@ -66,7 +69,7 @@ public class Ship : Pawn
     {
         //Collision with other ships
         Ship ship = collision.gameObject.GetComponent<Ship>();
-        if (ship)
+        if (ship && ship.tag != tag )
         {
             Health otherHealth = ship.GetComponent<Health>();
             Health myHealth = GetComponent<Health>();
@@ -81,8 +84,6 @@ public class Ship : Pawn
             }
         }
     }
-
-    public float scrollingSpeed;
 
     protected override void Update()
     {

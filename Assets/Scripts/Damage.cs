@@ -10,6 +10,7 @@ public class Damage : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Don't hit friends 
         if (collision.gameObject.tag != this.tag)
         {
             Health health = collision.gameObject.GetComponent<Health>();
