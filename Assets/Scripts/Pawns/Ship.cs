@@ -13,7 +13,7 @@ using UnityEngine;
 public class Ship : Pawn
 {
     [Header("Ship parameters:")]
-    [Range(0.0f, 100.0f)]public float Speed = 0.5f;  //Movement speed of the ship
+    [Range(0.0f, 100.0f)]public float playerSpeed = 0.5f;  //Movement speed of the ship
 
     //Stun
     public bool canBeStunned = true;
@@ -82,13 +82,13 @@ public class Ship : Pawn
         }
     }
 
-    public float speed;
+    public float scrollingSpeed;
 
     protected override void Update()
     {
         base.Update();
 
-        transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+        transform.position += new Vector3(0, scrollingSpeed * Time.deltaTime, 0);
 
         //Stun
         stunTimer -= Time.deltaTime;
@@ -105,7 +105,7 @@ public class Ship : Pawn
         if ( ! IsStunned())
         {
             Vector2 newPosition = rb.position;
-            newPosition.x += axisValue * Speed * Time.fixedDeltaTime;
+            newPosition.x += axisValue * playerSpeed * Time.fixedDeltaTime;
             rb.position = newPosition;
         }
     }
@@ -116,7 +116,7 @@ public class Ship : Pawn
         if ( ! IsStunned())
         {
             Vector2 newPosition = rb.position;
-            newPosition.y += axisValue * Speed * Time.fixedDeltaTime;
+            newPosition.y += axisValue * playerSpeed * Time.fixedDeltaTime;
             rb.position = newPosition;
         }
     }
@@ -124,7 +124,7 @@ public class Ship : Pawn
     public override void MoveTowards(Vector3 point)
     {
         if( ! IsStunned() )
-            transform.position = Vector3.MoveTowards(transform.position, point, Speed * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, point, playerSpeed * Time.fixedDeltaTime);
     }
 
     //Makes the ship shoot ! 

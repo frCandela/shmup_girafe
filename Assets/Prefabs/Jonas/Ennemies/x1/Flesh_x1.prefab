@@ -115,9 +115,10 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
-  Speed: 12
+  playerSpeed: 12
   canBeStunned: 1
   isPlayerControlled: 0
+  scrollingSpeed: -2
 --- !u!114 &114283961945086644
 MonoBehaviour:
   m_ObjectHideFlags: 1

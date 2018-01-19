@@ -90,7 +90,6 @@ public class TankShip : Ship
                 //Rotates the character back 
                 Vector3 rotation = transform.rotation.eulerAngles;
                 rotation = Vector3.RotateTowards(rotation, new Vector3(0, 0, 180), deltaRotationSpeed, deltaRotationSpeed);
-                print(rotation);
                 transform.rotation = Quaternion.Euler( rotation );
 
             }
@@ -209,6 +208,6 @@ public class TankShip : Ship
     {
         if (!IsStunned() && !loadingCharge && !isCharging)
             if (Vector3.Distance(transform.position, getMouseWorldPosition()) > 0.3F)
-                transform.position = Vector3.MoveTowards(transform.position, point, Speed * Time.fixedDeltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, point, playerSpeed * Time.fixedDeltaTime);
     }
 }
