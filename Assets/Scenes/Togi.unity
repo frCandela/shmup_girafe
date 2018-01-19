@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794923ef7fa889f4aa7f384f3d33756d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VerticalSpeed: 1
+  VerticalSpeed: 2
   tunnelPrefab: {fileID: 1088843695409090, guid: c2a184766bffa854cbc5f2985a6a4283,
     type: 2}
   trauma: 0
@@ -1032,8 +1032,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910301822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 435.5, y: 319, z: 0}
-  m_LocalScale: {x: 1.08875, y: 1.08875, z: 1.08875}
+  m_LocalPosition: {x: 326, y: 183.5, z: 0}
+  m_LocalScale: {x: 0.815, y: 0.815, z: 0.815}
   m_Children:
   - {fileID: 928354307}
   - {fileID: 1310092358}
@@ -1073,7 +1073,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928354306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29992676, y: 123.393936, z: 0}
+  m_LocalPosition: {x: -0.29992676, y: 94.82216, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 910301826}
@@ -1408,7 +1408,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1310092357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -264.3, y: -244.59656, z: 3.8637416}
+  m_LocalPosition: {x: -264.3, y: -176.75339, z: 3.8637416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 75190819}

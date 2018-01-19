@@ -83,9 +83,13 @@ public class Ship : Pawn
         }
     }
 
+    public float speed;
+
     protected override void Update()
     {
         base.Update();
+
+        transform.position += new Vector3(0, speed * Time.deltaTime, 0);
 
         //Stun
         stunTimer -= Time.deltaTime;

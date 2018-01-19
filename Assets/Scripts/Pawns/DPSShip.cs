@@ -40,4 +40,12 @@ public class DPSShip : Ship
         }
     }
 
+    public override void UnFire()
+    {
+        attack.Reset();
+        attack2.Reset();
+        attack3.Reset();
+        attack4.Reset();
+    }
+
 }
