@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22c145235dded024a85f5e12da5a157f, type: 3}
-  m_Name: TankPattern_x1_Right
+  m_Name: TankPattern_x2_Right
   m_EditorClassIdentifier: 
   rate: 0.5
   charges:

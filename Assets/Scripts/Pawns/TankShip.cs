@@ -14,6 +14,7 @@ public class TankShip : Ship
     public float initialDistance = 1f;
     public float loadDuration = 1;
     public float chargeSpeed = 20F;
+    public float deltaRotationSpeed = 0.01f;
 
     [Header("Charge IA")]
     public ChargePattern pattern;
@@ -31,6 +32,7 @@ public class TankShip : Ship
 
     private bool oldImmortal;
     private bool oldCanBeStunned;
+
 
     // Use this for initialization
     void Start ()
@@ -64,8 +66,10 @@ public class TankShip : Ship
     protected override void Update()
     {
         base.Update();
-        if (isPlayerControlled) {
-            if (loadingCharge) {
+        if (isPlayerControlled)
+        {
+            if (loadingCharge)
+            {
                 //Load the ChargeDistance slowly
                 loadedChargeDistance += Time.deltaTime * (maxDistance - initialDistance) / loadDuration;
                 if (loadedChargeDistance > maxDistance)
@@ -76,19 +80,37 @@ public class TankShip : Ship
                 targetSprite.transform.position = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
 
                 rotateTowardTarget(targetSprite.transform.position);
-            } else rotateTowardTarget(getMouseWorldPosition());
-        } else if(pattern) {
+            }
+            else if( isCharging )
+            {
+
+            }
+            else
+            {
+                //Rotates the character back 
+                Vector3 rotation = transform.rotation.eulerAngles;
+                rotation = Vector3.RotateTowards(rotation, new Vector3(0, 0, 180), deltaRotationSpeed, deltaRotationSpeed);
+                print(rotation);
+                transform.rotation = Quaternion.Euler( rotation );
+
+            }
+                
+        }
+        else if(pattern)
+        {
             timerPattern -= Time.deltaTime;
 
             if (timerPattern < 0) {
-                if (currentCharge < pattern.charges.Count) {
+                if (currentCharge < pattern.charges.Count)
+                {
                     loadedChargeDistance = pattern.charges[currentCharge].distance;
                     startCharge(transform.position + Quaternion.Euler(0, 0, -(pattern.charges[currentCharge].angle + 180)) * Vector3.up * 20);
                 }
 
                 timerPattern = 1 / pattern.rate;
                 currentCharge = ++currentCharge % pattern.charges.Count;
-            } else if (timerPattern < (1 / pattern.rate) - 0.1f)
+            }
+            else if (timerPattern < (1 / pattern.rate) - 0.1f)
                 transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, -(pattern.charges[currentCharge].angle + 180)), transform.rotation, 0.85f);
         }
     }
@@ -103,9 +125,6 @@ public class TankShip : Ship
 
             if( angle != 0 )
                 transform.rotation = Quaternion.Euler(0, 0, angle + 180);
-
-
-
         }
     }
 
