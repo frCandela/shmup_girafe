@@ -158,19 +158,6 @@ public class MouseController : Controller
     {
         //Moves the pawn towards the mouse position
         if (isPossessingPawn() &&  ! isHacking )
-            PossessedPawn.MoveTowards(transform.position);
+            PossessedPawn.MoveTowards( GameManager.instance.getMouseWorldPosition() );
     }
-
-    void OnGUI()
-    {
-        Camera c = Camera.main;
-        Event e = Event.current;
-        Vector2 mousePos = new Vector2(e.mousePosition.x, c.pixelHeight - e.mousePosition.y);
-        Vector3 p = c.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, - GameManager.instance.MainCameraController.transform.position.z));
-
-        p.x = Mathf.Clamp(p.x, -screenLimit, screenLimit);
-
-        transform.position = new Vector3(p.x, p.y, 0);
-    }
-
 }

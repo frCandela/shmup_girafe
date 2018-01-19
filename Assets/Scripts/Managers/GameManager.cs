@@ -114,6 +114,17 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    //Return the position of the mouse in world coordinates
+    public Vector3 getMouseWorldPosition()
+    {
+        Vector3 screenPoint = Input.mousePosition;
+        screenPoint.z = transform.position.z - Camera.main.transform.position.z; //distance of the plane from the camera
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(screenPoint);
+        mousePos.z = transform.position.z;
+
+        return mousePos;
+    }
+
     //When the player is hit by a bullet
     private void playerHit()
     {
