@@ -14,7 +14,7 @@ public class TankShip : Ship
     public float initialDistance = 1f;
     public float loadDuration = 1;
     public float chargeSpeed = 20F;
-    public float deltaRotationSpeed = 0.01f;
+    public float deltaRotationSpeed = 5f;
 
     [Header("Charge IA")]
     public ChargePattern pattern;
