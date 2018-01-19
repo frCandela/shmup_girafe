@@ -134,13 +134,14 @@ public class MouseController : Controller
         }
     }
 
-    internal void PossessVirus() {
+    internal void PossessVirus()
+    {
         if(!virusShip)
             virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
 
         GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
         virusShip.enabled = true;
-        virusShip.transform.position = transform.position;
+        virusShip.transform.position = GameManager.instance.getMouseWorldPosition();
         Possess(virusShip);
     }
 
