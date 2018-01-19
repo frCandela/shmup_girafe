@@ -61,7 +61,6 @@ public class MainBar : MonoBehaviour
 
     public void setSegments( int nbSegments)
     {
-        print("setSeg " + nbSegments);
         for (int i = 0; i < selectedCombo.Length; ++i)
             selectedCombo[i].enabled = false;
         if (nbSegments == 1)

@@ -202,15 +202,17 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  Speed: 10
+  playerSpeed: 0.5
   canBeStunned: 1
   isPlayerControlled: 0
+  scrollingSpeed: 0
   chargeCircle: {fileID: 212798350263293616}
   targetSprite: {fileID: 212014846031605218}
   maxDistance: 10
   initialDistance: 1
   loadDuration: 1
   chargeSpeed: 30
+  deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 712e3bd8eb25a4959abd312184896f41, type: 2}
 --- !u!114 &114518344704141090
 MonoBehaviour:
@@ -291,12 +293,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300012, guid: 02d1d94a44029da4f91aa7e773b2b39b, type: 3}
+  m_Sprite: {fileID: 21300022, guid: 02d1d94a44029da4f91aa7e773b2b39b, type: 3}
   m_Color: {r: 0.9490196, g: 0.33333334, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.42, y: 1.42}
+  m_Size: {x: 1.42, y: 1.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -335,7 +337,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 02d1d94a44029da4f91aa7e773b2b39b, type: 3}
+  m_Sprite: {fileID: 21300020, guid: 02d1d94a44029da4f91aa7e773b2b39b, type: 3}
   m_Color: {r: 0.9485294, g: 0.33362064, b: 0, a: 0.228}
   m_FlipX: 0
   m_FlipY: 0
