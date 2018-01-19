@@ -25,15 +25,20 @@ public class TextPopupsGenerator : MonoBehaviour
     {
         GameObject popup;
         if (value > 0)
+        {
             popup = Instantiate(positiveScorePopupPrefab, transform);
+            popup.GetComponent<Text>().text = "+" + value.ToString();
+        }  
         else if (value < 0)
+        {
             popup = Instantiate(negativeScorePopupPrefab, transform);
+            popup.GetComponent<Text>().text = value.ToString();
+        }
         else
             return;
 
         Vector3 screenPos = Camera.main.WorldToScreenPoint(position);
         popup.transform.position = screenPos;
-        popup.GetComponent<Text>().text = "+" + value.ToString();
     }
 }
 
