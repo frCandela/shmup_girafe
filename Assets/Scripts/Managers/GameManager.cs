@@ -117,12 +117,11 @@ public class GameManager : MonoBehaviour {
     //Return the position of the mouse in world coordinates
     public Vector3 getMouseWorldPosition()
     {
-        Vector3 screenPoint = Input.mousePosition;
-        screenPoint.z = transform.position.z - Camera.main.transform.position.z; //distance of the plane from the camera
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(screenPoint);
-        mousePos.z = transform.position.z;
-
-        return mousePos;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Plane xy = new Plane(Vector3.forward, new Vector3(0, 0, 0));
+        float distance;
+        xy.Raycast(ray, out distance);
+        return ray.GetPoint(distance);
     }
 
     //When the player is hit by a bullet

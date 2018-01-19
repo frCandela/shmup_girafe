@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
 
     private BoxCollider2D cameraTrigger;
     public float trauma;
+    public float angle = -45;
 
     // Use this for initialization
     void Start ()
@@ -35,7 +36,7 @@ public class CameraController : MonoBehaviour
         float shake = trauma * trauma * trauma;
 
         transform.rotation = Quaternion.Euler(new Vector3(
-            shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 0) - 0.5f) * 15,
+            angle + shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 0) - 0.5f) * 15,
             shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 1) - 0.5f) * 15,
             shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 2) - 0.5f) * 15));
 
