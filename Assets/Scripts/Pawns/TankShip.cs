@@ -77,7 +77,7 @@ public class TankShip : Ship
                 updateChargeCicleSize();
 
                 //Set the target sprite position
-                targetSprite.transform.position = Vector3.MoveTowards(transform.position, getMouseWorldPosition(), loadedChargeDistance);
+                targetSprite.transform.position = Vector3.MoveTowards(transform.position, GameManager.instance.getMouseWorldPosition(), loadedChargeDistance);
 
                 rotateTowardTarget(targetSprite.transform.position);
             }
@@ -142,7 +142,7 @@ public class TankShip : Ship
     {
         if(loadingCharge)
         {
-            startCharge(getMouseWorldPosition());
+            startCharge(GameManager.instance.getMouseWorldPosition());
             stopLoadingCharge();
         }
     }
@@ -166,17 +166,6 @@ public class TankShip : Ship
         chargeCircle.enabled = false;
         targetSprite.enabled = false;
         updateChargeCicleSize();
-    }
-
-    //Return the position of the mouse in world coordinates
-    private Vector3 getMouseWorldPosition()
-    {
-        Vector3 screenPoint = Input.mousePosition;
-        screenPoint.z = transform.position.z - Camera.main.transform.position.z; //distance of the plane from the camera
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(screenPoint);
-        mousePos.z = transform.position.z;
-
-        return mousePos;
     }
 
     private void startCharge(Vector3 target)
@@ -207,7 +196,7 @@ public class TankShip : Ship
     public override void MoveTowards(Vector3 point)
     {
         if (!IsStunned() && !loadingCharge && !isCharging)
-            if (Vector3.Distance(transform.position, getMouseWorldPosition()) > 0.3F)
+            if (Vector3.Distance(transform.position, GameManager.instance.getMouseWorldPosition()) > 0.3F)
                 transform.position = Vector3.MoveTowards(transform.position, point, playerSpeed * Time.fixedDeltaTime);
     }
 }
