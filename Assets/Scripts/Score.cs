@@ -9,7 +9,7 @@ public class Score : MonoBehaviour
 
 	public void AddScore()
     {
-         int effectiveScore = GameManager.instance.addScore(score);
+        int effectiveScore = GameManager.instance.addScore(score);
         GameManager.instance.TextPopupsGen.generateScorePopup(effectiveScore, transform.position);
     }
 }
