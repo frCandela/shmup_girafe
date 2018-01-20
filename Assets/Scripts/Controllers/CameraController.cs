@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public float VerticalSpeed = 1f;
     public ShipCollection shipsInCameraView;
     public GameObject tunnelPrefab;
+    public float offsetDestroyTunnel = 0;
     GameObject lastTunnel, toDelete;
 
     private BoxCollider2D cameraTrigger;
@@ -41,7 +42,7 @@ public class CameraController : MonoBehaviour
             shake * (Mathf.PerlinNoise(Time.realtimeSinceStartup * 5, 2) - 0.5f) * 15));
 
         //Creates a new tunnel after the last one?
-        if (transform.position.y > lastTunnel.transform.position.y + 10) {
+        if (transform.position.y > lastTunnel.transform.position.y + offsetDestroyTunnel) {
             if (toDelete)
                 Destroy(toDelete);
             toDelete = lastTunnel;
@@ -63,7 +64,9 @@ public class CameraController : MonoBehaviour
         float widthCamera = heightCamera * Screen.width / Screen.height;
 
         //Set the size of the camera trigger 
-        cameraTrigger.size = new Vector2(2*widthCamera, 2*heightCamera);
+        cameraTrigger.size = new Vector2(2*widthCamera, 5*heightCamera);
+
+        cameraTrigger.offset = new Vector2(0, 2.5f*heightCamera);
     }
 
     // Update is called once per frame

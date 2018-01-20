@@ -71,7 +71,7 @@ public class MouseController : Controller
             if (isHacking)
             {
                 isHacking = false;
-                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -GameManager.instance.MainCameraController.transform.position.z)), Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
+                RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
                 if (hit && hit.collider)
                 {
                     Ship target = hit.collider.gameObject.GetComponent<Ship>();
