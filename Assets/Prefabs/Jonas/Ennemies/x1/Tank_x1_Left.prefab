@@ -267,8 +267,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.003992439, y: 0.0017666824}
-  m_Size: {x: 1.6299624, y: 1.2441725}
-  m_Direction: 1
+  m_Size: {x: 0.75, y: 1}
+  m_Direction: 0
 --- !u!95 &95576848131727276
 Animator:
   serializedVersion: 3
@@ -397,9 +397,9 @@ MonoBehaviour:
   scrollingSpeed: -2
   chargeCircle: {fileID: 212798350263293616}
   targetSprite: {fileID: 212014846031605218}
-  maxDistance: 10
+  maxDistance: 3
   initialDistance: 1
-  loadDuration: 1
+  loadDuration: 0.5
   chargeSpeed: 30
   deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 712e3bd8eb25a4959abd312184896f41, type: 2}

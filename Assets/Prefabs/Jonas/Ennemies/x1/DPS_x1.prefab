@@ -327,8 +327,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.003933312, y: -0.00837648}
-  m_Size: {x: 1.6932812, y: 1.2228295}
-  m_Direction: 1
+  m_Size: {x: 0.7, y: 1}
+  m_Direction: 0
 --- !u!95 &95883281414310080
 Animator:
   serializedVersion: 3
@@ -480,7 +480,7 @@ MonoBehaviour:
   hackbonus: 20
   playerSpeed: 15
   canBeStunned: 1
-  isPlayerControlled: 0
+  isPlayerControlled: 1
   scrollingSpeed: -2
   cannonPosition: {fileID: 4473357877139156}
   cannonPosition2: {fileID: 4690998034521930}
@@ -3946,7 +3946,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1956307464
+  randomSeed: 716779771
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7272,7 +7272,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 670387477
+  randomSeed: 1772368401
   InitialModule:
     serializedVersion: 3
     enabled: 1

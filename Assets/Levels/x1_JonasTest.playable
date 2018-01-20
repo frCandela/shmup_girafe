@@ -35,7 +35,7 @@ MonoBehaviour:
     defaultValue: {fileID: 0}
   enemies:
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
-    position: {x: -0.73333335, y: 0.728}
+    position: {x: -0.70666665, y: 0.744}
     angle: 180
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
@@ -43,8 +43,8 @@ MonoBehaviour:
     angle: 180
     col: {r: 0, g: 0.63252497, b: 1, a: 0.5101472}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
-    position: {x: 0.013333334, y: 0.224}
-    angle: 180
+    position: {x: 0.013333334, y: 0.2}
+    angle: 90
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
     position: {x: 0.72, y: -0.36}
@@ -52,7 +52,7 @@ MonoBehaviour:
     col: {r: 1, g: 0.1865044, b: 0, a: 0.5044969}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
     position: {x: -0.73333335, y: -0.36}
-    angle: 139
+    angle: 144
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114140759199538196
 MonoBehaviour:
@@ -78,19 +78,19 @@ MonoBehaviour:
     angle: 180
     col: {r: 0, g: 0.63252497, b: 1, a: 0.5101472}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
-    position: {x: -0.34666666, y: 0.312}
+    position: {x: -0.29333332, y: 0.216}
     angle: 155
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
-    position: {x: 0.72, y: -0.544}
+    position: {x: 0.7733333, y: -0.776}
     angle: -154
     col: {r: 1, g: 0.1865044, b: 0, a: 0.5044969}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
-    position: {x: -0.70666665, y: -0.568}
+    position: {x: -0.72, y: -0.752}
     angle: 153
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
-    position: {x: 0.52, y: -0.12}
+    position: {x: 0.48, y: -0.28}
     angle: -145
     col: {r: 1, g: 0, b: 0.20360851, a: 0.5178809}
 --- !u!114 &114269123903811426
@@ -263,6 +263,10 @@ MonoBehaviour:
     position: {x: 0.7733333, y: -0.816}
     angle: 180
     col: {r: 1, g: 0, b: 0.64004374, a: 0.50373036}
+  - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
+    position: {x: -0.026666667, y: -0.128}
+    angle: 180
+    col: {r: 0, g: 1, b: 0.51086044, a: 0.5475204}
 --- !u!114 &114673924557548848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,7 +317,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Vague 1
+    m_DisplayName: 1 DPS
     m_Version: 1
   - m_Start: 9.5
     m_ClipIn: 0
@@ -347,7 +351,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Vague 2
+    m_DisplayName: 2 DPS
     m_Version: 1
   - m_Start: 20.416666666666668
     m_ClipIn: 0
@@ -381,7 +385,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Vague 3
+    m_DisplayName: 8 flesh
     m_Version: 1
 --- !u!114 &114778883440892842
 MonoBehaviour:

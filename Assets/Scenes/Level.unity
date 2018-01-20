@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0ffad361f941d4e84002c3b0e28c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 6.64
+  scale: 7
   offset: 25
 --- !u!114 &454917184
 MonoBehaviour:
