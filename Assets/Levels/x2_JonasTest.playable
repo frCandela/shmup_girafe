@@ -509,38 +509,22 @@ MonoBehaviour:
     exposedName: 8ceab3f4194a84240806089a5d9dce45
     defaultValue: {fileID: 0}
   enemies:
-  - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
+  - enemy: {fileID: 1671544709107808, guid: b16458ae5f28d4c5eb81cae58bb23eaf, type: 2}
     position: {x: -0.72, y: 0.808}
     angle: 180
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
-  - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
+  - enemy: {fileID: 1671544709107808, guid: b16458ae5f28d4c5eb81cae58bb23eaf, type: 2}
     position: {x: -0.24, y: 0.8}
     angle: 180
-    col: {r: 0, g: 0.63252497, b: 1, a: 0.5101472}
-  - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
-    position: {x: 0.28, y: 0.808}
-    angle: 180
     col: {r: 1, g: 0.1865044, b: 0, a: 0.5044969}
-  - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
-    position: {x: 0.76, y: 0.808}
-    angle: 180
-    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
-  - enemy: {fileID: 1671544709107808, guid: 5051f9ef39f554c1e8deee0dc25d215b, type: 2}
-    position: {x: -0.72, y: -0.864}
+  - enemy: {fileID: 1671544709107808, guid: b16458ae5f28d4c5eb81cae58bb23eaf, type: 2}
+    position: {x: 0.28, y: 0.8}
     angle: 180
     col: {r: 1, g: 0, b: 0.11989498, a: 0.5293482}
-  - enemy: {fileID: 1671544709107808, guid: 5051f9ef39f554c1e8deee0dc25d215b, type: 2}
-    position: {x: -0.18666667, y: -0.864}
+  - enemy: {fileID: 1671544709107808, guid: b16458ae5f28d4c5eb81cae58bb23eaf, type: 2}
+    position: {x: 0.73333335, y: 0.792}
     angle: 180
     col: {r: 1, g: 0.70131624, b: 0, a: 0.5282464}
-  - enemy: {fileID: 1671544709107808, guid: 5051f9ef39f554c1e8deee0dc25d215b, type: 2}
-    position: {x: 0.29333332, y: -0.864}
-    angle: 180
-    col: {r: 1, g: 0, b: 0.6746769, a: 0.5841531}
-  - enemy: {fileID: 1671544709107808, guid: 5051f9ef39f554c1e8deee0dc25d215b, type: 2}
-    position: {x: 0.7866667, y: -0.864}
-    angle: 180
-    col: {r: 1, g: 0.40239793, b: 0, a: 0.5130618}
 --- !u!114 &114922458812127954
 MonoBehaviour:
   m_ObjectHideFlags: 1

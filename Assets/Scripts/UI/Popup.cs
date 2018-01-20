@@ -35,8 +35,6 @@ public class Popup : MonoBehaviour
 
         fadeOutTimer = 0f;
         initialScale = transform.localScale.x;
-
-        print(initialScale);
     }
 	
 	// Update is called once per frame
