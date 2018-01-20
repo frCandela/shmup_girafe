@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immortal: 0
-  health: 10
+  health: 7
   onDie:
     m_PersistentCalls:
       m_Calls:
