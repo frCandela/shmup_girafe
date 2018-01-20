@@ -6,6 +6,12 @@ using UnityEngine.PostProcessing;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
+[System.Serializable]
+public struct LightParameter {
+    public float intensity;
+    public Color color;
+}
+
 //GameManager (Singleton pattern)
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -22,12 +28,22 @@ public class GameManager : MonoBehaviour {
     public TextPopupsGenerator TextPopupsGen;
     public LeaderboardText Leaderboard;
 
+
+    [Header("Levels:")]
     public PlayableDirector director;
     public TimelineAsset[] timelines;
 
+
+    [Header("Multiplier Effects:")]
+    public Light[] lights;
+    public LightParameter[] lightColors;
+    public float[] tunnelSpeeds;
+
     private PostProcessingBehaviour PostProcessing;
 
+
     public const int scoreLossHitVirus = 1;
+    [Header("Score:")]
     public int hackPerCombo = 2;
     public int scorePeerHack = 50;
 
@@ -96,6 +112,8 @@ public class GameManager : MonoBehaviour {
         director.playableAsset = timelines[0];
         director.Play();
 
+        SetLights(0);
+
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
         Leaderboard.UpdateScore(checkpointId);
@@ -151,7 +169,9 @@ public class GameManager : MonoBehaviour {
             MainBar.setMulti(getMulti());
 
             director.playableAsset = timelines[comboMultiplier];
+            director.initialTime = -2;
             director.Play();
+            SetLights(comboMultiplier);
         }
 
         MainBar.setCombo(hackCount);
@@ -173,6 +193,7 @@ public class GameManager : MonoBehaviour {
         director.playableAsset = timelines[0];
         director.initialTime = -4;
         director.Play();
+        SetLights(0);
     }
 
     public int getScore(){ return score; }
@@ -187,6 +208,17 @@ public class GameManager : MonoBehaviour {
         return scoreGained;
     }
     public void saveScore(int check) { scores[check] = score; }
+
+    void SetLights(int mult) {
+        foreach(Light light in lights) {
+            light.color = lightColors[mult].color;
+            light.intensity = lightColors[mult].intensity;
+        }
+    }
+
+    public float getTunnelSpeed() {
+        return tunnelSpeeds[comboMultiplier];
+    }
 
     #region POST-EFFECT
 
