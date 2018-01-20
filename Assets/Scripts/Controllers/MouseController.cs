@@ -96,6 +96,8 @@ public class MouseController : Controller
                         target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
                         target.isPlayerControlled = true;
 
+                        target.GetComponent<CapsuleCollider2D>().size /= 2;
+
                         //Set events
                         target.GetComponent<Health>().onTakeDamage.AddListener(target.GetComponent<Blink>().StartBlink);
 
