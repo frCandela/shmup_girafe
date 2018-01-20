@@ -2316,7 +2316,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 46be15e22223d43338436a7707f32abf, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -2329,6 +2329,8 @@ PlayableDirector:
   - key: {fileID: 114673924557548848, guid: 46be15e22223d43338436a7707f32abf, type: 2}
     value: {fileID: 0}
   - key: {fileID: 114673924557548848, guid: fba258b75d3c3467a81176234f8bd134, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114287976663073814, guid: 46be15e22223d43338436a7707f32abf, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
@@ -2393,7 +2395,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0}
   tunnelSpeeds:
   - -2
-  - -3
+  - -5
   - 0
   - 0
   hackPerCombo: 2
