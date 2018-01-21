@@ -267,7 +267,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.003992439, y: 0.0017666824}
-  m_Size: {x: 0.75, y: 1}
+  m_Size: {x: 0.65, y: 1.25}
   m_Direction: 0
 --- !u!95 &95576848131727276
 Animator:
@@ -376,14 +376,14 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  playerSpeed: 10
+  playerSpeed: 0
   canBeStunned: 1
   isPlayerControlled: 0
-  scrollingSpeed: -2
+  scrollingSpeed: -4
   chargeCircle: {fileID: 212798350263293616}
   targetSprite: {fileID: 212014846031605218}
-  maxDistance: 10
-  initialDistance: 1
+  maxDistance: 7
+  initialDistance: 0
   loadDuration: 1
   chargeSpeed: 30
   deltaRotationSpeed: 5

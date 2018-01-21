@@ -187,7 +187,7 @@ public class TankShip : Ship
     private void startCharge(Vector3 target)
     {
         isCharging = true;
-        health.immortal = true;
+       // health.immortal = true;
         canBeStunned = false;
 
         //Cap the distance according to the loadedChargeDistance
@@ -197,7 +197,7 @@ public class TankShip : Ship
     private void stopCharge()
     {
         isCharging = false;
-        health.immortal = oldImmortal;
+       // health.immortal = oldImmortal;
         canBeStunned = oldCanBeStunned;
     }
 

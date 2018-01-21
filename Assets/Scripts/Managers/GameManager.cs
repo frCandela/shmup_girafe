@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour {
     private int[] scores = new int[5];
     private int hackCount = 0;
     private int comboMultiplier = 0;
-    private const int maxCombo = 3;
+	private const int maxCombo = 4;	//Jonas : x0 (virus), x1, x2, x4, x8. (was set to 3).
 
     private float timerCheckpoint;
     public float checkpointRefreshTime = 5;
@@ -95,13 +95,15 @@ public class GameManager : MonoBehaviour {
         score = 0;
         scores = new int[5];
         hackCount = 0;
-        hackPerCombo = 1;
+        hackPerCombo = 0; //Jonas : set to 0, was to 1.
         comboMultiplier = 0;
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.setCombo(0);
-        MainBar.setMulti(getMulti());
+        //MainBar.setMulti(getMulti());
+		//Jonas
+		MainBar.setMulti (0);//
         MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
@@ -162,11 +164,13 @@ public class GameManager : MonoBehaviour {
         if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
-            ++comboMultiplier;
+           // ++comboMultiplier;
             ++hackPerCombo;
 
             MainBar.setSegments(comboMultiplier + 1);
             MainBar.setMulti(getMulti());
+
+			++comboMultiplier;	//Jonas
 
             director.playableAsset = timelines[comboMultiplier];
             director.initialTime = -2;
@@ -186,9 +190,12 @@ public class GameManager : MonoBehaviour {
         hackCount = 0;
         comboMultiplier = 0;
 
+
         MainBar.setCombo(hackCount + 1);
         MainBar.setSegments(1); 
-        MainBar.setMulti(getMulti());
+        //MainBar.setMulti(getMulti());
+		//Jonas
+		MainBar.setMulti(0);
 
         director.playableAsset = timelines[0];
         director.initialTime = -4;

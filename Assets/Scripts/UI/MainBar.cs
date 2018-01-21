@@ -63,7 +63,10 @@ public class MainBar : MonoBehaviour
     {
         for (int i = 0; i < selectedCombo.Length; ++i)
             selectedCombo[i].enabled = false;
-        if (nbSegments == 1)
+		//Jonas
+		if (nbSegments == 0)
+			selectedCombo = combo1;//
+		else if (nbSegments == 1)
             selectedCombo = combo1;
         else if (nbSegments == 2)
             selectedCombo = combo2;

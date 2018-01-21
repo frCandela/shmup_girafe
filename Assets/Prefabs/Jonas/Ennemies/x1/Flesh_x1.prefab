@@ -236,7 +236,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.5522388, g: 0.83091545, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
   m_Range: 4
   m_SpotAngle: 30
@@ -470,7 +470,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -42160195
+  randomSeed: -691495497
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -536,7 +536,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.7529412, g: 0.79607844, b: 1, a: 1}
+      maxColor: {r: 0.97794116, g: 0.97794116, b: 0.97794116, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.6627451, g: 0.85882354, b: 1, a: 1}
@@ -7113,7 +7113,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1886177506
+  randomSeed: 1302497868
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7179,7 +7179,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 0.8784314}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.8784314}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -7877,19 +7877,19 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 2
           time: 0
-          value: 0.90205085
-          inSlope: 0.09794915
-          outSlope: 0.09794915
+          value: 0.5062169
+          inSlope: 0.4521171
+          outSlope: 0.4521171
           tangentMode: 34
         - serializedVersion: 2
           time: 1
-          value: 1
-          inSlope: 0.09794915
-          outSlope: 0.09794915
+          value: 0.95833397
+          inSlope: 0.4521171
+          outSlope: 0.4521171
           tangentMode: 34
         m_PreInfinity: 2
         m_PostInfinity: 2
-        m_RotationOrder: 4
+        m_RotationOrder: 0
       minCurve:
         serializedVersion: 2
         m_Curve:
@@ -8126,8 +8126,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.5372549, g: 0.8039216, b: 1, a: 1}
-        key1: {r: 0, g: 0.3019608, b: 0.91764706, a: 0.30588236}
+        key0: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
+        key1: {r: 0.7794118, g: 0.7794118, b: 0.7794118, a: 0.30588236}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}

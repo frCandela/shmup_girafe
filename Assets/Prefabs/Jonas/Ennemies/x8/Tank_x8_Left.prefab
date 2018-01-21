@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 114410754506266730}
   - component: {fileID: 114341212322532646}
   m_Layer: 8
-  m_Name: Tank_x2_Left
+  m_Name: Tank_x8_Left
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
   playerSpeed: 0
   canBeStunned: 1
   isPlayerControlled: 0
-  scrollingSpeed: -4
+  scrollingSpeed: -13
   chargeCircle: {fileID: 212798350263293616}
   targetSprite: {fileID: 212014846031605218}
   maxDistance: 7
