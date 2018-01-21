@@ -130,21 +130,37 @@ public class TankShip : Ship
     //When the player press the FIRE key
     public override void Fire()
     {
+		/*
         //Initialize the charge
         if( ! loadingCharge && ! isCharging)
         {
             startLoadingCharge();
         }
+		*/
+
+		//JONAS
+		if(loadingCharge)
+		{
+			startCharge(GameManager.instance.getMouseWorldPosition());
+			stopLoadingCharge();
+		}//
+
     }
 
     //When the player realease the FIRE key
     public override void UnFire()
     {
+		/*
         if(loadingCharge)
         {
             startCharge(GameManager.instance.getMouseWorldPosition());
             stopLoadingCharge();
         }
+        */
+
+		//JONAS
+		startLoadingCharge ();
+		//
     }
 
     private void startLoadingCharge()

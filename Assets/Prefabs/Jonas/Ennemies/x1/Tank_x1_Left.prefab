@@ -391,15 +391,15 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  playerSpeed: 10
+  playerSpeed: 0
   canBeStunned: 1
   isPlayerControlled: 0
   scrollingSpeed: -2
   chargeCircle: {fileID: 212798350263293616}
   targetSprite: {fileID: 212014846031605218}
-  maxDistance: 3
+  maxDistance: 5
   initialDistance: 1
-  loadDuration: 0.5
+  loadDuration: 1
   chargeSpeed: 30
   deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 712e3bd8eb25a4959abd312184896f41, type: 2}
