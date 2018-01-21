@@ -82,7 +82,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: zob
+  m_Text: 000
 --- !u!114 &114227281323599926
 MonoBehaviour:
   m_ObjectHideFlags: 1
