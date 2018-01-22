@@ -110,6 +110,8 @@ public class MouseController : Controller
                         //Set anim
                         target.setHackAnim(true);
 
+                        target.scrollingSpeed = 0F;
+
                         onHack.Invoke();
 
                     }
