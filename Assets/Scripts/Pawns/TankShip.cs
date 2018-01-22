@@ -30,13 +30,14 @@ public class TankShip : Ship
     private bool isCharging = false;
     private Vector3 targetCharge;
 
-    private bool oldImmortal;
     private bool oldCanBeStunned;
 
 
     // Use this for initialization
     void Start ()
     {
+
+
         loadingCharge = false;
         initialSize = chargeCircle.bounds.size.x;
 
@@ -45,11 +46,12 @@ public class TankShip : Ship
 
         updateChargeCicleSize();
 
-        oldImmortal = health.immortal;
         oldCanBeStunned = canBeStunned;
         if (pattern)
             timerPattern = 1 / pattern.rate;
         else Debug.LogWarning("No pattern for " + name);
+
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 
     private void FixedUpdate()
@@ -130,37 +132,18 @@ public class TankShip : Ship
     //When the player press the FIRE key
     public override void Fire(Quaternion angle)
     {
-		/*
-        //Initialize the charge
-        if( ! loadingCharge && ! isCharging)
-        {
-            startLoadingCharge();
-        }
-		*/
-
-		//JONAS
 		if(loadingCharge)
 		{
 			startCharge(GameManager.instance.getMouseWorldPosition());
 			stopLoadingCharge();
-		}//
+		}
 
     }
 
     //When the player realease the FIRE key
     public override void UnFire()
     {
-		/*
-        if(loadingCharge)
-        {
-            startCharge(GameManager.instance.getMouseWorldPosition());
-            stopLoadingCharge();
-        }
-        */
-
-		//JONAS
 		startLoadingCharge ();
-		//
     }
 
     private void startLoadingCharge()
@@ -187,7 +170,7 @@ public class TankShip : Ship
     private void startCharge(Vector3 target)
     {
         isCharging = true;
-       // health.immortal = true;
+        health.immuneToShipCollisions = true;
         canBeStunned = false;
 
         //Cap the distance according to the loadedChargeDistance
@@ -197,7 +180,7 @@ public class TankShip : Ship
     private void stopCharge()
     {
         isCharging = false;
-       // health.immortal = oldImmortal;
+        health.immuneToShipCollisions = false;
         canBeStunned = oldCanBeStunned;
     }
 

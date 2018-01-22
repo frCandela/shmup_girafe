@@ -78,8 +78,8 @@ public class Ship : Pawn
             {
                 int otherHealthValue = otherHealth.health;
                 int myHealthValue = myHealth.health;
-                otherHealth.takeDamage(myHealthValue);
-                myHealth.takeDamage(otherHealthValue);
+                otherHealth.takeDamage(myHealthValue, this);
+                myHealth.takeDamage(otherHealthValue, ship);
             }
         }
     }
