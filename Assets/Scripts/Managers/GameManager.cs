@@ -93,15 +93,13 @@ public class GameManager : MonoBehaviour {
         score = 0;
         scores = new int[5];
         hackCount = 0;
-        hackPerCombo = 0; //Jonas : set to 0, was to 1.
+        hackPerCombo = 0;
         comboMultiplier = initComboMultiplier;
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.setCombo(0);
-        //MainBar.setMulti(getMulti());
-		//Jonas
-		MainBar.setMulti (0);//
+		MainBar.setMulti (0);
         MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
@@ -162,13 +160,11 @@ public class GameManager : MonoBehaviour {
         if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
-           	//++comboMultiplier;
+           	++comboMultiplier;
             ++hackPerCombo;
 
-            MainBar.setSegments(comboMultiplier + 1);
+            MainBar.setSegments(comboMultiplier);
             MainBar.setMulti(getMulti());
-
-			++comboMultiplier;	//Jonas
 
             director.playableAsset = timelines[comboMultiplier];
             director.initialTime = -2;
@@ -186,14 +182,13 @@ public class GameManager : MonoBehaviour {
     {
         //Reset the combo
         hackCount = 0;
+        hackPerCombo = 0;
         comboMultiplier = 0;
 
-
-        MainBar.setCombo(hackCount + 1);
-        MainBar.setSegments(1); 
-        //MainBar.setMulti(getMulti());
-		//Jonas
-		MainBar.setMulti(0);
+        //initialise ui
+        MainBar.setSegments(hackPerCombo);
+        MainBar.setCombo(0);
+        MainBar.setMulti(0);
 
         director.playableAsset = timelines[0];
         director.initialTime = -4;
@@ -203,7 +198,13 @@ public class GameManager : MonoBehaviour {
 
     public int getScore(){ return score; }
 
-    public int getMulti() { return (int)Mathf.Pow(2f, comboMultiplier);}
+    public int getMulti()
+    {
+        if (comboMultiplier == 0)
+            return 0;
+        else
+            return (int)Mathf.Pow(2f, comboMultiplier - 1);
+    }
 
     //Returns the score effectively gained by the player
     public int addScore(int rawScore)
