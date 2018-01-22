@@ -50,13 +50,16 @@ public class GameManager : MonoBehaviour {
     private int score = 0;
     private int[] scores = new int[5];
     private int hackCount = 0;
-    private int comboMultiplier = 0;
+    
 	private const int maxCombo = 4;	//Jonas : x0 (virus), x1, x2, x4, x8. (was set to 3).
 
     private float timerCheckpoint;
     public float checkpointRefreshTime = 5;
     private const int checkpointCount = 5;
     private int checkpointId = 0;
+
+    [Header("THIS IS TEMPORARY:")]
+    public int comboMultiplier = 0;
 
     //Awake is always called before any Start functions
     void Awake()
