@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour {
 
     void Update()
     {
-        this.transform.position += this.transform.up * Time.deltaTime * speed;
+		this.transform.position += this.transform.up * Time.deltaTime * speed;
 
         lifetime -= Time.deltaTime;
         if (lifetime < 0)

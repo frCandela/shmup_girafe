@@ -13,16 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 10
   bursts:
-  - amount: 1
-    spread: 11
+  - amount: 3
+    spread: 17
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 6781c928f3bb64d9392444a73a6d5ea4, type: 2}
-  - amount: 1
-    spread: 11
+  - amount: 3
+    spread: 18
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 6781c928f3bb64d9392444a73a6d5ea4, type: 2}
-  - amount: 1
-    spread: 11
+  - amount: 3
+    spread: 20
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 6781c928f3bb64d9392444a73a6d5ea4, type: 2}
   - amount: 0
