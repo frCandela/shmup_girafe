@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114518344704141090}
   - component: {fileID: 114410754506266730}
   - component: {fileID: 114341212322532646}
+  - component: {fileID: 58698673066182508}
   m_Layer: 8
   m_Name: Tank_x2_Left
   m_TagString: Ennemy
@@ -157,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1201508606819798}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.1, y: 0, z: 0}
+  m_LocalPosition: {x: 1.346678, y: 9.242967, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4469478633547680}
@@ -254,6 +255,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58698673066182508
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201508606819798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015572906, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.314494
 --- !u!70 &70375913032197410
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -521,7 +537,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1296142945
+  randomSeed: 1968595147
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3949,7 +3965,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1548632357
+  randomSeed: 1342524337
   InitialModule:
     serializedVersion: 3
     enabled: 1

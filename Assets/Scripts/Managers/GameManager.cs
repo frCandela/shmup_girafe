@@ -16,11 +16,6 @@ public struct LightParameter {
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
-    /*public static Ship StarterShip { get; private set; }
-    public static MouseController PlayerController { get; private set; }
-    public static CameraController MainCameraController { get; private set; }
-    public static MainBar MainBar { get; private set; }*/
-
     [Header("Initialisation:")]
     public MouseController PlayerController;
     public CameraController MainCameraController;
