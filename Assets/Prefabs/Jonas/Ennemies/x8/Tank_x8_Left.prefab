@@ -402,7 +402,7 @@ MonoBehaviour:
   loadDuration: 1
   chargeSpeed: 30
   deltaRotationSpeed: 5
-  pattern: {fileID: 11400000, guid: 2cb493653ed3f484fa05c864dfb81b6b, type: 2}
+  pattern: {fileID: 11400000, guid: 5a160185a16144c1eaad0e17da26cbd1, type: 2}
 --- !u!114 &114518344704141090
 MonoBehaviour:
   m_ObjectHideFlags: 1

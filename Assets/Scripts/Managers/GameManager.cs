@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour {
         if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
-           // ++comboMultiplier;
+           	//++comboMultiplier;
             ++hackPerCombo;
 
             MainBar.setSegments(comboMultiplier + 1);
