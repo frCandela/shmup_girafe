@@ -2428,7 +2428,7 @@ MonoBehaviour:
   hackPerCombo: 2
   scorePeerHack: 500
   checkpointRefreshTime: 5
-  initComboMultiplier: 3
+  initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
   m_ObjectHideFlags: 0

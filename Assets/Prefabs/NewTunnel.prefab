@@ -21,8 +21,6 @@ GameObject:
   - component: {fileID: 4681293995978546}
   - component: {fileID: 61220527552686432}
   - component: {fileID: 61463530971358674}
-  - component: {fileID: 58719656552283878}
-  - component: {fileID: 58057148091124576}
   - component: {fileID: 114475212384297890}
   m_Layer: 0
   m_Name: NewTunnel
@@ -178,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1139816363977898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3006763, y: 1.9917029, z: 0}
+  m_LocalPosition: {x: -22.58465, y: 11.352281, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4902874885816602}
@@ -338,36 +336,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1988273391748894}
   m_Mesh: {fileID: 4300000, guid: dfe171aac1240d64c882716b5bba2f32, type: 3}
---- !u!58 &58057148091124576
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139816363977898}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 4.793813, y: 16.225004}
-  serializedVersion: 2
-  m_Radius: 0.51148224
---- !u!58 &58719656552283878
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1139816363977898}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.7313323, y: 16.257568}
-  serializedVersion: 2
-  m_Radius: 0.5332654
 --- !u!61 &61220527552686432
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -380,7 +348,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -10.401932, y: 3.2889528}
+  m_Offset: {x: -10.401932, y: 3.2771835}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -391,7 +359,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.853964, y: 26.592356}
+  m_Size: {x: 10.853964, y: 26.757793}
   m_EdgeRadius: 0
 --- !u!61 &61463530971358674
 BoxCollider2D:
@@ -416,7 +384,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.940599, y: 26.578539}
+  m_Size: {x: 13.940599, y: 26.767519}
   m_EdgeRadius: 0
 --- !u!108 &108181776968695128
 Light:
