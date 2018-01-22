@@ -2,18 +2,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="200" Column="10" />
-      <File FileName="Assets/Scripts/Score.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="173" Column="30" />
-      <File FileName="Assets/Scripts/UI/MainBar.cs" Line="57" Column="17" />
+      <File FileName="Assets/Scripts/Score.cs" Line="12" Column="51" />
+      <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="173" Column="4" />
+      <File FileName="Assets/Scripts/UI/MainBar.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Pawns/DPSShip.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/HackSelector.cs" Line="134" Column="43" />
-      <File FileName="Assets/Scripts/Controllers/Controller.cs" Line="30" Column="17" />
-      <File FileName="Assets/Scripts/Controllers/EnemyController.cs" Line="11" Column="9" />
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="97" Column="58" />
+      <File FileName="Assets/Scripts/HackSelector.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/EnemyController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
