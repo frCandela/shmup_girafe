@@ -20,7 +20,7 @@ public class MouseController : Controller
     [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
 
     [Header("Other parameters:")]
-    bool shootVertically = true;
+    public bool shootVertically = true;
 
     //Events
     public UnityEvent onHack;
