@@ -394,13 +394,13 @@ MonoBehaviour:
   playerSpeed: 0
   canBeStunned: 1
   isPlayerControlled: 0
-  scrollingSpeed: -13
+  scrollingSpeed: -2
   chargeCircle: {fileID: 212798350263293616}
   targetSprite: {fileID: 212014846031605218}
   maxDistance: 7
-  initialDistance: 0
-  loadDuration: 1
-  chargeSpeed: 30
+  initialDistance: 1
+  loadDuration: 0.5
+  chargeSpeed: 50
   deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 5a160185a16144c1eaad0e17da26cbd1, type: 2}
 --- !u!114 &114518344704141090

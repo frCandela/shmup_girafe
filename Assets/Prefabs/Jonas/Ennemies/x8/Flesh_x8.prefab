@@ -280,7 +280,7 @@ MonoBehaviour:
   playerSpeed: 12
   canBeStunned: 1
   isPlayerControlled: 0
-  scrollingSpeed: -13
+  scrollingSpeed: -2
 --- !u!114 &114119146770511760
 MonoBehaviour:
   m_ObjectHideFlags: 1
