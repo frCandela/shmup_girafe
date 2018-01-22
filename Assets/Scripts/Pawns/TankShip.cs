@@ -128,7 +128,7 @@ public class TankShip : Ship
     }
 
     //When the player press the FIRE key
-    public override void Fire()
+    public override void Fire(Quaternion angle)
     {
 		/*
         //Initialize the charge

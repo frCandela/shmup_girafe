@@ -64,7 +64,6 @@ public class Ship : Pawn
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Collision with other ships
@@ -129,13 +128,16 @@ public class Ship : Pawn
     }
 
     //Makes the ship shoot ! 
-    public override void Fire()
+    public override void Fire( Quaternion angle ) 
     {
         if( ! IsStunned())
         {
             if (anim)
                 anim.SetTrigger("Shoot");
+
+            transform.Rotate(angle.eulerAngles);
             attack.Fire(this.gameObject, transform);
+            transform.Rotate( - angle.eulerAngles);
         }
     }
 

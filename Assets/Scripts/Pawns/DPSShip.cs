@@ -26,17 +26,28 @@ public class DPSShip : Ship
     }
 
     //Makes the ship shoot ! 
-    public override void Fire()
+    public override void Fire(Quaternion angle)
     {
         if ( ! IsStunned())
         {
             if (anim)
                 anim.SetTrigger("Shoot");
 
+            cannonPosition.Rotate(angle.eulerAngles);
+            cannonPosition2.Rotate(angle.eulerAngles);
+            cannonPosition3.Rotate(angle.eulerAngles);
+            cannonPosition4.Rotate(angle.eulerAngles);
+
             attack.Fire(this.gameObject, cannonPosition);
             attack2.Fire(this.gameObject, cannonPosition2);
             attack3.Fire(this.gameObject, cannonPosition3);
             attack4.Fire(this.gameObject, cannonPosition4);
+
+
+            cannonPosition.Rotate(-angle.eulerAngles);
+            cannonPosition2.Rotate(-angle.eulerAngles);
+            cannonPosition3.Rotate(-angle.eulerAngles);
+            cannonPosition4.Rotate(-angle.eulerAngles);
         }
     }
 

@@ -47,8 +47,8 @@ public class KeyboardController : Controller
         if (isPossessingPawn())
         {
             //input
-            if (Input.GetButton("Fire"))
-                PossessedPawn.Fire();
+            /*if (Input.GetButton("Fire"))
+                PossessedPawn.Fire();*/
             if (Input.GetButtonDown("Hack"))
                 hackSelector.startHack(this);
                 

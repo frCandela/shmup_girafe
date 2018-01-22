@@ -19,6 +19,9 @@ public class MouseController : Controller
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
     [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
 
+    [Header("Other parameters:")]
+    bool shootVertically = true;
+
     //Events
     public UnityEvent onHack;
     public UnityEvent onBecomeVirus;
@@ -52,7 +55,7 @@ public class MouseController : Controller
     private void Update()
     {
         //Refill the hack bar
-        if( PossessedPawn == virusShip)
+        if ( PossessedPawn == virusShip)
             hackPower += virusHackRefillSpeed * Time.deltaTime;
         else
             hackPower += hackRefillSpeed * Time.deltaTime;
@@ -120,7 +123,19 @@ public class MouseController : Controller
                 TimeManager.resetSlowMotion();
             }
             else
-                PossessedPawn.Fire();
+            {
+               
+
+                float angle = 0f;
+                //Angle to shoot verticaly camerawise
+                if (shootVertically)
+                {
+                    Vector3 direction = PossessedPawn.transform.position - GameManager.instance.MainCameraController.transform.position;
+                    angle = Vector3.Angle(direction.normalized, new Vector3(1, 0, 0)) - 90f;
+                }
+                PossessedPawn.Fire(Quaternion.Euler(0, 0, angle / 2 ));
+            }
+                
         }
 
         if (Input.GetButtonUp("Fire"))
