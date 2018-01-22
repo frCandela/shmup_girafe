@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
         scores = new int[5];
         hackCount = 0;
         hackPerCombo = 0; //Jonas : set to 0, was to 1.
-        comboMultiplier = 0;
+        comboMultiplier = 3;
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
