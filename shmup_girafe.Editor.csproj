@@ -280,6 +280,14 @@
     <Compile Include="Assets\Editor\ChargeEditor.cs" />
     <Compile Include="Assets\Editor\CustomGUI.cs" />
     <Compile Include="Assets\Editor\SpawnEditor.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\Graph\Graph.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\Graph\Layouts\IGraphLayout.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\Graph\Layouts\ReingoldTilford.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\Graph\Node.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\Graph\Renderer\DefaultGraphRenderer.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\Graph\Renderer\IGraphRenderer.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\PlayableGraphVisualizer.cs" />
+    <Compile Include="Assets\GraphVisualizer\Editor\PlayableGraphVisualizerWindow.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_InspectorHelpEditor.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Editor\CFX_SpawnSystemEditor.cs" />
