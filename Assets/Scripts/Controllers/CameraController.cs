@@ -83,7 +83,10 @@ public class CameraController : MonoBehaviour
         //Adds the ship to the shipsInCameraView dictionary
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if(ship)
+        {
             shipsInCameraView[ship] = ship;
+        }
+            
 
         Bullet bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet)

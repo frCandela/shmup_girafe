@@ -25,7 +25,8 @@ GameObject:
   - component: {fileID: 95024271419405900}
   - component: {fileID: 212655479108382476}
   - component: {fileID: 61375117386959030}
-  m_Layer: 0
+  - component: {fileID: 114140930360449962}
+  m_Layer: 10
   m_Name: VirusShip_Jo
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -132,6 +133,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114140930360449962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024872792337874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f306c3646639ed74fb092862dc404f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkDuration: 1
+  BlinkFrequency: 10
+  SpriteRenderers:
+  - {fileID: 212655479108382476}
+  shipHealth: {fileID: 114117157822653960}
 --- !u!114 &114708004960594924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +165,6 @@ MonoBehaviour:
   hackbonus: 0
   playerSpeed: 20
   canBeStunned: 0
-  isPlayerControlled: 0
   scrollingSpeed: 0
 --- !u!212 &212655479108382476
 SpriteRenderer:

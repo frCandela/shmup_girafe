@@ -17,7 +17,7 @@ public class Pawn : MonoBehaviour
     {
     }
 
-    public void takeDamage(int damage)
+    public virtual void takeDamage(int damage)
     {
         if(controller)
             controller.onTakeDamage.Invoke();
@@ -40,9 +40,4 @@ public class Pawn : MonoBehaviour
 
     public virtual void Fire ( Quaternion angle ) {}
     public virtual void UnFire() {}
-
-    private void OnDestroy()
-    {
-        GameManager.instance.PlayerController.addHackPower(hackbonus);
-    }
 }

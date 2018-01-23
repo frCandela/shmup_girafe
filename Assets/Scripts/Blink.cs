@@ -57,6 +57,16 @@ public class Blink : MonoBehaviour
             StartCoroutine("BlinkCoroutine");
         }
     }
+
+    public void StopBlink()
+    {
+        if (SpriteRenderers != null)
+        {
+            StopAllCoroutines();
+            foreach (SpriteRenderer renderer in SpriteRenderers)
+                renderer.enabled = false;
+        }
+    }
 }
 
 #if UNITY_EDITOR
