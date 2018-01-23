@@ -416,12 +416,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351586955025634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3adb87ec3671684b85e2b752857c42a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: {fileID: 11400000, guid: 4796ad85990a1444da1b08654f63a55f, type: 2}
+  attackType: {fileID: 0}
 --- !u!114 &114406920894972296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,6 +434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immortal: 0
+  immuneToDamage: 0
+  immuneToShipCollisions: 0
   health: 4
   onDie:
     m_PersistentCalls:
@@ -497,7 +499,7 @@ MonoBehaviour:
   playerSpeed: 15
   canBeStunned: 1
   isPlayerControlled: 1
-  scrollingSpeed: -4
+  scrollingSpeed: -3
   cannonPosition: {fileID: 4473357877139156}
   cannonPosition2: {fileID: 4690998034521930}
   cannonPosition3: {fileID: 4678738130884302}
@@ -567,12 +569,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351586955025634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3adb87ec3671684b85e2b752857c42a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: {fileID: 11400000, guid: 4796ad85990a1444da1b08654f63a55f, type: 2}
+  attackType: {fileID: 0}
 --- !u!114 &114964515329419696
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865796f793386cf44a1a4691deb31748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14.8
+  speed: 15
   lifetime: 3
   notInCameraView: 0
 --- !u!212 &212675666388719702

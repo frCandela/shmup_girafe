@@ -841,7 +841,7 @@ MonoBehaviour:
   TimeScaleFactor: 0.1
   hackRefillSpeed: 5
   virusHackRefillSpeed: 15
-  shootVertically: 0
+  shootVertically: 1
   onHack:
     m_PersistentCalls:
       m_Calls: []
@@ -2380,6 +2380,7 @@ PlayableDirector:
     - ed7f2fd3c8a7841b8b3bfba709544bf4: {fileID: 454917183}
     - eaa3e9b78e167415d9789f28069cfc04: {fileID: 454917183}
     - c5ea108dff0d447209e13a50f4e1cd75: {fileID: 454917183}
+    - d34213fc0975148cc9a73dce000247fe: {fileID: 454917183}
     - 0463de9803b1b4214825a090c42d752e: {fileID: 454917183}
     - a30cf20fd455f4cab9da08671f8ea4f5: {fileID: 454917183}
     - 00de2070f2fc6499388e0049974a1edc: {fileID: 454917183}
@@ -2393,6 +2394,7 @@ PlayableDirector:
     - 2b1488ea28c134c4c9874a28e9bd76a9: {fileID: 454917183}
     - acc784d98389947ccb24c345b44583b3: {fileID: 454917183}
     - bf97bbba182a3474da7e2cb04430ddd2: {fileID: 454917183}
+    - 5bd5ebd7578a84ed5b8b3f352a553d04: {fileID: 454917183}
     - c6d0447a3707a41819e993793dcd9f14: {fileID: 454917183}
     - e08f46abf1ba6431aa76f3f04ecbe9fc: {fileID: 454917183}
     - 9c75c9a59739f4b8db8e9ac69e3ebcdf: {fileID: 454917183}
@@ -2401,9 +2403,11 @@ PlayableDirector:
     - 18b65ffaac8e44921a86306679ceac31: {fileID: 454917183}
     - 42269b534c97042c5a47a8aeeea722e8: {fileID: 454917183}
     - f61da27d7ebfb47228f5e60ed855ea6f: {fileID: 454917183}
+    - 777d62cd5efa64c51890828b44447609: {fileID: 454917183}
     - 18b28b380dd414f76a2fcb8fdd1182c2: {fileID: 454917183}
     - 4a8db0f2b5d5745dda813299f74407f4: {fileID: 454917183}
     - 2acd40b5c318b9544a3dde19ba4cd577: {fileID: 454917183}
+    - 1b5746b33a95b4e2296ed94d951f69e9: {fileID: 454917183}
     - dbc67994797bd4af091ce7f9a8172c62: {fileID: 454917183}
     - ede549a714dea453996f3fcdd535f22c: {fileID: 454917183}
     - 7148d568fb072499d81d4ccc13d5b168: {fileID: 454917183}
@@ -2434,6 +2438,7 @@ PlayableDirector:
     - fbba91f97fd894f46bf2eac8f945772c: {fileID: 454917183}
     - 3c53f2b5dc77748ffa738aa2d11df0d9: {fileID: 454917183}
     - 19a61307fd97f474c93e42cd7aca6820: {fileID: 454917183}
+    - 310c96934e7ab4df28943198a0cdaf1d: {fileID: 454917183}
     - ec6410f01eecf4d1d8181b20d0306ace: {fileID: 454917183}
     - ad67a035605ef455bb747d94eb34139a: {fileID: 454917183}
     - c5761e503564b4b608a0ddd7aa6c2b1e: {fileID: 454917183}
