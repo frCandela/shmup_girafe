@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114129248263478540}
   - component: {fileID: 58436751843917154}
   - component: {fileID: 50719474431657034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DPSBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
