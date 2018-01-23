@@ -19,15 +19,22 @@ public class AGIShip : Ship
     }
 
     // Update is called once per frame
-    public override void Fire()
+    public override void Fire(Quaternion angle)
     {
         if ( ! IsStunned() )
         {
             if (anim)
                 anim.SetTrigger("Shoot");
 
+
+            cannonPosition.Rotate(angle.eulerAngles);
+            cannonPosition2.Rotate(angle.eulerAngles);
+
             attack.Fire(  this.gameObject, cannonPosition);
             attack2.Fire( this.gameObject, cannonPosition2);
+
+            cannonPosition.Rotate(-angle.eulerAngles);
+            cannonPosition2.Rotate(-angle.eulerAngles);
         }
     }
 }

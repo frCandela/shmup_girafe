@@ -32,7 +32,7 @@ public class VirusShip : Ship
     }
 
     //Makes the ship shoot ! 
-    public override void Fire()
+    public override void Fire(Quaternion angle)
     {
     }
 

@@ -834,11 +834,14 @@ MonoBehaviour:
   screenLimit: 7
   VirusShipPrefab: {fileID: 114708004960594924, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
+  hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
+    type: 2}
   HackDuration: 3
   infiniteDuration: 0
   TimeScaleFactor: 0.1
   hackRefillSpeed: 5
   virusHackRefillSpeed: 15
+  shootVertically: 1
   onHack:
     m_PersistentCalls:
       m_Calls: []
@@ -2425,7 +2428,7 @@ MonoBehaviour:
   hackPerCombo: 2
   scorePeerHack: 500
   checkpointRefreshTime: 5
-  initComboMultiplier: 2
+  initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
   m_ObjectHideFlags: 0

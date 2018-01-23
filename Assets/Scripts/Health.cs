@@ -6,8 +6,11 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    [Header("Images :")]
+    [Header("Properties :")]
     public bool immortal = false;
+    public bool immuneToDamage = false;
+    public bool immuneToShipCollisions = false;
+
     [Range(0, 100)] public int health = 10;
 
     
@@ -18,7 +21,6 @@ public class Health : MonoBehaviour
     //Private parameters
     private int maxHealth;
     private bool dead = false;
-
 
     public bool isDead() { return dead;  }
 
@@ -46,19 +48,23 @@ public class Health : MonoBehaviour
             return 0;
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage(int damage, Object damageDealer)
     {
-        //Immortal objects don't take damage
-        if (!immortal)
+        if (immortal)
+            return;
+        if (immuneToDamage && damageDealer is Damage)
+            return;
+        if (immuneToShipCollisions && damageDealer is Ship)
+            return;
+
+        onTakeDamage.Invoke();
+        health -= damage;
+        if (health <= 0 && !dead)
         {
-            onTakeDamage.Invoke();
-            health -= damage;
-            if (health <= 0 && !dead)
-            {
-                onDie.Invoke();
-                dead = true; // Prevent multiple die before destroy
-                Destroy(this.gameObject);//Destroy the object
-            }
+            onDie.Invoke();
+            dead = true; // Prevent multiple die before destroy
+            Destroy(this.gameObject);//Destroy the object
         }
+
     }
 }

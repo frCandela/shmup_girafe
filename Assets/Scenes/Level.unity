@@ -710,7 +710,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 5
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -834,11 +834,14 @@ MonoBehaviour:
   screenLimit: 7
   VirusShipPrefab: {fileID: 114708004960594924, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
+  hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
+    type: 2}
   HackDuration: 3
   infiniteDuration: 0
   TimeScaleFactor: 0.1
   hackRefillSpeed: 5
   virusHackRefillSpeed: 15
+  shootVertically: 1
   onHack:
     m_PersistentCalls:
       m_Calls: []
@@ -967,7 +970,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599629946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 161, y: 193, z: 3.8637416}
+  m_LocalPosition: {x: 161, y: 193.11111, z: 3.8637416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420967918}
@@ -1638,8 +1641,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910301822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 656, y: 369, z: 0}
-  m_LocalScale: {x: 1.64, y: 1.64, z: 1.64}
+  m_LocalPosition: {x: 450, y: 253, z: 0}
+  m_LocalScale: {x: 1.125, y: 1.125, z: 1.125}
   m_Children:
   - {fileID: 928354307}
   - {fileID: 599629947}
@@ -1679,7 +1682,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928354306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29992676, y: 94.75756, z: 0}
+  m_LocalPosition: {x: -0.29992676, y: 94.71077, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 910301826}
@@ -2315,7 +2318,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 1acfcb883b2234d088e0e1bfaf74f663, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -2395,13 +2398,12 @@ MonoBehaviour:
   MainBar: {fileID: 599629948}
   TextPopupsGen: {fileID: 896299611}
   Leaderboard: {fileID: 928354308}
-  director: {fileID: 1301998660}
-  timelines:
-  - {fileID: 11400000, guid: 1acfcb883b2234d088e0e1bfaf74f663, type: 2}
-  - {fileID: 11400000, guid: c1191c2954f8b4732a71fafe821914fb, type: 2}
-  - {fileID: 11400000, guid: 2a93c05d681634118a913e8a083d6da5, type: 2}
-  - {fileID: 11400000, guid: f383eff4437de4b1c960dad15a237d08, type: 2}
-  - {fileID: 11400000, guid: d25e673b1f5f54b008fa5560b0778293, type: 2}
+  trackNames:
+  - Virus Phase
+  - Multi x1
+  - Multi x2
+  - Multi x4
+  - Multi x8
   lights:
   - {fileID: 1103002388}
   - {fileID: 1776019604}
@@ -2425,7 +2427,7 @@ MonoBehaviour:
   hackPerCombo: 2
   scorePeerHack: 500
   checkpointRefreshTime: 5
-  initComboMultiplier: 3
+  initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,7 +2981,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.5955882, g: 0.88286, b: 1, a: 1}
+  m_Color: {r: 0.83823526, g: 0.886207, b: 1, a: 1}
   m_Intensity: 1.39
   m_Range: 10
   m_SpotAngle: 30

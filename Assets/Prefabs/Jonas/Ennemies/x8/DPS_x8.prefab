@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114374209508377178}
   - component: {fileID: 114902661856517662}
   - component: {fileID: 114787943915931856}
+  - component: {fileID: 58429156429133360}
   m_Layer: 8
   m_Name: DPS_x8
   m_TagString: Ennemy
@@ -204,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351586955025634}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.58, y: 0.07, z: 0.026434172}
+  m_LocalPosition: {x: -1.697399, y: 10.514116, z: 0.026434172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4473357877139156}
@@ -314,6 +315,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58429156429133360
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1351586955025634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.013406754, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.3348033
 --- !u!70 &70818305139544968
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -3946,7 +3962,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 716779771
+  randomSeed: -1853037878
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7272,7 +7288,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1772368401
+  randomSeed: 1170260146
   InitialModule:
     serializedVersion: 3
     enabled: 1

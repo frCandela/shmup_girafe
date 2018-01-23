@@ -16,7 +16,7 @@ public class Damage : MonoBehaviour {
             Health health = collision.gameObject.GetComponent<Health>();
             if (health)
             {
-                health.takeDamage(damage);
+                health.takeDamage(damage, this);
                 Destroy(this.gameObject);
             }
 

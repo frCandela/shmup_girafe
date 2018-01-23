@@ -16,11 +16,6 @@ public struct LightParameter {
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
-    /*public static Ship StarterShip { get; private set; }
-    public static MouseController PlayerController { get; private set; }
-    public static CameraController MainCameraController { get; private set; }
-    public static MainBar MainBar { get; private set; }*/
-
     [Header("Initialisation:")]
     public MouseController PlayerController;
     public CameraController MainCameraController;
@@ -30,8 +25,9 @@ public class GameManager : MonoBehaviour {
 
 
     [Header("Levels:")]
-    public PlayableDirector director;
-    public TimelineAsset[] timelines;
+    public string[] trackNames;
+    private PlayableDirector director;
+    private PlayableTrack[] tracks;
 
 
     [Header("Multiplier Effects:")]
@@ -76,15 +72,14 @@ public class GameManager : MonoBehaviour {
     }
 
     //Initializes the game for each level.
-    void AwakeGame()
-    {
+    void AwakeGame() {
         if (!PlayerController)
             throw new Exception("Error : no player controller selected");
         if (!MainCameraController)
             throw new Exception("Error : no main camera selected");
         if (!TextPopupsGen)
             throw new Exception("Error : no TextPopupsGenerator selected");
-        
+
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         PlayerController.PossessVirus();
@@ -98,15 +93,13 @@ public class GameManager : MonoBehaviour {
         score = 0;
         scores = new int[5];
         hackCount = 0;
-        hackPerCombo = 0; //Jonas : set to 0, was to 1.
+        hackPerCombo = 0;
         comboMultiplier = initComboMultiplier;
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.setCombo(0);
-        //MainBar.setMulti(getMulti());
-		//Jonas
-		MainBar.setMulti (0);//
+        MainBar.setMulti(0);
         MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
@@ -114,7 +107,18 @@ public class GameManager : MonoBehaviour {
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
 
-        director.playableAsset = timelines[0];
+        director = GetComponent<PlayableDirector>();
+        tracks = new PlayableTrack[trackNames.Length];
+        foreach (TrackAsset track in ((TimelineAsset)director.playableAsset).GetRootTracks()) {
+            for(int i = 0; i < trackNames.Length; i++) {
+                if(trackNames[i] == track.name) {
+                    tracks[i] = (PlayableTrack)track;
+                    break;
+                }
+            }
+        }
+        
+        PlayTrack(0);
         director.Play();
 
         SetLights(0);
@@ -126,7 +130,6 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
@@ -167,17 +170,13 @@ public class GameManager : MonoBehaviour {
         if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
-           	//++comboMultiplier;
+           	++comboMultiplier;
             ++hackPerCombo;
 
-            MainBar.setSegments(comboMultiplier + 1);
+            MainBar.setSegments(comboMultiplier);
             MainBar.setMulti(getMulti());
 
-			++comboMultiplier;	//Jonas
-
-            director.playableAsset = timelines[comboMultiplier];
-            director.initialTime = -2;
-            director.Play();
+            PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
         }
 
@@ -187,28 +186,40 @@ public class GameManager : MonoBehaviour {
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
     }
 
+    void PlayTrack(int level) {
+        for (int i = 0; i < tracks.Length; i++) {
+            tracks[i].muted = (i != level);
+        }
+        director.initialTime = director.time;
+        director.Stop();
+        director.Play();
+    }
+
     public void playerBecameVirus()
     {
         //Reset the combo
         hackCount = 0;
+        hackPerCombo = 0;
         comboMultiplier = 0;
 
-
-        MainBar.setCombo(hackCount + 1);
-        MainBar.setSegments(1); 
-        //MainBar.setMulti(getMulti());
-		//Jonas
-		MainBar.setMulti(0);
-
-        director.playableAsset = timelines[0];
-        director.initialTime = -4;
-        director.Play();
+        //initialise ui
+        MainBar.setSegments(hackPerCombo);
+        MainBar.setCombo(0);
+        MainBar.setMulti(0);
+        
+        PlayTrack(0);
         SetLights(0);
     }
 
     public int getScore(){ return score; }
 
-    public int getMulti() { return (int)Mathf.Pow(2f, comboMultiplier);}
+    public int getMulti()
+    {
+        if (comboMultiplier == 0)
+            return 0;
+        else
+            return (int)Mathf.Pow(2f, comboMultiplier - 1);
+    }
 
     //Returns the score effectively gained by the player
     public int addScore(int rawScore)

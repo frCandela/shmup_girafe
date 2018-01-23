@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114518344704141090}
   - component: {fileID: 114410754506266730}
   - component: {fileID: 114341212322532646}
+  - component: {fileID: 58680311539160432}
   m_Layer: 8
   m_Name: Tank_x4_Right
   m_TagString: Ennemy
@@ -170,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1201508606819798}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.1, y: -0.52, z: 0}
+  m_LocalPosition: {x: 0.3136282, y: 10.366641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4644819086484532}
@@ -254,6 +255,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58680311539160432
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1201508606819798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0067037344, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.3954774
 --- !u!70 &70375913032197410
 CapsuleCollider2D:
   m_ObjectHideFlags: 1

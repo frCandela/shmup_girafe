@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 114283961945086644}
   - component: {fileID: 114327742626344956}
   - component: {fileID: 114843351824256386}
+  - component: {fileID: 58433242615916802}
   m_Layer: 8
   m_Name: Flesh_x2
   m_TagString: Ennemy
@@ -113,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671544709107808}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.026434172}
+  m_LocalPosition: {x: -1.6744527, y: 9.045711, z: 0.026434172}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4791403066700692}
@@ -195,6 +196,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58433242615916802
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671544709107808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010381937, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.3969059
 --- !u!70 &70502556474722916
 CapsuleCollider2D:
   m_ObjectHideFlags: 1

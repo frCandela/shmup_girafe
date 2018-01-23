@@ -119,6 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immortal: 1
+  immuneToDamage: 1
+  immuneToShipCollisions: 1
   health: 0
   onDie:
     m_PersistentCalls:

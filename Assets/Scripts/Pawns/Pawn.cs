@@ -38,7 +38,7 @@ public class Pawn : MonoBehaviour
     public virtual void MoveTowards(Vector3 point){}
 
 
-    public virtual void Fire() {}
+    public virtual void Fire ( Quaternion angle ) {}
     public virtual void UnFire() {}
 
     private void OnDestroy()

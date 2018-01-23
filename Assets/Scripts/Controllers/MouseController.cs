@@ -11,6 +11,8 @@ public class MouseController : Controller
     [Header("GameObjects")]
     public Ship VirusShipPrefab;
     private Ship virusShip;
+    public GameObject hackPointerPrefab;
+    private GameObject hackPointer;
 
     [Header("Hack parameters:")]
     public float HackDuration = 3F;
@@ -18,6 +20,9 @@ public class MouseController : Controller
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
     [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
+
+    [Header("Other parameters:")]
+    public bool shootVertically = true;
 
     //Events
     public UnityEvent onHack;
@@ -28,6 +33,7 @@ public class MouseController : Controller
     private float maxHackPower = 100F;
     private float minHackPower = 100F;
     private bool isHacking = false;
+    private Ship targetHack;
 
     private void Start()
     {
@@ -35,10 +41,18 @@ public class MouseController : Controller
         isHacking = false;
         if (infiniteDuration)
             HackDuration = float.MaxValue;
+        targetHack = null;
+
+        //hackPointer
+        hackPointer = Instantiate(hackPointerPrefab, transform.position, transform.rotation);
+        hackPointer.GetComponent<SpriteRenderer>().enabled = false;
+
 
         //Virus ship
         if (!virusShip)
             virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
+
+        
 
         //Set events on the possesed ship
         if (PossessedPawn && PossessedPawn != virusShip)
@@ -52,7 +66,7 @@ public class MouseController : Controller
     private void Update()
     {
         //Refill the hack bar
-        if( PossessedPawn == virusShip)
+        if ( PossessedPawn == virusShip)
             hackPower += virusHackRefillSpeed * Time.deltaTime;
         else
             hackPower += hackRefillSpeed * Time.deltaTime;
@@ -66,24 +80,37 @@ public class MouseController : Controller
             PossessVirus();
         }
 
+        if( isHacking )
+        {
+            RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
+            if (hit && hit.collider)
+                targetHack = hit.collider.gameObject.GetComponent<Ship>();
+            else
+                targetHack = null;
+
+            if ( targetHack )
+                    hackPointer.transform.position = targetHack.transform.position;
+            else
+                hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();
+        }
+
+
+
         if (Input.GetButton("Fire"))
         {
             if (isHacking)
             {
                 isHacking = false;
-                RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
-                if (hit && hit.collider)
+
+                if (targetHack)
                 {
-                    Ship target = hit.collider.gameObject.GetComponent<Ship>();
-
-
-                    if(target.hackCost <= hackPower && target != PossessedPawn && target.isHackable)
+                    if(targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                     {
                         //misc
-                        hackPower -= target.hackCost;
+                        hackPower -= targetHack.hackCost;
                         if (hackPower < 0F)
                             hackPower = 0F;
-                        GameManager.instance.MainBar.health = target.GetComponent<Health>();
+                        GameManager.instance.MainBar.health = targetHack.GetComponent<Health>();
 
                         //Destroy the old pawn
                         Health oldHealth = this.PossessedPawn.GetComponent<Health>();
@@ -91,26 +118,26 @@ public class MouseController : Controller
                             Destroy(this.PossessedPawn.gameObject);
 
                         //Possess the new ship
-                        target.gameObject.tag = this.gameObject.tag;
-                        this.Possess(target);
-                        target.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
-                        target.isPlayerControlled = true;
+                        targetHack.gameObject.tag = this.gameObject.tag;
+                        this.Possess(targetHack);
+                        targetHack.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+                        targetHack.isPlayerControlled = true;
 
 						//Reduce hitbox size except for tank ships
-						if(!target.GetComponent<TankShip>()) target.GetComponent<CapsuleCollider2D>().size /= 2;
+						if(!targetHack.GetComponent<TankShip>()) targetHack.GetComponent<CapsuleCollider2D>().size /= 2;
 
                         //Set events
-                        target.GetComponent<Health>().onTakeDamage.AddListener(target.GetComponent<Blink>().StartBlink);
+                        targetHack.GetComponent<Health>().onTakeDamage.AddListener(targetHack.GetComponent<Blink>().StartBlink);
 
                         //Set Health
-                        Health targetHealth = target.GetComponent<Health>();
+                        Health targetHealth = targetHack.GetComponent<Health>();
                         if (targetHealth)
                             targetHealth.RestoreHealth();
 
                         //Set anim
-                        target.setHackAnim(true);
+                        targetHack.setHackAnim(true);
 
-                        target.scrollingSpeed = 0F;
+                        targetHack.scrollingSpeed = 0F;
 
                         onHack.Invoke();
 
@@ -118,23 +145,37 @@ public class MouseController : Controller
                 }
 
                 TimeManager.resetSlowMotion();
+                hackPointer.GetComponent<SpriteRenderer>().enabled = false;
             }
             else
-                PossessedPawn.Fire();
+            {
+                float angle = 0f;
+                //Angle to shoot verticaly camerawise
+                if (shootVertically)
+                {
+                    Vector3 direction = PossessedPawn.transform.position - GameManager.instance.MainCameraController.transform.position;
+                    angle = Vector3.Angle(direction.normalized, new Vector3(1, 0, 0)) - 90f;
+                }
+                PossessedPawn.Fire(Quaternion.Euler(0, 0, angle / 2 ));
+            }
+                
         }
 
         if (Input.GetButtonUp("Fire"))
             PossessedPawn.UnFire();
 
-
-        if (isHacking && !TimeManager.inSlowMotion()) {
+        //Hack timeout
+        if (isHacking && !TimeManager.inSlowMotion())
+        {
             isHacking = false;
+            hackPointer.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         //Starts the hack !
         if (Input.GetButton("Hack") && !isHacking && hackPower >= minHackPower)
         {
             isHacking = true;
+            hackPointer.GetComponent<SpriteRenderer>().enabled = true;
             TimeManager.doSlowMotion(3, 0.05f);
         }
     }
