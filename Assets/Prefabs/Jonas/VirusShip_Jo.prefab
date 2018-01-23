@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f306c3646639ed74fb092862dc404f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlinkDuration: 3
+  BlinkDuration: 1
   BlinkFrequency: 10
   SpriteRenderers:
   - {fileID: 212655479108382476}
