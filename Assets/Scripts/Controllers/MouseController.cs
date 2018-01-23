@@ -124,7 +124,7 @@ public class MouseController : Controller
                         targetHack.gameObject.tag = this.gameObject.tag;
                         this.Possess(targetHack);
                         targetHack.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
-                        targetHack.isPlayerControlled = true;
+                        targetHack.SetPlayerControlled(true);
 
 						//Reduce hitbox size except for tank ships
 						if(!targetHack.GetComponent<TankShip>()) targetHack.GetComponent<CapsuleCollider2D>().size /= 2;

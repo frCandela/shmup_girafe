@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 212655479108382476}
   - component: {fileID: 61375117386959030}
   - component: {fileID: 114140930360449962}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: VirusShip_Jo
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.044811964, y: 0.117200375}
@@ -144,10 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f306c3646639ed74fb092862dc404f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlinkDuration: 1
+  BlinkDuration: 3
   BlinkFrequency: 10
-  SpriteRenderers: []
-  shipHealth: {fileID: 0}
+  SpriteRenderers:
+  - {fileID: 212655479108382476}
+  shipHealth: {fileID: 114117157822653960}
 --- !u!114 &114708004960594924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,7 +165,6 @@ MonoBehaviour:
   hackbonus: 0
   playerSpeed: 20
   canBeStunned: 0
-  isPlayerControlled: 0
   scrollingSpeed: 0
 --- !u!212 &212655479108382476
 SpriteRenderer:

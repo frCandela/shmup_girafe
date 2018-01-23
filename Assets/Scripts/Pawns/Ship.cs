@@ -17,7 +17,7 @@ public class Ship : Pawn
 
     //Stun
     public bool canBeStunned = true;
-    public bool isPlayerControlled = false;
+    private bool isPlayerControlled = false;
 
     //Speed
     public float scrollingSpeed;
@@ -70,17 +70,29 @@ public class Ship : Pawn
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if (ship && ship.tag != tag )
         {
+           
+
             Health otherHealth = ship.GetComponent<Health>();
             Health myHealth = GetComponent<Health>();
 
+            if (isPlayerControlled)
+            {
+                otherHealth.takeDamage(otherHealth.health, this);
+
+                if (myHealth.health == 1)
+                    myHealth.takeDamage(1, this);
+                else
+                    myHealth.takeDamage(myHealth.health - 1, this);
+            }
+
             //Checks if no ship is already destroyed
-            if( ! myHealth.isDead() && ! otherHealth.isDead())
+            /*if ( ! myHealth.isDead() && ! otherHealth.isDead())
             {
                 int otherHealthValue = otherHealth.health;
                 int myHealthValue = myHealth.health;
                 otherHealth.takeDamage(myHealthValue, this);
                 myHealth.takeDamage(otherHealthValue, ship);
-            }
+            }*/
         }
     }
 
@@ -150,4 +162,8 @@ public class Ship : Pawn
     {
         GameManager.instance.PlayerController.addHackPower(hackbonus);
     }
+
+
+    public bool IsPlayerControlled() { return isPlayerControlled; }
+    public void SetPlayerControlled( bool value) { isPlayerControlled = value; }
 }

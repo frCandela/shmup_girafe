@@ -67,5 +67,7 @@ public class VirusShip : Ship
         Blink blink = GetComponent<Blink>();
         if (blink)
             blink.StartBlink();
+        if (controller)
+            controller.onTakeDamage.Invoke();
     }
 }
