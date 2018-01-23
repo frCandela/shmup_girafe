@@ -25,8 +25,9 @@ public class GameManager : MonoBehaviour {
 
 
     [Header("Levels:")]
-    public PlayableDirector director;
-    public TimelineAsset[] timelines;
+    public string[] trackNames;
+    private PlayableDirector director;
+    private PlayableTrack[] tracks;
 
 
     [Header("Multiplier Effects:")]
@@ -71,15 +72,14 @@ public class GameManager : MonoBehaviour {
     }
 
     //Initializes the game for each level.
-    void AwakeGame()
-    {
+    void AwakeGame() {
         if (!PlayerController)
             throw new Exception("Error : no player controller selected");
         if (!MainCameraController)
             throw new Exception("Error : no main camera selected");
         if (!TextPopupsGen)
             throw new Exception("Error : no TextPopupsGenerator selected");
-        
+
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         PlayerController.PossessVirus();
@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour {
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.setCombo(0);
-		MainBar.setMulti (0);
+        MainBar.setMulti(0);
         MainBar.setSegments(hackPerCombo);
 
         //Post Processing reset
@@ -107,7 +107,18 @@ public class GameManager : MonoBehaviour {
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
 
-        director.playableAsset = timelines[0];
+        director = GetComponent<PlayableDirector>();
+        tracks = new PlayableTrack[trackNames.Length];
+        foreach (TrackAsset track in ((TimelineAsset)director.playableAsset).GetRootTracks()) {
+            for(int i = 0; i < trackNames.Length; i++) {
+                if(trackNames[i] == track.name) {
+                    tracks[i] = (PlayableTrack)track;
+                    break;
+                }
+            }
+        }
+        
+        PlayTrack(0);
         director.Play();
 
         SetLights(0);
@@ -119,7 +130,6 @@ public class GameManager : MonoBehaviour {
 
     private void Update()
     {
-
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
@@ -166,9 +176,7 @@ public class GameManager : MonoBehaviour {
             MainBar.setSegments(comboMultiplier);
             MainBar.setMulti(getMulti());
 
-            director.playableAsset = timelines[comboMultiplier];
-            director.initialTime = -2;
-            director.Play();
+            PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
         }
 
@@ -176,6 +184,15 @@ public class GameManager : MonoBehaviour {
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
+    }
+
+    void PlayTrack(int level) {
+        for (int i = 0; i < tracks.Length; i++) {
+            tracks[i].muted = (i != level);
+        }
+        director.initialTime = director.time;
+        director.Stop();
+        director.Play();
     }
 
     public void playerBecameVirus()
@@ -189,10 +206,8 @@ public class GameManager : MonoBehaviour {
         MainBar.setSegments(hackPerCombo);
         MainBar.setCombo(0);
         MainBar.setMulti(0);
-
-        director.playableAsset = timelines[0];
-        director.initialTime = -4;
-        director.Play();
+        
+        PlayTrack(0);
         SetLights(0);
     }
 

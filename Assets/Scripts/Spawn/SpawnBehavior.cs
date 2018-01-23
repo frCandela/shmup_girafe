@@ -16,6 +16,8 @@ public class SpawnBehavior : PlayableBehaviour
             if (!spawner)
                 throw new UnityException("No Spawner");
 
+            if (playable.GetTime() > 0.15f)
+                return;
             foreach (Spawn s in data)
                 spawner.Spawn(s.enemy, s.position, -s.angle);
             playable.SetDone(true);

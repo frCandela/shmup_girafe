@@ -369,7 +369,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 8 flesh
     m_Version: 1
-  - m_Start: 29.533333333333424
+  - m_Start: 29.66242790222168
     m_ClipIn: 0
     m_Asset: {fileID: 114778178062948012, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -381,7 +381,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: -1
+    m_BlendOutDuration: 0.12909456888825588
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -416,7 +416,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 114285374359633262}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: -1
+    m_BlendInDuration: 0.12909456888825588
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
