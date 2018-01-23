@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 114518344704141090}
   - component: {fileID: 114410754506266730}
   - component: {fileID: 114341212322532646}
-  - component: {fileID: 58933977600312632}
   m_Layer: 8
   m_Name: Tank_x1_Left
   m_TagString: Ennemy
@@ -255,21 +254,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58933977600312632
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1201508606819798}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.010381818, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.4857956
 --- !u!70 &70375913032197410
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -443,6 +427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immortal: 0
+  immuneToDamage: 0
+  immuneToShipCollisions: 0
   health: 7
   onDie:
     m_PersistentCalls:

@@ -17,6 +17,7 @@ public class MouseController : Controller
     [Header("Hack parameters:")]
     public float HackDuration = 3F;
     public bool infiniteDuration = false;
+    public float HackSnapDistance = 1F;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
     [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
@@ -82,7 +83,9 @@ public class MouseController : Controller
 
         if( isHacking )
         {
-            RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
+
+
+            /*RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
             if (hit && hit.collider)
                 targetHack = hit.collider.gameObject.GetComponent<Ship>();
             else
@@ -90,6 +93,16 @@ public class MouseController : Controller
 
             if ( targetHack )
                     hackPointer.transform.position = targetHack.transform.position;
+            else
+                hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();*/
+
+            targetHack = null;
+
+            foreach (var s in GameManager.instance.MainCameraController.shipsInCameraView)
+                if( Vector3.Distance(s.Value.transform.position, GameManager.instance.getMouseWorldPosition()) < HackSnapDistance)
+                    targetHack = s.Value;
+            if (targetHack)
+                hackPointer.transform.position = targetHack.transform.position;
             else
                 hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();
         }
