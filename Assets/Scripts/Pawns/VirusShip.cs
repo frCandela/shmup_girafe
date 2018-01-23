@@ -12,6 +12,9 @@ public class Virus : Ship
 
     private void OnDisable()
     {
+        
         GetComponent<SpriteRenderer>().enabled = false;
     }
+
+
 }

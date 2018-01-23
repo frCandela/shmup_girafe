@@ -64,7 +64,7 @@ public class Ship : Pawn
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         //Collision with other ships
         Ship ship = collision.gameObject.GetComponent<Ship>();
@@ -144,5 +144,10 @@ public class Ship : Pawn
     public override void UnFire() {
         if(attack)
             attack.Reset();
+    }
+
+    protected void OnDestroy()
+    {
+        GameManager.instance.PlayerController.addHackPower(hackbonus);
     }
 }

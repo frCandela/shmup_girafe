@@ -53,7 +53,6 @@ public class MouseController : Controller
         if (!virusShip)
             virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
 
-        
 
         //Set events on the possesed ship
         if (PossessedPawn && PossessedPawn != virusShip)
@@ -83,19 +82,6 @@ public class MouseController : Controller
 
         if( isHacking )
         {
-
-
-            /*RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
-            if (hit && hit.collider)
-                targetHack = hit.collider.gameObject.GetComponent<Ship>();
-            else
-                targetHack = null;
-
-            if ( targetHack )
-                    hackPointer.transform.position = targetHack.transform.position;
-            else
-                hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();*/
-
             targetHack = null;
 
             foreach (var s in GameManager.instance.MainCameraController.shipsInCameraView)
@@ -128,7 +114,11 @@ public class MouseController : Controller
                         //Destroy the old pawn
                         Health oldHealth = this.PossessedPawn.GetComponent<Health>();
                         if (!oldHealth || !oldHealth.immortal)//Don't destroy immortal objects 
+                        {
+                            this.PossessedPawn.hackbonus = 0;
                             Destroy(this.PossessedPawn.gameObject);
+                        }
+                            
 
                         //Possess the new ship
                         targetHack.gameObject.tag = this.gameObject.tag;
@@ -146,6 +136,12 @@ public class MouseController : Controller
                         Health targetHealth = targetHack.GetComponent<Health>();
                         if (targetHealth)
                             targetHealth.RestoreHealth();
+
+                        //No score gained when possessed ship is destroyed
+                        Score score = targetHack.GetComponent<Score>();
+                        if (score)
+                            Destroy(score);
+
 
                         //Set anim
                         targetHack.setHackAnim(true);

@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour {
         PlayerController.onHack.AddListener(hackOccured);
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
-        //PlayerController.PossessedPawn.transform.position = getMouseWorldPosition();
+        PlayerController.PossessedPawn.transform.position = getMouseWorldPosition();
 
         //Init variables
         score = 0;
