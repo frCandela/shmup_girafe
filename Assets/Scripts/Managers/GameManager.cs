@@ -98,9 +98,9 @@ public class GameManager : MonoBehaviour {
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.setCombo(0);
         MainBar.setMulti(0);
         MainBar.setSegments(hackPerCombo);
+        MainBar.setCombo(1);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -166,20 +166,35 @@ public class GameManager : MonoBehaviour {
     private void hackOccured()
     {
         //Increment combo multiplier
-        if ( ++hackCount > hackPerCombo && comboMultiplier < maxCombo)
+        ++hackCount;
+        
+
+        if (hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
            	++comboMultiplier;
-            ++hackPerCombo;
 
-            MainBar.setSegments(comboMultiplier);
+            if (comboMultiplier == 1)
+            {
+                hackPerCombo = 0;
+                MainBar.setSegments(hackPerCombo);
+                MainBar.setCombo(1);
+            }
+            else
+            {
+                hackPerCombo = comboMultiplier-1;
+
+                MainBar.setSegments(hackPerCombo);
+                MainBar.setCombo(0);
+            }
+
+
             MainBar.setMulti(getMulti());
-
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
         }
-
-        MainBar.setCombo(hackCount);
+        else
+            MainBar.setCombo(hackCount);
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);

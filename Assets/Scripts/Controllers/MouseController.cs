@@ -185,7 +185,7 @@ public class MouseController : Controller
         {
             isHacking = true;
             hackPointer.GetComponent<SpriteRenderer>().enabled = true;
-            TimeManager.doSlowMotion(3, 0.05f);
+            TimeManager.doSlowMotion(HackDuration, 0.05f);
         }
     }
 
