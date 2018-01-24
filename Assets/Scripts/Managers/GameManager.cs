@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour {
     [Header("Multiplier Effects:")]
     public Light[] lights;
     public LightParameter[] lightColors;
+    private LightParameter currentColor;
+    private float currentSpeed;
     public float[] tunnelSpeeds;
 
     private PostProcessingBehaviour PostProcessing;
@@ -121,15 +123,24 @@ public class GameManager : MonoBehaviour {
         PlayTrack(0);
         director.Play();
 
+        foreach (Light light in lights) {
+            light.color = lightColors[0].color;
+            light.intensity = lightColors[0].intensity;
+        }
         SetLights(0);
 
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
         Leaderboard.UpdateScore(checkpointId);
     }
-
+    
     private void Update()
     {
+        foreach (Light light in lights) {
+            light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
+            light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
+        }
+
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
@@ -231,14 +242,12 @@ public class GameManager : MonoBehaviour {
     public void saveScore(int check) { scores[check] = score; }
 
     void SetLights(int mult) {
-        foreach(Light light in lights) {
-            light.color = lightColors[mult].color;
-            light.intensity = lightColors[mult].intensity;
-        }
+        currentColor = lightColors[mult];
     }
 
     public float getTunnelSpeed() {
-        return tunnelSpeeds[comboMultiplier];
+        currentSpeed = Mathf.Lerp(currentSpeed, tunnelSpeeds[comboMultiplier], Time.deltaTime);
+        return currentSpeed;
     }
 
     #region POST-EFFECT

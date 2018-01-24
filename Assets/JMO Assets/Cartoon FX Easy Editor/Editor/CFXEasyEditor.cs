@@ -878,8 +878,9 @@ public class CFXEasyEditor : EditorWindow
 			//Scale Lifetime
 			foreach(ParticleSystem ps in systems)
 			{
-				ps.playbackSpeed = (100.0f/LTScalingValue);
-			}
+                ParticleSystem.MainModule main = ps.main;
+                main.simulationSpeed = (100.0f / LTScalingValue);
+            }
 		}
 	}
 	
@@ -918,7 +919,8 @@ public class CFXEasyEditor : EditorWindow
 			//Scale Lifetime
 			foreach(ParticleSystem ps in systems)
 			{
-				ps.startDelay = DelayValue;
+                ParticleSystem.MainModule main = ps.main;
+                main.startDelay = DelayValue;
 			}
 		}
 	}
@@ -943,20 +945,22 @@ public class CFXEasyEditor : EditorWindow
 			psDest.FindProperty("moveWithTransform").boolValue = psSource.FindProperty("moveWithTransform").boolValue;
 			
 			GenericModuleCopy(psSource.FindProperty("InitialModule"), psDest.FindProperty("InitialModule"));
-			
-			dest.startDelay = source.startDelay;
-			dest.loop = source.loop;
-			dest.playOnAwake = source.playOnAwake;
-			dest.playbackSpeed = source.playbackSpeed;
-		#if UNITY_5_0 || UNITY_5_1 || UNITY_5_2
-			dest.emissionRate = source.emissionRate;
-		#endif
-			dest.startSpeed = source.startSpeed;
-			dest.startSize = source.startSize;
-			dest.startColor = source.startColor;
-			dest.startRotation = source.startRotation;
-			dest.startLifetime = source.startLifetime;
-			dest.gravityModifier = source.gravityModifier;
+
+            ParticleSystem.MainModule main = dest.main;
+
+            main.startDelay = source.main.startDelay;
+            main.loop = source.main.loop;
+            main.playOnAwake = source.main.playOnAwake;
+            main.simulationSpeed = source.main.simulationSpeed;
+#if UNITY_5_0 || UNITY_5_1 || UNITY_5_2
+			main.emissionRate = source.main.emissionRate;
+#endif
+            main.startSpeed = source.main.startSpeed;
+            main.startSize = source.main.startSize;
+            main.startColor = source.main.startColor;
+            main.startRotation = source.main.startRotation;
+            main.startLifetime = source.main.startLifetime;
+            main.gravityModifier = source.main.gravityModifier;
 		}
 		
 		//Emission
@@ -1168,11 +1172,16 @@ public class CFXEasyEditor : EditorWindow
 	//Scale System
 	private void ScaleParticleValues(ParticleSystem ps, GameObject parent)
 	{
-		//Particle System
-		ps.startSize *= ScalingValue;
-		ps.gravityModifier *= ScalingValue;
-		if(ps.startSpeed > 0.01f)
-			ps.startSpeed *= ScalingValue;
+        ParticleSystem.MainModule main = ps.main;
+        var size = main.startSize;
+        var grav = main.gravityModifier;
+        var speed = main.startSpeed;
+
+        //Particle System
+        size.constant *= ScalingValue;
+        grav.constant *= ScalingValue;
+		if(ps.main.startSpeed.constant > 0.01f)
+            speed.constant *= ScalingValue;
 		if(ps.gameObject != parent)
 			ps.transform.localPosition *= ScalingValue;
 		

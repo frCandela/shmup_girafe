@@ -15,7 +15,7 @@ public class LeaderboardText : MonoBehaviour {
 
     void Update() {
         if(leaders.Count == 0)
-            text.text = "<color=grey>Loading Scores</color>" + "<color=red>YOU " + GameManager.instance.getScore() + "</color>";
+            text.text = "<color=grey>Loading Scores...</color>";
         else {
             text.text = "<color=grey>Leaderboard:</color>\n";
             int count = 1;
