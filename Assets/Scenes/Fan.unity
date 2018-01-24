@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 215
+      value: 325.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 121
+      value: 183
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -413,7 +413,9 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: combo
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -468,6 +470,7 @@ MonoBehaviour:
   virusShip: {fileID: 0}
   hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
     type: 2}
+  hackPointer: {fileID: 0}
   HackDuration: 1000
   infiniteDuration: 0
   HackSnapDistance: 1
