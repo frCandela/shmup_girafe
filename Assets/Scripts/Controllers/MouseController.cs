@@ -17,6 +17,7 @@ public class MouseController : Controller
     [Header("Hack parameters:")]
     public float HackDuration = 3F;
     public bool infiniteDuration = false;
+    public float HackSnapDistance = 1F;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
     [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
@@ -52,7 +53,6 @@ public class MouseController : Controller
         if (!virusShip)
             virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
 
-        
 
         //Set events on the possesed ship
         if (PossessedPawn && PossessedPawn != virusShip)
@@ -82,14 +82,13 @@ public class MouseController : Controller
 
         if( isHacking )
         {
-            RaycastHit2D hit = Physics2D.Raycast(GameManager.instance.getMouseWorldPosition() - Vector3.forward, Vector2.zero, Mathf.Infinity, 256, -Mathf.Infinity);
-            if (hit && hit.collider)
-                targetHack = hit.collider.gameObject.GetComponent<Ship>();
-            else
-                targetHack = null;
+            targetHack = null;
 
-            if ( targetHack )
-                    hackPointer.transform.position = targetHack.transform.position;
+            foreach (var s in GameManager.instance.MainCameraController.shipsInCameraView)
+                if( Vector3.Distance(s.Value.transform.position, GameManager.instance.getMouseWorldPosition()) < HackSnapDistance)
+                    targetHack = s.Value;
+            if (targetHack)
+                hackPointer.transform.position = targetHack.transform.position;
             else
                 hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();
         }
@@ -115,13 +114,18 @@ public class MouseController : Controller
                         //Destroy the old pawn
                         Health oldHealth = this.PossessedPawn.GetComponent<Health>();
                         if (!oldHealth || !oldHealth.immortal)//Don't destroy immortal objects 
+                        {
+                            this.PossessedPawn.hackbonus = 0;
                             Destroy(this.PossessedPawn.gameObject);
+                        }
+                            
 
                         //Possess the new ship
                         targetHack.gameObject.tag = this.gameObject.tag;
                         this.Possess(targetHack);
                         targetHack.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
-                        targetHack.isPlayerControlled = true;
+                        targetHack.SetPlayerControlled(true);
+						hackPointer.GetComponent<ParticleSystem> ().Play ();
 
 						//Reduce hitbox size except for tank ships
 						if(!targetHack.GetComponent<TankShip>()) targetHack.GetComponent<CapsuleCollider2D>().size /= 2;
@@ -133,6 +137,12 @@ public class MouseController : Controller
                         Health targetHealth = targetHack.GetComponent<Health>();
                         if (targetHealth)
                             targetHealth.RestoreHealth();
+
+                        //No score gained when possessed ship is destroyed
+                        Score score = targetHack.GetComponent<Score>();
+                        if (score)
+                            Destroy(score);
+
 
                         //Set anim
                         targetHack.setHackAnim(true);
@@ -176,7 +186,7 @@ public class MouseController : Controller
         {
             isHacking = true;
             hackPointer.GetComponent<SpriteRenderer>().enabled = true;
-            TimeManager.doSlowMotion(3, 0.05f);
+            TimeManager.doSlowMotion(HackDuration, 0.05f);
         }
     }
 

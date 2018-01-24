@@ -68,7 +68,7 @@ public class TankShip : Ship
     protected override void Update()
     {
         base.Update();
-        if (isPlayerControlled)
+        if (IsPlayerControlled())
         {
             if (loadingCharge)
             {

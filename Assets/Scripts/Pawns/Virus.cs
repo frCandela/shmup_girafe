@@ -12,6 +12,8 @@ public class VirusShip : Ship
     {
         glitchTimer = 0F;
         glitchDelta = 0F;
+
+        transform.position = GameManager.instance.getMouseWorldPosition();
     }
 
     protected override void Update()
@@ -31,6 +33,8 @@ public class VirusShip : Ship
         }
     }
 
+
+
     //Makes the ship shoot ! 
     public override void Fire(Quaternion angle)
     {
@@ -39,9 +43,9 @@ public class VirusShip : Ship
     private void OnEnable()
     {
         //Set the VirusShip at the camera position
-        Vector3 newPosition = GameManager.instance.MainCameraController.transform.position;
-        newPosition.z = 0;
-        transform.position = newPosition;
+        /*Vector3 newPosition = GameManager.instance.MainCameraController.transform.position;
+        newPosition.z = 0;*/
+        transform.position = GameManager.instance.getMouseWorldPosition();
 
 
         GetComponent<SpriteRenderer>().enabled = true;
@@ -55,5 +59,15 @@ public class VirusShip : Ship
         GetComponent<SpriteRenderer>().enabled = false;
         foreach (Collider2D collider in GetComponents<Collider2D>())
             collider.enabled = false;
+        GetComponent<Blink>().StopBlink();
+    }
+
+    public override void takeDamage(int damage)
+    {
+        Blink blink = GetComponent<Blink>();
+        if (blink)
+            blink.StartBlink();
+        if (controller)
+            controller.onTakeDamage.Invoke();
     }
 }
