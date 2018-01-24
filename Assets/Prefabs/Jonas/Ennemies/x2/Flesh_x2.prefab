@@ -293,9 +293,9 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 10
+  explosionPrefab: {fileID: 0}
   playerSpeed: 12
   canBeStunned: 1
-  isPlayerControlled: 0
   scrollingSpeed: -3
 --- !u!114 &114119146770511760
 MonoBehaviour:
@@ -10698,7 +10698,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 99a848be8eb968a49b6d7917b9445673, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.32, y: 1.32}
   m_AdaptiveModeThreshold: 0.5

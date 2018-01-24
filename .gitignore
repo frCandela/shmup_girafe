@@ -7,8 +7,12 @@ Assets/AssetStoreTools*
 test.exe
 test_Data/
 UnityPlayer.dll
-fmod.log
 [Cc]bj/
-.gitignore
-fmod_editor.log
 Assets/FMODStudioCache.asset
+fmod.log
+fmod_editor.log
+BUG/.cache/
+BUG/.unsaved/
+BUG/.user/
+BUG/Metadata/
+Assets/FMODStudioCache.asset.meta

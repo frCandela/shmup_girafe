@@ -177,7 +177,6 @@ public class MouseController : Controller
                     if (score)
                         Destroy(score);
 
-
                     //Set anim
                     targetHack.setHackAnim(true);
 
@@ -203,7 +202,7 @@ public class MouseController : Controller
                     Vector3 direction = PossessedPawn.transform.position - GameManager.instance.MainCameraController.transform.position;
                     angle = Vector3.Angle(direction.normalized, new Vector3(1, 0, 0)) - 90f;
                 }
-                PossessedPawn.Fire(Quaternion.Euler(0, 0, angle / 2 ));
+                PossessedPawn.Fire(Quaternion.Euler(0, 0, angle / 2));
             }
                 
         }

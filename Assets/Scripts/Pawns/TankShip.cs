@@ -134,6 +134,7 @@ public class TankShip : Ship
     {
 		if(loadingCharge)
 		{
+			anim.SetBool("Charging", true);
 			startCharge(GameManager.instance.getMouseWorldPosition());
 			stopLoadingCharge();
 		}
@@ -144,6 +145,7 @@ public class TankShip : Ship
     public override void UnFire()
     {
 		startLoadingCharge ();
+		anim.SetBool("Charging", false);
     }
 
     private void startLoadingCharge()

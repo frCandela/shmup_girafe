@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FollowPlayer.cs" />
      <Compile Include="Assets\GraphVisualizer\Clients\GraphVisualizerClient.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
@@ -141,6 +140,7 @@
      <Compile Include="Assets\Scripts\UI\MainBar.cs" />
      <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
      <Compile Include="Assets\Scripts\UI\TextPopupsGenerator.cs" />
+     <Compile Include="Assets\Scripts\UI\UIBar.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />

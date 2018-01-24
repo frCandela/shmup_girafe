@@ -12,7 +12,10 @@ using UnityEngine;
 
 public class Ship : Pawn
 {
-    [Header("Ship parameters:")]
+    [Header("Prefabs:")]
+    public GameObject explosionPrefab;
+
+    
     [Range(0.0f, 100.0f)]public float playerSpeed = 0.5f;  //Movement speed of the ship
 
     //Stun
@@ -62,11 +65,6 @@ public class Ship : Pawn
             stunTimer = stunDuration;
             stunned = true;
         }
-    }
-
-    public virtual void Destroy()
-    {
-        Destroy(this.gameObject);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
@@ -161,6 +159,13 @@ public class Ship : Pawn
             FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
         else
             FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
+    }
+
+    public virtual void Destroy()
+    {
+        Destroy(this.gameObject);
+        if(explosionPrefab)
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
     }
 
 

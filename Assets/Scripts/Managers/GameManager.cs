@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour {
     public LeaderboardText Leaderboard;
     public SoundManager soundManager;
 
-
     [Header("Levels:")]
     public string[] trackNames;
     private PlayableDirector director;
@@ -227,14 +226,16 @@ public class GameManager : MonoBehaviour {
 
             //Music
             FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_fin", MainCameraController.transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/mult", MainCameraController.transform.position);
             if (comboMultiplier <= 1 )
                 music.SetParameter("combo", 0);
             else
                 music.SetParameter("combo", comboMultiplier - 1);
-            music.SetParameter("hack", 0);
         }
         else
             MainBar.setCombo(hackCount);
+
+        music.SetParameter("hack", 0);
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
@@ -263,6 +264,7 @@ public class GameManager : MonoBehaviour {
 
         //Music
         music.SetParameter("combo", 0);
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/demult", MainCameraController.transform.position);
 
         PlayTrack(0);
         SetLights(0);
