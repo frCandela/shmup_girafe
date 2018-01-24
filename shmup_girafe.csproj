@@ -291,6 +291,7 @@
     <Compile Include="Assets\Scripts\Controllers\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MouseController.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
+    <Compile Include="Assets\Scripts\ExplosionShuriken.cs" />
     <Compile Include="Assets\Scripts\HackSelector.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
