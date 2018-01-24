@@ -127,7 +127,7 @@ public class MouseController : Controller
                 if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                 {
                     //misc
-                    HackSoundTrigerred = true;
+                    HackSoundTrigerred = false;
                     hackPower -= targetHack.hackCost;
                     if (hackPower < 0F)
                         hackPower = 0F;

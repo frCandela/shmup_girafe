@@ -9,3 +9,4 @@ UnityPlayer.dll
 fmod.log
 [Cc]bj/
 .gitignore
+fmod_editor.log
