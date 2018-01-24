@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     [Header("Initialisation:")]
     public MouseController PlayerController;
     public CameraController MainCameraController;
-    public MainBar MainBar;
+    public UIBar MainBar;
     public TextPopupsGenerator TextPopupsGen;
     public LeaderboardText Leaderboard;
     public SoundManager soundManager;
