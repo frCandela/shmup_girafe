@@ -1,12 +1,15 @@
 fileFormatVersion: 2
 guid: da8111a81aa1bc14487b59065b9ada5a
-timeCreated: 1515231192
+timeCreated: 1516803287
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: PLAYER_IDLE_0
     21300002: PLAYER_IDLE_1
     21300004: PLAYER_IDLE_2
+    21300006: PLAYER_IDLE_3
+    21300008: PLAYER_IDLE_4
+    21300010: PLAYER_IDLE_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,9 +97,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 123
-        height: 125
+        y: 376
+        width: 132
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,10 +110,10 @@ TextureImporter:
       name: PLAYER_IDLE_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 0
-        width: 125
-        height: 125
+        x: 132
+        y: 376
+        width: 132
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,10 +124,52 @@ TextureImporter:
       name: PLAYER_IDLE_2
       rect:
         serializedVersion: 2
-        x: 252
+        x: 0
+        y: 188
+        width: 132
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PLAYER_IDLE_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 188
+        width: 132
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PLAYER_IDLE_4
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 131
-        height: 125
+        width: 132
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PLAYER_IDLE_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 132
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
