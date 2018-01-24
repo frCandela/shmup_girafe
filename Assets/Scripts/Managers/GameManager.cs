@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
     public TextPopupsGenerator TextPopupsGen;
     public LeaderboardText Leaderboard;
     public SoundManager soundManager;
-
+    public GameObject explosionPrefab;
 
     [Header("Levels:")]
     public string[] trackNames;
