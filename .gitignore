@@ -1,4 +1,5 @@
 .vs
+.user
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -10,3 +11,4 @@ fmod.log
 [Cc]bj/
 .gitignore
 fmod_editor.log
+Assets/FMODStudioCache.asset
