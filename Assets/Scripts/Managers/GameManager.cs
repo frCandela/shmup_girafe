@@ -227,6 +227,7 @@ public class GameManager : MonoBehaviour {
 
             //Music
             FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_fin", MainCameraController.transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/mult", MainCameraController.transform.position);
             if (comboMultiplier <= 1 )
                 music.SetParameter("combo", 0);
             else
@@ -263,6 +264,7 @@ public class GameManager : MonoBehaviour {
 
         //Music
         music.SetParameter("combo", 0);
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/demult", MainCameraController.transform.position);
 
         PlayTrack(0);
         SetLights(0);

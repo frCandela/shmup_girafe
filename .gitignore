@@ -11,3 +11,7 @@ UnityPlayer.dll
 Assets/FMODStudioCache.asset
 fmod.log
 fmod_editor.log
+BUG/.cache/
+BUG/.unsaved/
+BUG/.user/
+BUG/Metadata/

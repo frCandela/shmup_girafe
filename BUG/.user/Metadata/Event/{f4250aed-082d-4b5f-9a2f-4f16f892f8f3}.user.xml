@@ -5,7 +5,7 @@
             <value>3</value>
         </property>
         <relationship name="selectables">
-            <destination>{6958e805-3e44-42ae-9d33-956722805e30}</destination>
+            <destination>{04864273-f08a-4e82-95dc-fed3a09a06f2}</destination>
         </relationship>
         <relationship name="uiLastParameterSelection">
             <destination>{79dd1bf2-0b32-4943-bc39-3935dc303d3e}</destination>
@@ -54,10 +54,10 @@
     <object class="SingleSound" id="{8e6e02df-a5f4-45d9-86f6-bbeb2e97a532}"/>
     <object class="EventMixerGroup" id="{7d68ad9e-961a-48b7-9ef8-958482943c34}"/>
     <object class="AutomationTrack" id="{1c3f5490-eff2-4b6c-a5e2-f6384fe704fa}"/>
-    <object class="SingleSound" id="{880e854b-f227-4156-913e-aff5bdbe6f44}"/>
+    <object class="SingleSound" id="{e1fb77fa-7839-4220-9e26-b0728fd5fbcb}"/>
     <object class="EventMixerGroup" id="{17de8d42-4fcc-4cb7-b7cb-ff4c4f90a74f}"/>
     <object class="AutomationTrack" id="{f1263857-e86a-4388-9e1b-853bb53fa58c}"/>
-    <object class="SingleSound" id="{6958e805-3e44-42ae-9d33-956722805e30}"/>
+    <object class="SingleSound" id="{04864273-f08a-4e82-95dc-fed3a09a06f2}"/>
     <object class="EventMixerGroup" id="{27763df5-e30c-402d-b733-0181dd23f5ff}"/>
     <object class="AutomationTrack" id="{6875ff18-83e6-4470-87ee-19ec78be7aba}"/>
     <object class="SingleSound" id="{80e16a59-4db6-48ff-b801-d1bc24aa540b}"/>
