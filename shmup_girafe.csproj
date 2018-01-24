@@ -305,6 +305,7 @@
     <Compile Include="Assets\Scripts\Popups\ExplosionPopup.cs" />
     <Compile Include="Assets\Scripts\Popups\Popup.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnBehavior.cs" />
     <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
     <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />

@@ -94,9 +94,19 @@ public class MouseController : Controller
                 if( Vector3.Distance(s.Value.transform.position, GameManager.instance.getMouseWorldPosition()) < HackSnapDistance)
                     targetHack = s.Value;
             if (targetHack)
+            {
                 hackPointer.transform.position = targetHack.transform.position;
+
+                if( ! GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                    GameManager.instance.soundManager.hackSurvol.Play();
+            }
             else
+            {
                 hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();
+                if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                    GameManager.instance.soundManager.hackSurvol.Stop();
+            }
+                
         }
 
 
@@ -107,10 +117,8 @@ public class MouseController : Controller
             {
                 isHacking = false;
 
-                if (targetHack)
+                if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                 {
-                    if(targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
-                    {
                         //misc
                         hackPower -= targetHack.hackCost;
                         if (hackPower < 0F)
@@ -152,10 +160,10 @@ public class MouseController : Controller
                         targetHack.scrollingSpeed = 0F;
 
                         onHack.Invoke();
-
-                    }
                 }
-                onHackStop.Invoke();
+                else
+                    onHackStop.Invoke();
+
                 TimeManager.resetSlowMotion();
                 hackPointer.GetComponent<SpriteRenderer>().enabled = false;
             }
