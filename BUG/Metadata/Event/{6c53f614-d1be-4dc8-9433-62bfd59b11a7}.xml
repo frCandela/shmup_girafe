@@ -5,7 +5,7 @@
             <value>explosion_enemy</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{ff1d35e9-2b2d-4baf-968d-afab1da50294}</destination>
@@ -72,6 +72,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{1346a3f6-f292-4c2b-8916-fef1a68e6903}">
+        <property name="volume">
+            <value>-7.5</value>
+        </property>
         <relationship name="effectChain">
             <destination>{bd77876d-6da9-4f63-8b93-107d200aaef4}</destination>
         </relationship>
@@ -115,8 +118,8 @@
     </object>
     <object class="MixerBusEffectChain" id="{bd77876d-6da9-4f63-8b93-107d200aaef4}">
         <relationship name="effects">
+            <destination>{6b092dcd-b2bf-42ba-948b-8c607a5c6ad2}</destination>
             <destination>{825c7c6b-0e83-479f-b9b4-e918037ddbb6}</destination>
-            <destination>{915c041c-2ecb-4cbb-92e2-fe1d45d8a5dd}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{b88523fa-37ea-4b13-b354-826675e103d5}"/>
@@ -147,7 +150,14 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{6111d0b2-2768-4fff-b008-8cf842bb1c50}"/>
+    <object class="ThreeEQEffect" id="{6b092dcd-b2bf-42ba-948b-8c607a5c6ad2}">
+        <property name="lowGain">
+            <value>-9</value>
+        </property>
+        <property name="lowCrossover">
+            <value>280</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{825c7c6b-0e83-479f-b9b4-e918037ddbb6}"/>
-    <object class="SpatialiserEffect" id="{915c041c-2ecb-4cbb-92e2-fe1d45d8a5dd}"/>
     <object class="MixerBusFader" id="{02783ead-5ceb-4d3c-a705-2c281e24e5cb}"/>
 </objects>
