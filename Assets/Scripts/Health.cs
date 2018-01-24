@@ -40,12 +40,9 @@ public class Health : MonoBehaviour
     }
 
     //Returns the health scaled between 0 and 1
-    public float getHealthRatio()
+    public int getMaxHealth()
     {
-        if (maxHealth != 0F)
-            return (float)health / maxHealth;
-        else
-            return 0;
+        return maxHealth;
     }
 
     public void takeDamage(int damage, Object damageDealer)
