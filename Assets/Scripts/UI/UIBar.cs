@@ -10,6 +10,8 @@ public class UIBar : MonoBehaviour {
     public GameObject healthBackPrefab;
     public List<Image> healthPoints;
 
+    public Animator anim;
+
     public Image hackBar;
     public Image hackMessage;
 
@@ -36,7 +38,7 @@ public class UIBar : MonoBehaviour {
     //Set the multiplierText
     public void setMulti(int value)
     {
-        Debug.Log(value);
+        multi.sprite = multiText[value];
     }
 
     public void setSegments(int nbSegments)
@@ -68,6 +70,7 @@ public class UIBar : MonoBehaviour {
         numberPV = value;
     }
 
+    bool lowHealthShow = false;
     //Set the health bar, value must be between 0F and 1F
     public void setHealthBar(int value)
     {
@@ -78,15 +81,34 @@ public class UIBar : MonoBehaviour {
             else
                 healthPoints[i].color = new Color(1, 1, 1, 0.5f);
         }
+
+        if (value == 1 && !lowHealthShow)
+        {
+            anim.SetTrigger("showHealth");
+            lowHealthShow = true;
+        }
+        else if (value != 1 && lowHealthShow)
+        {
+            anim.SetTrigger("endHealth");
+            lowHealthShow = false;
+        }
     }
+
+    bool hackShow = false;
 
     //Set the hack bar, value must be between 0F and 1F
     public void setHackBar(float value)
     {
         hackBar.rectTransform.offsetMax = new Vector2(-250 + value * 260, 12);
-        if(value >= 1f)
-            hackMessage.enabled = true;
-        else
-            hackMessage.enabled = false;
+        if (value >= 1f && !hackShow)
+        {
+            anim.SetTrigger("showHack");
+            hackShow = true;
+        }
+        else if(value < 1f && hackShow)
+        {
+            anim.SetTrigger("endHack");
+            hackShow = false;
+        }
     }
 }
