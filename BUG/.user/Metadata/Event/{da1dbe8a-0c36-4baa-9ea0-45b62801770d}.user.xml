@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="Event" id="{da1dbe8a-0c36-4baa-9ea0-45b62801770d}">
+        <relationship name="uiLastParameterSelection">
+            <destination>{23824ce1-27bd-4dbc-98da-5fa8b84f9085}</destination>
+        </relationship>
+    </object>
+    <object class="MasterTrack" id="{accf961b-631e-423e-9df3-e9916eefd76f}"/>
+    <object class="MixerInput" id="{2f67b7c0-7f37-4635-82a3-7183cde62ebc}"/>
+    <object class="EventAutomatableProperties" id="{c7b3e9cc-117b-4c22-b6a4-b232842e8dac}"/>
+    <object class="MarkerTrack" id="{fc5decdf-5974-49e8-b33d-dc23a7603dd5}"/>
+    <object class="GroupTrack" id="{71e3ac80-c8e8-42b2-a06b-2aba9c0306e6}">
+        <property name="uiTrackHeight">
+            <value>200</value>
+        </property>
+    </object>
+    <object class="Timeline" id="{23824ce1-27bd-4dbc-98da-5fa8b84f9085}">
+        <property name="uiLastRulerScaleRatio">
+            <value>0.0011584092756599495</value>
+        </property>
+    </object>
+    <object class="EventMixerMaster" id="{814e4525-b468-4f1e-bf78-cbd424122052}">
+        <relationship name="input">
+            <destination>{8c7dcaa6-14be-4b0a-9f2f-30b34a4e070b}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{60413d38-d9d5-4a49-8adc-f500e5e063be}"/>
+    <object class="MixerBusPanner" id="{4d61327c-6c37-442f-a163-23635f83e323}"/>
+    <object class="SingleSound" id="{2ebed774-830f-446a-aab4-1c4dabdaeed6}"/>
+    <object class="EventMixerGroup" id="{8c7dcaa6-14be-4b0a-9f2f-30b34a4e070b}"/>
+    <object class="MixerBusEffectChain" id="{f5d33c82-ba40-4d9b-9470-f7682b3fc04d}"/>
+    <object class="MixerBusPanner" id="{062a0ee0-ed7a-40c8-b16d-1a965a9c98d2}"/>
+    <object class="MixerBusFader" id="{4f292d43-c68b-4374-a7f6-d40e06746602}"/>
+    <object class="MixerBusEffectChain" id="{5b96b4fc-8e1b-439f-ade0-3582a73bc070}"/>
+    <object class="MixerBusPanner" id="{6182cf18-3909-4fa9-a25a-10b614fdcc47}"/>
+    <object class="MixerBusFader" id="{8bf147ab-0f15-4e32-901f-69d0254c81d1}"/>
+    <object class="MixerBusFader" id="{9a62063f-445f-4cbd-8997-5795c8db5aff}"/>
+</objects>
