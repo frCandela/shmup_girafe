@@ -37,6 +37,7 @@ public class MouseController : Controller
     private float minHackPower = 100F;
     private bool isHacking = false;
     private Ship targetHack;
+    private bool HackSoundTrigerred = false;
 
     private void Awake()
     {
@@ -45,8 +46,6 @@ public class MouseController : Controller
 
     private void Start()
     {   
-
-
         //Hack parameters
         isHacking = false;
         if (infiniteDuration)
@@ -76,8 +75,17 @@ public class MouseController : Controller
             hackPower += virusHackRefillSpeed * Time.deltaTime;
         else
             hackPower += hackRefillSpeed * Time.deltaTime;
+
         if (hackPower > maxHackPower)
+        {
             hackPower = maxHackPower;
+            if( !HackSoundTrigerred)
+            {
+                HackSoundTrigerred = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/jaugeHackPleine", GameManager.instance.MainCameraController.transform.position);
+            }
+        }
+            
 
         //If the ship is destroyed, control the virus ship
         if (!isPossessingPawn())
@@ -119,47 +127,48 @@ public class MouseController : Controller
 
                 if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                 {
-                        //misc
-                        hackPower -= targetHack.hackCost;
-                        if (hackPower < 0F)
-                            hackPower = 0F;
-                        GameManager.instance.MainBar.health = targetHack.GetComponent<Health>();
+                    //misc
+                    HackSoundTrigerred = true;
+                    hackPower -= targetHack.hackCost;
+                    if (hackPower < 0F)
+                        hackPower = 0F;
+                    GameManager.instance.MainBar.health = targetHack.GetComponent<Health>();
 
-                        //Destroy the old pawn
-                        PossessedPawn.hackbonus = 0;
-                        ((Ship)PossessedPawn).Destroy();
-                        
-
-                        //Possess the new ship
-                        targetHack.gameObject.tag = this.gameObject.tag;
-                        this.Possess(targetHack);
-                        targetHack.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
-                        targetHack.SetPlayerControlled(true);
-						hackPointer.GetComponent<ParticleSystem> ().Play ();
-
-						//Reduce hitbox size except for tank ships
-						if(!targetHack.GetComponent<TankShip>()) targetHack.GetComponent<CapsuleCollider2D>().size /= 2;
-
-                        //Set events
-                        targetHack.GetComponent<Health>().onTakeDamage.AddListener(targetHack.GetComponent<Blink>().StartBlink);
-
-                        //Set Health
-                        Health targetHealth = targetHack.GetComponent<Health>();
-                        if (targetHealth)
-                            targetHealth.RestoreHealth();
-
-                        //No score gained when possessed ship is destroyed
-                        Score score = targetHack.GetComponent<Score>();
-                        if (score)
-                            Destroy(score);
+                    //Destroy the old pawn
+                    PossessedPawn.hackbonus = 0;
+                    ((Ship)PossessedPawn).Destroy();
 
 
-                        //Set anim
-                        targetHack.setHackAnim(true);
+                    //Possess the new ship
+                    targetHack.gameObject.tag = this.gameObject.tag;
+                    this.Possess(targetHack);
+                    targetHack.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+                    targetHack.SetPlayerControlled(true);
+                    hackPointer.GetComponent<ParticleSystem>().Play();
 
-                        targetHack.scrollingSpeed = 0F;
+                    //Reduce hitbox size except for tank ships
+                    if (!targetHack.GetComponent<TankShip>()) targetHack.GetComponent<CapsuleCollider2D>().size /= 2;
 
-                        onHack.Invoke();
+                    //Set events
+                    targetHack.GetComponent<Health>().onTakeDamage.AddListener(targetHack.GetComponent<Blink>().StartBlink);
+
+                    //Set Health
+                    Health targetHealth = targetHack.GetComponent<Health>();
+                    if (targetHealth)
+                        targetHealth.RestoreHealth();
+
+                    //No score gained when possessed ship is destroyed
+                    Score score = targetHack.GetComponent<Score>();
+                    if (score)
+                        Destroy(score);
+
+
+                    //Set anim
+                    targetHack.setHackAnim(true);
+
+                    targetHack.scrollingSpeed = 0F;
+
+                    onHack.Invoke();
                 }
                 else
                     onHackStop.Invoke();

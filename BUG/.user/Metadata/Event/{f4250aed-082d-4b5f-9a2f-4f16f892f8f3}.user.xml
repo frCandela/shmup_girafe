@@ -5,10 +5,10 @@
             <value>3</value>
         </property>
         <relationship name="selectables">
-            <destination>{50310774-8be2-423c-b666-561d56bb5a4a}</destination>
+            <destination>{dc103585-2b7f-4789-ae7c-6935881b39f7}</destination>
         </relationship>
         <relationship name="uiLastParameterSelection">
-            <destination>{79dd1bf2-0b32-4943-bc39-3935dc303d3e}</destination>
+            <destination>{24dde1ff-a714-463d-a09a-1c29acdfc11f}</destination>
         </relationship>
     </object>
     <object class="MasterTrack" id="{969326c7-6217-4de5-9e61-0aadc125b737}"/>
