@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 224038267204298266}
   - component: {fileID: 114011533062163974}
   m_Layer: 5
-  m_Name: Newbar
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
