@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: BUG\BUG.fspro
-  SourceProjectPathUnformatted: BUG\BUG.fspro
-  SourceBankPathUnformatted: BUG\Build
+  sourceProjectPath: BUG/BUG.fspro
+  SourceProjectPathUnformatted: BUG/BUG.fspro
+  SourceBankPathUnformatted: BUG/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -55,5 +55,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: Master Bank
+  MasterBank: 
   Banks: []
