@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114129248263478540}
   - component: {fileID: 58436751843917154}
   - component: {fileID: 50719474431657034}
+  - component: {fileID: 95374214405461402}
   m_Layer: 0
   m_Name: DPSBullet_x1
   m_TagString: Untagged
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1620326717983798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7729, y: 5.0841, z: 0}
-  m_LocalScale: {x: 0.30877876, y: 0.30877876, z: 0.30877876}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,9 +77,26 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.85}
   serializedVersion: 2
-  m_Radius: 0.125
+  m_Radius: 0.22
+--- !u!95 &95374214405461402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1620326717983798}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e2124c6bd9a24484694361150b3726b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114129248263478540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,12 +158,12 @@ SpriteRenderer:
   m_SortingLayerID: -843816745
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 817d2e5235431fc46b4d82d532fa090d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43c3fa0268ced4779b2e5ba6bbbe393d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
-  m_Size: {x: 1.32, y: 1.3}
+  m_Size: {x: 1.69, y: 2.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{35c0e107-04e0-496b-9884-0043234dcc7c}">
+        <property name="assetPath">
+            <value>jaugehackpleine.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.73657596371882084</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e693d0c5-08e5-4b13-856d-c2087bc3f5d1}</destination>
+        </relationship>
+    </object>
+</objects>

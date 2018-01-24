@@ -64,6 +64,11 @@ public class Ship : Pawn
         }
     }
 
+    public virtual void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         //Collision with other ships
@@ -84,15 +89,6 @@ public class Ship : Pawn
                 else
                     myHealth.takeDamage(myHealth.health - 1, this);
             }
-
-            //Checks if no ship is already destroyed
-            /*if ( ! myHealth.isDead() && ! otherHealth.isDead())
-            {
-                int otherHealthValue = otherHealth.health;
-                int myHealthValue = myHealth.health;
-                otherHealth.takeDamage(myHealthValue, this);
-                myHealth.takeDamage(otherHealthValue, ship);
-            }*/
         }
     }
 
@@ -161,6 +157,12 @@ public class Ship : Pawn
     protected void OnDestroy()
     {
         GameManager.instance.PlayerController.addHackPower(hackbonus);
+
+
+        if( isPlayerControlled)
+            FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
+        else
+            FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
     }
 
 

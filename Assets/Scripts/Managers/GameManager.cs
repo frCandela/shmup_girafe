@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
     public UIBar MainBar;
     public TextPopupsGenerator TextPopupsGen;
     public LeaderboardText Leaderboard;
+    public SoundManager soundManager;
 
 
     [Header("Levels:")]
@@ -55,6 +56,9 @@ public class GameManager : MonoBehaviour {
     private const int checkpointCount = 5;
     private int checkpointId = 0;
 
+    //Sound
+    FMODUnity.StudioEventEmitter music;
+
     [Header("THIS IS TEMPORARY:")]
     public int initComboMultiplier = 0;
 
@@ -86,6 +90,8 @@ public class GameManager : MonoBehaviour {
         PlayerController.PossessVirus();
         PlayerController.addHackPower(50);
         PlayerController.onHack.AddListener(hackOccured);
+        PlayerController.onHackStart.AddListener(hackStarted);
+        PlayerController.onHackStop.AddListener(hackStopped);
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
         PlayerController.PossessedPawn.transform.position = getMouseWorldPosition();
@@ -124,7 +130,10 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
-        
+
+        //Music
+        music = MainCameraController.GetComponent<FMODUnity.StudioEventEmitter>();
+
         PlayTrack(0);
         director.Play();
 
@@ -179,12 +188,21 @@ public class GameManager : MonoBehaviour {
         TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
     }
 
+    private void hackStarted()
+    {
+        music.SetParameter("hack", 1);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_début",  MainCameraController.transform.position );
+    }
+    private void hackStopped()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/wrong", MainCameraController.transform.position);
+        music.SetParameter("hack", 0);
+    }
+
     private void hackOccured()
     {
         //Increment combo multiplier
         ++hackCount;
-        
-
         if (hackCount > hackPerCombo && comboMultiplier < maxCombo)
         {
             hackCount = 0;
@@ -203,11 +221,17 @@ public class GameManager : MonoBehaviour {
                 MainBar.setSegments(hackPerCombo);
                 MainBar.setCombo(0);
             }
-
-
             MainBar.setMulti(getMulti());
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
+
+            //Music
+            FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_fin", MainCameraController.transform.position);
+            if (comboMultiplier <= 1 )
+                music.SetParameter("combo", 0);
+            else
+                music.SetParameter("combo", comboMultiplier - 1);
+            music.SetParameter("hack", 0);
         }
         else
             MainBar.setCombo(hackCount);
@@ -236,7 +260,10 @@ public class GameManager : MonoBehaviour {
         MainBar.setSegments(hackPerCombo);
         MainBar.setCombo(0);
         MainBar.setMulti(0);
-        
+
+        //Music
+        music.SetParameter("combo", 0);
+
         PlayTrack(0);
         SetLights(0);
     }

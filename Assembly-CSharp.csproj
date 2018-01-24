@@ -51,16 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FollowPlayer.cs" />
      <Compile Include="Assets\GraphVisualizer\Clients\GraphVisualizerClient.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTButton.cs" />
-     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\UI\CFX_Demo_GTToggle.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
@@ -125,6 +117,7 @@
      <Compile Include="Assets\Scripts\Controllers\KeyboardController.cs" />
      <Compile Include="Assets\Scripts\Controllers\MouseController.cs" />
      <Compile Include="Assets\Scripts\Damage.cs" />
+     <Compile Include="Assets\Scripts\ExplosionShuriken.cs" />
      <Compile Include="Assets\Scripts\HackSelector.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
@@ -136,7 +129,8 @@
      <Compile Include="Assets\Scripts\Pawns\Ship.cs" />
      <Compile Include="Assets\Scripts\Pawns\TankShip.cs" />
      <Compile Include="Assets\Scripts\Pawns\Virus.cs" />
-     <Compile Include="Assets\Scripts\Pawns\VirusShip.cs" />
+     <Compile Include="Assets\Scripts\Popups\ExplosionPopup.cs" />
+     <Compile Include="Assets\Scripts\Popups\Popup.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnBehavior.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
@@ -144,7 +138,6 @@
      <Compile Include="Assets\Scripts\Turn.cs" />
      <Compile Include="Assets\Scripts\UI\LeaderboardText.cs" />
      <Compile Include="Assets\Scripts\UI\MainBar.cs" />
-     <Compile Include="Assets\Scripts\UI\Popup.cs" />
      <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
      <Compile Include="Assets\Scripts\UI\TextPopupsGenerator.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
@@ -179,7 +172,6 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
-     <None Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
@@ -226,6 +218,10 @@
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>/Users/jonas/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{219B59EF-1E68-6DDE-8177-7C4A90C67CAC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

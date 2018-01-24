@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{7aac3c68-ea97-4030-9305-e68734d3ac81}">
+        <property name="name">
+            <value>hack</value>
+        </property>
+        <relationship name="folder">
+            <destination>{c6523af0-f870-4d4a-afca-5a02c2a6ce47}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{57d5e100-bf9d-486a-aa63-a23c0d41a9fe}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{57d5e100-bf9d-486a-aa63-a23c0d41a9fe}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>5</value>
+        </property>
+        <property name="seekSpeedDescending">
+            <value>5</value>
+        </property>
+        <property name="seekSpeedAsymmetric">
+            <value>true</value>
+        </property>
+    </object>
+</objects>

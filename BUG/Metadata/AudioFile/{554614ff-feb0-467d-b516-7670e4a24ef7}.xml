@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{554614ff-feb0-467d-b516-7670e4a24ef7}">
+        <property name="assetPath">
+            <value>chargelayer2-1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.29149659863945576</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e693d0c5-08e5-4b13-856d-c2087bc3f5d1}</destination>
+        </relationship>
+    </object>
+</objects>

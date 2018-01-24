@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
         {
             onDie.Invoke();
             dead = true; // Prevent multiple die before destroy
-            Destroy(this.gameObject);//Destroy the object
+            GetComponent<Ship>().Destroy();
         }
 
     }

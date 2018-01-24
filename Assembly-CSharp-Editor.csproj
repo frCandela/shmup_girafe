@@ -54,6 +54,7 @@
      <Compile Include="Assets\Editor\AttackEditor.cs" />
      <Compile Include="Assets\Editor\ChargeEditor.cs" />
      <Compile Include="Assets\Editor\CustomGUI.cs" />
+     <Compile Include="Assets\Editor\FMODMigrationUtil.cs" />
      <Compile Include="Assets\Editor\SpawnEditor.cs" />
      <Compile Include="Assets\GraphVisualizer\Editor\Graph\Graph.cs" />
      <Compile Include="Assets\GraphVisualizer\Editor\Graph\Layouts\IGraphLayout.cs" />
@@ -132,7 +133,6 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
-     <None Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
@@ -241,8 +241,12 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{219B59EF-1E68-6DDE-8177-7C4A90C67CAC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{ABA53E5B-35E9-40DE-0C95-B784708A01B1}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{49DDE266-03D4-7D57-DA73-9F159CEF88A8}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
