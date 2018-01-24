@@ -21,7 +21,6 @@ public class FollowHack : MonoBehaviour {
         else
         {
             infos.enabled = true;
-            Debug.Log(targetShip.GetType());
             if(targetShip.GetType() == typeof(DPSShip))
                 spec.sprite = specDPS;
             else if (targetShip.GetType() == typeof(TankShip))

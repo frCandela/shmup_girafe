@@ -225,7 +225,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FollowHack.cs" />
     <Compile Include="Assets\GraphVisualizer\Clients\GraphVisualizerClient.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
@@ -311,6 +310,7 @@
     <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
     <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
     <Compile Include="Assets\Scripts\Turn.cs" />
+    <Compile Include="Assets\Scripts\UI\FollowHack.cs" />
     <Compile Include="Assets\Scripts\UI\LeaderboardText.cs" />
     <Compile Include="Assets\Scripts\UI\MainBar.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
