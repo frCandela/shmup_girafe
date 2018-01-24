@@ -17,14 +17,16 @@ public class Burst
     public float angle = 0;
     public GameObject prefab;
 
-    public void Attack(GameObject shooter, Transform origin)
+    public bool Attack(GameObject shooter, Transform origin)
     {
+        bool attacked = false;
+
         if (amount == 1) {
             GameObject bullet = Object.Instantiate(prefab, origin.position, Quaternion.Euler(0, 0, origin.rotation.eulerAngles.z - angle));
             Damage bulletDamage = bullet.GetComponent<Damage>();
             if (bulletDamage) //Ignore damage tag
                 bulletDamage.tag = shooter.tag;
-            return;
+            return true;
         }
 
         if (spread == 360)
@@ -42,5 +44,7 @@ public class Burst
 
         if (spread == 360)
             amount--;
+
+        return attacked;
     }
 }

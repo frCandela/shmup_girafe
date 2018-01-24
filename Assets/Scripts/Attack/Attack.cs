@@ -21,7 +21,14 @@ public class Attack : MonoBehaviour
         if (timerShoot < 0)
         {
             if (currentShoot < attackType.bursts.Count)
-                attackType.bursts[currentShoot].Attack(shooter, origin);
+            {
+                bool attacked = attackType.bursts[currentShoot].Attack(shooter, origin);
+
+                Ship ship = GetComponent<Ship>();
+                if (attacked && ship && ship.IsPlayerControlled())
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/tir", GameManager.instance.MainCameraController.transform.position);
+            }
+                
 
             timerShoot = 1 / attackType.rate;
             currentShoot = ++currentShoot % attackType.bursts.Count;
