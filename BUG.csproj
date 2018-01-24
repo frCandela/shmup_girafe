@@ -307,6 +307,7 @@
     <Compile Include="Assets\Scripts\UI\Popup.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
     <Compile Include="Assets\Scripts\UI\TextPopupsGenerator.cs" />
+    <Compile Include="Assets\Scripts\UI\UIBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\!JMO Assets Readme.txt" />
