@@ -13,6 +13,9 @@ public class UIBar : MonoBehaviour {
     public Image hackBar;
     public Image hackMessage;
 
+    public Image multi;
+    public Sprite[] multiText;
+
     [Header("Linked gamebjects :")]
     public HackSelector hackSelector;
     public MouseController mouseController;
@@ -33,7 +36,7 @@ public class UIBar : MonoBehaviour {
     //Set the multiplierText
     public void setMulti(int value)
     {
-        
+        Debug.Log(value);
     }
 
     public void setSegments(int nbSegments)

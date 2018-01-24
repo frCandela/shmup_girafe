@@ -271,11 +271,20 @@
       <Project>{8AE2A048-A5E1-D93B-1B14-EE8CE67A064D}</Project>
       <Name>BUG</Name>
     </ProjectReference>
+    <ProjectReference Include="BUG.Plugins.csproj">
+      <Project>{AAAE47AA-9400-A200-A64E-15770CA91143}</Project>
+      <Name>BUG.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="BUG.Editor.Plugins.csproj">
+      <Project>{04553243-B6C1-E6A7-0AC2-927BD0AAAECD}</Project>
+      <Name>BUG.Editor.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\AttackEditor.cs" />
     <Compile Include="Assets\Editor\ChargeEditor.cs" />
     <Compile Include="Assets\Editor\CustomGUI.cs" />
+    <Compile Include="Assets\Editor\FMODMigrationUtil.cs" />
     <Compile Include="Assets\Editor\SpawnEditor.cs" />
     <Compile Include="Assets\GraphVisualizer\Editor\Graph\Graph.cs" />
     <Compile Include="Assets\GraphVisualizer\Editor\Graph\Layouts\IGraphLayout.cs" />
@@ -328,6 +337,7 @@
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Readme.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+    <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
