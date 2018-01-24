@@ -979,7 +979,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   screenLimit: 7
-  VirusShipPrefab: {fileID: 114708004960594924, guid: bdebec36fcf96445184889ed13943d6d,
+  VirusShipPrefab: {fileID: 114690295686379222, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
   virusShip: {fileID: 0}
   hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
@@ -991,6 +991,16 @@ MonoBehaviour:
   hackRefillSpeed: 5
   virusHackRefillSpeed: 15
   shootVertically: 1
+  onHackStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onHackStop:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   onHack:
     m_PersistentCalls:
       m_Calls: []
@@ -1119,7 +1129,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599629946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 161, y: 193.2066, z: 3.8637416}
+  m_LocalPosition: {x: 161, y: 193.19788, z: 3.8637416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 420967918}
@@ -1791,8 +1801,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910301822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 242, y: 136, z: 0}
-  m_LocalScale: {x: 0.605, y: 0.605, z: 0.605}
+  m_LocalPosition: {x: 189.5, y: 106.5, z: 0}
+  m_LocalScale: {x: 0.47375, y: 0.47375, z: 0.47375}
   m_Children:
   - {fileID: 928354307}
   - {fileID: 599629947}
@@ -1849,7 +1859,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 928354306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29992676, y: 94.67054, z: 0}
+  m_LocalPosition: {x: -0.29992676, y: 94.67422, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 910301826}

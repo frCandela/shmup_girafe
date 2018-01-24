@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-public class VirusShip : Ship
+public class Virus : Ship
 {
     private  float glitchTimer;
     private float glitchDelta;
@@ -63,5 +63,9 @@ public class VirusShip : Ship
             blink.StartBlink();
         if (controller)
             controller.onTakeDamage.Invoke();
+    }
+
+    public override void Destroy()
+    {
     }
 }

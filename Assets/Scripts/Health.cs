@@ -59,11 +59,11 @@ public class Health : MonoBehaviour
 
         onTakeDamage.Invoke();
         health -= damage;
-        if (health <= 0 && !dead && !GetComponent<VirusShip>())
+        if (health <= 0 && !dead)
         {
             onDie.Invoke();
             dead = true; // Prevent multiple die before destroy
-            Destroy(this.gameObject);//Destroy the object
+            GetComponent<Ship>().Destroy();
         }
 
     }

@@ -9,8 +9,8 @@ public class MouseController : Controller
     public float screenLimit = 7f;
 
     [Header("GameObjects")]
-    public Ship VirusShipPrefab;
-    public Ship virusShip;
+    public Virus VirusShipPrefab;
+    public Virus virusShip;
     public GameObject hackPointerPrefab;
     private GameObject hackPointer;
 
@@ -26,6 +26,8 @@ public class MouseController : Controller
     public bool shootVertically = true;
 
     //Events
+    public UnityEvent onHackStart;
+    public UnityEvent onHackStop;
     public UnityEvent onHack;
     public UnityEvent onBecomeVirus;
 
@@ -38,13 +40,13 @@ public class MouseController : Controller
 
     private void Awake()
     {
-        //Virus ship
         virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
-
     }
 
     private void Start()
     {
+
+
         //Hack parameters
         isHacking = false;
         if (infiniteDuration)
@@ -80,7 +82,7 @@ public class MouseController : Controller
         //If the ship is destroyed, control the virus ship
         if (!isPossessingPawn())
         {
-            this.Invoke( "PossessVirus", 1);
+            this.Invoke( "PossessVirus", 0.1f);
             onBecomeVirus.Invoke();
         }
 
@@ -116,12 +118,9 @@ public class MouseController : Controller
                         GameManager.instance.MainBar.health = targetHack.GetComponent<Health>();
 
                         //Destroy the old pawn
-                        Health oldHealth = this.PossessedPawn.GetComponent<Health>();
-                        if (!oldHealth || !oldHealth.immortal)//Don't destroy immortal objects 
-                        {
-                            this.PossessedPawn.hackbonus = 0;
-                            Destroy(this.PossessedPawn.gameObject);
-                        }
+                        PossessedPawn.hackbonus = 0;
+                        ((Ship)PossessedPawn).Destroy();
+                        
 
                         //Possess the new ship
                         targetHack.gameObject.tag = this.gameObject.tag;
@@ -156,7 +155,7 @@ public class MouseController : Controller
 
                     }
                 }
-
+                onHackStop.Invoke();
                 TimeManager.resetSlowMotion();
                 hackPointer.GetComponent<SpriteRenderer>().enabled = false;
             }
@@ -182,6 +181,7 @@ public class MouseController : Controller
         {
             isHacking = false;
             hackPointer.GetComponent<SpriteRenderer>().enabled = false;
+            onHackStop.Invoke();
         }
 
         //Starts the hack !
@@ -190,6 +190,7 @@ public class MouseController : Controller
             isHacking = true;
             hackPointer.GetComponent<SpriteRenderer>().enabled = true;
             TimeManager.doSlowMotion(HackDuration, 0.05f);
+            onHackStart.Invoke();
         }
     }
 

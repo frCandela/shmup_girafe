@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour {
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
         PlayerController.PossessedPawn.transform.position = getMouseWorldPosition();
+        PlayerController.onHackStart.AddListener(hackStarted);
+        PlayerController.onHackStop.AddListener(hackStopped);
 
         //Init variables
         score = 0;
@@ -175,7 +177,14 @@ public class GameManager : MonoBehaviour {
             TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
         }
     }
-
+    private void hackStarted()
+    {
+        music.SetParameter("hack", 1);
+    }
+    private void hackStopped()
+    {
+        music.SetParameter("hack", 0);
+    }
     private void hackOccured()
     {
         //Increment combo multiplier
@@ -202,7 +211,8 @@ public class GameManager : MonoBehaviour {
             }
 
             //Set music 
-            if( comboMultiplier == 0 || comboMultiplier == 1)
+            music.SetParameter("hack", 0);
+            if ( comboMultiplier == 0 || comboMultiplier == 1)
                 music.SetParameter("combo", 0);
             else
                 music.SetParameter("combo", comboMultiplier - 1);

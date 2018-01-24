@@ -310,7 +310,6 @@
     <Compile Include="Assets\Scripts\Pawns\Ship.cs" />
     <Compile Include="Assets\Scripts\Pawns\TankShip.cs" />
     <Compile Include="Assets\Scripts\Pawns\Virus.cs" />
-    <Compile Include="Assets\Scripts\Pawns\VirusShip.cs" />
     <Compile Include="Assets\Scripts\Popups\ExplosionPopup.cs" />
     <Compile Include="Assets\Scripts\Popups\Popup.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
