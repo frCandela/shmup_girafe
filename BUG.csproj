@@ -225,7 +225,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FollowPlayer.cs" />
     <Compile Include="Assets\GraphVisualizer\Clients\GraphVisualizerClient.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutodestructWhenNoChildren.cs" />
