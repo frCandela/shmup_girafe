@@ -232,10 +232,11 @@ public class GameManager : MonoBehaviour {
                 music.SetParameter("combo", 0);
             else
                 music.SetParameter("combo", comboMultiplier - 1);
-            music.SetParameter("hack", 0);
         }
         else
             MainBar.setCombo(hackCount);
+
+        music.SetParameter("hack", 0);
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);
