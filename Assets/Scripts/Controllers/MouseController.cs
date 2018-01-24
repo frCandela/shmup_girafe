@@ -76,7 +76,7 @@ public class MouseController : Controller
         else
             hackPower += hackRefillSpeed * Time.deltaTime;
 
-        if (hackPower > maxHackPower)
+        if (hackPower >= maxHackPower)
         {
             hackPower = maxHackPower;
             if( !HackSoundTrigerred)
