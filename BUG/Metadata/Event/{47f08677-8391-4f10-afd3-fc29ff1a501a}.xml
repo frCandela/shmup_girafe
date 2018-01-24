@@ -5,7 +5,7 @@
             <value>jaugehackpleine</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{ff1d35e9-2b2d-4baf-968d-afab1da50294}</destination>
@@ -76,6 +76,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{5a62a2c7-4207-42d1-93e8-3bd43a9f6975}">
+        <property name="volume">
+            <value>-8</value>
+        </property>
         <relationship name="effectChain">
             <destination>{41f682f7-013e-4909-a758-eb9e0bb7144e}</destination>
         </relationship>
@@ -128,7 +131,6 @@
     <object class="MixerBusEffectChain" id="{41f682f7-013e-4909-a758-eb9e0bb7144e}">
         <relationship name="effects">
             <destination>{4952f384-618f-4e06-bc54-6768167cf9d4}</destination>
-            <destination>{cf4a233c-93c3-4f41-9c1a-5dda9f2c05f8}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{9c0a28be-df41-4f14-8e72-6270e4349596}"/>
@@ -140,6 +142,5 @@
     </object>
     <object class="MixerBusPanner" id="{9654df4c-7178-4538-84cb-98724ff200f3}"/>
     <object class="MixerBusFader" id="{4952f384-618f-4e06-bc54-6768167cf9d4}"/>
-    <object class="SpatialiserEffect" id="{cf4a233c-93c3-4f41-9c1a-5dda9f2c05f8}"/>
     <object class="MixerBusFader" id="{8506e9f8-dc35-42b2-955d-b259ddfab6b7}"/>
 </objects>
