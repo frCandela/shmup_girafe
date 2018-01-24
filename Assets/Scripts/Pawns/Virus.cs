@@ -19,18 +19,18 @@ public class Virus : Ship
     protected override void Update()
     {
         base.Update();
-
         if (!isPossessed())
             this.enabled = false;
 
         //Glitch animation
         glitchTimer += Time.deltaTime;
-        if (glitchTimer >= glitchDelta)
-        {
-            anim.SetTrigger("glitch");
-            glitchTimer = 0F;
-            glitchDelta = Random.Range(0, 3f);
-        }
+		if (glitchTimer >= glitchDelta)
+		{
+			anim.SetTrigger ("glitch");
+			anim.speed = Random.Range (1f, 3f);
+			glitchTimer = 0F;
+			glitchDelta = Random.Range (0, 3f);
+		} 
     }
 
 
@@ -68,4 +68,9 @@ public class Virus : Ship
     public override void Destroy()
     {
     }
+
+	void SetAnimSpeed()
+	{
+		anim.speed = 0.15f;
+	}
 }

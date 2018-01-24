@@ -558,84 +558,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 81065963}
   m_Script: {fileID: 11500000, guid: 1e00d9a41c4b98f4ea3b0f3b0b462785, type: 3}
---- !u!1001 &593030834
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4173026718387222, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 506a5c59b3bfa427b85751ab932f87c6,
-        type: 3}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 4.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 4.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212861779368781380, guid: 957531fcd87364e07a86375c8335f5a7,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &891582798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +970,8 @@ MonoBehaviour:
   TextPopupsGen: {fileID: 1288760402}
   Leaderboard: {fileID: 580630434}
   soundManager: {fileID: 1681368128}
+  explosionPrefab: {fileID: 1209019765537398, guid: 7612260b9d0dc480bafb4ec77d1dfef4,
+    type: 2}
   trackNames:
   - Virus Phase
   - Multi x1
