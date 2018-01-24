@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
     public TextPopupsGenerator TextPopupsGen;
     public LeaderboardText Leaderboard;
     public SoundManager soundManager;
-
+    public GameObject explosionPrefab;
 
     [Header("Levels:")]
     public string[] trackNames;
@@ -232,10 +232,11 @@ public class GameManager : MonoBehaviour {
                 music.SetParameter("combo", 0);
             else
                 music.SetParameter("combo", comboMultiplier - 1);
-            music.SetParameter("hack", 0);
         }
         else
             MainBar.setCombo(hackCount);
+
+        music.SetParameter("hack", 0);
 
         int scoreGained = addScore(scorePeerHack);
         TextPopupsGen.generateScorePopup(scoreGained, PlayerController.PossessedPawn.transform.position);

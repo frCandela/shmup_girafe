@@ -66,6 +66,7 @@ public class Ship : Pawn
 
     public virtual void Destroy()
     {
+        Instantiate( GameManager.instance.explosionPrefab, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 
