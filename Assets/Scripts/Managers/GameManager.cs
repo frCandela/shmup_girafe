@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour {
     [Header("Multiplier Effects:")]
     public Light[] lights;
     public LightParameter[] lightColors;
+    private LightParameter currentColor;
+    private float currentSpeed;
     public float[] tunnelSpeeds;
 
     private PostProcessingBehaviour PostProcessing;
@@ -55,8 +57,6 @@ public class GameManager : MonoBehaviour {
 
     [Header("THIS IS TEMPORARY:")]
     public int initComboMultiplier = 0;
-
-    private FMODUnity.StudioEventEmitter music;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -89,8 +89,6 @@ public class GameManager : MonoBehaviour {
         PlayerController.onBecomeVirus.AddListener(playerBecameVirus);
         PlayerController.onTakeDamage.AddListener(playerHit);
         PlayerController.PossessedPawn.transform.position = getMouseWorldPosition();
-        PlayerController.onHackStart.AddListener(hackStarted);
-        PlayerController.onHackStop.AddListener(hackStopped);
 
         //Init variables
         score = 0;
@@ -104,7 +102,6 @@ public class GameManager : MonoBehaviour {
         MainBar.setMulti(0);
         MainBar.setSegments(hackPerCombo);
         MainBar.setCombo(1);
-
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -131,20 +128,24 @@ public class GameManager : MonoBehaviour {
         PlayTrack(0);
         director.Play();
 
+        foreach (Light light in lights) {
+            light.color = lightColors[0].color;
+            light.intensity = lightColors[0].intensity;
+        }
         SetLights(0);
 
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
         Leaderboard.UpdateScore(checkpointId);
     }
-
-    private void Start()
-    {
-        music = MainCameraController.GetComponent<FMODUnity.StudioEventEmitter>();
-    }
-
+    
     private void Update()
     {
+        foreach (Light light in lights) {
+            light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
+            light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
+        }
+
         timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
@@ -174,17 +175,10 @@ public class GameManager : MonoBehaviour {
             score -= scoreLossHitVirus;
             if (score < 0)
                 score = 0;
-            TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
         }
+        TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
     }
-    private void hackStarted()
-    {
-        music.SetParameter("hack", 1);
-    }
-    private void hackStopped()
-    {
-        music.SetParameter("hack", 0);
-    }
+
     private void hackOccured()
     {
         //Increment combo multiplier
@@ -210,12 +204,6 @@ public class GameManager : MonoBehaviour {
                 MainBar.setCombo(0);
             }
 
-            //Set music 
-            music.SetParameter("hack", 0);
-            if ( comboMultiplier == 0 || comboMultiplier == 1)
-                music.SetParameter("combo", 0);
-            else
-                music.SetParameter("combo", comboMultiplier - 1);
 
             MainBar.setMulti(getMulti());
             PlayTrack(comboMultiplier);
@@ -248,10 +236,7 @@ public class GameManager : MonoBehaviour {
         MainBar.setSegments(hackPerCombo);
         MainBar.setCombo(0);
         MainBar.setMulti(0);
-
-        //Music
-        music.SetParameter("combo", 0);
-
+        
         PlayTrack(0);
         SetLights(0);
     }
@@ -276,14 +261,12 @@ public class GameManager : MonoBehaviour {
     public void saveScore(int check) { scores[check] = score; }
 
     void SetLights(int mult) {
-        foreach(Light light in lights) {
-            light.color = lightColors[mult].color;
-            light.intensity = lightColors[mult].intensity;
-        }
+        currentColor = lightColors[mult];
     }
 
     public float getTunnelSpeed() {
-        return tunnelSpeeds[comboMultiplier];
+        currentSpeed = Mathf.Lerp(currentSpeed, tunnelSpeeds[comboMultiplier], Time.deltaTime);
+        return currentSpeed;
     }
 
     #region POST-EFFECT

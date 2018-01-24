@@ -36,6 +36,4 @@ public class Bullet : MonoBehaviour {
         if (lifetime < 0)
             Destroy(gameObject);
     }
-
-
 }

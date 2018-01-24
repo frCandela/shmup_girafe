@@ -1,21 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pawns/Ship.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="261" Column="17" />
-      <File FileName="Assets/Scripts/Attack/Attack.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Bullet.cs" Line="38" Column="6" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Attack/Attack.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Score.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/UI/MainBar.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pawns/DPSShip.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/HackSelector.cs" Line="57" Column="38" />
+      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="80" Column="29" />
+      <File FileName="Assets/Scripts/Pawns/DPSShip.cs" Line="59" Column="6" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="152" Column="32" />
+      <File FileName="Assets/Scripts/Damage.cs" Line="20" Column="7" />
+      <File FileName="Assets/Scripts/Pawns/Pawn.cs" Line="23" Column="37" />
+      <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="71" Column="37" />
+      <File FileName="Assets/Scripts/Health.cs" Line="51" Column="17" />
       <File FileName="Assets/Scripts/Controllers/Controller.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Controllers/EnemyController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Spawn/Spawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
