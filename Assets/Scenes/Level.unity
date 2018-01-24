@@ -970,6 +970,8 @@ MonoBehaviour:
   TextPopupsGen: {fileID: 1288760402}
   Leaderboard: {fileID: 580630434}
   soundManager: {fileID: 1681368128}
+  explosionPrefab: {fileID: 1209019765537398, guid: 7612260b9d0dc480bafb4ec77d1dfef4,
+    type: 2}
   trackNames:
   - Virus Phase
   - Multi x1
