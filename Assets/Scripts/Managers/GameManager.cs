@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour {
                 MainBar.setSegments(hackPerCombo);
                 MainBar.setCombo(0);
             }
-            MainBar.setMulti(getMulti());
+            MainBar.setMulti(comboMultiplier);
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
 

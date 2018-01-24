@@ -101,18 +101,25 @@ public class TankShip : Ship
         {
             timerPattern -= Time.deltaTime;
 
-            if (timerPattern < 0) {
+            if (timerPattern < 0)
+            {
                 if (currentCharge < pattern.charges.Count)
                 {
+                    anim.SetBool("Charging", true);
                     loadedChargeDistance = pattern.charges[currentCharge].distance;
                     startCharge(transform.position + Quaternion.Euler(0, 0, -(pattern.charges[currentCharge].angle + 180)) * Vector3.up * 20);
                 }
-
+                
                 timerPattern = 1 / pattern.rate;
                 currentCharge = ++currentCharge % pattern.charges.Count;
             }
             else if (timerPattern < (1 / pattern.rate) - 0.1f)
+            {
                 transform.rotation = Quaternion.Lerp(Quaternion.Euler(0, 0, -(pattern.charges[currentCharge].angle + 180)), transform.rotation, 0.85f);
+            }
+            else
+                anim.SetBool("Charging", false);
+
         }
     }
 
