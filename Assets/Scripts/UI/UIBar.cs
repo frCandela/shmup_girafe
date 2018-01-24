@@ -36,7 +36,6 @@ public class UIBar : MonoBehaviour {
     //Set the multiplierText
     public void setMulti(int value)
     {
-        Debug.Log(value);
     }
 
     public void setSegments(int nbSegments)
