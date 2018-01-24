@@ -17,7 +17,8 @@ public class Damage : MonoBehaviour {
             if (health)
             {
                 health.takeDamage(damage, this);
-                Destroy(this.gameObject);
+				//GetComponent<Animator> ().SetTrigger ("Destroy");
+               	Destroy(this.gameObject);
             }
 
             Ship ship = collision.gameObject.GetComponent<Ship>();
@@ -34,4 +35,9 @@ public class Damage : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+		
+	void Destroy()
+	{
+		Destroy(this.gameObject);
+	}
 }
