@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{3b7c94fe-9ad2-4cba-9937-aa2d0e97d6ba}">
+        <property name="assetPath">
+            <value>explosion_3_toglitch.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.0586167800453514</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{e693d0c5-08e5-4b13-856d-c2087bc3f5d1}</destination>
+        </relationship>
+    </object>
+</objects>

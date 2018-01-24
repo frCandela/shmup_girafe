@@ -64,6 +64,11 @@ public class Ship : Pawn
         }
     }
 
+    public virtual void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         //Collision with other ships
@@ -84,15 +89,6 @@ public class Ship : Pawn
                 else
                     myHealth.takeDamage(myHealth.health - 1, this);
             }
-
-            //Checks if no ship is already destroyed
-            /*if ( ! myHealth.isDead() && ! otherHealth.isDead())
-            {
-                int otherHealthValue = otherHealth.health;
-                int myHealthValue = myHealth.health;
-                otherHealth.takeDamage(myHealthValue, this);
-                myHealth.takeDamage(otherHealthValue, ship);
-            }*/
         }
     }
 
