@@ -47,7 +47,8 @@ public class Blink : MonoBehaviour
     //Initialize and stard a blink coroutine
     public void StartBlink()
     {
-		//GetComponent<Animator> ().SetTrigger ("Hit");
+		if(!GetComponent<Virus>())GetComponent<Animator> ().SetTrigger ("Hit");
+
         if(SpriteRenderers != null)
         {
             StopAllCoroutines();
