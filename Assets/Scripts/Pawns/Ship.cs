@@ -157,8 +157,6 @@ public class Ship : Pawn
     protected void OnDestroy()
     {
         GameManager.instance.PlayerController.addHackPower(hackbonus);
-
-
         if( isPlayerControlled)
             FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
         else

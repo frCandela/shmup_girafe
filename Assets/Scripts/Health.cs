@@ -65,6 +65,18 @@ public class Health : MonoBehaviour
             dead = true; // Prevent multiple die before destroy
             GetComponent<Ship>().Destroy();
         }
+        else
+        {
+            if (health == 1 )
+            {
+                Ship ship = GetComponent<Ship>();
+                if (ship && ship.IsPlayerControlled())
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/lowhealth", ship.transform.position);
+            }
+
+        }
+
+
 
     }
 }

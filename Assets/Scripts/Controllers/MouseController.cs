@@ -113,8 +113,7 @@ public class MouseController : Controller
                 hackPointer.transform.position = GameManager.instance.getMouseWorldPosition();
                 if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
                     GameManager.instance.soundManager.hackSurvol.Stop();
-            }
-                
+            }  
         }
 
 
@@ -156,6 +155,8 @@ public class MouseController : Controller
                     Health targetHealth = targetHack.GetComponent<Health>();
                     if (targetHealth)
                         targetHealth.RestoreHealth();
+                    if( targetHealth.health == 1 )
+                        FMODUnity.RuntimeManager.PlayOneShot("event:/lowhealth", GameManager.instance.MainCameraController.transform.position);
 
                     //No score gained when possessed ship is destroyed
                     Score score = targetHack.GetComponent<Score>();
