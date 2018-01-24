@@ -106,6 +106,12 @@ public class GameManager : MonoBehaviour {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
+		ChromaticAberrationModel.Settings chromaAb = PostProcessing.profile.chromaticAberration.settings;
+		chromaAb.intensity = 0;
+		PostProcessing.profile.chromaticAberration.settings = chromaAb;
+		BloomModel.Settings bloom = PostProcessing.profile.bloom.settings;
+		bloom.bloom.intensity = 0;
+		PostProcessing.profile.bloom.settings = bloom;
 
         director = GetComponent<PlayableDirector>();
         tracks = new PlayableTrack[trackNames.Length];
@@ -279,35 +285,71 @@ public class GameManager : MonoBehaviour {
     IEnumerator startHack(float timing)
     {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
+		ChromaticAberrationModel.Settings chromaAb = PostProcessing.profile.chromaticAberration.settings; //Jonas
+		BloomModel.Settings bloom = PostProcessing.profile.bloom.settings;
 
         float elapsedTime = 0;
         while (elapsedTime < timing)
         {
+			//color
             set.contribution = Mathf.Lerp(0, 1, elapsedTime / timing);
             PostProcessing.profile.userLut.settings = set;
+
+			//chroma aberration
+			chromaAb.intensity = Mathf.Lerp(0.114f, 1, elapsedTime / timing);
+			PostProcessing.profile.chromaticAberration.settings = chromaAb;
+
+			//bloom
+			bloom.bloom.intensity =Mathf.Lerp(0, 0.25f, elapsedTime / timing);
+			PostProcessing.profile.bloom.settings = bloom;
+
             elapsedTime += Time.unscaledDeltaTime;
             yield return new WaitForEndOfFrame();
         }
 
         set.contribution = 1;
         PostProcessing.profile.userLut.settings = set;
+
+		chromaAb.intensity = 1;
+		PostProcessing.profile.chromaticAberration.settings = chromaAb;
+
+		bloom.bloom.intensity = 0.25f;
+		PostProcessing.profile.bloom.settings = bloom;
     }
 
     IEnumerator stopHack(float timing)
     {
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
+		ChromaticAberrationModel.Settings chromaAb = PostProcessing.profile.chromaticAberration.settings; //Jonas
+		BloomModel.Settings bloom = PostProcessing.profile.bloom.settings;
 
         float elapsedTime = 0;
         while (elapsedTime < timing)
         {
+			//color
             set.contribution = Mathf.Lerp(1, 0, elapsedTime / timing);
             PostProcessing.profile.userLut.settings = set;
+
+			//chroma aberration
+			chromaAb.intensity = Mathf.Lerp(1, 0.114f, elapsedTime / timing);
+			PostProcessing.profile.chromaticAberration.settings = chromaAb;
+
+			//bloom
+			bloom.bloom.intensity =Mathf.Lerp(0.25f, 0, elapsedTime / timing);
+			PostProcessing.profile.bloom.settings = bloom;
+
             elapsedTime += Time.unscaledDeltaTime;
             yield return new WaitForEndOfFrame();
         }
 
         set.contribution = 0;
         PostProcessing.profile.userLut.settings = set;
+
+		chromaAb.intensity = 0.114f;
+		PostProcessing.profile.chromaticAberration.settings = chromaAb;
+
+		bloom.bloom.intensity = 0;
+		PostProcessing.profile.bloom.settings = bloom;
     }
     #endregion
 }
