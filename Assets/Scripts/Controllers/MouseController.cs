@@ -10,7 +10,7 @@ public class MouseController : Controller
 
     [Header("GameObjects")]
     public Ship VirusShipPrefab;
-    private Ship virusShip;
+    public Ship virusShip;
     public GameObject hackPointerPrefab;
     private GameObject hackPointer;
 
@@ -36,6 +36,13 @@ public class MouseController : Controller
     private bool isHacking = false;
     private Ship targetHack;
 
+    private void Awake()
+    {
+        //Virus ship
+        virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
+
+    }
+
     private void Start()
     {
         //Hack parameters
@@ -48,12 +55,6 @@ public class MouseController : Controller
         hackPointer = Instantiate(hackPointerPrefab, transform.position, transform.rotation);
         hackPointer.GetComponent<SpriteRenderer>().enabled = false;
 
-
-        //Virus ship
-        if (!virusShip)
-            virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
-
-
         //Set events on the possesed ship
         if (PossessedPawn && PossessedPawn != virusShip)
         {
@@ -65,6 +66,9 @@ public class MouseController : Controller
 
     private void Update()
     {
+        if (!virusShip)
+            print("NO VIRUS");
+
         //Refill the hack bar
         if ( PossessedPawn == virusShip)
             hackPower += virusHackRefillSpeed * Time.deltaTime;
@@ -76,8 +80,8 @@ public class MouseController : Controller
         //If the ship is destroyed, control the virus ship
         if (!isPossessingPawn())
         {
+            this.Invoke( "PossessVirus", 1);
             onBecomeVirus.Invoke();
-            PossessVirus();
         }
 
         if( isHacking )
@@ -118,7 +122,6 @@ public class MouseController : Controller
                             this.PossessedPawn.hackbonus = 0;
                             Destroy(this.PossessedPawn.gameObject);
                         }
-                            
 
                         //Possess the new ship
                         targetHack.gameObject.tag = this.gameObject.tag;
@@ -192,9 +195,6 @@ public class MouseController : Controller
 
     internal void PossessVirus()
     {
-        if(!virusShip)
-            virusShip = Instantiate(VirusShipPrefab, transform.position, transform.rotation);
-
         GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
         virusShip.enabled = true;
         virusShip.transform.position = GameManager.instance.getMouseWorldPosition();

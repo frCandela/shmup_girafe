@@ -267,15 +267,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="shmup_girafe.Plugins.csproj">
+      <Project>{F4E69E6F-3090-306C-0467-B660ADEB7EEC}</Project>
+      <Name>shmup_girafe.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="shmup_girafe.csproj">
       <Project>{760127A1-A19C-C18A-8EAB-A85B93846951}</Project>
       <Name>shmup_girafe</Name>
+    </ProjectReference>
+    <ProjectReference Include="shmup_girafe.Editor.Plugins.csproj">
+      <Project>{59217922-C55F-0E8E-0987-17B985CF0E95}</Project>
+      <Name>shmup_girafe.Editor.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\AttackEditor.cs" />
     <Compile Include="Assets\Editor\ChargeEditor.cs" />
     <Compile Include="Assets\Editor\CustomGUI.cs" />
+    <Compile Include="Assets\Editor\FMODMigrationUtil.cs" />
     <Compile Include="Assets\Editor\SpawnEditor.cs" />
     <Compile Include="Assets\GraphVisualizer\Editor\Graph\Graph.cs" />
     <Compile Include="Assets\GraphVisualizer\Editor\Graph\Layouts\IGraphLayout.cs" />
@@ -329,6 +338,7 @@
     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Readme.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+    <None Include="Assets\Plugins\FMOD\LICENSE.TXT" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

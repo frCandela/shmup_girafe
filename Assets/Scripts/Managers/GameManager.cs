@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour {
     [Header("THIS IS TEMPORARY:")]
     public int initComboMultiplier = 0;
 
+    private FMODUnity.StudioEventEmitter music;
+
     //Awake is always called before any Start functions
     void Awake()
     {
@@ -101,6 +103,7 @@ public class GameManager : MonoBehaviour {
         MainBar.setSegments(hackPerCombo);
         MainBar.setCombo(1);
 
+
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
         set.contribution = 0;
@@ -131,6 +134,11 @@ public class GameManager : MonoBehaviour {
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
         Leaderboard.UpdateScore(checkpointId);
+    }
+
+    private void Start()
+    {
+        music = MainCameraController.GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
     private void Update()
@@ -193,6 +201,11 @@ public class GameManager : MonoBehaviour {
                 MainBar.setCombo(0);
             }
 
+            //Set music 
+            if( comboMultiplier == 0 || comboMultiplier == 1)
+                music.SetParameter("combo", 0);
+            else
+                music.SetParameter("combo", comboMultiplier - 1);
 
             MainBar.setMulti(getMulti());
             PlayTrack(comboMultiplier);
@@ -225,7 +238,10 @@ public class GameManager : MonoBehaviour {
         MainBar.setSegments(hackPerCombo);
         MainBar.setCombo(0);
         MainBar.setMulti(0);
-        
+
+        //Music
+        music.SetParameter("combo", 0);
+
         PlayTrack(0);
         SetLights(0);
     }

@@ -42,16 +42,10 @@ public class VirusShip : Ship
 
     private void OnEnable()
     {
-        //Set the VirusShip at the camera position
-        /*Vector3 newPosition = GameManager.instance.MainCameraController.transform.position;
-        newPosition.z = 0;*/
-        transform.position = GameManager.instance.getMouseWorldPosition();
-
-
+        //transform.position = GameManager.instance.getMouseWorldPosition();
         GetComponent<SpriteRenderer>().enabled = true;
         foreach(Collider2D collider in GetComponents<Collider2D>())
             collider.enabled = true;
-        
     }
 
     private void OnDisable()
