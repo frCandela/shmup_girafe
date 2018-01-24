@@ -6,3 +6,6 @@ Assets/AssetStoreTools*
 test.exe
 test_Data/
 UnityPlayer.dll
+fmod.log
+[Cc]bj/
+.gitignore
