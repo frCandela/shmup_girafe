@@ -164,6 +164,9 @@ public class MouseController : Controller
                 else
                     onHackStop.Invoke();
 
+                if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                    GameManager.instance.soundManager.hackSurvol.Stop();
+
                 TimeManager.resetSlowMotion();
                 hackPointer.GetComponent<SpriteRenderer>().enabled = false;
             }
