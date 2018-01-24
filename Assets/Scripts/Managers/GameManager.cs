@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour {
 
     private PostProcessingBehaviour PostProcessing;
 
-
     public int scoreLossHitVirus = 1;
     [Header("Score:")]
     public int hackPerCombo = 2;
