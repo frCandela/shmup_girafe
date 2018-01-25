@@ -160,6 +160,8 @@ public class GameManager : MonoBehaviour {
         if(timerCheckpoint < 0)
         {
             timerCheckpoint = checkpointRefreshTime;
+            if (checkpointId < checkpointCount)
+                saveScore(checkpointId);
             checkpointId++;
             if (checkpointId >= checkpointCount)
                 checkpointId = checkpointCount - 1;

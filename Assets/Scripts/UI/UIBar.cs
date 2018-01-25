@@ -14,6 +14,7 @@ public class UIBar : MonoBehaviour {
 
     public Image hackBar;
     public Image hackMessage;
+	public Text hackPercentage;
 
     public Image multi;
     public Sprite[] multiText;
@@ -21,6 +22,8 @@ public class UIBar : MonoBehaviour {
     [Header("Linked gamebjects :")]
     public MouseController mouseController;
     public Health health;
+
+	private float currentHackPower = 0f;
 
     // Update is called once per frame
     void Update()
@@ -96,7 +99,7 @@ public class UIBar : MonoBehaviour {
     //Set the hack bar, value must be between 0F and 1F
     public void setHackBar(float value)
     {
-        hackBar.rectTransform.offsetMax = new Vector2(-250 + value * 260, 12);
+		SetHackPercentage (value);
         if (value >= 1f && !hackShow)
         {
             anim.SetTrigger("showHack");
@@ -108,4 +111,16 @@ public class UIBar : MonoBehaviour {
             hackShow = false;
         }
     }
+
+	//set the percentage of the hack bar
+	void SetHackPercentage(float per)
+	{
+		if(per != currentHackPower)
+		{
+			currentHackPower = Mathf.Lerp (currentHackPower, per, Time.deltaTime*7f);
+			hackBar.rectTransform.offsetMax = new Vector2(-250 + currentHackPower * 260, 12);
+			hackPercentage.text = Mathf.RoundToInt (currentHackPower*100f).ToString () + " %";
+
+		}
+	}
 }
