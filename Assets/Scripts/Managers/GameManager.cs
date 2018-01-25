@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
     public LeaderboardText Leaderboard;
     public SoundManager soundManager;
 	public GameObject playerExplosion;
+	public GameObject bulletImpact;
 
     [Header("Levels:")]
     public string[] trackNames;

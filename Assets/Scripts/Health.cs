@@ -56,6 +56,7 @@ public class Health : MonoBehaviour
 
         onTakeDamage.Invoke();
         health -= damage;
+		//GetComponent<Animator> ().SetTrigger ("Hit");
         if (health <= 0 && !dead)
         {
             onDie.Invoke();
