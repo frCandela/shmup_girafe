@@ -178,7 +178,7 @@ MonoBehaviour:
   hackbonus: 0
   explosionPrefab: {fileID: 1725675208499452, guid: 8c10fd30b91a0437ab48f3e9668c189f,
     type: 2}
-  playerSpeed: 7
+  playerSpeed: 15
   canBeStunned: 1
   scrollingSpeed: 0
 --- !u!212 &212655479108382476

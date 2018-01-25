@@ -15,6 +15,8 @@ public class UIBar : MonoBehaviour {
     public Image hackBar;
     public Image hackMessage;
 	public Text hackPercentage;
+	public GameObject outerGlow;
+	public Animator inGlow;
 
     public Image multi;
     public Sprite[] multiText;
@@ -24,6 +26,14 @@ public class UIBar : MonoBehaviour {
     public Health health;
 
 	private float currentHackPower = 0f;
+	private Image hackGlow;
+	private Animator outGlowAnim;
+
+	void Start()
+	{
+		outGlowAnim = outerGlow.GetComponent<Animator> ();
+		hackGlow = outerGlow.GetComponent<Image> ();
+	}
 
     // Update is called once per frame
     void Update()
@@ -117,10 +127,17 @@ public class UIBar : MonoBehaviour {
 	{
 		if(per != currentHackPower)
 		{
+			outGlowAnim.SetBool ("isGlowing", true);
+
 			currentHackPower = Mathf.Lerp (currentHackPower, per, Time.deltaTime*7f);
 			hackBar.rectTransform.offsetMax = new Vector2(-250 + currentHackPower * 260, 12);
 			hackPercentage.text = Mathf.RoundToInt (currentHackPower*100f).ToString () + " %";
 
+			//Full hack glow
+			if (currentHackPower > 0.99f)
+				inGlow.SetBool ("isGlowing", true);
+			else 
+				inGlow.SetBool ("isGlowing", false);
 		}
 	}
 }
