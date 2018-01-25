@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour {
     public int scorePeerHack = 50;
     
     private int score = 0;
-    private int[] scores = new int[5];
+    private int[] scores = new int[12];
     private int hackCount = 0;
     
 	private const int maxCombo = 4;	//Jonas : x0 (virus), x1, x2, x4, x8. (was set to 3).
@@ -160,7 +160,7 @@ public class GameManager : MonoBehaviour {
         if(timerCheckpoint < 0)
         {
             timerCheckpoint = checkpointRefreshTime;
-            if (checkpointId < checkpointCount)
+            if (checkpointId < checkpointCount - 1)
                 saveScore(checkpointId);
             checkpointId++;
             if (checkpointId >= checkpointCount)
