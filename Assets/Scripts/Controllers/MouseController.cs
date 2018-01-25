@@ -258,6 +258,11 @@ public class MouseController : Controller
             hackPower = maxHackPower;
     }
 
+    public void resetHack()
+    {
+        hackPower = 0;
+    }
+
     void FixedUpdate()
     {
         //Moves the pawn towards the mouse position

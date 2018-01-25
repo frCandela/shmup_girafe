@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Menu : MonoBehaviour {
-
-    [FMODUnity.EventRef]
-    public string PlayerIntroEvent;
     public FMODUnity.StudioEventEmitter music;
 
     public GameObject credits, loading, leader;
