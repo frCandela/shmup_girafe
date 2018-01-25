@@ -14,6 +14,7 @@ public class UIBar : MonoBehaviour {
 
     public Image hackBar;
     public Image hackMessage;
+	public Text hackPercentage;
 
     public Image multi;
     public Sprite[] multiText;
@@ -23,16 +24,24 @@ public class UIBar : MonoBehaviour {
     public MouseController mouseController;
     public Health health;
 
+	private float currentHackPower = 0f;
+
     // Update is called once per frame
     void Update()
     {
         setMaxHealth(health.getMaxHealth());
         if (health)
             setHealthBar(health.health);
-        if (hackSelector)
-            setHackBar(hackSelector.getHackPowerRatio());
+		if (hackSelector) 
+		{
+			setHackBar (hackSelector.getHackPowerRatio ());
+			SetHackPercentage ();
+		}
         else if (mouseController)
-            setHackBar(mouseController.getHackPowerRatio());
+		{
+			setHackBar (mouseController.getHackPowerRatio ());
+			SetHackPercentage ();
+		}
     }
 
     //Set the multiplierText
@@ -111,4 +120,17 @@ public class UIBar : MonoBehaviour {
             hackShow = false;
         }
     }
+
+	//set the percentage of the hack bar
+	void SetHackPercentage()
+	{
+		float per = mouseController.getHackPowerRatio ();
+		per *= 100f;
+		per = Mathf.RoundToInt (per);
+		if(per != currentHackPower)
+		{
+			currentHackPower = Mathf.Lerp (currentHackPower, per, Time.deltaTime*7f);
+			hackPercentage.text = Mathf.RoundToInt (currentHackPower).ToString () + " %";
+		}
+	}
 }
