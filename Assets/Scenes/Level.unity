@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 476
+      value: 160.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 268
+      value: 90.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -1035,6 +1035,8 @@ MonoBehaviour:
   TextPopupsGen: {fileID: 1288760402}
   Leaderboard: {fileID: 580630434}
   soundManager: {fileID: 1681368128}
+  playerExplosion: {fileID: 0}
+  bulletImpact: {fileID: 0}
   trackNames:
   - Virus Phase
   - Multi x1
@@ -1065,7 +1067,7 @@ MonoBehaviour:
   hackPerCombo: 2
   scorePeerHack: 500
   checkpointRefreshTime: 5
-  initComboMultiplier: 3
+  initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
   m_ObjectHideFlags: 0
