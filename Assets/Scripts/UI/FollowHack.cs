@@ -25,6 +25,7 @@ public class FollowHack : MonoBehaviour {
         {
             infos.enabled = false;
             spec.enabled = false;
+			HP.SetActive (false);
         }
         else
         {
