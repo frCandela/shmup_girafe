@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 570
+      value: 160.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 320.5
+      value: 90.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -770,7 +770,6 @@ PlayableDirector:
     - f7da98f3bd75447bea8c66b088dd3075: {fileID: 454917183}
     - 208092a3c6c2b4ee1a2e896cfec3f776: {fileID: 454917183}
     - 27e9754e89e95448a80bf4e4d2dc72dd: {fileID: 454917183}
-    - 8dd3fd609c75a654ca9402ce98e1a561: {fileID: 454917183}
     - a00532d14712d43a9ac1028491991170: {fileID: 454917183}
     - 9d637838147364c02a4b5aaf75b068da: {fileID: 454917183}
     - c05d46886fb684eb0896cbf07553d039: {fileID: 454917183}
@@ -863,7 +862,6 @@ PlayableDirector:
     - acc784d98389947ccb24c345b44583b3: {fileID: 454917183}
     - e6eefb7ae548644ef9dd23c724f238fe: {fileID: 454917183}
     - a50e41e75bce843d4b961a7a3bdbf02b: {fileID: 454917183}
-    - 7ab24afce305a7045a9c2c3bb59fa868: {fileID: 454917183}
     - 75d4ec15724164e10acdd7f12d1da547: {fileID: 454917183}
     - 612639e6682c341e8a678fc4fa99ce49: {fileID: 454917183}
     - bf97bbba182a3474da7e2cb04430ddd2: {fileID: 454917183}
@@ -909,7 +907,6 @@ PlayableDirector:
     - 8ceab3f4194a84240806089a5d9dce45: {fileID: 454917183}
     - c4f944fca1ed242278d9487f6e017245: {fileID: 454917183}
     - d922346fa7b1f0e4bab7fb1b13d77239: {fileID: 454917183}
-    - 5b8e2d62b8f4a4744814cd3fe4b91d41: {fileID: 454917183}
     - 172aa17592d37435ca3763ebb0886ea5: {fileID: 454917183}
     - 91fc3019384fd4cd2af54e5c005bf869: {fileID: 454917183}
     - a1976a65f97d3dd42b2667541ed573b4: {fileID: 454917183}
@@ -937,7 +934,6 @@ PlayableDirector:
     - d920dbc95ebda4a939f2a3c23e85d48c: {fileID: 454917183}
     - 2246df29a7a7e404baba841aef95d55d: {fileID: 454917183}
     - bd777c5552efa42938383d964109bab7: {fileID: 454917183}
-    - 14320335c9cf4d64290f7d774df81b22: {fileID: 454917183}
     - 899dfc599410e774da68beadf2104863: {fileID: 454917183}
     - 1dea44570d26940baaeb0296fc3ee14b: {fileID: 454917183}
     - 628b5e10c53cd4cad96d679ec55ecba4: {fileID: 454917183}
@@ -992,7 +988,6 @@ PlayableDirector:
     - 936da5ec5ad7b4d1eb45ddd8084a4ad6: {fileID: 454917183}
     - cc3f73e03c4f49a40822022c1df76624: {fileID: 454917183}
     - d8169cb420329421eb148d5cbc196565: {fileID: 454917183}
-    - bb7bab81204e102438862eccbd455fc4: {fileID: 454917183}
     - 38782605fe2c74a57b513fa341f8509b: {fileID: 454917183}
     - ad67a035605ef455bb747d94eb34139a: {fileID: 454917183}
     - 4b7bec08bb58813449de487dcf8ad1da: {fileID: 454917183}

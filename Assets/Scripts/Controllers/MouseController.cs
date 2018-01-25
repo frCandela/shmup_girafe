@@ -99,6 +99,15 @@ public class MouseController : Controller
         //If the ship is destroyed, control the virus ship
         if (!isPossessingPawn())
         {
+            if (isHacking)
+            {
+                TimeManager.resetSlowMotion();
+                onHackStop.Invoke();
+                isHacking = false;
+                if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                    GameManager.instance.soundManager.hackSurvol.Stop();
+            }
+
             this.Invoke( "PossessVirus", 0.1f);
             onBecomeVirus.Invoke();
         }
