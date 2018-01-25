@@ -166,6 +166,12 @@ public class Ship : Pawn
         Destroy(this.gameObject);
         if(explosionPrefab)
             Instantiate(explosionPrefab, transform.position, transform.rotation);
+		if (!isPlayerControlled)
+		{
+			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
+			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
+			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
+		}
     }
 
 	public IEnumerator HackImmunity()

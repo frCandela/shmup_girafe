@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour {
     public SoundManager soundManager;
 	public GameObject playerExplosion;
 	public GameObject bulletImpact;
+	public GameObject hackFillerPrefab;
+	public Vector3 barPosition;
 
     [Header("Levels:")]
     public string[] trackNames;

@@ -469,7 +469,7 @@ MonoBehaviour:
   HackSnapDistance: 1
   TimeScaleFactor: 0.1
   hackRefillSpeed: 0
-  virusHackRefillSpeed: 15
+  virusHackRefillSpeed: 50
   shootVertically: 0
   onHackStart:
     m_PersistentCalls:
@@ -1019,6 +1019,9 @@ MonoBehaviour:
     type: 2}
   bulletImpact: {fileID: 1440419746047944, guid: 14c1057c0ebe34bd6947b5718678dc0b,
     type: 2}
+  hackFillerPrefab: {fileID: 1084652459621800, guid: 8aa7fc1fcaf844324bd824754ac9df8b,
+    type: 2}
+  barPosition: {x: 5.24, y: 7.14, z: -4.45}
   trackNames:
   - Virus Phase
   - Multi x1
