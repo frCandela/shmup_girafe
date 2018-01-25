@@ -33,15 +33,9 @@ public class UIBar : MonoBehaviour {
         if (health)
             setHealthBar(health.health);
 		if (hackSelector) 
-		{
 			setHackBar (hackSelector.getHackPowerRatio ());
-			SetHackPercentage ();
-		}
         else if (mouseController)
-		{
 			setHackBar (mouseController.getHackPowerRatio ());
-			SetHackPercentage ();
-		}
     }
 
     //Set the multiplierText
@@ -108,7 +102,7 @@ public class UIBar : MonoBehaviour {
     //Set the hack bar, value must be between 0F and 1F
     public void setHackBar(float value)
     {
-        hackBar.rectTransform.offsetMax = new Vector2(-250 + value * 260, 12);
+		SetHackPercentage (value);
         if (value >= 1f && !hackShow)
         {
             anim.SetTrigger("showHack");
@@ -122,15 +116,14 @@ public class UIBar : MonoBehaviour {
     }
 
 	//set the percentage of the hack bar
-	void SetHackPercentage()
+	void SetHackPercentage(float per)
 	{
-		float per = mouseController.getHackPowerRatio ();
-		per *= 100f;
-		per = Mathf.RoundToInt (per);
 		if(per != currentHackPower)
 		{
 			currentHackPower = Mathf.Lerp (currentHackPower, per, Time.deltaTime*7f);
-			hackPercentage.text = Mathf.RoundToInt (currentHackPower).ToString () + " %";
+			hackBar.rectTransform.offsetMax = new Vector2(-250 + currentHackPower * 260, 12);
+			hackPercentage.text = Mathf.RoundToInt (currentHackPower*100f).ToString () + " %";
+
 		}
 	}
 }
