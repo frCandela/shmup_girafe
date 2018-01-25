@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4868494479531124}
   - component: {fileID: 212044305946672336}
   - component: {fileID: 95881826569029038}
-  - component: {fileID: 114118349897757956}
+  - component: {fileID: 114456050558196518}
   m_Layer: 0
   m_Name: DPSExplosion
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114118349897757956
+--- !u!114 &114456050558196518
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1209019765537398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab8caf1b1f5e4939b52ad686ac65955, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d92f2cd8fda410cbabdb3dc1204ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212044305946672336

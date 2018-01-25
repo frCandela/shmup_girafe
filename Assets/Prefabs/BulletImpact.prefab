@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4453237800340244}
   - component: {fileID: 212199589276280198}
   - component: {fileID: 95899850157859156}
-  - component: {fileID: 114839432585521050}
+  - component: {fileID: 114495646424322460}
   m_Layer: 0
   m_Name: BulletImpact
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114839432585521050
+--- !u!114 &114495646424322460
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1440419746047944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab8caf1b1f5e4939b52ad686ac65955, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d92f2cd8fda410cbabdb3dc1204ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212199589276280198
