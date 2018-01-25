@@ -104,6 +104,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Scripts\AddHack.cs" />
      <Compile Include="Assets\Scripts\Attack\Attack.cs" />
      <Compile Include="Assets\Scripts\Attack\AttackType.cs" />
      <Compile Include="Assets\Scripts\Attack\ChargePattern.cs" />
@@ -134,6 +135,7 @@
      <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
      <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
      <Compile Include="Assets\Scripts\Turn.cs" />
+     <Compile Include="Assets\Scripts\UI\ButtonHover.cs" />
      <Compile Include="Assets\Scripts\UI\FollowHack.cs" />
      <Compile Include="Assets\Scripts\UI\LeaderboardText.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />

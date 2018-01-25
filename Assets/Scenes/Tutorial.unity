@@ -249,46 +249,14 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2604.8665
       objectReference: {fileID: 0}
-    - target: {fileID: 114673152378595842, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.r
+    - target: {fileID: 1797653081208650, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114673152378595842, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.g
+    - target: {fileID: 1935022816672154, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114673152378595842, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673152378595842, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: e3d4119c3e4597d4b90fc27f1419ca4b, type: 2}
-    - target: {fileID: 114489561314112734, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114489561314112734, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.33793116
-      objectReference: {fileID: 0}
-    - target: {fileID: 114489561314112734, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114011533062163974, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: outerGlow
-      value: 
-      objectReference: {fileID: 544655267}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
   m_IsPrefabParent: 0
@@ -580,11 +548,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
---- !u!1 &544655267 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1329338640288864, guid: cd9ae7963527bec44bb5a5221b77a287,
-    type: 2}
-  m_PrefabInternal: {fileID: 376372679}
 --- !u!114 &580630434 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114110559862891928, guid: cd9ae7963527bec44bb5a5221b77a287,
@@ -1083,7 +1046,6 @@ MonoBehaviour:
   - -12
   - -20
   scoreLossHitVirus: 1000
-  hackPerCombo: 2
   scorePeerHack: 500
   checkpointRefreshTime: 5
   initComboMultiplier: 0
