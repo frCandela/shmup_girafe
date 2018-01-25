@@ -59,8 +59,8 @@ public class Blink : MonoBehaviour
 				if (!GetComponent<Virus> ())
 					GetComponent<Animator> ().SetTrigger ("Hit");	//hit animation
 				GameManager.instance.MainCameraController.Shake (screenShakePerHit);	//screenshake
-
-				StopAllCoroutines ();
+                FMODUnity.RuntimeManager.PlayOneShot("event:/hit", transform.position);
+                StopAllCoroutines ();
 				BlinkEndTime = Time.time + BlinkDuration;
 				BlinkDeltaTime = 1f / BlinkFrequency;
 				BlinkState = false;

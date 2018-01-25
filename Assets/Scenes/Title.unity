@@ -628,6 +628,7 @@ GameObject:
   - component: {fileID: 1629912851}
   - component: {fileID: 1629912850}
   - component: {fileID: 1629912849}
+  - component: {fileID: 1629912852}
   - component: {fileID: 1629912848}
   m_Layer: 0
   m_Name: Main Camera
@@ -636,13 +637,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1629912848
-AudioListener:
+--- !u!114 &1629912848
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1629912847}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/music/menu
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!124 &1629912849
 Behaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +714,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629912852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629912847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &1726236907
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,8 +841,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832970211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 502.5, y: 282.5, z: 0}
-  m_LocalScale: {x: 0.5231481, y: 0.5231481, z: 0.5231481}
+  m_LocalPosition: {x: 370, y: 208, z: 0}
+  m_LocalScale: {x: 0.38518518, y: 0.38518518, z: 0.38518518}
   m_Children:
   - {fileID: 2095216054}
   - {fileID: 471035447}
