@@ -187,7 +187,7 @@
             <value>54.857142857142854</value>
         </property>
         <relationship name="audioFile">
-            <destination>{71e99ced-cc9c-40d3-bb51-ab61b516df56}</destination>
+            <destination>{cc750971-eec9-4340-adad-c31270b50f98}</destination>
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{c6c040cd-c81b-4a89-81e8-701302998010}">
@@ -214,7 +214,7 @@
             <value>54.857142857142854</value>
         </property>
         <relationship name="audioFile">
-            <destination>{e11ce300-8977-4a73-9202-64f8f73f3d0e}</destination>
+            <destination>{593f64f3-3b01-427d-82c4-f823a3c9af1e}</destination>
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{732efa04-fadc-4fc8-b5b9-cbb8c5f1561c}">
@@ -377,7 +377,7 @@
     </object>
     <object class="TempoMarker" id="{c8e044b8-2b2c-4c1f-85ce-cc19dabec3cc}">
         <property name="position">
-            <value>13.714285714285714</value>
+            <value>0</value>
         </property>
         <property name="tempo">
             <value>140</value>
