@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour {
     public TextPopupsGenerator TextPopupsGen;
     public LeaderboardText Leaderboard;
     public SoundManager soundManager;
+	public GameObject playerExplosion;
+	public GameObject bulletImpact;
 
     [Header("Levels:")]
     public string[] trackNames;
@@ -227,10 +229,9 @@ public class GameManager : MonoBehaviour {
             //Music
             FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_fin", MainCameraController.transform.position);
             FMODUnity.RuntimeManager.PlayOneShot("event:/mult", MainCameraController.transform.position);
-            if (comboMultiplier <= 1 )
-                music.SetParameter("combo", 0);
-            else
-                music.SetParameter("combo", comboMultiplier - 1);
+
+            music.SetParameter("combo", comboMultiplier+0.1f);
+            print(comboMultiplier);
         }
         else
             MainBar.setCombo(hackCount);

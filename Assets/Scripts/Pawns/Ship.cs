@@ -168,6 +168,13 @@ public class Ship : Pawn
             Instantiate(explosionPrefab, transform.position, transform.rotation);
     }
 
+	public IEnumerator HackImmunity()
+	{
+		health.immortal = true;
+		yield return new WaitForSeconds (1f);
+		health.immortal = false;
+	}
+
 
     public bool IsPlayerControlled() { return isPlayerControlled; }
     public void SetPlayerControlled( bool value) { isPlayerControlled = value; }

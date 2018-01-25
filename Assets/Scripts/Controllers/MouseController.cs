@@ -182,6 +182,9 @@ public class MouseController : Controller
 
                     targetHack.scrollingSpeed = 0F;
 
+					//Make the ship immune for a second
+					StartCoroutine (targetHack.HackImmunity ());
+
                     onHack.Invoke();
                 }
                 else

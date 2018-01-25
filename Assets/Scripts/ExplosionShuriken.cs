@@ -6,7 +6,6 @@ public class ExplosionShuriken : MonoBehaviour
 {
 	void Destroy()
 	{
-		//GetComponent<SpriteRenderer> ().sprite = null;
 		Destroy (gameObject);
 	}
 }
