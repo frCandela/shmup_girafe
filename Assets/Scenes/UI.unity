@@ -1141,9 +1141,8 @@ MonoBehaviour:
   - -12
   - -20
   scoreLossHitVirus: 1000
-  hackPerCombo: 2
   scorePeerHack: 500
-  checkpointRefreshTime: 5
+  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:

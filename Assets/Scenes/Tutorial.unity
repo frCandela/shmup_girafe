@@ -122,12 +122,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 750
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 422
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -209,25 +209,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2627.9666
-      objectReference: {fileID: 0}
-    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 950
       objectReference: {fileID: 0}
-    - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 940
-      objectReference: {fileID: 0}
-    - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2620.8665
+      value: 2303.3684
       objectReference: {fileID: 0}
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -237,25 +227,27 @@ Prefab:
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1112.187
+      value: 985.21277
       objectReference: {fileID: 0}
-    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 950
+      value: 940
       objectReference: {fileID: 0}
-    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2604.8665
+      value: -2319.3684
       objectReference: {fileID: 0}
-    - target: {fileID: 1797653081208650, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2326.4685
       objectReference: {fileID: 0}
-    - target: {fileID: 1935022816672154, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
@@ -741,7 +733,7 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 114277109234011768, guid: 1acfcb883b2234d088e0e1bfaf74f663, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 114056933175735870, guid: 1acfcb883b2234d088e0e1bfaf74f663, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
@@ -824,6 +816,7 @@ PlayableDirector:
     - 68d62343fb9074ab881cf1566bb8996f: {fileID: 454917183}
     - ec15b3ae522214304886fce6b86a9e70: {fileID: 454917183}
     - 2288f83083d1e43fca78db0bf20e94dd: {fileID: 454917183}
+    - 2044898d2da97be44831dd06886f6974: {fileID: 454917183}
     - 43f583952a8ee474b9d7bcc41a57773b: {fileID: 454917183}
     - 31f8b118050c84dcbb648ff0ccc1a0cd: {fileID: 454917183}
     - ed7f2fd3c8a7841b8b3bfba709544bf4: {fileID: 454917183}
@@ -853,6 +846,7 @@ PlayableDirector:
     - acc784d98389947ccb24c345b44583b3: {fileID: 454917183}
     - e6eefb7ae548644ef9dd23c724f238fe: {fileID: 454917183}
     - a50e41e75bce843d4b961a7a3bdbf02b: {fileID: 454917183}
+    - 7ab24afce305a7045a9c2c3bb59fa868: {fileID: 454917183}
     - 75d4ec15724164e10acdd7f12d1da547: {fileID: 454917183}
     - 612639e6682c341e8a678fc4fa99ce49: {fileID: 454917183}
     - bf97bbba182a3474da7e2cb04430ddd2: {fileID: 454917183}
@@ -940,6 +934,7 @@ PlayableDirector:
     - f4ff83126b59e423290910aaba69f635: {fileID: 454917183}
     - 566be01d0f849446cb5c11a9e6cc9e92: {fileID: 454917183}
     - 7b9297d6f32984499ad7ebc94db5656f: {fileID: 454917183}
+    - ae64f5ccbe9c99448a6973780e00425a: {fileID: 454917183}
     - 2f9ee631bc081459f94985ba18cfd2aa: {fileID: 454917183}
     - 9a9b4cd3a52dd4bc0a8bc2e25346d1f3: {fileID: 454917183}
     - 2256dc2dd7dd6410684555865c7bf9bf: {fileID: 454917183}
@@ -1047,7 +1042,7 @@ MonoBehaviour:
   - -20
   scoreLossHitVirus: 1000
   scorePeerHack: 500
-  checkpointRefreshTime: 5
+  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:

@@ -2171,15 +2171,15 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.73333335, y: 0.784}
-    angle: 180
+    angle: -149
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.6533333, y: 0.8}
-    angle: 180
+    angle: 141
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.013333334, y: -0.208}
-    angle: -144
+    angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114157204716327894
 MonoBehaviour:
@@ -3430,15 +3430,15 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.61333334, y: 0.808}
-    angle: -142
+    angle: -149
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.7733333, y: 0.576}
-    angle: 135
+    angle: 141
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.04, y: -0.296}
-    angle: -90
+    angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114245604894224780
 MonoBehaviour:
@@ -5608,15 +5608,15 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.64, y: 0.784}
-    angle: 180
+    angle: -149
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.68, y: 0.8}
-    angle: 180
+    angle: 141
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0, y: -0.256}
-    angle: 144
+    angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114370827139537224
 MonoBehaviour:
@@ -5720,7 +5720,7 @@ MonoBehaviour:
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.46666667, y: -0.232}
-    angle: -143
+    angle: 128
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
     position: {x: 0.6533333, y: -0.464}
@@ -6328,15 +6328,15 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.73333335, y: 0.784}
-    angle: 180
+    angle: -149
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.6533333, y: 0.8}
-    angle: 180
+    angle: 141
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.013333334, y: -0.208}
-    angle: -90
+    angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114429196562849892
 MonoBehaviour:
@@ -14132,15 +14132,15 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.72, y: 0.52}
-    angle: 135
+    angle: -149
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.73333335, y: 0.768}
-    angle: -145
+    angle: 141
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: 0.013333334, y: -0.352}
-    angle: 122
+    angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114924460708229852
 MonoBehaviour:

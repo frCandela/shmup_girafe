@@ -47,15 +47,17 @@ public class GameManager : MonoBehaviour {
     public int scorePeerHack = 50;
     
     private int score = 0;
-    private int[] scores = new int[12];
+    private int[] scores;
     private int hackCount = 0;
     
 	private const int maxCombo = 4;	//Jonas : x0 (virus), x1, x2, x4, x8. (was set to 3).
     private int comboMultiplier = 0;
     private float timerCheckpoint;
-    public float checkpointRefreshTime = 5;
+    private float checkpointRefreshTime;
     private const int checkpointCount = 12;
     private int checkpointId = 0;
+    public float levelDuration = 200;
+    private float timeLevel = 0;
 
     //Sound
     FMODUnity.StudioEventEmitter music;
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour {
 
         //Init variables
         score = 0;
-        scores = new int[5];
+        scores = new int[12];
         hackCount = 0;
         hackPerCombo = 0;
         comboMultiplier = initComboMultiplier;
@@ -141,6 +143,8 @@ public class GameManager : MonoBehaviour {
         }
         SetLights(0);
 
+        checkpointRefreshTime = levelDuration / checkpointCount;
+
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
         Leaderboard.UpdateScore(checkpointId);
@@ -148,6 +152,7 @@ public class GameManager : MonoBehaviour {
     
     private void Update()
     {
+        timeLevel += Time.deltaTime;
         foreach (Light light in lights) {
             light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
             light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
