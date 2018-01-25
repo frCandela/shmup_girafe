@@ -55,16 +55,6 @@ public class UIBar : MonoBehaviour {
             multiAfter.enabled = false;
     }
 
-    public void setSegments(int nbSegments)
-    {
-        
-    }
-    
-    public void setCombo(int value)
-    {
-        
-    }
-
     public void setMaxHealth(int value)
     {
         if (value == numberPV)

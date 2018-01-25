@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
 
     public int scoreLossHitVirus = 1;
     [Header("Score:")]
-    public int hackPerCombo = 2;
+    private int hackPerCombo;
     public int scorePeerHack = 50;
     
     private int score = 0;
@@ -89,7 +89,6 @@ public class GameManager : MonoBehaviour {
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
         PlayerController.PossessVirus();
-        PlayerController.addHackPower(50);
         PlayerController.onHack.AddListener(hackOccured);
         PlayerController.onHackStart.AddListener(hackStarted);
         PlayerController.onHackStop.AddListener(hackStopped);
@@ -107,8 +106,6 @@ public class GameManager : MonoBehaviour {
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
         MainBar.setMulti(0);
-        MainBar.setSegments(hackPerCombo);
-        MainBar.setCombo(1);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -212,18 +209,9 @@ public class GameManager : MonoBehaviour {
            	++comboMultiplier;
 
             if (comboMultiplier == 1)
-            {
                 hackPerCombo = 0;
-                MainBar.setSegments(hackPerCombo);
-                MainBar.setCombo(1);
-            }
             else
-            {
                 hackPerCombo = comboMultiplier-1;
-
-                MainBar.setSegments(hackPerCombo);
-                MainBar.setCombo(0);
-            }
             MainBar.setMulti(comboMultiplier);
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
@@ -233,10 +221,7 @@ public class GameManager : MonoBehaviour {
             FMODUnity.RuntimeManager.PlayOneShot("event:/mult", MainCameraController.transform.position);
 
             music.SetParameter("combo", comboMultiplier+0.1f);
-            print(comboMultiplier);
         }
-        else
-            MainBar.setCombo(hackCount);
 
         music.SetParameter("hack", 0);
 
@@ -261,8 +246,6 @@ public class GameManager : MonoBehaviour {
         comboMultiplier = 0;
 
         //initialise ui
-        MainBar.setSegments(hackPerCombo);
-        MainBar.setCombo(0);
         MainBar.setMulti(0);
 
         //Music
@@ -271,6 +254,8 @@ public class GameManager : MonoBehaviour {
 
         PlayTrack(0);
         SetLights(0);
+
+        PlayerController.resetHack();
     }
 
     public int getScore(){ return score; }
