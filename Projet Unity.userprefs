@@ -1,14 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spawn/SpawnClip.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Damage.cs">
     <Files>
-      <File FileName="Assets/Scripts/ExplosionShuriken.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/Blink.cs" Line="58" Column="25" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="27" Column="33" />
+      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="174" Column="37" />
+      <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="68" Column="26" />
+      <File FileName="Assets/Scripts/Pawns/DPSShip.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="163" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Pawns/Pawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Health.cs" Line="59" Column="5" />
+      <File FileName="Assets/Scripts/Damage.cs" Line="20" Column="91" />
       <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Damage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="79" Column="25" />
-      <File FileName="Assets/Scripts/Spawn/SpawnClip.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Spawn/Spawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Spawn/SpawnBehavior.cs" Line="12" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
