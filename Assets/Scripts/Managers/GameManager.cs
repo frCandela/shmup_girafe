@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
     private int comboMultiplier = 0;
     private float timerCheckpoint;
     public float checkpointRefreshTime = 5;
-    private const int checkpointCount = 5;
+    private const int checkpointCount = 12;
     private int checkpointId = 0;
 
     //Sound
@@ -160,6 +160,8 @@ public class GameManager : MonoBehaviour {
         if(timerCheckpoint < 0)
         {
             timerCheckpoint = checkpointRefreshTime;
+            if (checkpointId < checkpointCount)
+                saveScore(checkpointId);
             checkpointId++;
             if (checkpointId >= checkpointCount)
                 checkpointId = checkpointCount - 1;
