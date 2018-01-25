@@ -290,7 +290,6 @@
     <Compile Include="Assets\Scripts\Controllers\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MouseController.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
-    <Compile Include="Assets\Scripts\ExplosionShuriken.cs" />
     <Compile Include="Assets\Scripts\HackSelector.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
@@ -303,6 +302,7 @@
     <Compile Include="Assets\Scripts\Pawns\TankShip.cs" />
     <Compile Include="Assets\Scripts\Pawns\Virus.cs" />
     <Compile Include="Assets\Scripts\Popups\ExplosionPopup.cs" />
+    <Compile Include="Assets\Scripts\Popups\ExplosionShuriken.cs" />
     <Compile Include="Assets\Scripts\Popups\Popup.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />

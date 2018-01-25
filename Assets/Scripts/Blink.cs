@@ -11,7 +11,7 @@ public class Blink : MonoBehaviour
     [Header("Blink parameters:")]
     public float BlinkDuration = 1;
     public float BlinkFrequency = 10;
-	float screenShakePerHit = 0.5f;
+	float screenShakePerHit = 0.3f;
     public SpriteRenderer[] SpriteRenderers;
     public Health shipHealth;
 
