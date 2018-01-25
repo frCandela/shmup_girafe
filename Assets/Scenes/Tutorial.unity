@@ -122,12 +122,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 960
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 540
+      value: 422
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -461,7 +461,7 @@ MonoBehaviour:
   HackSnapDistance: 1
   TimeScaleFactor: 0.1
   hackRefillSpeed: 0
-  virusHackRefillSpeed: 50
+  virusHackRefillSpeed: 20
   shootVertically: 0
   onHackStart:
     m_PersistentCalls:

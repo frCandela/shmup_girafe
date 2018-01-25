@@ -7968,19 +7968,19 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: fc98f714ea2b44c7f8187be4814d5bf7, type: 2}
     position: {x: 0.64, y: 0.744}
-    angle: -137
+    angle: 97
     col: {r: 0, g: 0.6719489, b: 1, a: 0.5706356}
   - enemy: {fileID: 1671544709107808, guid: eaa4425aa30e943f0a73711d4707e593, type: 2}
     position: {x: 0.32, y: 0.328}
-    angle: -126
+    angle: -59
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
   - enemy: {fileID: 1351586955025634, guid: 1d3031e2b68c185458bee24c5620368d, type: 2}
     position: {x: -0.68, y: 0.808}
-    angle: 19
+    angle: 180
     col: {r: 0, g: 1, b: 0.15456796, a: 0.53448695}
   - enemy: {fileID: 1201508606819798, guid: 9ee1ebe8489a5469783c30ce3178dcc9, type: 2}
     position: {x: 0.68, y: -0.064}
-    angle: 180
+    angle: -178
     col: {r: 1, g: 0.970816, b: 0, a: 0.5147102}
 --- !u!114 &114558696709832002
 MonoBehaviour:
