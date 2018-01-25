@@ -11,6 +11,7 @@ public class Blink : MonoBehaviour
     [Header("Blink parameters:")]
     public float BlinkDuration = 1;
     public float BlinkFrequency = 10;
+	float screenShakePerHit = 0.5f;
     public SpriteRenderer[] SpriteRenderers;
     public Health shipHealth;
 
@@ -18,6 +19,7 @@ public class Blink : MonoBehaviour
     private float BlinkEndTime;
     private float BlinkDeltaTime;
     private bool BlinkState;
+	private bool isBlinking = false; //Jonas
 
     private void Awake() {
         shipHealth = GetComponent<Health>();
@@ -42,22 +44,30 @@ public class Blink : MonoBehaviour
             renderer.enabled = true;
 
         shipHealth.immortal = false;
+		isBlinking = false;
     }
 
     //Initialize and stard a blink coroutine
     public void StartBlink()
     {
-		if(!GetComponent<Virus>())GetComponent<Animator> ().SetTrigger ("Hit");
+		if (!isBlinking) 
+		{
+			isBlinking = true;
 
-        if(SpriteRenderers != null)
-        {
-            StopAllCoroutines();
-            BlinkEndTime = Time.time + BlinkDuration;
-            BlinkDeltaTime = 1f / BlinkFrequency;
-            BlinkState = false;
-            shipHealth.immortal = true;
-            StartCoroutine("BlinkCoroutine");
-        }
+			if (SpriteRenderers != null)
+			{
+				if (!GetComponent<Virus> ())
+					GetComponent<Animator> ().SetTrigger ("Hit");	//hit animation
+				GameManager.instance.MainCameraController.Shake (screenShakePerHit);	//screenshake
+
+				StopAllCoroutines ();
+				BlinkEndTime = Time.time + BlinkDuration;
+				BlinkDeltaTime = 1f / BlinkFrequency;
+				BlinkState = false;
+				shipHealth.immortal = true;
+				StartCoroutine ("BlinkCoroutine");
+			}
+		}
     }
 
     public void StopBlink()
@@ -68,6 +78,8 @@ public class Blink : MonoBehaviour
             foreach (SpriteRenderer renderer in SpriteRenderers)
                 renderer.enabled = false;
         }
+
+		isBlinking = false;
     }
 }
 
