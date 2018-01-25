@@ -239,6 +239,7 @@ MonoBehaviour:
     type: 2}
   offsetDestroyTunnel: -10
   trauma: 0
+  maxTrauma: 0.5
   angle: -35
 --- !u!114 &454917185
 MonoBehaviour:
@@ -385,6 +386,7 @@ MonoBehaviour:
   virusShip: {fileID: 0}
   hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
     type: 2}
+  hackPointer: {fileID: 0}
   HackDuration: 1000
   infiniteDuration: 0
   HackSnapDistance: 1
@@ -1123,6 +1125,8 @@ MonoBehaviour:
   TextPopupsGen: {fileID: 1288760402}
   Leaderboard: {fileID: 580630434}
   soundManager: {fileID: 1681368128}
+  playerExplosion: {fileID: 0}
+  bulletImpact: {fileID: 0}
   trackNames:
   - Virus Phase
   - Multi x1
@@ -1429,6 +1433,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 84c530b36e2427040ba1a6fc3931a775,
         type: 3}
+    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
   m_IsPrefabParent: 0
@@ -1786,7 +1795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2015907157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1851,6 +1860,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f0b865a09e9b341a531b29a45ed9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specDPS: {fileID: 0}
+  specTank: {fileID: 0}
+  specFlesh: {fileID: 0}
+  infos: {fileID: 0}
+  spec: {fileID: 0}
 --- !u!1 &2068811730
 GameObject:
   m_ObjectHideFlags: 0

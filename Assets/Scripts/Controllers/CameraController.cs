@@ -15,7 +15,8 @@ public class CameraController : MonoBehaviour
 
     private BoxCollider2D cameraTrigger;
     public float trauma;
-	public float maxTrauma = 0.5f;
+    public float reduceTrauma = 0.2f;
+    public float maxTrauma = 0.5f;
     public float angle = -45;
 
     // Use this for initialization
@@ -32,7 +33,7 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        trauma -= Time.deltaTime * 0.2f;
+        trauma -= Time.deltaTime * reduceTrauma;
         trauma = Mathf.Clamp(trauma, 0, 1);
 
         float shake = trauma * trauma * trauma;

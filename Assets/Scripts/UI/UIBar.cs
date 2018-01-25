@@ -19,7 +19,6 @@ public class UIBar : MonoBehaviour {
     public Sprite[] multiText;
 
     [Header("Linked gamebjects :")]
-    public HackSelector hackSelector;
     public MouseController mouseController;
     public Health health;
 
@@ -29,9 +28,7 @@ public class UIBar : MonoBehaviour {
         setMaxHealth(health.getMaxHealth());
         if (health)
             setHealthBar(health.health);
-        if (hackSelector)
-            setHackBar(hackSelector.getHackPowerRatio());
-        else if (mouseController)
+        if (mouseController)
             setHackBar(mouseController.getHackPowerRatio());
     }
 
