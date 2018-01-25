@@ -142,7 +142,8 @@ public class TankShip : Ship
 		if(loadingCharge)
 		{
 			anim.SetBool("Charging", true);
-			startCharge(GameManager.instance.getMouseWorldPosition());
+            FMODUnity.RuntimeManager.PlayOneShot("event:/chargetank", transform.position);
+            startCharge(GameManager.instance.getMouseWorldPosition());
 			stopLoadingCharge();
 		}
 
