@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitTruc", "GitTruc.csproj", "{3577E377-DBE5-C1A9-6A38-BD0BE5DBECFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitTruc.Plugins", "GitTruc.Plugins.csproj", "{DF3F4378-2A9D-EAD5-07FB-4FDD0631A52D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitTruc.Editor", "GitTruc.Editor.csproj", "{F3EF02DA-A121-26E7-950D-843DC95B25E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitTruc.Editor.Plugins", "GitTruc.Editor.Plugins.csproj", "{7ADEB1B2-0B68-7A47-3BBD-4DC8E8A46E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3577E377-DBE5-C1A9-6A38-BD0BE5DBECFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3577E377-DBE5-C1A9-6A38-BD0BE5DBECFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3577E377-DBE5-C1A9-6A38-BD0BE5DBECFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3577E377-DBE5-C1A9-6A38-BD0BE5DBECFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF3F4378-2A9D-EAD5-07FB-4FDD0631A52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF3F4378-2A9D-EAD5-07FB-4FDD0631A52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF3F4378-2A9D-EAD5-07FB-4FDD0631A52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF3F4378-2A9D-EAD5-07FB-4FDD0631A52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3EF02DA-A121-26E7-950D-843DC95B25E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EF02DA-A121-26E7-950D-843DC95B25E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EF02DA-A121-26E7-950D-843DC95B25E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3EF02DA-A121-26E7-950D-843DC95B25E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADEB1B2-0B68-7A47-3BBD-4DC8E8A46E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADEB1B2-0B68-7A47-3BBD-4DC8E8A46E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADEB1B2-0B68-7A47-3BBD-4DC8E8A46E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADEB1B2-0B68-7A47-3BBD-4DC8E8A46E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

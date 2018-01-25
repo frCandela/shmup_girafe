@@ -17,7 +17,7 @@ public class Damage : MonoBehaviour {
             if (health)
             {
                 health.takeDamage(damage, this);
-				//GetComponent<Animator> ().SetTrigger ("Destroy");
+				Instantiate (GameManager.instance.bulletImpact, transform.position, transform.rotation, collision.transform);
                	Destroy(this.gameObject);
             }
 

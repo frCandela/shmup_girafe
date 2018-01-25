@@ -234,7 +234,8 @@ MonoBehaviour:
   isHackable: 1
   hackCost: 100
   hackbonus: 20
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 1209019765537398, guid: c6a935f0cb5ef4cada265ca1f2813505,
+    type: 2}
   playerSpeed: 0
   canBeStunned: 1
   scrollingSpeed: -2

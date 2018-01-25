@@ -9,43 +9,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
-  m_Name: DPSAttack_x4
+  m_Name: DPSAttack_x4_Type2
   m_EditorClassIdentifier: 
-  rate: 10
+  rate: 6
   bursts:
-  - amount: 3
+  - amount: 1
     spread: 17
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 3
-    spread: 17
+  - amount: 1
+    spread: 18
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 3
-    spread: 17
+  - amount: 1
+    spread: 20
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 0
+  - amount: 1
     spread: 11
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 0
+  - amount: 1
     spread: 11
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 0
+  - amount: 1
     spread: 11
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 0
-    spread: 11
+  - amount: 2
+    spread: 40.31
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 0
-    spread: 11
+  - amount: 2
+    spread: 90.08
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
-  - amount: 0
-    spread: 11
+  - amount: 2
+    spread: 120.84
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 2
+    spread: 89.98
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 2
+    spread: 40.5
     angle: 0
     prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
