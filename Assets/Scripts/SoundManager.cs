@@ -5,5 +5,6 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public FMODUnity.StudioEventEmitter hackSurvol;
+    public FMODUnity.StudioEventEmitter hitEnnemies;
 
 }

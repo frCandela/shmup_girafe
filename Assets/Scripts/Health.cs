@@ -56,6 +56,13 @@ public class Health : MonoBehaviour
 
         onTakeDamage.Invoke();
         health -= damage;
+
+        //Hit sound
+        if( !GameManager.instance.soundManager.hitEnnemies.IsPlaying())
+            GameManager.instance.soundManager.hitEnnemies.Play();
+
+        //FMODUnity.RuntimeManager.PlayOneShot("event:/hit", transform.position);
+
         if (health <= 0 && !dead)
         {
             onDie.Invoke();
