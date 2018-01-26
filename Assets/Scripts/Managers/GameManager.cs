@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour {
 
 
     [Header("Multiplier Effects:")]
-    public Light[] lights;
+	public Light mainLight;
+	public Light[] lights;
     public LightParameter[] lightColors;
     private LightParameter currentColor;
     private float currentSpeed;
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviour {
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.setMulti(0);
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -191,8 +192,9 @@ public class GameManager : MonoBehaviour {
             score -= scoreLossHitVirus;
             if (score < 0)
                 score = 0;
+            TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
         }
-        TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
+       
     }
 
     private void hackStarted()
@@ -219,9 +221,11 @@ public class GameManager : MonoBehaviour {
                 hackPerCombo = 0;
             else
                 hackPerCombo = comboMultiplier-1;
-            MainBar.setMulti(comboMultiplier);
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
+
+			//feedback light effect
+			StartCoroutine (ComboLightEffect ());
 
             //Music
             FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_fin", MainCameraController.transform.position);
@@ -229,6 +233,7 @@ public class GameManager : MonoBehaviour {
 
             music.SetParameter("combo", comboMultiplier+0.1f);
         }
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         music.SetParameter("hack", 0);
 
@@ -253,7 +258,7 @@ public class GameManager : MonoBehaviour {
         comboMultiplier = 0;
 
         //initialise ui
-        MainBar.setMulti(0);
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         //Music
         music.SetParameter("combo", 0);
@@ -261,8 +266,6 @@ public class GameManager : MonoBehaviour {
 
         PlayTrack(0);
         SetLights(0);
-
-        PlayerController.resetHack();
     }
 
     public int getScore(){ return score; }
@@ -292,6 +295,33 @@ public class GameManager : MonoBehaviour {
         currentSpeed = Mathf.Lerp(currentSpeed, tunnelSpeeds[comboMultiplier], Time.deltaTime);
         return currentSpeed;
     }
+
+	//Light effect when multiplier changes
+	IEnumerator ComboLightEffect()
+	{
+		float elapsedTime = 0f;
+		float timing = 0.5f;
+		float intensity = mainLight.intensity;
+		Quaternion rotation = mainLight.transform.rotation;
+		//mainLight.intensity = 40f;
+		while(elapsedTime < timing)
+		{
+			if (mainLight.intensity < 40f)
+				mainLight.intensity += 20f*Time.deltaTime;
+			mainLight.transform.Rotate (0, 2160f*Time.deltaTime, 0);
+			elapsedTime += Time.unscaledDeltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+
+		mainLight.transform.rotation = rotation;
+
+		while (mainLight.intensity > intensity)
+		{
+			mainLight.intensity -= 20f*Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+		mainLight.intensity = intensity;
+	}
 
     #region POST-EFFECT
 

@@ -10,7 +10,7 @@ public class MouseController : Controller
 
     [Header("GameObjects")]
     public Virus VirusShipPrefab;
-    public Virus virusShip;
+    private Virus virusShip;
     public GameObject hackPointerPrefab;
     public GameObject hackPointer;
 
@@ -20,7 +20,7 @@ public class MouseController : Controller
     public float HackSnapDistance = 1F;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
-    [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
+    [Range(0F, 100F)] public float virusHackRefillSpeed = 15F;
 
     [Header("Other parameters:")]
     public bool shootVertically = true;
@@ -80,7 +80,7 @@ public class MouseController : Controller
             print("NO VIRUS");
 
         //Refill the hack bar
-        if ( PossessedPawn == virusShip)
+        if ( PossessedPawn == virusShip )
             hackPower += virusHackRefillSpeed * Time.deltaTime;
         else
             hackPower += hackRefillSpeed * Time.deltaTime;
@@ -110,6 +110,7 @@ public class MouseController : Controller
 
             this.Invoke( "PossessVirus", 0.1f);
             onBecomeVirus.Invoke();
+            hackPower = 0;
         }
 
         if( isHacking )
@@ -231,12 +232,25 @@ public class MouseController : Controller
         }
 
         //Starts the hack !
-        if (Input.GetButton("Hack") && !isHacking && hackPower >= minHackPower)
+        if (Input.GetButtonDown("Hack"))
         {
-            isHacking = true;
-            //hackPointer.GetComponent<SpriteRenderer>().enabled = true;
-            TimeManager.doSlowMotion(HackDuration, 0.05f);
-            onHackStart.Invoke();
+            if(isHacking)
+            {
+                onHackStop.Invoke();
+
+                if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                    GameManager.instance.soundManager.hackSurvol.Stop();
+
+                TimeManager.resetSlowMotion();
+            }
+            else if (hackPower >= minHackPower)
+            {
+                isHacking = true;
+                //hackPointer.GetComponent<SpriteRenderer>().enabled = true;
+                TimeManager.doSlowMotion(HackDuration, 0.05f);
+                onHackStart.Invoke();
+            }
+
         }
     }
 
@@ -258,10 +272,10 @@ public class MouseController : Controller
             hackPower = maxHackPower;
     }
 
-    public void resetHack()
+    /*public void resetHack()
     {
         hackPower = 0;
-    }
+    }*/
 
     void FixedUpdate()
     {

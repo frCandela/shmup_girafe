@@ -16,13 +16,20 @@ public class ScoreText : MonoBehaviour
 
     public void Update()
     {
-		int newScore = GameManager.instance.getScore (); 
-		if(newScore > currentScore)
-		{
-			currentScore = (int)Mathf.Lerp (currentScore, newScore, 10f * Time.deltaTime);
-			if (newScore - currentScore < 5)
-				currentScore = newScore;
+		if (text) {
+			int newScore = GameManager.instance.getScore (); 
+			if (newScore > currentScore) {
+				currentScore = (int)Mathf.Lerp (currentScore, newScore, 10f * Time.deltaTime);
+				if (Mathf.Abs (newScore - currentScore) < 5)
+					currentScore = newScore;
+			} else if (newScore < currentScore) {
+				{
+					currentScore = (int)Mathf.Lerp (newScore, currentScore, 10f * Time.deltaTime);
+					if (Mathf.Abs (newScore - currentScore) < 5)
+						currentScore = newScore;
+				}
+			}
+			text.text = string.Format ("{0:D10}", currentScore);
 		}
-		text.text = string.Format("{0:D10}", currentScore);
     }
 }

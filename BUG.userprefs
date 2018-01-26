@@ -1,13 +1,16 @@
-﻿<Properties StartupItem="BUG.csproj">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FeedbackBarFill.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/TimeManager.cs">
     <Files>
-      <File FileName="Assets/FeedbackBarFill.cs" Line="27" Column="14" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="29" Column="29" />
+      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/TimeManager.cs" Line="81" Column="24" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="291" Column="29" />
       <File FileName="Assets/Scripts/Popups/Popup.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Health.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="173" Column="97" />
       <File FileName="Assets/Scripts/Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="197" Column="1" />
+      <File FileName="Assets/Scripts/UI/FeedbackBarFill.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/ScoreText.cs" Line="33" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
