@@ -1043,7 +1043,7 @@ MonoBehaviour:
   - -8
   - -12
   - -20
-  scoreLossHitVirus: 1000
+  scoreLossHitVirus: 1010
   scorePeerHack: 500
   initComboMultiplier: 0
 --- !u!114 &1301998662
