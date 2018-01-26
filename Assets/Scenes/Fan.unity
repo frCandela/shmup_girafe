@@ -1203,8 +1203,10 @@ MonoBehaviour:
   TextPopupsGen: {fileID: 1288760402}
   Leaderboard: {fileID: 580630434}
   soundManager: {fileID: 1681368128}
-  playerExplosion: {fileID: 0}
-  bulletImpact: {fileID: 0}
+  playerExplosion: {fileID: 1725675208499452, guid: 8c10fd30b91a0437ab48f3e9668c189f,
+    type: 2}
+  bulletImpact: {fileID: 1440419746047944, guid: 14c1057c0ebe34bd6947b5718678dc0b,
+    type: 2}
   hackFillerPrefab: {fileID: 0}
   barPosition: {x: 0, y: 0, z: 0}
   trackNames:
