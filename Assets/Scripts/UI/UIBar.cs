@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +26,12 @@ public class UIBar : MonoBehaviour {
 	public Image multiBarDown;
     public Sprite[] multiText;
 
-    [Header("Linked gamebjects :")]
+    [Header("Linked GameObjects :")]
     public MouseController mouseController;
     public Health health;
+    public GameObject leader;
 
-	private float currentHackPower = 0f;
+    private float currentHackPower = 0f;
 	private Image hackGlow;
 	private Animator outGlowAnim;
 
@@ -154,4 +156,15 @@ public class UIBar : MonoBehaviour {
 				inGlow.SetBool ("isGlowing", false);
 		}
 	}
+
+    public void showLeaderScreen()
+    {
+        leader.SetActive(true);
+    }
+
+    public void sendScore()
+    {
+        Debug.Log(GameManager.instance.getScores());
+        StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), "Tog"));
+    }
 }

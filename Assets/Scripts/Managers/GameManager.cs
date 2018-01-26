@@ -80,8 +80,6 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
-
-		levelDuration = GetComponent<TimeManager> ()._gameDuration;
     }
 
     //Initializes the game for each level.
@@ -92,6 +90,8 @@ public class GameManager : MonoBehaviour {
             throw new Exception("Error : no main camera selected");
         if (!TextPopupsGen)
             throw new Exception("Error : no TextPopupsGenerator selected");
+
+        levelDuration = GetComponent<TimeManager>()._gameDuration;
 
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
@@ -158,6 +158,12 @@ public class GameManager : MonoBehaviour {
     private void Update()
     {
         timeLevel += Time.deltaTime;
+
+        if(timeLevel > levelDuration)
+        {
+            MainBar.showLeaderScreen();
+        }
+
         foreach (Light light in lights) {
             light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
             light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
@@ -287,7 +293,8 @@ public class GameManager : MonoBehaviour {
         score += scoreGained;
         return scoreGained;
     }
-    public void saveScore(int check) { scores[check] = score; }
+    public void saveScore(int check) { Debug.Log("Save " + check + " " + score); scores[check] = score; }
+    public int[] getScores() { return scores; }
 
     void SetLights(int mult) {
         currentColor = lightColors[mult];
