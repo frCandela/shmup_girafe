@@ -309,7 +309,6 @@ public class GameManager : MonoBehaviour {
 			if (mainLight.intensity < 40f)
 				mainLight.intensity += 20f*Time.deltaTime;
 			mainLight.transform.Rotate (0, 2160f*Time.deltaTime, 0);
-			Debug.Log ("kjsgdfihjqsdf");
 			elapsedTime += Time.unscaledDeltaTime;
 			yield return new WaitForEndOfFrame ();
 		}
