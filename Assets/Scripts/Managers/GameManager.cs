@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour {
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.setMulti(0);
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -221,7 +221,6 @@ public class GameManager : MonoBehaviour {
                 hackPerCombo = 0;
             else
                 hackPerCombo = comboMultiplier-1;
-            MainBar.setMulti(comboMultiplier);
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
 
@@ -234,6 +233,7 @@ public class GameManager : MonoBehaviour {
 
             music.SetParameter("combo", comboMultiplier+0.1f);
         }
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         music.SetParameter("hack", 0);
 
@@ -258,7 +258,7 @@ public class GameManager : MonoBehaviour {
         comboMultiplier = 0;
 
         //initialise ui
-        MainBar.setMulti(0);
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         //Music
         music.SetParameter("combo", 0);
@@ -309,7 +309,6 @@ public class GameManager : MonoBehaviour {
 			if (mainLight.intensity < 40f)
 				mainLight.intensity += 20f*Time.deltaTime;
 			mainLight.transform.Rotate (0, 2160f*Time.deltaTime, 0);
-			Debug.Log ("kjsgdfihjqsdf");
 			elapsedTime += Time.unscaledDeltaTime;
 			yield return new WaitForEndOfFrame ();
 		}
