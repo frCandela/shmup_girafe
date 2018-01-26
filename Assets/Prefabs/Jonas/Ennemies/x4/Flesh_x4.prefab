@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114283961945086644}
   - component: {fileID: 114327742626344956}
   - component: {fileID: 114843351824256386}
+  - component: {fileID: 114699295407088266}
   m_Layer: 8
   m_Name: Flesh_x4
   m_TagString: Ennemy
@@ -224,6 +225,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDeactivate: 0
+--- !u!114 &114699295407088266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671544709107808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cdfecb1598284d4ea3eb1bdcc9babd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refillSpeed: 1
 --- !u!114 &114843351824256386
 MonoBehaviour:
   m_ObjectHideFlags: 1

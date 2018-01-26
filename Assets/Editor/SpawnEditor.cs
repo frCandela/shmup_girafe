@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(SpawnClip), true)]
+[CanEditMultipleObjects]
 public class SpawnEditor : Editor
 {
     SpawnClip playable;
