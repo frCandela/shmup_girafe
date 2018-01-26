@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 478.5
+      value: 472
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 269
+      value: 265.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -264,6 +264,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.38177082
       objectReference: {fileID: 0}
+    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
   m_IsPrefabParent: 0
@@ -394,6 +399,7 @@ MonoBehaviour:
     type: 2}
   offsetDestroyTunnel: -10
   trauma: 0
+  reduceTrauma: 0.2
   maxTrauma: 1
   angle: -35
 --- !u!114 &454917185
@@ -798,6 +804,7 @@ PlayableDirector:
     - 970ab8263340eb447805b530e1af1dcd: {fileID: 454917183}
     - 489e983dbf71dfe46b5dddc15c438298: {fileID: 454917183}
     - 48db8b81dae2c4f939ce72aa4591e2eb: {fileID: 454917183}
+    - 3ca786875a6dcfe4a9dcc9c17ad04a89: {fileID: 454917183}
     - f95a1adf45cc7e84da844d6497dc6942: {fileID: 454917183}
     - fd1548436db7dc64a9cb86309863322e: {fileID: 454917183}
     - 8acf7163232a8d741ad62107a662f92c: {fileID: 454917183}
@@ -821,6 +828,7 @@ PlayableDirector:
     - 0dd33f2ab383e4031a218f64800b8a8e: {fileID: 454917183}
     - 4c11513e844b1cd49b6d83da0bdd6c05: {fileID: 454917183}
     - aa7fa9a0b9ec543d49acc87b21aaffdb: {fileID: 454917183}
+    - 43ebf6bd38b5c9048acfe7204ea1b674: {fileID: 454917183}
     - bef3ab3d1f79b4e8d8301ff24c8e53a3: {fileID: 454917183}
     - a5dcc268ccf234438906d29747ea4c16: {fileID: 454917183}
     - 9fa64ad376f169b4b8a90e900de94493: {fileID: 454917183}
@@ -838,6 +846,7 @@ PlayableDirector:
     - aad9a09e6ba33774e8b954e01e752cce: {fileID: 454917183}
     - ec9ee5ec610704383b9f7d1318a01a02: {fileID: 454917183}
     - 42e1959a7a928ac469b6b981c66d72fb: {fileID: 454917183}
+    - 5acadd3e3593e7b44875d9899980a091: {fileID: 454917183}
     - 8ffdfb974f2a89242b4fc65af5147989: {fileID: 454917183}
     - 419418ed58389ef4eb07755fc76deb60: {fileID: 454917183}
     - d6a41b27c976b4de1bcf2bb1d8a6f4df: {fileID: 454917183}
@@ -858,6 +867,7 @@ PlayableDirector:
     - c5becd411356e0c4a87b2c33b68c10d0: {fileID: 454917183}
     - 662019e8c3c16204699274c2e23e0184: {fileID: 454917183}
     - c1552b7c568a2474a814c81279236625: {fileID: 454917183}
+    - 5f1f7f31fdba8314fa8a951fb4dfa32b: {fileID: 454917183}
     - 3c690024537364255b223cce2418700e: {fileID: 454917183}
     - d03e0a0f9d1d11e41a89d5c645ae3b5e: {fileID: 454917183}
     - 617f59ef52157a340910dd9cb2c81a83: {fileID: 454917183}
@@ -872,6 +882,7 @@ PlayableDirector:
     - 470b1a6ce24f74442a74965f052c0999: {fileID: 454917183}
     - 034c9cf3e50386349962d1b36206f58f: {fileID: 454917183}
     - 7f6c6725d5eb50f44899f63eeec3bf6d: {fileID: 454917183}
+    - c89cf1179a935b54f9182c3d01d3a7dd: {fileID: 454917183}
     - 74284ce7547699b4788c594e0cb94ac6: {fileID: 454917183}
     - e80bb0110e246452c9da4e1a06fd8f2e: {fileID: 454917183}
     - 844867d55e5db4f448dade33ba2944c1: {fileID: 454917183}
@@ -906,6 +917,7 @@ PlayableDirector:
     - a30cf20fd455f4cab9da08671f8ea4f5: {fileID: 454917183}
     - 00de2070f2fc6499388e0049974a1edc: {fileID: 454917183}
     - 941c2aac1cfbb41e98e3e8fd16ae8196: {fileID: 454917183}
+    - 1577f805b67c4b94fb0bd681bc2c9150: {fileID: 454917183}
     - 6c6883c14af074dc3b90e8d769ffd841: {fileID: 454917183}
     - 75626afe9b3a140028980c06a6ee2f7a: {fileID: 454917183}
     - 76c93d65fe6d58648a19ed90cc2a9a48: {fileID: 454917183}
@@ -920,6 +932,7 @@ PlayableDirector:
     - 1dc197543748046818e317e5cd8e95dc: {fileID: 454917183}
     - dfb5d8968c613dc4e81ed87629d1a25a: {fileID: 454917183}
     - 953127793217d4a379752b3dba84af75: {fileID: 454917183}
+    - 2565002561b3e8e4091319b0c1f91baf: {fileID: 454917183}
     - b8d68a84678b64c8b9d6d55daeb3a124: {fileID: 454917183}
     - 827bc26426fde430481f2cbcc99a6da1: {fileID: 454917183}
     - b6bb8a6c0e33ea3418632c9108bbaa89: {fileID: 454917183}
@@ -945,12 +958,14 @@ PlayableDirector:
     - 69b2792c143b0454289e7731e400f318: {fileID: 454917183}
     - ea047c5be2b78404cb6a4695f4c99576: {fileID: 454917183}
     - a2d7948521f55b443beddf2a08737a6e: {fileID: 454917183}
+    - 684f0587a68c00d459af22e28899a03b: {fileID: 454917183}
     - c6d0447a3707a41819e993793dcd9f14: {fileID: 454917183}
     - e08f46abf1ba6431aa76f3f04ecbe9fc: {fileID: 454917183}
     - 35f22991ed196447cad693bb9ddc9cfe: {fileID: 454917183}
     - 9c75c9a59739f4b8db8e9ac69e3ebcdf: {fileID: 454917183}
     - fa1f483674648574890a71ee385db185: {fileID: 454917183}
     - 893f972dba4a149c3866eceac26b5df7: {fileID: 454917183}
+    - 7eaed8e4ce3367148b672e7bb564b9a2: {fileID: 454917183}
     - 8be19ad55938e924cade5f301ed20858: {fileID: 454917183}
     - 128206f8b604589499cd9e66b1297e17: {fileID: 454917183}
     - 7459e3e156c70954cb17a77407f92580: {fileID: 454917183}
@@ -978,6 +993,7 @@ PlayableDirector:
     - 19839b56d81a07a499f01b95054931a5: {fileID: 454917183}
     - 2c4ee38f940a84412be3a94b46af1294: {fileID: 454917183}
     - 0251435357c3a964eb3c693c98357b1e: {fileID: 454917183}
+    - 7a773907eaed5494ab059db347c480a2: {fileID: 454917183}
     - 9f2a92e2c8bab4299a392c311ab55d12: {fileID: 454917183}
     - 2acd40b5c318b9544a3dde19ba4cd577: {fileID: 454917183}
     - 3613996ff32911d48b4ff5a3b5f93f2d: {fileID: 454917183}
@@ -992,11 +1008,13 @@ PlayableDirector:
     - 69423a943d656374cbf30edf96009c45: {fileID: 454917183}
     - 05024579156464b69a521f332d693e32: {fileID: 454917183}
     - 52f0b7256172d6740b53a1c84bc2f92f: {fileID: 454917183}
+    - e2fdb8d5f77509e4da94d0694305f07a: {fileID: 454917183}
     - ad8c6d404eabc4444bc8a6c3750788fe: {fileID: 454917183}
     - 2065d6282f4d54861a6578eeb2b1416f: {fileID: 454917183}
     - 7148d568fb072499d81d4ccc13d5b168: {fileID: 454917183}
     - 16f1b8e9670d5490aa06f4ebfa1e09f1: {fileID: 454917183}
     - 8ceab3f4194a84240806089a5d9dce45: {fileID: 454917183}
+    - 6d263e32135502c4d858dddac5136941: {fileID: 454917183}
     - c4f944fca1ed242278d9487f6e017245: {fileID: 454917183}
     - d922346fa7b1f0e4bab7fb1b13d77239: {fileID: 454917183}
     - 5b8e2d62b8f4a4744814cd3fe4b91d41: {fileID: 454917183}
@@ -1033,6 +1051,7 @@ PlayableDirector:
     - e0257016ea94b4ae2a9257c2e123f24f: {fileID: 454917183}
     - 9a0401d4dcb924b4ba2f30feeec9f929: {fileID: 454917183}
     - fac543673d46f8b45a392f76f4b4046f: {fileID: 454917183}
+    - 41a8cbdfdc10c7f4fadda9045f1ba392: {fileID: 454917183}
     - f6c7b338eb31a314597144cadb507127: {fileID: 454917183}
     - 0630d10c60434494bbde1f00fa507700: {fileID: 454917183}
     - 8a2d66a35bf904d8394888d86ccc8365: {fileID: 454917183}
@@ -1061,7 +1080,10 @@ PlayableDirector:
     - 4e33e02c8eee64c46aaef4e16370e695: {fileID: 454917183}
     - f90527afb17434df1b495a19b0f1344f: {fileID: 454917183}
     - 35f4f2c44a93e4ef7a46d0f458a0d74f: {fileID: 454917183}
+    - 7e05c5aa419cec9448abc097f305d1df: {fileID: 454917183}
     - b7c3b804335aa244885ee661c9f07927: {fileID: 454917183}
+    - e37aee873c294614db12dbe33750639c: {fileID: 454917183}
+    - 3771795229a3f0d47951bfee61de1e17: {fileID: 454917183}
     - 95c647f5a7c064169bb5451ef49f2a2f: {fileID: 454917183}
     - 94c392fdcaa5add4d8dc1f569419c545: {fileID: 454917183}
     - 8963e40c507caa84e83141002fe1780a: {fileID: 454917183}
@@ -1081,12 +1103,15 @@ PlayableDirector:
     - 2f9ee631bc081459f94985ba18cfd2aa: {fileID: 454917183}
     - 73c48ce371f432a45a736c9bde66fa95: {fileID: 454917183}
     - 9a9b4cd3a52dd4bc0a8bc2e25346d1f3: {fileID: 454917183}
+    - 76a363fd34fb8aa45b8f5185b23cdcba: {fileID: 454917183}
     - fca4c48ed7e158a4dbd3be3d692bcce7: {fileID: 454917183}
     - c8aea8c38a665504e918daa884d5f3f4: {fileID: 454917183}
     - 2256dc2dd7dd6410684555865c7bf9bf: {fileID: 454917183}
+    - 218b58a8a4dcff646bde09bcb7115a26: {fileID: 454917183}
     - 9a74c726a5441ff4cb3fd31ac5d73c5c: {fileID: 454917183}
     - 48f1133695b6d4aa4991b4413f474675: {fileID: 454917183}
     - 045f1f7a82d37a2438ea93135bd98fd7: {fileID: 454917183}
+    - be47f217a155cc94a8b964a2d322812f: {fileID: 454917183}
     - 3361cd62a8d2c4b2497d080b018bf58b: {fileID: 454917183}
     - eae2193be68544ac286b7c8b97b27bcf: {fileID: 454917183}
     - 04eb912c1ea934507ac1f2657cf0bbd8: {fileID: 454917183}
@@ -1095,6 +1120,7 @@ PlayableDirector:
     - 1ecf6ff95fa084c408dd2c92cc24de23: {fileID: 454917183}
     - b3e72b6b8e7ac774c9322f3ebeb01d1c: {fileID: 454917183}
     - 8b324657e2f5d99429d23f1955946ea2: {fileID: 454917183}
+    - 3ed51387221f39946a1ce3ef68936f45: {fileID: 454917183}
     - b0a496537ca5da74296389c9dbe5f64f: {fileID: 454917183}
     - 844775d0789db41bd85c38db823ddfdc: {fileID: 454917183}
     - b24c46b7b96a9b249b172f38c651cc33: {fileID: 454917183}
@@ -1103,6 +1129,7 @@ PlayableDirector:
     - ac5c1948e6053014897a128f45198806: {fileID: 454917183}
     - fbba91f97fd894f46bf2eac8f945772c: {fileID: 454917183}
     - 79c7258daa5a39344ba7a0ab37d0645d: {fileID: 454917183}
+    - 34e3ba68892c72842ac9a57399c35427: {fileID: 454917183}
     - abb800216cf8547879ace76a122c121a: {fileID: 454917183}
     - 3c53f2b5dc77748ffa738aa2d11df0d9: {fileID: 454917183}
     - ff784b073dc342540ac3a6af7b717243: {fileID: 454917183}
@@ -1116,13 +1143,16 @@ PlayableDirector:
     - 75482aab365e18641a7fecc16253c89f: {fileID: 454917183}
     - 65f7b11b49bf34576b23e9bbee108bbc: {fileID: 454917183}
     - 36a64f7792fb0486e9e933c05995f46c: {fileID: 454917183}
+    - 7542dbb97fd5b9d46831f53e990fe182: {fileID: 454917183}
     - bf029935b491c4e1fb6f4f28e3c803e2: {fileID: 454917183}
+    - 5a659328a728d014e8c747911767fff7: {fileID: 454917183}
     - 310c96934e7ab4df28943198a0cdaf1d: {fileID: 454917183}
     - 2d0fa8364c436004aba2a50cd717dd73: {fileID: 454917183}
     - 5a79df19883ed6546a094b60c4869d5a: {fileID: 454917183}
     - 0ba959a349a33a54691b9c79d9258cd7: {fileID: 454917183}
     - ec6410f01eecf4d1d8181b20d0306ace: {fileID: 454917183}
     - 936da5ec5ad7b4d1eb45ddd8084a4ad6: {fileID: 454917183}
+    - 61ffa983f5dc7ef4ab0aa4faf1e8fef4: {fileID: 454917183}
     - b9cae16182dcd2b42bed4546f2496aa3: {fileID: 454917183}
     - cc3f73e03c4f49a40822022c1df76624: {fileID: 454917183}
     - d8169cb420329421eb148d5cbc196565: {fileID: 454917183}
@@ -1136,6 +1166,7 @@ PlayableDirector:
     - 4f319c5282fb2498f81e22b0d9519317: {fileID: 454917183}
     - 79055b3054f136f408faf36405335a93: {fileID: 454917183}
     - 8748ab0becea4a8498e69f06fb7b5396: {fileID: 454917183}
+    - c765af8aa7bdf7c46983138e0519c1eb: {fileID: 454917183}
     - 161613941d0624e4abd327b0d33f5329: {fileID: 454917183}
     - ff1dc87970bf3104cae2e5f33e17359d: {fileID: 454917183}
     - ca0da14a4d77bed44a425a649d6e534c: {fileID: 454917183}
@@ -1167,6 +1198,7 @@ PlayableDirector:
     - 91c60dbc1c275dc4aa4af4b97b4885db: {fileID: 454917183}
     - 4bd0650f83f594840a8f4b763a19387f: {fileID: 454917183}
     - d8affd008a78642a2882f3bc52082561: {fileID: 454917183}
+    - 8b227f8827ab3d04290f7d11d6477689: {fileID: 454917183}
     - 109466e636488f64e8e686d84784cdba: {fileID: 454917183}
     - e5959d8af0251e9478eea68ace9286b5: {fileID: 454917183}
     - a0f4b9eb9aedd43b2b7ee756d7769e06: {fileID: 454917183}
@@ -1199,6 +1231,8 @@ MonoBehaviour:
   soundManager: {fileID: 1681368128}
   playerExplosion: {fileID: 0}
   bulletImpact: {fileID: 0}
+  hackFillerPrefab: {fileID: 0}
+  barPosition: {x: 0, y: 0, z: 0}
   trackNames:
   - Virus Phase
   - Multi x1
@@ -1226,10 +1260,9 @@ MonoBehaviour:
   - -12
   - -20
   scoreLossHitVirus: 1000
-  hackPerCombo: 2
   scorePeerHack: 500
-  checkpointRefreshTime: 5
-  initComboMultiplier: 0
+  levelDuration: 200
+  initComboMultiplier: 3
 --- !u!114 &1301998662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,6 +1274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebefbb00cde96549bc9aa2f16a2b46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameDuration: 180
+  _timerText: {fileID: 0}
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0

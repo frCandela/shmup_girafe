@@ -13,15 +13,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   bursts:
-  - amount: 4
-    spread: 55
-    angle: -25.016891
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
-  - amount: 4
-    spread: 67
-    angle: 20.556042
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
-  - amount: 4
-    spread: 67
-    angle: -2.9356768
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+  - amount: 3
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 3
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 3
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 1
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 1
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 1
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 1
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 1
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 1
+    spread: 180
+    angle: 0
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
