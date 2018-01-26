@@ -53,6 +53,8 @@ public class UIBar : MonoBehaviour {
         int array = value + hack;
         if (value == 3)
             array++;
+        if (value == 4)
+            array = multiText.Length - 1;
         multiBefore.enabled = true;
         if (array > 0)
             multiBefore.sprite = multiText[array - 1];
