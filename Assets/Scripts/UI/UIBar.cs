@@ -30,6 +30,7 @@ public class UIBar : MonoBehaviour {
     public MouseController mouseController;
     public Health health;
     public GameObject leader;
+    public InputField input;
 
     private float currentHackPower = 0f;
 	private Image hackGlow;
@@ -164,7 +165,7 @@ public class UIBar : MonoBehaviour {
 
     public void sendScore()
     {
-        Debug.Log(GameManager.instance.getScores());
-        StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), "Tog"));
+        GameManager.instance.saveScore(11);
+        StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
     }
 }

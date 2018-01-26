@@ -6,5 +6,6 @@ public class SoundManager : MonoBehaviour
 {
     public FMODUnity.StudioEventEmitter hackSurvol;
     public FMODUnity.StudioEventEmitter hitEnnemies;
+    public FMODUnity.StudioEventEmitter wrong;
 
 }

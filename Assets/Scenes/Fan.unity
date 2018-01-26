@@ -222,17 +222,17 @@ Prefab:
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 227.62262
+      value: 1002.2804
       objectReference: {fileID: 0}
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 950
+      value: 950.00006
       objectReference: {fileID: 0}
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 504.48553
+      value: 2343.8955
       objectReference: {fileID: 0}
     - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -272,7 +272,7 @@ Prefab:
     - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 523.89545
+      value: 2363.3054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
@@ -1285,7 +1285,6 @@ MonoBehaviour:
   - -20
   scoreLossHitVirus: 1000
   scorePeerHack: 500
-  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
@@ -1303,7 +1302,7 @@ MonoBehaviour:
   _countdown: 1
   _countdownDuration: 5
   _countdownDisplay: {fileID: 0}
-  _countdownText: {fileID: 0}
+  _countdownImages: []
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0
