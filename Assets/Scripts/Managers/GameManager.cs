@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour {
     private float checkpointRefreshTime;
     private const int checkpointCount = 12;
     private int checkpointId = 0;
-    public float levelDuration = 200;
+   	private float levelDuration = 200;
     private float timeLevel = 0;
 
     //Sound
@@ -80,6 +80,8 @@ public class GameManager : MonoBehaviour {
         else if (instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+
+		levelDuration = GetComponent<TimeManager> ()._gameDuration;
     }
 
     //Initializes the game for each level.

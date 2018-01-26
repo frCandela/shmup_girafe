@@ -909,7 +909,6 @@ MonoBehaviour:
   - -20
   scoreLossHitVirus: 1000
   scorePeerHack: 500
-  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
@@ -924,6 +923,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDuration: 180
   _timerText: {fileID: 1340386493}
+  _countdown: 1
+  _countdownDuration: 7
+  _countdownDisplay: {fileID: 1546980953}
+  _countdownText: {fileID: 1418685509}
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0
@@ -943,6 +946,17 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2028260108}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1418685509 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114527302595419756, guid: cd9ae7963527bec44bb5a5221b77a287,
+    type: 2}
+  m_PrefabInternal: {fileID: 2028260108}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1546980953 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1661939412986532, guid: cd9ae7963527bec44bb5a5221b77a287,
+    type: 2}
+  m_PrefabInternal: {fileID: 2028260108}
 --- !u!1 &1581928574
 GameObject:
   m_ObjectHideFlags: 0
