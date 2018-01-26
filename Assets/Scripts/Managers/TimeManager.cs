@@ -10,11 +10,15 @@ public class TimeManager : MonoBehaviour
 	[Tooltip("In seconds")]
 	[SerializeField] private float _gameDuration = 180f;
 	[SerializeField] private Text _timerText;
+	public bool _countdown = true;
+	[SerializeField] private float _countdownDuration = 3f;
+	[SerializeField] private Text _countdownText;
 	private float _elapsedTime = 0f;
 	private float _mins;
 	private float _secs;
 	private float _cents;
 	private float _timeLeft;
+	private bool _gameStarted = false;
 
     private static float m_slowDownDuration;
     private static float m_timeElapsedSlowMo;
@@ -33,6 +37,10 @@ public class TimeManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         InitTime();
+		if(!_countdown)
+		{
+			_gameStarted = true;
+		}
     }
 
     private void Update()
@@ -42,9 +50,32 @@ public class TimeManager : MonoBehaviour
         if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
             resetSlowMotion();
         
-        DisplayTimer ();
-		_elapsedTime += Time.unscaledDeltaTime;
+        if(!_gameStarted)
+		{
+			DisplayCountdown ();
+			_elapsedTime += Time.unscaledDeltaTime;
+		}
+		else 
+		{
+			DisplayTimer ();
+			_elapsedTime += Time.unscaledDeltaTime;
+		}
     }
+
+	void DisplayCountdown()
+	{
+		if (_countdownText) {
+			_timeLeft = _countdownDuration - Mathf.Floor (_elapsedTime);
+			_countdownText.text = _timeLeft.ToString ("F0");
+			if (_timeLeft < _countdownDuration) {
+				_elapsedTime = 0f;
+				_gameStarted = true;
+			}
+		} else {
+			_gameStarted = true;
+			Debug.LogWarning("No countdown text assigned, game will start automatically.");
+		}
+	}
 
 	void DisplayTimer()
 	{
@@ -56,7 +87,6 @@ public class TimeManager : MonoBehaviour
             _cents = Mathf.Round(_timeLeft * 100) % 100;
             _timerText.text = string.Format("{0:0}:{1:00}:{2:00}", _mins, _secs, _cents);
         }
-
 	}
 
     //Resets the slow motion

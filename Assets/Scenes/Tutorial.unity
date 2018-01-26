@@ -924,6 +924,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDuration: 180
   _timerText: {fileID: 1340386493}
+  _countdown: 1
+  _countdownDuration: 3
+  _countdownText: {fileID: 0}
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0
@@ -1226,7 +1229,7 @@ Prefab:
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2604.8665
+      value: 504.15997
       objectReference: {fileID: 0}
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -1236,7 +1239,7 @@ Prefab:
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1112.187
+      value: 227.48553
       objectReference: {fileID: 0}
     - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -1246,7 +1249,7 @@ Prefab:
     - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2624.2764
+      value: 523.5699
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
