@@ -1055,6 +1055,33 @@ MonoBehaviour:
     position: {x: -0.62666667, y: 0.52}
     angle: 180
     col: {r: 1, g: 0, b: 0.7811184, a: 0.5567101}
+--- !u!114 &114065939766447092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114067523849421890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1457,6 +1484,33 @@ MonoBehaviour:
     position: {x: -0.22666667, y: 0.208}
     angle: 180
     col: {r: 1, g: 0, b: 0.42361307, a: 0.58983725}
+--- !u!114 &114095008938354140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: feabad13647574f408355b49d4f13955
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114096412001844178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1630,6 +1684,33 @@ MonoBehaviour:
     position: {x: -0.04, y: 0.456}
     angle: 180
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114100510325986598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 8d99f4c7c5900a84aa338c451e5f0fac
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114100859512469858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1830,6 +1911,33 @@ MonoBehaviour:
     position: {x: 0.026666667, y: 0.376}
     angle: 180
     col: {r: 1, g: 0, b: 0.7811184, a: 0.5567101}
+--- !u!114 &114110482062568688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114111525039787390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,6 +1992,33 @@ MonoBehaviour:
     position: {x: -0.42666668, y: 0.728}
     angle: 86
     col: {r: 1, g: 0, b: 0.7811184, a: 0.5567101}
+--- !u!114 &114113611829746054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114114708627337578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1992,6 +2127,33 @@ MonoBehaviour:
     position: {x: -0.66, y: 0.512}
     angle: -178
     col: {r: 1, g: 0.70144284, b: 0, a: 0.5453552}
+--- !u!114 &114120113455364050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 276423f67caab984db349e6d7c3ad439
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114120598674447328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2387,8 +2549,8 @@ MonoBehaviour:
     angle: -52
     col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
   - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
-    position: {x: -0.34666666, y: 0.32}
-    angle: 119
+    position: {x: 0.68, y: 0.76}
+    angle: -19
     col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114142755611810324
 MonoBehaviour:
@@ -2417,6 +2579,33 @@ MonoBehaviour:
     position: {x: -0.6, y: 0.808}
     angle: 46
     col: {r: 0.73643064, g: 0, b: 1, a: 0.5202259}
+--- !u!114 &114143255424320164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114148874603003538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2688,6 +2877,33 @@ MonoBehaviour:
     position: {x: -0.61333334, y: 0.816}
     angle: 159
     col: {r: 0.73643064, g: 0, b: 1, a: 0.5202259}
+--- !u!114 &114177283944866754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: e1218beb9f091324cabdf1af7ecd8c42
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114178278368458818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3015,7 +3231,7 @@ MonoBehaviour:
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1671544709107808, guid: e66be065aea244dc89f766cc014406b5, type: 2}
     position: {x: 0.74666667, y: 0.832}
-    angle: 180
+    angle: -129
     col: {r: 0, g: 0.63252497, b: 1, a: 0.5101472}
   - enemy: {fileID: 1201508606819798, guid: c7aec8365ee2449aba7cfdba38d44f8f, type: 2}
     position: {x: 0.12, y: -0.16}
@@ -3261,6 +3477,33 @@ MonoBehaviour:
     position: {x: 0, y: 0.064}
     angle: 180
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
+--- !u!114 &114215853403602610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: bdbce8f198aec164886753414b205f35
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114218076634168898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3315,6 +3558,33 @@ MonoBehaviour:
     position: {x: -0.04, y: 0.456}
     angle: 180
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114220106562209700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114220790994439004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3884,6 +4154,33 @@ MonoBehaviour:
     position: {x: 0.48, y: 0.008}
     angle: 180
     col: {r: 1, g: 0, b: 0.2995348, a: 0.52203524}
+--- !u!114 &114240535166906696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114240810676051600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4418,6 +4715,33 @@ MonoBehaviour:
     position: {x: 0, y: -0.256}
     angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114270679627067712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114272322634745224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5050,6 +5374,33 @@ MonoBehaviour:
     position: {x: -0.68, y: 0.24}
     angle: 142
     col: {r: 0, g: 0.6719489, b: 1, a: 0.5706356}
+--- !u!114 &114300604923113226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114304885575464808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5209,6 +5560,33 @@ MonoBehaviour:
     position: {x: -0.026666667, y: -0.128}
     angle: 180
     col: {r: 0, g: 1, b: 0.51086044, a: 0.5475204}
+--- !u!114 &114318398874757034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114320419360301932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5819,6 +6197,33 @@ MonoBehaviour:
     position: {x: -0.48, y: 0.392}
     angle: 180
     col: {r: 1, g: 0, b: 0.7811184, a: 0.5567101}
+--- !u!114 &114346489788605016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114347559037950626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5870,6 +6275,33 @@ MonoBehaviour:
     position: {x: -0.026666667, y: -0.128}
     angle: 180
     col: {r: 0, g: 1, b: 0.51086044, a: 0.5475204}
+--- !u!114 &114347874309547764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 7e22441590749094da4e4c4677f20652
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114349409805676494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6532,6 +6964,33 @@ MonoBehaviour:
     position: {x: 0, y: -0.256}
     angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114369920557439656
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: b78947dd4442bbf4a86c2ad74d96c2c6
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114370827139537224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6984,6 +7443,33 @@ MonoBehaviour:
     position: {x: -0.73333335, y: -0.36}
     angle: 144
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114400624333869992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: ae71f8f9f0045a743bf0a2a809b80397
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114400792243636018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7208,6 +7694,33 @@ MonoBehaviour:
     position: {x: -0.73333335, y: -0.36}
     angle: 144
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114418896171098898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: f36780466d0a0634f9abf6089b0ec32f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114420046515646500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7637,6 +8150,33 @@ MonoBehaviour:
     position: {x: 0.31229228, y: -0.56048673}
     angle: 180
     col: {r: 1, g: 0, b: 0.42361307, a: 0.58983725}
+--- !u!114 &114442306331566510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: f1917ab3329fabc4c9df0a0bff3f02e0
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114443391370079476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7753,6 +8293,33 @@ MonoBehaviour:
     position: {x: -0.38666666, y: 0.288}
     angle: -90
     col: {r: 0.03860402, g: 1, b: 0, a: 0.56090057}
+--- !u!114 &114448099548172248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: dbd1696699a62ba4e9eb71902da60b65
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114453691965581548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8104,6 +8671,60 @@ MonoBehaviour:
     position: {x: 0.68, y: -0.064}
     angle: 180
     col: {r: 1, g: 0.970816, b: 0, a: 0.5147102}
+--- !u!114 &114470476176372432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
+--- !u!114 &114472216685408272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 7ebbea8728733a14cb68f99e6f484b12
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114472985739707554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8591,6 +9212,33 @@ MonoBehaviour:
     position: {x: 0, y: 0.568}
     angle: 180
     col: {r: 1, g: 0, b: 0.42361307, a: 0.58983725}
+--- !u!114 &114498015436510112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114498579481659538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8877,6 +9525,33 @@ MonoBehaviour:
     position: {x: 0.026666667, y: 0.376}
     angle: 140
     col: {r: 1, g: 0, b: 0.7811184, a: 0.5567101}
+--- !u!114 &114519415586726012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114521502699324382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9086,6 +9761,33 @@ MonoBehaviour:
     position: {x: 0, y: 0.064}
     angle: 180
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
+--- !u!114 &114535222366305304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114535376804466594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9132,6 +9834,33 @@ MonoBehaviour:
     position: {x: -0.68, y: 0.352}
     angle: 63
     col: {r: 1, g: 0, b: 0.7370925, a: 0.58033127}
+--- !u!114 &114540203723463936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: e963fdc013a478b42b7cea2a558aef40
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114541932528947318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9199,7 +9928,7 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1671544709107808, guid: eaa4425aa30e943f0a73711d4707e593, type: 2}
     position: {x: 0.6533333, y: 0.104}
-    angle: -143
+    angle: 180
     col: {r: 1, g: 0.38001972, b: 0, a: 0.5019997}
   - enemy: {fileID: 1671544709107808, guid: eaa4425aa30e943f0a73711d4707e593, type: 2}
     position: {x: -0.68, y: 0.048}
@@ -9209,6 +9938,33 @@ MonoBehaviour:
     position: {x: -0.68, y: 0.36}
     angle: 130
     col: {r: 0.16457629, g: 1, b: 0, a: 0.55471003}
+--- !u!114 &114548354025580404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114550091078613564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9279,6 +10035,33 @@ MonoBehaviour:
     position: {x: -0.026666667, y: 0.328}
     angle: -173
     col: {r: 1, g: 0, b: 0.06666279, a: 0.5057242}
+--- !u!114 &114553325961769598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114554723384626396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9314,6 +10097,33 @@ MonoBehaviour:
     position: {x: 0.30666667, y: 0.12}
     angle: 87
     col: {r: 0.73643064, g: 0, b: 1, a: 0.5202259}
+--- !u!114 &114554822195996528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114558538651282680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9631,6 +10441,25 @@ MonoBehaviour:
     position: {x: 0.31229228, y: -0.56048673}
     angle: 180
     col: {r: 1, g: 0, b: 0.42361307, a: 0.58983725}
+--- !u!114 &114570895617284734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: a1d62ecdb854f2b4a9c2c2a3368c5f35
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1201508606819798, guid: 957531fcd87364e07a86375c8335f5a7, type: 2}
+    position: {x: 0.64, y: 0.784}
+    angle: -149
+    col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
 --- !u!114 &114571451180476796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9712,6 +10541,33 @@ MonoBehaviour:
     position: {x: -0.04, y: 0.456}
     angle: -129
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114577014750993282
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: ba115b5c57d45c840b0bb906b3aa71e4
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114578185211231082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9735,6 +10591,33 @@ MonoBehaviour:
     position: {x: -0.04, y: 0.456}
     angle: 180
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114578546761563754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114580607653290886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10310,6 +11193,60 @@ MonoBehaviour:
     position: {x: 0, y: 0.064}
     angle: 180
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
+--- !u!114 &114618593899182242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 1f17f5ba93f29a346aaa1e1518ee0869
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
+--- !u!114 &114620129364573070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 78c6487a3ce24364e9e4a2ed471521ec
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114621229266626870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10631,6 +11568,33 @@ MonoBehaviour:
     position: {x: -0.5466667, y: 0.208}
     angle: 121
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114635479316260800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114636115481413008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10925,6 +11889,33 @@ MonoBehaviour:
     position: {x: 0.5466667, y: 0.296}
     angle: -178
     col: {r: 1, g: 0.70144284, b: 0, a: 0.5453552}
+--- !u!114 &114652243260207816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114654714898034864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12570,6 +13561,33 @@ MonoBehaviour:
     position: {x: 0.68, y: 0.352}
     angle: -90
     col: {r: 0.5553112, g: 1, b: 0, a: 0.5624013}
+--- !u!114 &114726417763769768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114727789939388772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12643,6 +13661,33 @@ MonoBehaviour:
     position: {x: -0.38666666, y: 0.792}
     angle: 93
     col: {r: 0.14137602, g: 0, b: 1, a: 0.5940576}
+--- !u!114 &114731236776977236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 2836dfc44829c6e4e9b1783ef947b5a1
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114731271198604312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12940,6 +13985,33 @@ MonoBehaviour:
     position: {x: -0.04, y: 0.456}
     angle: 180
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114747113023539212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114747323146621424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13141,6 +14213,60 @@ MonoBehaviour:
     position: {x: -0.06666667, y: 0.28}
     angle: -90
     col: {r: 0.5553112, g: 1, b: 0, a: 0.5624013}
+--- !u!114 &114756338603145430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
+--- !u!114 &114756382191959116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 6a4425d0c5f4a4449a4e093ba31814dd
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114757266857981816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13763,6 +14889,33 @@ MonoBehaviour:
     position: {x: 0.68, y: 0.824}
     angle: -154
     col: {r: 0.19473219, g: 1, b: 0, a: 0.5872081}
+--- !u!114 &114781287875305480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114782586849379114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14080,6 +15233,33 @@ MonoBehaviour:
     position: {x: 0.49333334, y: 0.264}
     angle: 177
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
+--- !u!114 &114800856949462194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114801710611418860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14463,6 +15643,33 @@ MonoBehaviour:
     position: {x: -0.026666667, y: 0.328}
     angle: 84
     col: {r: 1, g: 0, b: 0.06666279, a: 0.5057242}
+--- !u!114 &114816221705977422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114816985826207320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14919,6 +16126,33 @@ MonoBehaviour:
     position: {x: 0.38666666, y: 0.8}
     angle: -145
     col: {r: 1, g: 0, b: 0.20360851, a: 0.5178809}
+--- !u!114 &114836305223325550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114838284054419926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15012,6 +16246,33 @@ MonoBehaviour:
     position: {x: 0.68, y: -0.064}
     angle: 180
     col: {r: 1, g: 0.970816, b: 0, a: 0.5147102}
+--- !u!114 &114841447376235340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114841458633523574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15085,6 +16346,33 @@ MonoBehaviour:
     position: {x: 0, y: -0.256}
     angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114842973823011362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: c20a83b970d33c3468dd8fe494f72120
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114843287969222784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15116,6 +16404,33 @@ MonoBehaviour:
     position: {x: -0.7733333, y: 0.808}
     angle: 145
     col: {r: 0.14137602, g: 0, b: 1, a: 0.5940576}
+--- !u!114 &114844202846757900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: b5798a5dca612704988fe249699c35eb
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114850249625642442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15174,6 +16489,33 @@ MonoBehaviour:
     position: {x: -0.68, y: 0.808}
     angle: 136
     col: {r: 0, g: 1, b: 0.47598124, a: 0.53056276}
+--- !u!114 &114851938359811912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: f6050fe2004f60044b2528a56793fe9d
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114852428331132328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15352,6 +16694,33 @@ MonoBehaviour:
     position: {x: 0.49333334, y: 0.264}
     angle: 177
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
+--- !u!114 &114863923695419030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: a06db049515ced34e8291b5458e18c54
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114864688737871316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15453,6 +16822,33 @@ MonoBehaviour:
     position: {x: -0.7866667, y: -0.872}
     angle: 144
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114866290422437344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: a71b99e2a691fee4283e963c1eaf3278
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114866327541652676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15550,6 +16946,33 @@ MonoBehaviour:
     position: {x: -0.70666665, y: 0.744}
     angle: 119
     col: {r: 1, g: 0, b: 0.7811184, a: 0.5567101}
+--- !u!114 &114875391806283298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114878895208521506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15581,6 +17004,33 @@ MonoBehaviour:
     position: {x: -0.6, y: 0.808}
     angle: 180
     col: {r: 0.73643064, g: 0, b: 1, a: 0.5202259}
+--- !u!114 &114880823082142198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114885251937704066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15674,6 +17124,60 @@ MonoBehaviour:
     position: {x: 0.31229228, y: -0.56048673}
     angle: 180
     col: {r: 1, g: 0, b: 0.42361307, a: 0.58983725}
+--- !u!114 &114892827581865898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
+--- !u!114 &114895125206451522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114898163174911482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15883,6 +17387,33 @@ MonoBehaviour:
     position: {x: 0, y: -0.256}
     angle: -97
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114912190195647106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114912193107560378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16111,6 +17642,33 @@ MonoBehaviour:
     position: {x: -0.64, y: 0.008}
     angle: 123
     col: {r: 1, g: 0.1865044, b: 0, a: 0.5044969}
+--- !u!114 &114922350946852740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 0463de9803b1b4214825a090c42d752e
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
+    position: {x: 0.64, y: 0.784}
+    angle: -149
+    col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
+  - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
+    position: {x: -0.68, y: 0.784}
+    angle: 141
+    col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
+  - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
+    position: {x: 0, y: -0.256}
+    angle: -97
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
 --- !u!114 &114922532355565850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16308,6 +17866,33 @@ MonoBehaviour:
     position: {x: -0.66, y: 0.512}
     angle: -178
     col: {r: 1, g: 0.70144284, b: 0, a: 0.5453552}
+--- !u!114 &114928054806392848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 4899efbcf86a1ae40911af996696c13d
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114929791844630574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16343,6 +17928,87 @@ MonoBehaviour:
     position: {x: -0.73333335, y: -0.36}
     angle: 144
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+--- !u!114 &114930387854616110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: f20b1392eec7f3441bae6a1c7ed3ae98
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
+--- !u!114 &114930560496215312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
+--- !u!114 &114930629183016126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114931521090174336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16447,6 +18113,33 @@ MonoBehaviour:
     position: {x: -0.74666667, y: 0.68}
     angle: 88
     col: {r: 0, g: 0.0510211, b: 1, a: 0.50362945}
+--- !u!114 &114933168987413416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3325e24d34518b4cad63c2e57c5d511, type: 3}
+  m_Name: SpawnClip(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  spawner:
+    exposedName: 82fab30b3dbc7534ebebc69c5b29178f
+    defaultValue: {fileID: 0}
+  enemies:
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: -0.4, y: 0.688}
+    angle: -129
+    col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
+  - enemy: {fileID: 1351586955025634, guid: 33a114b18d31cd744ba9e265dfa3289b, type: 2}
+    position: {x: 0.32, y: -0.272}
+    angle: -52
+    col: {r: 0.9463897, g: 0, b: 1, a: 0.5082359}
+  - enemy: {fileID: 1351586955025634, guid: 3ab4b0cb920b945e6a28900df2070ccb, type: 2}
+    position: {x: -0.34666666, y: 0.32}
+    angle: 119
+    col: {r: 0, g: 1, b: 0.50399065, a: 0.5868561}
 --- !u!114 &114934977395942424
 MonoBehaviour:
   m_ObjectHideFlags: 1

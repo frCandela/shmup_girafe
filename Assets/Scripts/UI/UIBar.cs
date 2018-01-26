@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,13 +22,17 @@ public class UIBar : MonoBehaviour {
     public Image multi;
     public Image multiBefore;
     public Image multiAfter;
+	public Image multiBarUp;
+	public Image multiBarDown;
     public Sprite[] multiText;
 
-    [Header("Linked gamebjects :")]
+    [Header("Linked GameObjects :")]
     public MouseController mouseController;
     public Health health;
+    public GameObject leader;
+    public InputField input;
 
-	private float currentHackPower = 0f;
+    private float currentHackPower = 0f;
 	private Image hackGlow;
 	private Animator outGlowAnim;
 
@@ -53,6 +58,8 @@ public class UIBar : MonoBehaviour {
         int array = value + hack;
         if (value == 3)
             array++;
+        if (value == 4)
+            array = multiText.Length - 1;
         multiBefore.enabled = true;
         if (array > 0)
             multiBefore.sprite = multiText[array - 1];
@@ -60,6 +67,9 @@ public class UIBar : MonoBehaviour {
             multiBefore.enabled = false;
 
         multi.sprite = multiText[array];
+		multi.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+		multiBarUp.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+		multiBarDown.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 
         multiAfter.enabled = true;
         if (array < multiText.Length - 1)
@@ -147,4 +157,15 @@ public class UIBar : MonoBehaviour {
 				inGlow.SetBool ("isGlowing", false);
 		}
 	}
+
+    public void showLeaderScreen()
+    {
+        leader.SetActive(true);
+    }
+
+    public void sendScore()
+    {
+        GameManager.instance.saveScore(11);
+        StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
+    }
 }

@@ -8,17 +8,20 @@ public class TimeManager : MonoBehaviour
 {
 	//Timer variables
 	[Tooltip("In seconds")]
-	[SerializeField] private float _gameDuration = 180f;
+	public float _gameDuration = 180f;
 	[SerializeField] private Text _timerText;
 	[SerializeField] private bool _countdown = true;
 	[SerializeField] private float _countdownDuration = 5f;
 	[SerializeField] private GameObject _countdownDisplay;
-	[SerializeField] private Text _countdownText;
+	[SerializeField] private Sprite[] _countdownImages;
+	private Image _countdownImage;
 	private float _elapsedTime = 0f;
+	private float _elapsedCD = 0f;
 	private float _mins;
 	private float _secs;
 	private float _cents;
 	private float _timeLeft;
+	private float _countdownLeft;
 	private bool _gameStarted = false;
 
     private static float m_slowDownDuration;
@@ -38,12 +41,18 @@ public class TimeManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         InitTime();
+    }
+
+	void Start()
+	{
+		_countdownImage = _countdownDisplay.GetComponent<Image> ();
+		_timerText.color = Color.white;
 		if (!_countdown) {
 			_countdownDisplay.SetActive (false);
 			_gameStarted = true;
 		} else
 			StartCoroutine (DisplayCountdown ());
-    }
+	}
 
     private void Update()
     {
@@ -52,27 +61,24 @@ public class TimeManager : MonoBehaviour
         if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
             resetSlowMotion();
         
+		DisplayTimer ();
         if(_gameStarted)
-		{
-			DisplayTimer ();
 			_elapsedTime += Time.unscaledDeltaTime;
-		}
     }
 
 	IEnumerator DisplayCountdown()
 	{
-		if (_countdownText) 
+		if (_countdownDisplay) 
 		{
-			while(_elapsedTime < _countdownDuration)
+			while(_elapsedCD < _countdownDuration)
 			{
-				_timeLeft = _countdownDuration - Mathf.Floor (_elapsedTime);
-				_countdownText.text = _timeLeft.ToString ("F0");
+				_countdownLeft = _countdownDuration - Mathf.Floor (_elapsedCD);
+				_countdownImage.sprite = _countdownImages [(int)_countdownLeft];
 				yield return null;
-				_elapsedTime += Time.unscaledDeltaTime;
+				_elapsedCD += Time.unscaledDeltaTime;
 			}
-
-			_elapsedTime = 0f;
-			_countdownText.text = "HACK!";
+			_countdownImage.sprite = _countdownImages [0];
+			_elapsedCD = 0f;
 			_gameStarted = true;
 			yield return new WaitForSeconds (1f);
 			_countdownDisplay.SetActive (false);
@@ -93,7 +99,31 @@ public class TimeManager : MonoBehaviour
             _secs = Mathf.Floor(_timeLeft % 60);
             _cents = Mathf.Round(_timeLeft * 100) % 100;
             _timerText.text = string.Format("{0:0}:{1:00}:{2:00}", _mins, _secs, _cents);
+
+			//red last ten seconds
+			if (_timeLeft < 10f) 
+			{
+				_timerText.color = Color.red;
+				if(_timeLeft < 0f)
+				{
+					_gameStarted = false;
+					StartCoroutine (EndAnimation ());
+				}
+			}
+			
         }
+	}
+
+	IEnumerator EndAnimation()
+	{
+		float timing = 3f;
+		float elapsedTime = 0f;
+		while(elapsedTime < timing)
+		{
+			GameManager.instance.MainCameraController.VerticalSpeed = Mathf.Lerp (0, 5f, elapsedTime / timing);
+			yield return new WaitForEndOfFrame ();
+		}
+		//pop up leaderboard
 	}
 
     //Resets the slow motion
