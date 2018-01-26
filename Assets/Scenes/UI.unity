@@ -312,7 +312,6 @@ MonoBehaviour:
   screenLimit: 7
   VirusShipPrefab: {fileID: 114690295686379222, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
-  virusShip: {fileID: 0}
   hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
     type: 2}
   hackPointer: {fileID: 0}
@@ -871,12 +870,16 @@ MonoBehaviour:
     type: 2}
   bulletImpact: {fileID: 1440419746047944, guid: 14c1057c0ebe34bd6947b5718678dc0b,
     type: 2}
+  hackFillerPrefab: {fileID: 1084652459621800, guid: 8aa7fc1fcaf844324bd824754ac9df8b,
+    type: 2}
+  barPosition: {x: 0, y: 0, z: 0}
   trackNames:
   - Virus Phase
   - Multi x1
   - Multi x2
   - Multi x4
   - Multi x8
+  mainLight: {fileID: 1581928575}
   lights:
   - {fileID: 1103002388}
   - {fileID: 1776019604}
@@ -912,6 +915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebefbb00cde96549bc9aa2f16a2b46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameDuration: 180
+  _timerText: {fileID: 0}
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0
@@ -1194,15 +1199,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 950
-      objectReference: {fileID: 0}
-    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2303.3684
+      value: 2322.7783
+      objectReference: {fileID: 0}
+    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -1214,14 +1219,23 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 985.21277
       objectReference: {fileID: 0}
-    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2326.4685
-      objectReference: {fileID: 0}
-    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
+      value: 950
+      objectReference: {fileID: 0}
+    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2303.3684
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868928000931584, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223604404736721194, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
