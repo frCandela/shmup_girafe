@@ -41,18 +41,22 @@ public class TimeManager : MonoBehaviour
 
         if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
             resetSlowMotion();
-
-		DisplayTimer ();
+        
+        DisplayTimer ();
 		_elapsedTime += Time.unscaledDeltaTime;
     }
 
 	void DisplayTimer()
 	{
-		_timeLeft = _gameDuration - _elapsedTime;
-		_mins = Mathf.Floor (_timeLeft / 60);
-		_secs = Mathf.Floor (_timeLeft % 60);
-		_cents = Mathf.Round(_timeLeft * 100) % 100;
-		_timerText.text = string.Format ("{0:0}:{1:00}:{2:00}", _mins, _secs, _cents);
+        if(_timerText)
+        {
+            _timeLeft = _gameDuration - _elapsedTime;
+            _mins = Mathf.Floor(_timeLeft / 60);
+            _secs = Mathf.Floor(_timeLeft % 60);
+            _cents = Mathf.Round(_timeLeft * 100) % 100;
+            _timerText.text = string.Format("{0:0}:{1:00}:{2:00}", _mins, _secs, _cents);
+        }
+
 	}
 
     //Resets the slow motion

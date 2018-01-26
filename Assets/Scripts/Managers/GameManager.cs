@@ -192,8 +192,9 @@ public class GameManager : MonoBehaviour {
             score -= scoreLossHitVirus;
             if (score < 0)
                 score = 0;
+            TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
         }
-        TextPopupsGen.generateScorePopup(-scoreLossHitVirus, PlayerController.PossessedPawn.transform.position);
+       
     }
 
     private void hackStarted()
@@ -265,8 +266,6 @@ public class GameManager : MonoBehaviour {
 
         PlayTrack(0);
         SetLights(0);
-
-        PlayerController.resetHack();
     }
 
     public int getScore(){ return score; }
