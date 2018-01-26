@@ -105,15 +105,14 @@ public class TimeManager : MonoBehaviour
 			if (_timeLeft < 10f) 
 			{
 				_timerText.color = Color.red;
-				if(_timeLeft < 0f && _gameStarted)
+				if(_timeLeft < 0f)
 				{
 					_timeLeft = 0f;
 					_timerText.text = string.Format("{0:0}:{1:00}:{2:00}", 0,00,00);
+					if(_gameStarted) StartCoroutine (EndAnimation ());
 					_gameStarted = false;
-					StartCoroutine (EndAnimation ());
 				}
 			}
-			
         }
 	}
 
