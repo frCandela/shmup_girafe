@@ -21,6 +21,8 @@ public class UIBar : MonoBehaviour {
     public Image multi;
     public Image multiBefore;
     public Image multiAfter;
+	public Image multiBarUp;
+	public Image multiBarDown;
     public Sprite[] multiText;
 
     [Header("Linked gamebjects :")]
@@ -62,6 +64,9 @@ public class UIBar : MonoBehaviour {
             multiBefore.enabled = false;
 
         multi.sprite = multiText[array];
+		multi.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+		multiBarUp.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+		multiBarDown.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 
         multiAfter.enabled = true;
         if (array < multiText.Length - 1)
