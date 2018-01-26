@@ -159,11 +159,6 @@ public class GameManager : MonoBehaviour {
     {
         timeLevel += Time.deltaTime;
 
-        if(timeLevel > levelDuration)
-        {
-            MainBar.showLeaderScreen();
-        }
-
         foreach (Light light in lights) {
             light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
             light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
@@ -293,7 +288,7 @@ public class GameManager : MonoBehaviour {
         score += scoreGained;
         return scoreGained;
     }
-    public void saveScore(int check) { Debug.Log("Save " + check + " " + score); scores[check] = score; }
+    public void saveScore(int check) { scores[check] = score; }
     public int[] getScores() { return scores; }
 
     void SetLights(int mult) {

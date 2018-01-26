@@ -14,6 +14,7 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] private float _countdownDuration = 5f;
 	[SerializeField] private GameObject _countdownDisplay;
 	[SerializeField] private Sprite[] _countdownImages;
+	[SerializeField] private Image _fadeOutImage;
 	private Image _countdownImage;
 	private float _elapsedTime = 0f;
 	private float _elapsedCD = 0f;
@@ -104,8 +105,10 @@ public class TimeManager : MonoBehaviour
 			if (_timeLeft < 10f) 
 			{
 				_timerText.color = Color.red;
-				if(_timeLeft < 0f)
+				if(_timeLeft < 0f && _gameStarted)
 				{
+					_timeLeft = 0f;
+					_timerText.text = string.Format("{0:0}:{1:00}:{2:00}", 0,00,00);
 					_gameStarted = false;
 					StartCoroutine (EndAnimation ());
 				}
@@ -118,12 +121,25 @@ public class TimeManager : MonoBehaviour
 	{
 		float timing = 3f;
 		float elapsedTime = 0f;
+		float speed = 0f;
+		float fadeOut = 0f;
 		while(elapsedTime < timing)
 		{
-			GameManager.instance.MainCameraController.VerticalSpeed = Mathf.Lerp (0, 5f, elapsedTime / timing);
+			//speed up camera
+			speed = Mathf.Lerp (0, 100f, elapsedTime / timing);
+			GameManager.instance.MainCameraController.VerticalSpeed = speed;
+
+			//fade out
+			fadeOut = Mathf.Lerp (0, 1f, elapsedTime / timing);
+			_fadeOutImage.color = new Color (0f, 0f, 0f, fadeOut);
+
+			elapsedTime += Time.unscaledDeltaTime;
 			yield return new WaitForEndOfFrame ();
 		}
+		GameManager.instance.MainCameraController.VerticalSpeed = 100f;
+		_fadeOutImage.color = Color.black;
 		//pop up leaderboard
+		GameManager.instance.MainBar.showLeaderScreen ();
 	}
 
     //Resets the slow motion
