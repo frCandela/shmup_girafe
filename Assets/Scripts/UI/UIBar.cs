@@ -48,19 +48,22 @@ public class UIBar : MonoBehaviour {
     }
 
     //Set the multiplierText
-    public void setMulti(int value)
+    public void setMulti(int value, int hack)
     {
+        int array = value + hack;
+        if (value == 3)
+            array++;
         multiBefore.enabled = true;
-        if (value > 0)
-            multiBefore.sprite = multiText[value - 1];
+        if (array > 0)
+            multiBefore.sprite = multiText[array - 1];
         else
             multiBefore.enabled = false;
 
-        multi.sprite = multiText[value];
+        multi.sprite = multiText[array];
 
         multiAfter.enabled = true;
-        if (value < 3)
-            multiAfter.sprite = multiText[value + 1];
+        if (array < multiText.Length - 1)
+            multiAfter.sprite = multiText[array + 1];
         else
             multiAfter.enabled = false;
     }
