@@ -452,7 +452,6 @@ MonoBehaviour:
   screenLimit: 7
   VirusShipPrefab: {fileID: 114690295686379222, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
-  virusShip: {fileID: 0}
   hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
     type: 2}
   hackPointer: {fileID: 0}
