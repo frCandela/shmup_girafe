@@ -34,13 +34,13 @@ MonoBehaviour:
   m_Name: Virus Phase
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 5
+  - m_Start: 3
     m_ClipIn: 0
     m_Asset: {fileID: 114368252127132528, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 14.683333333333334
+  - m_Start: 12.683333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 114156027890183092, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -112,7 +112,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 24.8
+  - m_Start: 22.8
     m_ClipIn: 0
     m_Asset: {fileID: 114429176376450974, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -148,7 +148,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 34.91666666666667
+  - m_Start: 32.91666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 114244722071142896, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -184,7 +184,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 45.03333333333333
+  - m_Start: 43.03333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114923914941693802, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -220,7 +220,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 54.74999999999999
+  - m_Start: 52.74999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114639768488384566, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -256,7 +256,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 65.26666666666667
+  - m_Start: 63.266666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 114672226259955072, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -292,7 +292,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 74.85
+  - m_Start: 72.85
     m_ClipIn: 0
     m_Asset: {fileID: 114589440667238290, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -328,7 +328,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 84.43333333333332
+  - m_Start: 82.43333333333332
     m_ClipIn: 0
     m_Asset: {fileID: 114816128907211876, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -364,7 +364,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 94.01666666666665
+  - m_Start: 92.01666666666665
     m_ClipIn: 0
     m_Asset: {fileID: 114222031853360958, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -400,7 +400,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 103.59999999999998
+  - m_Start: 101.59999999999998
     m_ClipIn: 0
     m_Asset: {fileID: 114077707193400972, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -436,7 +436,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 113.18333333333331
+  - m_Start: 111.18333333333331
     m_ClipIn: 0
     m_Asset: {fileID: 114285410799945070, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -472,7 +472,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 122.76666666666664
+  - m_Start: 120.76666666666664
     m_ClipIn: 0
     m_Asset: {fileID: 114842285796290740, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -508,7 +508,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 132.34999999999997
+  - m_Start: 130.34999999999997
     m_ClipIn: 0
     m_Asset: {fileID: 114531879753607614, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -544,7 +544,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 141.93333333333328
+  - m_Start: 139.93333333333328
     m_ClipIn: 0
     m_Asset: {fileID: 114779771560907372, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -580,7 +580,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 151.5166666666666
+  - m_Start: 149.5166666666666
     m_ClipIn: 0
     m_Asset: {fileID: 114552659696189444, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -616,7 +616,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 161.0999999999999
+  - m_Start: 159.0999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114374925221871706, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -652,7 +652,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 170.68333333333322
+  - m_Start: 168.68333333333322
     m_ClipIn: 0
     m_Asset: {fileID: 114710773208092924, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -688,7 +688,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 180.26666666666654
+  - m_Start: 178.26666666666654
     m_ClipIn: 0
     m_Asset: {fileID: 114000049543896724, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -742,13 +742,121 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 59.88333333333333
+  - m_Start: 84.23333333333328
     m_ClipIn: 0
-    m_Asset: {fileID: 114197499205979752, guid: 46be15e22223d43338436a7707f32abf,
+    m_Asset: {fileID: 114141468004713128, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
     m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
-    m_Duration: 7.85
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 87.23333333333329
+    m_ClipIn: 0
+    m_Asset: {fileID: 114319305029814774, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 0.06425813039143691
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 90.16907520294185
+    m_ClipIn: 0
+    m_Asset: {fileID: 114564747664899578, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0.06425813039143691
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 93.23333333333332
+    m_ClipIn: 0
+    m_Asset: {fileID: 114568039925502076, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114277109234011768}
     m_EaseInDuration: 0
@@ -778,9 +886,9 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 67.73333333333332
+  - m_Start: 96.23333333333329
     m_ClipIn: 0
-    m_Asset: {fileID: 114599669947909812, guid: 46be15e22223d43338436a7707f32abf,
+    m_Asset: {fileID: 114351495975649174, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
     m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -814,19 +922,19 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 70.73333333333332
+  - m_Start: 99.23333333333332
     m_ClipIn: 0
-    m_Asset: {fileID: 114101489601043366, guid: 46be15e22223d43338436a7707f32abf,
+    m_Asset: {fileID: 114947495147774280, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
     m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
-    m_Duration: 4.11666666666666
+    m_Duration: 3
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114277109234011768}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 0.5499999999999687
+    m_BlendOutDuration: 0.2333333333333485
     m_MixInCurve:
       serializedVersion: 2
       m_Curve: []
@@ -850,9 +958,9 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 74.30000000000001
+  - m_Start: 101.99999999999997
     m_ClipIn: 0
-    m_Asset: {fileID: 114141468004713128, guid: 46be15e22223d43338436a7707f32abf,
+    m_Asset: {fileID: 114480025104503258, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
     m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -861,7 +969,943 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 114277109234011768}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.5499999999999687
+    m_BlendInDuration: 0.2333333333333485
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 105
+    m_ClipIn: 0
+    m_Asset: {fileID: 114859167043272366, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 107.99999999999997
+    m_ClipIn: 0
+    m_Asset: {fileID: 114524682928007612, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 111
+    m_ClipIn: 0
+    m_Asset: {fileID: 114823115351553788, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 114
+    m_ClipIn: 0
+    m_Asset: {fileID: 114039204798310980, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 117
+    m_ClipIn: 0
+    m_Asset: {fileID: 114847407557614518, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 120
+    m_ClipIn: 0
+    m_Asset: {fileID: 114528204195329356, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 123
+    m_ClipIn: 0
+    m_Asset: {fileID: 114564924668677412, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 126
+    m_ClipIn: 0
+    m_Asset: {fileID: 114430883325060966, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 129
+    m_ClipIn: 0
+    m_Asset: {fileID: 114699971367574828, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 132
+    m_ClipIn: 0
+    m_Asset: {fileID: 114408218840777944, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 135
+    m_ClipIn: 0
+    m_Asset: {fileID: 114960560076311300, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 138
+    m_ClipIn: 0
+    m_Asset: {fileID: 114563649167517616, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 141
+    m_ClipIn: 0
+    m_Asset: {fileID: 114913822120561470, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 144
+    m_ClipIn: 0
+    m_Asset: {fileID: 114584902154296740, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 147
+    m_ClipIn: 0
+    m_Asset: {fileID: 114446649465994900, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 150
+    m_ClipIn: 0
+    m_Asset: {fileID: 114224473626713078, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 153
+    m_ClipIn: 0
+    m_Asset: {fileID: 114698184950868748, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 156
+    m_ClipIn: 0
+    m_Asset: {fileID: 114131875510024688, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 159
+    m_ClipIn: 0
+    m_Asset: {fileID: 114153586071482764, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 162
+    m_ClipIn: 0
+    m_Asset: {fileID: 114849918392826116, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 165
+    m_ClipIn: 0
+    m_Asset: {fileID: 114719974726399404, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 168
+    m_ClipIn: 0
+    m_Asset: {fileID: 114462874087653932, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 171
+    m_ClipIn: 0
+    m_Asset: {fileID: 114659137371231768, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 174
+    m_ClipIn: 0
+    m_Asset: {fileID: 114320940773000894, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 177
+    m_ClipIn: 0
+    m_Asset: {fileID: 114565024306652762, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 180
+    m_ClipIn: 0
+    m_Asset: {fileID: 114781136219297422, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114277109234011768}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -898,13 +1942,13 @@ MonoBehaviour:
   m_Name: Multi x1
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 1
+  m_Muted: 0
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 5
+  - m_Start: 3
     m_ClipIn: 0
     m_Asset: {fileID: 114828684533305694, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -952,7 +1996,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 10.1
+  - m_Start: 8.1
     m_ClipIn: 0
     m_Asset: {fileID: 114941185745527056, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1000,7 +2044,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 14.75
+  - m_Start: 12.75
     m_ClipIn: 0
     m_Asset: {fileID: 114560711423373716, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1036,7 +2080,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 2 DPS
     m_Version: 1
-  - m_Start: 19.65
+  - m_Start: 17.65
     m_ClipIn: 0
     m_Asset: {fileID: 114980111204178652, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1072,7 +2116,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 2 DPS
     m_Version: 1
-  - m_Start: 24.8
+  - m_Start: 22.8
     m_ClipIn: 0
     m_Asset: {fileID: 114680896721957652, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1120,7 +2164,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 30
+  - m_Start: 28
     m_ClipIn: 0
     m_Asset: {fileID: 114269763640160636, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1156,7 +2200,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 34.3
+  - m_Start: 32.3
     m_ClipIn: 0
     m_Asset: {fileID: 114570895617284734, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1192,7 +2236,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 37.93333333333333
+  - m_Start: 35.93333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114835220780059252, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1228,7 +2272,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 42.98333333333333
+  - m_Start: 40.98333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114463836484813550, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1264,7 +2308,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 48.033333333333324
+  - m_Start: 46.033333333333324
     m_ClipIn: 0
     m_Asset: {fileID: 114778065549067932, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1300,7 +2344,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 53.08333333333332
+  - m_Start: 51.08333333333332
     m_ClipIn: 0
     m_Asset: {fileID: 114761558024799436, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1336,7 +2380,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 58.13333333333332
+  - m_Start: 56.13333333333332
     m_ClipIn: 0
     m_Asset: {fileID: 114800133269895594, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1372,7 +2416,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 63.183333333333316
+  - m_Start: 61.183333333333316
     m_ClipIn: 0
     m_Asset: {fileID: 114851262613235376, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1408,7 +2452,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 68.23333333333332
+  - m_Start: 66.23333333333332
     m_ClipIn: 0
     m_Asset: {fileID: 114818232453968704, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1444,7 +2488,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 73.28333333333333
+  - m_Start: 71.28333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114426701940079594, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1492,7 +2536,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 77.88333333333333
+  - m_Start: 75.88333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114479821962234066, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1528,7 +2572,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 82.93333333333331
+  - m_Start: 80.93333333333331
     m_ClipIn: 0
     m_Asset: {fileID: 114070026196276592, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1564,7 +2608,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 87.46666666666667
+  - m_Start: 85.46666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 114424636221947778, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1600,7 +2644,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 92.58333333333334
+  - m_Start: 90.58333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 114103104341421878, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1636,7 +2680,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 96.96666666666667
+  - m_Start: 94.96666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 114584691828817052, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1684,7 +2728,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 102.01666666666668
+  - m_Start: 100.01666666666668
     m_ClipIn: 0
     m_Asset: {fileID: 114097015167142954, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1720,7 +2764,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 2 DPS
     m_Version: 1
-  - m_Start: 106.63333333333333
+  - m_Start: 104.63333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114963189121620976, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1768,7 +2812,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 111.68333333333334
+  - m_Start: 109.68333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 114810962355999974, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1804,7 +2848,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 2 DPS
     m_Version: 1
-  - m_Start: 116.21666666666664
+  - m_Start: 114.21666666666664
     m_ClipIn: 0
     m_Asset: {fileID: 114569837843874058, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1840,7 +2884,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 120.81666666666663
+  - m_Start: 118.81666666666663
     m_ClipIn: 0
     m_Asset: {fileID: 114198894025293444, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1876,7 +2920,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 125.79999999999998
+  - m_Start: 123.79999999999998
     m_ClipIn: 0
     m_Asset: {fileID: 114251997940562110, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1912,7 +2956,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 130.84999999999997
+  - m_Start: 128.84999999999997
     m_ClipIn: 0
     m_Asset: {fileID: 114714424892520992, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1960,7 +3004,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 135.38333333333333
+  - m_Start: 133.38333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114899959972272138, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -1996,7 +3040,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 139.91666666666663
+  - m_Start: 137.91666666666663
     m_ClipIn: 0
     m_Asset: {fileID: 114722135010169904, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2032,7 +3076,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 144.95
+  - m_Start: 142.95
     m_ClipIn: 0
     m_Asset: {fileID: 114125602981422510, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2068,7 +3112,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 149.9833333333333
+  - m_Start: 147.9833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114679091950105566, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2116,7 +3160,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 154.5333333333333
+  - m_Start: 152.5333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114722486947914552, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2152,7 +3196,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 159.08333333333331
+  - m_Start: 157.08333333333331
     m_ClipIn: 0
     m_Asset: {fileID: 114209963582376408, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2200,7 +3244,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 164.13333333333327
+  - m_Start: 162.13333333333327
     m_ClipIn: 0
     m_Asset: {fileID: 114689718234378996, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2236,6 +3280,90 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
+  - m_Start: 168.35
+    m_ClipIn: 0
+    m_Asset: {fileID: 114413246451290180, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 4.55
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114285374359633262}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 172.9
+    m_ClipIn: 0
+    m_Asset: {fileID: 114896627229368428, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 5.049999999999926
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114285374359633262}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
 --- !u!114 &114584397704209360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2254,7 +3382,7 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 24.9
+  - m_Start: 22.9
     m_ClipIn: 0
     m_Asset: {fileID: 114560319596916312, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2290,7 +3418,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 30
+  - m_Start: 28
     m_ClipIn: 0
     m_Asset: {fileID: 114583117512212458, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2326,7 +3454,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 34.3
+  - m_Start: 32.3
     m_ClipIn: 0
     m_Asset: {fileID: 114510118526942470, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2362,7 +3490,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 38.60000000000001
+  - m_Start: 36.60000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114308171071654930, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2398,7 +3526,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 42.900000000000006
+  - m_Start: 40.900000000000006
     m_ClipIn: 0
     m_Asset: {fileID: 114565453110740242, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2434,7 +3562,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 47.2
+  - m_Start: 45.2
     m_ClipIn: 0
     m_Asset: {fileID: 114446038976137236, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2470,7 +3598,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 51.500000000000014
+  - m_Start: 49.500000000000014
     m_ClipIn: 0
     m_Asset: {fileID: 114980090263562170, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2506,7 +3634,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 55.8
+  - m_Start: 53.8
     m_ClipIn: 0
     m_Asset: {fileID: 114070272274318136, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2542,7 +3670,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 60.099999999999994
+  - m_Start: 58.099999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114642963688239920, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2578,7 +3706,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 64.40000000000002
+  - m_Start: 62.40000000000002
     m_ClipIn: 0
     m_Asset: {fileID: 114828107241477014, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2614,7 +3742,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 68.7
+  - m_Start: 66.7
     m_ClipIn: 0
     m_Asset: {fileID: 114714112236520160, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2650,7 +3778,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 73.00000000000001
+  - m_Start: 71.00000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114227983723802212, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2686,7 +3814,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 77.3
+  - m_Start: 75.3
     m_ClipIn: 0
     m_Asset: {fileID: 114914281281832634, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2722,7 +3850,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 81.60000000000001
+  - m_Start: 79.60000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114087119068656062, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2758,7 +3886,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 85.89999999999999
+  - m_Start: 83.89999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114051428503853938, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2794,7 +3922,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 90.2
+  - m_Start: 88.2
     m_ClipIn: 0
     m_Asset: {fileID: 114338382796777008, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2830,7 +3958,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 94.49999999999999
+  - m_Start: 92.49999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114077770506608540, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2866,7 +3994,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 98.8
+  - m_Start: 96.8
     m_ClipIn: 0
     m_Asset: {fileID: 114259876376721236, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2902,7 +4030,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 103.09999999999998
+  - m_Start: 101.09999999999998
     m_ClipIn: 0
     m_Asset: {fileID: 114003319048231642, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2938,7 +4066,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 107.39999999999999
+  - m_Start: 105.39999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114330362739252148, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -2974,7 +4102,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 111.69999999999997
+  - m_Start: 109.69999999999997
     m_ClipIn: 0
     m_Asset: {fileID: 114865773517780036, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3010,7 +4138,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 115.99999999999999
+  - m_Start: 113.99999999999999
     m_ClipIn: 0
     m_Asset: {fileID: 114354537280521212, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3046,7 +4174,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 120.29999999999994
+  - m_Start: 118.29999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114239989366426054, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3082,7 +4210,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 124.59999999999995
+  - m_Start: 122.59999999999995
     m_ClipIn: 0
     m_Asset: {fileID: 114365792441970290, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3118,7 +4246,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 128.89999999999998
+  - m_Start: 126.89999999999998
     m_ClipIn: 0
     m_Asset: {fileID: 114269191454675894, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3154,7 +4282,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 133.20000000000005
+  - m_Start: 131.20000000000005
     m_ClipIn: 0
     m_Asset: {fileID: 114194459860241286, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3190,7 +4318,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 137.50000000000006
+  - m_Start: 135.50000000000006
     m_ClipIn: 0
     m_Asset: {fileID: 114045513642458240, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3226,7 +4354,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 141.80000000000007
+  - m_Start: 139.80000000000007
     m_ClipIn: 0
     m_Asset: {fileID: 114378162202040100, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3262,7 +4390,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 146.10000000000008
+  - m_Start: 144.10000000000008
     m_ClipIn: 0
     m_Asset: {fileID: 114373063197793508, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3298,7 +4426,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 150.4000000000001
+  - m_Start: 148.4000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114453962632928026, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3334,9 +4462,189 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 154.7000000000001
+  - m_Start: 152.7000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114832962594039902, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 4.3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114584397704209360}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 157.0000000000001
+    m_ClipIn: 0
+    m_Asset: {fileID: 114558819498188232, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 4.3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114584397704209360}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 162.73333333333332
+    m_ClipIn: 0
+    m_Asset: {fileID: 114092519286949996, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 4.3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114584397704209360}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 167.03333333333333
+    m_ClipIn: 0
+    m_Asset: {fileID: 114924389601411146, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 4.3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114584397704209360}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 171.33333333333334
+    m_ClipIn: 0
+    m_Asset: {fileID: 114310570078684900, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 4.3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114584397704209360}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 175.63333333333335
+    m_ClipIn: 0
+    m_Asset: {fileID: 114642267059216362, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
     m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3388,7 +4696,7 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 48.15
+  - m_Start: 46.15
     m_ClipIn: 0
     m_Asset: {fileID: 114932416610744366, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3424,7 +4732,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 51.15000000000001
+  - m_Start: 49.15000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114444890240547240, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3460,7 +4768,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 54.15000000000001
+  - m_Start: 52.15000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114648013574349802, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3496,7 +4804,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 57.1
+  - m_Start: 55.1
     m_ClipIn: 0
     m_Asset: {fileID: 114578185211231082, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3532,7 +4840,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 60.10000000000001
+  - m_Start: 58.10000000000001
     m_ClipIn: 0
     m_Asset: {fileID: 114685324778894546, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3568,7 +4876,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 63.10000000000005
+  - m_Start: 61.10000000000005
     m_ClipIn: 0
     m_Asset: {fileID: 114972114572025412, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3604,7 +4912,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 66.03333333333336
+  - m_Start: 64.03333333333336
     m_ClipIn: 0
     m_Asset: {fileID: 114436089202697724, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3640,7 +4948,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 69.03333333333339
+  - m_Start: 67.03333333333339
     m_ClipIn: 0
     m_Asset: {fileID: 114103861147403746, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3676,7 +4984,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 72.0333333333335
+  - m_Start: 70.0333333333335
     m_ClipIn: 0
     m_Asset: {fileID: 114542824842156498, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3712,7 +5020,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 75.03333333333347
+  - m_Start: 73.03333333333347
     m_ClipIn: 0
     m_Asset: {fileID: 114060416683887396, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3748,7 +5056,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 78.03333333333345
+  - m_Start: 76.03333333333345
     m_ClipIn: 0
     m_Asset: {fileID: 114432335835468596, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3784,7 +5092,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 81.0333333333333
+  - m_Start: 79.0333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114613901963670828, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3820,7 +5128,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 84.0333333333333
+  - m_Start: 82.0333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114331220737348844, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3856,7 +5164,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 86.99999999999994
+  - m_Start: 84.99999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114591653259938598, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3892,7 +5200,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 89.74999999999994
+  - m_Start: 87.74999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114272322634745224, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3928,7 +5236,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 92.74999999999994
+  - m_Start: 90.74999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114573421532761376, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -3964,7 +5272,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 95.74999999999991
+  - m_Start: 93.74999999999991
     m_ClipIn: 0
     m_Asset: {fileID: 114754324335792616, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4000,7 +5308,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 98.74999999999994
+  - m_Start: 96.74999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114943956287025578, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4036,7 +5344,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 101.74999999999991
+  - m_Start: 99.74999999999991
     m_ClipIn: 0
     m_Asset: {fileID: 114036387953270920, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4072,7 +5380,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 104.74999999999991
+  - m_Start: 102.74999999999991
     m_ClipIn: 0
     m_Asset: {fileID: 114924460708229852, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4108,7 +5416,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 107.74999999999991
+  - m_Start: 105.74999999999991
     m_ClipIn: 0
     m_Asset: {fileID: 114542430588616078, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4144,7 +5452,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 110.49999999999994
+  - m_Start: 108.49999999999994
     m_ClipIn: 0
     m_Asset: {fileID: 114800258046705550, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4180,7 +5488,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 113.7833333333333
+  - m_Start: 111.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114187803537182770, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4216,7 +5524,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 116.7833333333333
+  - m_Start: 114.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114785529489141722, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4252,7 +5560,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 119.7833333333333
+  - m_Start: 117.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114289302993143204, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4288,7 +5596,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 122.7833333333333
+  - m_Start: 120.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114362713271650976, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4324,7 +5632,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 125.7833333333333
+  - m_Start: 123.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114655641698123690, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4360,7 +5668,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 128.78333333333333
+  - m_Start: 126.78333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114558538651282680, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4396,7 +5704,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 131.78333333333333
+  - m_Start: 129.78333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114296984168846698, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4432,7 +5740,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 134.7833333333333
+  - m_Start: 132.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114205585589608296, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4468,7 +5776,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 137.7833333333333
+  - m_Start: 135.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114654714898034864, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4504,7 +5812,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 140.7833333333333
+  - m_Start: 138.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114802097171291498, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4540,7 +5848,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 143.7833333333333
+  - m_Start: 141.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114738823650749666, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4576,7 +5884,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 146.7833333333333
+  - m_Start: 144.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114807913681841050, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4612,7 +5920,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 149.7833333333333
+  - m_Start: 147.7833333333333
     m_ClipIn: 0
     m_Asset: {fileID: 114714362297520520, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4648,7 +5956,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: 1 DPS
     m_Version: 1
-  - m_Start: 152.71666666666658
+  - m_Start: 150.71666666666658
     m_ClipIn: 0
     m_Asset: {fileID: 114874362411985562, guid: 46be15e22223d43338436a7707f32abf,
       type: 2}
@@ -4660,6 +5968,330 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0.06666666666671972
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 156.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114379952121522604, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 159.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114357587465644230, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 162.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114381036904884800, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 165.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114063659886126500, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 168.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114979799895553896, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 171.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114376996998480640, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 174.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114662350112004310, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 177.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114214491727295644, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: 1 DPS
+    m_Version: 1
+  - m_Start: 180.76666666666668
+    m_ClipIn: 0
+    m_Asset: {fileID: 114519334999927698, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_UnderlyingAsset: {fileID: 114098438238210868, guid: 46be15e22223d43338436a7707f32abf,
+      type: 2}
+    m_Duration: 3
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 114692242690039534}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
