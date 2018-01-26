@@ -287,10 +287,8 @@
     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\Controllers\Controller.cs" />
     <Compile Include="Assets\Scripts\Controllers\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Controllers\MouseController.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
-    <Compile Include="Assets\Scripts\HackSelector.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TimeManager.cs" />
@@ -310,9 +308,10 @@
     <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
     <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
     <Compile Include="Assets\Scripts\Turn.cs" />
+    <Compile Include="Assets\Scripts\UI\ButtonHover.cs" />
     <Compile Include="Assets\Scripts\UI\FollowHack.cs" />
     <Compile Include="Assets\Scripts\UI\LeaderboardText.cs" />
-    <Compile Include="Assets\Scripts\UI\MainBar.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu.cs" />
     <Compile Include="Assets\Scripts\UI\ScoreText.cs" />
     <Compile Include="Assets\Scripts\UI\TextPopupsGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\UIBar.cs" />
