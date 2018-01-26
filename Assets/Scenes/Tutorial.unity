@@ -1121,6 +1121,7 @@ MonoBehaviour:
   - Multi x2
   - Multi x4
   - Multi x8
+  mainLight: {fileID: 1581928575}
   lights:
   - {fileID: 1103002388}
   - {fileID: 1776019604}

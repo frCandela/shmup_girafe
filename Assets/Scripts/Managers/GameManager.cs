@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour {
 
 
     [Header("Multiplier Effects:")]
-    public Light[] lights;
+	public Light mainLight;
+	public Light[] lights;
     public LightParameter[] lightColors;
     private LightParameter currentColor;
     private float currentSpeed;
@@ -223,6 +224,9 @@ public class GameManager : MonoBehaviour {
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
 
+			//feedback light effect
+			StartCoroutine (ComboLightEffect ());
+
             //Music
             FMODUnity.RuntimeManager.PlayOneShot("event:/hack/hack_fin", MainCameraController.transform.position);
             FMODUnity.RuntimeManager.PlayOneShot("event:/mult", MainCameraController.transform.position);
@@ -292,6 +296,34 @@ public class GameManager : MonoBehaviour {
         currentSpeed = Mathf.Lerp(currentSpeed, tunnelSpeeds[comboMultiplier], Time.deltaTime);
         return currentSpeed;
     }
+
+	//Light effect when multiplier changes
+	IEnumerator ComboLightEffect()
+	{
+		float elapsedTime = 0f;
+		float timing = 0.5f;
+		float intensity = mainLight.intensity;
+		Quaternion rotation = mainLight.transform.rotation;
+		//mainLight.intensity = 40f;
+		while(elapsedTime < timing)
+		{
+			if (mainLight.intensity < 40f)
+				mainLight.intensity += 20f*Time.deltaTime;
+			mainLight.transform.Rotate (0, 2160f*Time.deltaTime, 0);
+			Debug.Log ("kjsgdfihjqsdf");
+			elapsedTime += Time.unscaledDeltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+
+		mainLight.transform.rotation = rotation;
+
+		while (mainLight.intensity > intensity)
+		{
+			mainLight.intensity -= 20f*Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+		mainLight.intensity = intensity;
+	}
 
     #region POST-EFFECT
 
