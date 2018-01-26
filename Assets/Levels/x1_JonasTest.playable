@@ -3084,15 +3084,15 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1351586955025634, guid: 1d3031e2b68c185458bee24c5620368d, type: 2}
     position: {x: 0.64, y: 0.288}
-    angle: -117
+    angle: 97
     col: {r: 0.90802824, g: 1, b: 0, a: 0.54463565}
   - enemy: {fileID: 1351586955025634, guid: fc98f714ea2b44c7f8187be4814d5bf7, type: 2}
     position: {x: -0.06666667, y: 0.72}
-    angle: 103
+    angle: 180
     col: {r: 0, g: 0.6719489, b: 1, a: 0.5706356}
   - enemy: {fileID: 1201508606819798, guid: 9ee1ebe8489a5469783c30ce3178dcc9, type: 2}
     position: {x: 0.5466667, y: 0.64}
-    angle: 180
+    angle: -178
     col: {r: 0.8676443, g: 0, b: 1, a: 0.53306335}
   - enemy: {fileID: 1201508606819798, guid: 005fb4d6067954f2eab090420370c11b, type: 2}
     position: {x: -0.46666667, y: 0.24}

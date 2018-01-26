@@ -1057,9 +1057,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebefbb00cde96549bc9aa2f16a2b46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameDuration: 5
+  _gameDuration: 180
   _timerText: {fileID: 1340386493}
-  _countdown: 0
+  _countdown: 1
   _countdownDuration: 5
   _countdownDisplay: {fileID: 1978016349}
   _countdownImages:

@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Name: Multi x1
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_Name: Multi x2
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -3382,7 +3382,7 @@ MonoBehaviour:
   m_Name: Multi x4
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
