@@ -40,6 +40,8 @@ public class Burst
             //Objects with shooter.tag dont get damaged
             if (bulletDamage) 
                 bulletDamage.tag = shooter.tag;
+
+            attacked = true;
         }
 
         if (spread == 360)
