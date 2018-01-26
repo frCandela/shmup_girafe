@@ -909,7 +909,6 @@ MonoBehaviour:
   - -20
   scoreLossHitVirus: 1000
   scorePeerHack: 500
-  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:

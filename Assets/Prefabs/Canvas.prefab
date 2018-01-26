@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 222514184511743936}
   - component: {fileID: 114224166109282234}
   m_Layer: 5
-  m_Name: ScoreBackground
+  m_Name: Score&Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

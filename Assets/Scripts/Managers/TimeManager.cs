@@ -8,7 +8,7 @@ public class TimeManager : MonoBehaviour
 {
 	//Timer variables
 	[Tooltip("In seconds")]
-	[SerializeField] private float _gameDuration = 180f;
+	public float _gameDuration = 180f;
 	[SerializeField] private Text _timerText;
 	[SerializeField] private bool _countdown = true;
 	[SerializeField] private float _countdownDuration = 5f;
