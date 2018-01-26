@@ -13,7 +13,8 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] private bool _countdown = true;
 	[SerializeField] private float _countdownDuration = 5f;
 	[SerializeField] private GameObject _countdownDisplay;
-	[SerializeField] private Text _countdownText;
+	[SerializeField] private Sprite[] _countdownImages;
+	private Image _countdownImage;
 	private float _elapsedTime = 0f;
 	private float _elapsedCD = 0f;
 	private float _mins;
@@ -44,6 +45,8 @@ public class TimeManager : MonoBehaviour
 
 	void Start()
 	{
+		_countdownImage = _countdownDisplay.GetComponent<Image> ();
+		_timerText.color = Color.white;
 		if (!_countdown) {
 			_countdownDisplay.SetActive (false);
 			_gameStarted = true;
@@ -65,18 +68,17 @@ public class TimeManager : MonoBehaviour
 
 	IEnumerator DisplayCountdown()
 	{
-		if (_countdownText) 
+		if (_countdownDisplay) 
 		{
 			while(_elapsedCD < _countdownDuration)
 			{
 				_countdownLeft = _countdownDuration - Mathf.Floor (_elapsedCD);
-				_countdownText.text = _countdownLeft.ToString ("F0");
+				_countdownImage.sprite = _countdownImages [(int)_countdownLeft];
 				yield return null;
 				_elapsedCD += Time.unscaledDeltaTime;
 			}
-
+			_countdownImage.sprite = _countdownImages [0];
 			_elapsedCD = 0f;
-			_countdownText.text = "HACK!";
 			_gameStarted = true;
 			yield return new WaitForSeconds (1f);
 			_countdownDisplay.SetActive (false);
@@ -97,7 +99,31 @@ public class TimeManager : MonoBehaviour
             _secs = Mathf.Floor(_timeLeft % 60);
             _cents = Mathf.Round(_timeLeft * 100) % 100;
             _timerText.text = string.Format("{0:0}:{1:00}:{2:00}", _mins, _secs, _cents);
+
+			//red last ten seconds
+			if (_timeLeft < 10f) 
+			{
+				_timerText.color = Color.red;
+				if(_timeLeft < 0f)
+				{
+					_gameStarted = false;
+					StartCoroutine (EndAnimation ());
+				}
+			}
+			
         }
+	}
+
+	IEnumerator EndAnimation()
+	{
+		float timing = 3f;
+		float elapsedTime = 0f;
+		while(elapsedTime < timing)
+		{
+			GameManager.instance.MainCameraController.VerticalSpeed = Mathf.Lerp (0, 5f, elapsedTime / timing);
+			yield return new WaitForEndOfFrame ();
+		}
+		//pop up leaderboard
 	}
 
     //Resets the slow motion
