@@ -15,10 +15,12 @@ public class TimeManager : MonoBehaviour
 	[SerializeField] private GameObject _countdownDisplay;
 	[SerializeField] private Text _countdownText;
 	private float _elapsedTime = 0f;
+	private float _elapsedCD = 0f;
 	private float _mins;
 	private float _secs;
 	private float _cents;
 	private float _timeLeft;
+	private float _countdownLeft;
 	private bool _gameStarted = false;
 
     private static float m_slowDownDuration;
@@ -38,12 +40,16 @@ public class TimeManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         InitTime();
+    }
+
+	void Start()
+	{
 		if (!_countdown) {
 			_countdownDisplay.SetActive (false);
 			_gameStarted = true;
 		} else
 			StartCoroutine (DisplayCountdown ());
-    }
+	}
 
     private void Update()
     {
@@ -52,26 +58,24 @@ public class TimeManager : MonoBehaviour
         if (m_slowDownDuration != 0F && m_timeElapsedSlowMo >= m_slowDownDuration)
             resetSlowMotion();
         
+		DisplayTimer ();
         if(_gameStarted)
-		{
-			DisplayTimer ();
 			_elapsedTime += Time.unscaledDeltaTime;
-		}
     }
 
 	IEnumerator DisplayCountdown()
 	{
 		if (_countdownText) 
 		{
-			while(_elapsedTime < _countdownDuration)
+			while(_elapsedCD < _countdownDuration)
 			{
-				_timeLeft = _countdownDuration - Mathf.Floor (_elapsedTime);
-				_countdownText.text = _timeLeft.ToString ("F0");
+				_countdownLeft = _countdownDuration - Mathf.Floor (_elapsedCD);
+				_countdownText.text = _countdownLeft.ToString ("F0");
 				yield return null;
-				_elapsedTime += Time.unscaledDeltaTime;
+				_elapsedCD += Time.unscaledDeltaTime;
 			}
 
-			_elapsedTime = 0f;
+			_elapsedCD = 0f;
 			_countdownText.text = "HACK!";
 			_gameStarted = true;
 			yield return new WaitForSeconds (1f);
