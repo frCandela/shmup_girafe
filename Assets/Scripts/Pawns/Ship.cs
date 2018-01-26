@@ -15,7 +15,7 @@ public class Ship : Pawn
     [Header("Prefabs:")]
     public GameObject explosionPrefab;
 
-    
+    [Header("Parameters")]
     [Range(0.0f, 100.0f)]public float playerSpeed = 0.5f;  //Movement speed of the ship
 
     //Stun

@@ -10,7 +10,7 @@ public class MouseController : Controller
 
     [Header("GameObjects")]
     public Virus VirusShipPrefab;
-    public Virus virusShip;
+    private Virus virusShip;
     public GameObject hackPointerPrefab;
     public GameObject hackPointer;
 
@@ -20,7 +20,7 @@ public class MouseController : Controller
     public float HackSnapDistance = 1F;
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
-    [Range(0F, 100F)] public float virusHackRefillSpeed = 1F;
+    [Range(0F, 100F)] public float virusHackRefillSpeed = 15F;
 
     [Header("Other parameters:")]
     public bool shootVertically = true;
@@ -80,7 +80,7 @@ public class MouseController : Controller
             print("NO VIRUS");
 
         //Refill the hack bar
-        if ( PossessedPawn == virusShip)
+        if ( PossessedPawn == virusShip )
             hackPower += virusHackRefillSpeed * Time.deltaTime;
         else
             hackPower += hackRefillSpeed * Time.deltaTime;

@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 95017971907028722}
   - component: {fileID: 50343288882402758}
   - component: {fileID: 70502556474722916}
-  - component: {fileID: 114037917414470774}
+  - component: {fileID: 114306433223498582}
   - component: {fileID: 114889548285565050}
   - component: {fileID: 114451531610115154}
   - component: {fileID: 114283961945086644}
@@ -134,25 +134,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114037917414470774
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1671544709107808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f89811622aab9640b47c3bbb175c154, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHackable: 1
-  hackCost: 100
-  hackbonus: 10
-  explosionPrefab: {fileID: 1209019765537398, guid: 22a5f05441e3e4b13963c1fb35f044b8,
-    type: 2}
-  playerSpeed: 12
-  canBeStunned: 1
-  scrollingSpeed: -5
 --- !u!114 &114283961945086644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +146,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 250
+--- !u!114 &114306433223498582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1671544709107808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ee6e2803552854dbee5ea0d0431421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHackable: 1
+  hackCost: 100
+  hackbonus: 10
+  explosionPrefab: {fileID: 1209019765537398, guid: 22a5f05441e3e4b13963c1fb35f044b8,
+    type: 2}
+  playerSpeed: 12
+  canBeStunned: 1
+  scrollingSpeed: -5
 --- !u!114 &114327742626344956
 MonoBehaviour:
   m_ObjectHideFlags: 1
