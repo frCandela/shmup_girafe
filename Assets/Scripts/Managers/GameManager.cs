@@ -261,8 +261,6 @@ public class GameManager : MonoBehaviour {
 
         PlayTrack(0);
         SetLights(0);
-
-        PlayerController.resetHack();
     }
 
     public int getScore(){ return score; }

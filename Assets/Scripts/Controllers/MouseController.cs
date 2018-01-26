@@ -110,6 +110,7 @@ public class MouseController : Controller
 
             this.Invoke( "PossessVirus", 0.1f);
             onBecomeVirus.Invoke();
+            hackPower = 0;
         }
 
         if( isHacking )
@@ -231,12 +232,25 @@ public class MouseController : Controller
         }
 
         //Starts the hack !
-        if (Input.GetButton("Hack") && !isHacking && hackPower >= minHackPower)
+        if (Input.GetButtonDown("Hack"))
         {
-            isHacking = true;
-            //hackPointer.GetComponent<SpriteRenderer>().enabled = true;
-            TimeManager.doSlowMotion(HackDuration, 0.05f);
-            onHackStart.Invoke();
+            if(isHacking)
+            {
+                onHackStop.Invoke();
+
+                if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                    GameManager.instance.soundManager.hackSurvol.Stop();
+
+                TimeManager.resetSlowMotion();
+            }
+            else if (hackPower >= minHackPower)
+            {
+                isHacking = true;
+                //hackPointer.GetComponent<SpriteRenderer>().enabled = true;
+                TimeManager.doSlowMotion(HackDuration, 0.05f);
+                onHackStart.Invoke();
+            }
+
         }
     }
 
@@ -258,10 +272,10 @@ public class MouseController : Controller
             hackPower = maxHackPower;
     }
 
-    public void resetHack()
+    /*public void resetHack()
     {
         hackPower = 0;
-    }
+    }*/
 
     void FixedUpdate()
     {
