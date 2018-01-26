@@ -467,6 +467,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957536103 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114410499668968192, guid: cd9ae7963527bec44bb5a5221b77a287,
+    type: 2}
+  m_PrefabInternal: {fileID: 1927825380}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1103002387
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +538,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 9.76, y: 56.7, z: 0}
+--- !u!1 &1255323702 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1661939412986532, guid: cd9ae7963527bec44bb5a5221b77a287,
+    type: 2}
+  m_PrefabInternal: {fileID: 1927825380}
 --- !u!114 &1288760402 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114962417417861068, guid: cd9ae7963527bec44bb5a5221b77a287,
@@ -902,7 +913,6 @@ MonoBehaviour:
   - -20
   scoreLossHitVirus: 1000
   scorePeerHack: 500
-  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
@@ -915,8 +925,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ebefbb00cde96549bc9aa2f16a2b46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameDuration: 180
-  _timerText: {fileID: 0}
+  _gameDuration: 30
+  _timerText: {fileID: 957536103}
+  _countdown: 1
+  _countdownDuration: 5
+  _countdownDisplay: {fileID: 1255323702}
+  _countdownText: {fileID: 1685722795}
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0
@@ -1037,6 +1051,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hackSurvol: {fileID: 2068811732}
+  hitEnnemies: {fileID: 454917185}
+--- !u!114 &1685722795 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114527302595419756, guid: cd9ae7963527bec44bb5a5221b77a287,
+    type: 2}
+  m_PrefabInternal: {fileID: 1927825380}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1776019603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1223,7 @@ Prefab:
     - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2322.7783
+      value: 523.4099
       objectReference: {fileID: 0}
     - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -1217,7 +1238,7 @@ Prefab:
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 985.21277
+      value: 227.41812
       objectReference: {fileID: 0}
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -1227,16 +1248,7 @@ Prefab:
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2303.3684
-      objectReference: {fileID: 0}
-    - target: {fileID: 1868928000931584, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223604404736721194, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
+      value: 504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}

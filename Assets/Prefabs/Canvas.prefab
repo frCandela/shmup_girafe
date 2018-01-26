@@ -995,6 +995,7 @@ MonoBehaviour:
   mouseController: {fileID: 0}
   health: {fileID: 0}
   leader: {fileID: 1868928000931584}
+  input: {fileID: 114209282883348524}
 --- !u!114 &114027483300236624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1509,7 +1510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2304,7 +2305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2803,7 +2804,7 @@ RectTransform:
   m_Children:
   - {fileID: 224446413811679910}
   m_Father: {fileID: 224748931594314606}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3095,7 +3096,7 @@ RectTransform:
   - {fileID: 224362003129902538}
   - {fileID: 224785684086804094}
   m_Father: {fileID: 224748931594314606}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
@@ -3275,8 +3276,8 @@ RectTransform:
   - {fileID: 224286103892720724}
   - {fileID: 224384530951423962}
   - {fileID: 224212813317737792}
-  - {fileID: 224559615780859340}
   - {fileID: 224211196316557770}
+  - {fileID: 224559615780859340}
   m_Father: {fileID: 224579811896041462}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
