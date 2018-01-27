@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour {
         } 
         else if (instance != this)
             Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     //Initializes the game for each level.
@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour {
 
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
-        Leaderboard.UpdateScore(checkpointId);
+
     }
     
     private void Update()
@@ -170,10 +170,10 @@ public class GameManager : MonoBehaviour {
             timerCheckpoint = checkpointRefreshTime;
             if (checkpointId < checkpointCount - 1)
                 saveScore(checkpointId);
-            checkpointId++;
+			Leaderboard.UpdateScore(checkpointId);
+			checkpointId++;
             if (checkpointId >= checkpointCount)
                 checkpointId = checkpointCount - 1;
-            Leaderboard.UpdateScore(checkpointId);
         }
     }
 

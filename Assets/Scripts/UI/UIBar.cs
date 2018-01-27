@@ -167,7 +167,15 @@ public class UIBar : MonoBehaviour {
 
     public void sendScore()
     {
-        GameManager.instance.saveScore(11);
-        StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
+		StartCoroutine (SubmitAndMenu ());
+        //GameManager.instance.saveScore(11);
+        //StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
     }
+
+	IEnumerator SubmitAndMenu()
+	{
+		GameManager.instance.saveScore(11);
+		yield return StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Title");
+	}
 }

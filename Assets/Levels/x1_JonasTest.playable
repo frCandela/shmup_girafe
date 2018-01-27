@@ -11882,7 +11882,7 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
     position: {x: -0.68, y: 0.744}
-    angle: 180
+    angle: 93
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
     position: {x: 0.64, y: 0.752}
@@ -11890,7 +11890,7 @@ MonoBehaviour:
     col: {r: 0, g: 0.63252497, b: 1, a: 0.5101472}
   - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
     position: {x: -0.29333332, y: 0.216}
-    angle: 135
+    angle: 32
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
 --- !u!114 &114560940587842322
 MonoBehaviour:
@@ -12986,11 +12986,11 @@ MonoBehaviour:
   enemies:
   - enemy: {fileID: 1671544709107808, guid: eaa4425aa30e943f0a73711d4707e593, type: 2}
     position: {x: -0.68, y: 0.504}
-    angle: 180
+    angle: -147
     col: {r: 1, g: 0.85672843, b: 0, a: 0.5734375}
   - enemy: {fileID: 1671544709107808, guid: eaa4425aa30e943f0a73711d4707e593, type: 2}
     position: {x: 0.41333333, y: 0.744}
-    angle: -86
+    angle: -178
     col: {r: 0.111260414, g: 1, b: 0, a: 0.57397467}
   - enemy: {fileID: 1671544709107808, guid: eaa4425aa30e943f0a73711d4707e593, type: 2}
     position: {x: 0.64, y: 0.488}

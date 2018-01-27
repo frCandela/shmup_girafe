@@ -201,6 +201,12 @@ public class TankShip : Ship
         chargeCircle.transform.localScale = new Vector3(newScale, newScale, newScale);
     }
 
+	public IEnumerator SetImmuneToBullets()
+	{
+		health.immuneToDamage = true;
+		yield return new WaitForSeconds (0.5f);
+		health.immuneToDamage = false;
+	}
 
     public override void MoveTowards(Vector3 point)
     {

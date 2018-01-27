@@ -59,6 +59,7 @@
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_ShurikenThreadFix.cs" />
      <Compile Include="Assets\JMO Assets\Cartoon FX\Spawn System\CFX_SpawnSystem.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

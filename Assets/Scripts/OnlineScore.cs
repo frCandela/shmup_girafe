@@ -67,8 +67,6 @@ public static class OnlineScore {
 
         if (hs_post.error != null)
             Debug.LogWarning("There was an error posting the high score: " + hs_post.error);
-
-		//UnityEngine.SceneManagement.SceneManager.
     }
 
 }
