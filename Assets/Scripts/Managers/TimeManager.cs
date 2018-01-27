@@ -118,6 +118,7 @@ public class TimeManager : MonoBehaviour
 
 	IEnumerator EndAnimation()
 	{
+		GameManager.instance.scoreLossHitVirus = 0;
 		float timing = 3f;
 		float elapsedTime = 0f;
 		float speed = 0f;

@@ -285,7 +285,7 @@ MonoBehaviour:
   immortal: 0
   immuneToDamage: 0
   immuneToShipCollisions: 0
-  health: 10
+  health: 15
   onDie:
     m_PersistentCalls:
       m_Calls:

@@ -307,7 +307,6 @@ public class GameManager : MonoBehaviour {
 		float timing = 0.5f;
 		float intensity = mainLight.intensity;
 		Quaternion rotation = mainLight.transform.rotation;
-		//mainLight.intensity = 40f;
 		while(elapsedTime < timing)
 		{
 			if (mainLight.intensity < 40f)

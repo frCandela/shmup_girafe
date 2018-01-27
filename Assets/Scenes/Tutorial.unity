@@ -122,12 +122,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 654
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 368
+      value: 365.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -209,15 +209,20 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 114990828091822672, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 523.59344
-      objectReference: {fileID: 0}
-    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1301998664}
+    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 950
+      objectReference: {fileID: 0}
+    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2228.7678
       objectReference: {fileID: 0}
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -227,51 +232,27 @@ Prefab:
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 227.49545
+      value: 953.79504
       objectReference: {fileID: 0}
-    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224868241160162524, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 950.00006
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 504.18353
+      value: 2248.1777
       objectReference: {fileID: 0}
-    - target: {fileID: 114410499668968192, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 114056121698007680, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
-      propertyPath: m_Color.r
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114410499668968192, guid: cd9ae7963527bec44bb5a5221b77a287,
+    - target: {fileID: 114289997081494214, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114410499668968192, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114053350452014626, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Text
-      value: '<color=grey>LeAderboArd:</color>
-
-        <Size=40>WAiTiNG FOR FiRST CHECKPOiNT...</Size>
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114265806179913872, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Text
-      value: Collected dAtA
-      objectReference: {fileID: 0}
-    - target: {fileID: 114029703957352712, guid: cd9ae7963527bec44bb5a5221b77a287,
-        type: 2}
-      propertyPath: m_Text
-      value: 'Time remaAining :'
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
@@ -1153,7 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDuration: 180
   _timerText: {fileID: 1340386493}
-  _countdown: 0
+  _countdown: 1
   _countdownDuration: 5
   _countdownDisplay: {fileID: 1978016349}
   _countdownImages:

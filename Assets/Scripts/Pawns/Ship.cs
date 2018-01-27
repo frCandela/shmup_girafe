@@ -83,10 +83,7 @@ public class Ship : Pawn
                 otherHealth.takeDamage(otherHealth.health, this);
 
 				if (myHealth.health == 1 || GetComponent<TankShip>())
-				{
 					myHealth.takeDamage (1, this);
-					GetComponent<TankShip> ().SetImmuneToBullets ();
-				}
                 else
 					myHealth.takeDamage (myHealth.health - 1, this);
             }

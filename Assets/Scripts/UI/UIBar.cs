@@ -31,15 +31,15 @@ public class UIBar : MonoBehaviour {
     public Health health;
     public GameObject leader;
     public InputField input;
+	public GameObject leaderBoard;
+	public GameObject newHighScore;
 
     private float currentHackPower = 0f;
-	private Image hackGlow;
 	private Animator outGlowAnim;
 
 	void Start()
 	{
 		outGlowAnim = outerGlow.GetComponent<Animator> ();
-		hackGlow = outerGlow.GetComponent<Image> ();
 	}
 
     // Update is called once per frame
@@ -134,12 +134,17 @@ public class UIBar : MonoBehaviour {
             anim.SetTrigger("showHack");
             hackShow = true;
         }
-        else if(value < 1f && hackShow)
+		else if(value < 1f && hackShow)
         {
             anim.SetTrigger("endHack");
             hackShow = false;
         }
     }
+
+	public void ToggleHackMessage()
+	{
+		hackMessage.enabled = !hackMessage.enabled;
+	}
 
 	//set the percentage of the hack bar
 	void SetHackPercentage(float per)
@@ -163,19 +168,21 @@ public class UIBar : MonoBehaviour {
     public void showLeaderScreen()
     {
         leader.SetActive(true);
+		int[] scores = GameManager.instance.getScores ();
+		if (GameManager.instance.getScore () > scores [0])
+			newHighScore.SetActive (true);
     }
 
     public void sendScore()
     {
 		StartCoroutine (SubmitAndMenu ());
-        //GameManager.instance.saveScore(11);
-        //StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
     }
 
 	IEnumerator SubmitAndMenu()
 	{
 		GameManager.instance.saveScore(11);
 		yield return StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("Title");
+		leader.SetActive (false);
+		leaderBoard.SetActive (true);
 	}
 }

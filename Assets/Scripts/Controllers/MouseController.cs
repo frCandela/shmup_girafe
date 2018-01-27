@@ -148,6 +148,8 @@ public class MouseController : Controller
             {
                 isHacking = false;
 
+				GameManager.instance.MainBar.ToggleHackMessage ();
+
                 if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                 {
                     //misc
@@ -242,14 +244,18 @@ public class MouseController : Controller
                     GameManager.instance.soundManager.hackSurvol.Stop();
 
                 TimeManager.resetSlowMotion();
+
+				GameManager.instance.MainBar.ToggleHackMessage ();
             }
             else if (hackPower >= minHackPower)
             {
                 isHacking = true;
+				GameManager.instance.MainBar.ToggleHackMessage ();
                 //hackPointer.GetComponent<SpriteRenderer>().enabled = true;
                 TimeManager.doSlowMotion(HackDuration, 0.05f);
                 onHackStart.Invoke();
             }
+			else FMODUnity.RuntimeManager.PlayOneShot("event:/wrong", GameManager.instance.MainCameraController.transform.position);
 
         }
     }
