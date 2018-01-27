@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDuration: 180
   _timerText: {fileID: 1340386493}
-  _countdown: 1
+  _countdown: 0
   _countdownDuration: 5
   _countdownDisplay: {fileID: 1978016349}
   _countdownImages:
