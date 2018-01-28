@@ -168,10 +168,18 @@ public class UIBar : MonoBehaviour {
     public void showLeaderScreen()
     {
         leader.SetActive(true);
-		int[] scores = GameManager.instance.getScores ();
-		if (GameManager.instance.getScore () > scores [0])
-			newHighScore.SetActive (true);
+		StartCoroutine (CheckHighScore ());
     }
+
+	IEnumerator CheckHighScore()
+	{
+		List<Record> leaders = new List<Record> ();
+		yield return StartCoroutine (OnlineScore.GetScores (leaders, 11));
+		int higherScore = leaders [0].score;
+		print ("higher score: " + higherScore + "\n Your score: " + GameManager.instance.getScore ());
+		if (GameManager.instance.getScore () > higherScore)
+			newHighScore.SetActive (true);
+	}
 
     public void sendScore()
     {

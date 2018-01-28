@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour {
     public FMODUnity.StudioEventEmitter music;
 
-    public GameObject credits, loading, leader, tutoriel;
+    public GameObject credits, loading, leader, tutoriel, background;
     public Text pseudos, scores;
 
     private List<Record> leaders;
@@ -60,6 +60,8 @@ public class Menu : MonoBehaviour {
     public void PlayGame()
     {
         AsyncOperation async = SceneManager.LoadSceneAsync("Tutorial");
+		tutoriel.SetActive (false);
+		background.SetActive (false);
         loading.SetActive(true);
         async.completed += OnLoad;
     }

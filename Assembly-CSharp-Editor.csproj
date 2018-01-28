@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\AddMenu.cs" />
      <Compile Include="Assets\Editor\AttackEditor.cs" />
      <Compile Include="Assets\Editor\ChargeEditor.cs" />
      <Compile Include="Assets\Editor\CustomGUI.cs" />
