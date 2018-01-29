@@ -48,11 +48,12 @@ public class TimeManager : MonoBehaviour
 	{
 		_countdownImage = _countdownDisplay.GetComponent<Image> ();
 		_timerText.color = Color.white;
-		if (!_countdown) {
-			_countdownDisplay.SetActive (false);
+		if (!_countdown)
 			_gameStarted = true;
-		} else
+		else {
+			_countdownDisplay.SetActive (true);
 			StartCoroutine (DisplayCountdown ());
+		}
 	}
 
     private void Update()

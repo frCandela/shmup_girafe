@@ -75,12 +75,17 @@ public class GameManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-            AwakeGame();
+            //AwakeGame();
         } 
         else if (instance != this)
             Destroy(gameObject);
         //DontDestroyOnLoad(gameObject);
     }
+
+	void OnEnable()
+	{
+		AwakeGame ();
+	}
 
     //Initializes the game for each level.
     void AwakeGame() {
@@ -157,6 +162,10 @@ public class GameManager : MonoBehaviour {
     
     private void Update()
     {
+		//Press escape to go to menu
+		if (Input.GetKeyDown (KeyCode.Escape))
+			BackToMenu ();
+		
         timeLevel += Time.deltaTime;
 
         foreach (Light light in lights) {
@@ -324,6 +333,11 @@ public class GameManager : MonoBehaviour {
 			yield return new WaitForEndOfFrame ();
 		}
 		mainLight.intensity = intensity;
+	}
+
+	public void BackToMenu()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Title");
 	}
 
     #region POST-EFFECT

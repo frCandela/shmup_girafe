@@ -213,7 +213,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1301998664}
+      objectReference: {fileID: 1301998661}
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -261,6 +261,16 @@ Prefab:
     - target: {fileID: 1868928000931584, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114029703957352712, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Time remAining :'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114990828091822672, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
@@ -708,7 +718,6 @@ GameObject:
   - component: {fileID: 1301998662}
   - component: {fileID: 1301998661}
   - component: {fileID: 1301998660}
-  - component: {fileID: 1301998664}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1166,17 +1175,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1301998664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1301998659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a96c73b28a2044263b14826f614573c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1340386493 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114410499668968192, guid: cd9ae7963527bec44bb5a5221b77a287,

@@ -137,6 +137,10 @@
      <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
      <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
      <Compile Include="Assets\Scripts\Turn.cs" />
+     <Compile Include="Assets\Scripts\TUTO\TutoEnnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\TUTO\TutoEnnemyStopper.cs" />
+     <Compile Include="Assets\Scripts\TUTO\TutoManager.cs" />
+     <Compile Include="Assets\Scripts\TUTO\TutorialUIDisplayer.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonHover.cs" />
      <Compile Include="Assets\Scripts\UI\FeedbackBarFill.cs" />
      <Compile Include="Assets\Scripts\UI\FollowHack.cs" />

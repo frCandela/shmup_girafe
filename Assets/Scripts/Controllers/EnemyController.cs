@@ -16,8 +16,8 @@ public class EnemyController : Controller
     {
         if(PossessedPawn)
         {
-            Vector3 direction = PossessedPawn.transform.position - GameManager.instance.MainCameraController.transform.position;
-            float angle = Vector3.Angle(direction.normalized, new Vector3(1, 0, 0)) - 90f;
+           // Vector3 direction = PossessedPawn.transform.position - GameManager.instance.MainCameraController.transform.position;
+           // float angle = Vector3.Angle(direction.normalized, new Vector3(1, 0, 0)) - 90f;
             PossessedPawn.Fire(Quaternion.Euler(0, 0, 0));
         }
             

@@ -154,11 +154,11 @@ public class Ship : Pawn
 
     protected void OnDestroy()
     {
-        GameManager.instance.PlayerController.addHackPower(hackbonus);
+        /*GameManager.instance.PlayerController.addHackPower(hackbonus);
         if( isPlayerControlled)
             FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
         else
-            FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);*/
     }
 
     public virtual void Destroy()
@@ -172,6 +172,11 @@ public class Ship : Pawn
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
 		}
+		GameManager.instance.PlayerController.addHackPower(hackbonus);
+		if( isPlayerControlled)
+			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
+		else
+			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
     }
 
 	public IEnumerator HackImmunity()

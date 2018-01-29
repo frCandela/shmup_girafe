@@ -40,6 +40,8 @@ public class UIBar : MonoBehaviour {
 	void Start()
 	{
 		outGlowAnim = outerGlow.GetComponent<Animator> ();
+		if (mouseController)
+			setHackBar (mouseController.getHackPowerRatio ());
 	}
 
     // Update is called once per frame
@@ -141,8 +143,9 @@ public class UIBar : MonoBehaviour {
         }
     }
 
-	public void ToggleHackMessage()
+	public IEnumerator ToggleHackMessage(float delay)
 	{
+		yield return new WaitForSeconds (delay);
 		hackMessage.enabled = !hackMessage.enabled;
 	}
 
@@ -176,7 +179,6 @@ public class UIBar : MonoBehaviour {
 		List<Record> leaders = new List<Record> ();
 		yield return StartCoroutine (OnlineScore.GetScores (leaders, 11));
 		int higherScore = leaders [0].score;
-		print ("higher score: " + higherScore + "\n Your score: " + GameManager.instance.getScore ());
 		if (GameManager.instance.getScore () > higherScore)
 			newHighScore.SetActive (true);
 	}
