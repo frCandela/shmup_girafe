@@ -20,7 +20,7 @@ public class Ship : Pawn
 
     //Stun
     public bool canBeStunned = true;
-    private bool isPlayerControlled = false;
+	public bool isPlayerControlled = false;	//was private
 
     //Speed
     public float scrollingSpeed;

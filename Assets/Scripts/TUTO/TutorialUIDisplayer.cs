@@ -9,8 +9,9 @@ public class TutorialUIDisplayer : MonoBehaviour
 
 	void Start()
 	{
+		//_steps [3] = GameManager.instance.PlayerController.PossessedPawn.gameObject.transform.Find ("Canvas").gameObject;
 		foreach (GameObject step in _steps)
-			step.SetActive (false);
+			if(step )step.SetActive (false);
 	}
 
 	public IEnumerator DisplayStep(int index, bool active)
@@ -46,6 +47,11 @@ public class TutorialUIDisplayer : MonoBehaviour
 			}
 		}
 		yield return null;
+		_steps [index].SetActive (active);
+	}
+
+	public void ToggleInfo (int index, bool active)
+	{
 		_steps [index].SetActive (active);
 	}
 }

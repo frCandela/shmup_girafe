@@ -16,7 +16,7 @@ public class TutoEnnemyStopper : MonoBehaviour
 				if (GetComponent<DPSShip> ())
 					GetComponent<DPSShip> ().scrollingSpeed = 0;
 				else if (GetComponent<TankShip> ())
-					GetComponent<TankShip> ().Stun (60f);
+					GetComponent<TankShip> ().scrollingSpeed = 0;
 			}
 		}
 	}

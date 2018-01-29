@@ -34,14 +34,13 @@ public class UIBar : MonoBehaviour {
 	public GameObject leaderBoard;
 	public GameObject newHighScore;
 
-    private float currentHackPower = 0f;
+    private float currentHackPower = 0.1f;
 	private Animator outGlowAnim;
 
 	void Start()
 	{
 		outGlowAnim = outerGlow.GetComponent<Animator> ();
-		if (mouseController)
-			setHackBar (mouseController.getHackPowerRatio ());
+		currentHackPower = 0.01f;
 	}
 
     // Update is called once per frame
