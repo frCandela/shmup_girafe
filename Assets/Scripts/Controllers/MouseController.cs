@@ -148,8 +148,6 @@ public class MouseController : Controller
             {
                 isHacking = false;
 
-				//StartCoroutine(GameManager.instance.MainBar.ToggleHackMessage (3f));
-
                 if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                 {
                     //misc
@@ -199,8 +197,10 @@ public class MouseController : Controller
 
                     onHack.Invoke();
                 }
-                else
-                    onHackStop.Invoke();
+                else {
+					onHackStop.Invoke ();
+					GameManager.instance.MainBar.ShowHackMessage ();
+				}
 
                 if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
                     GameManager.instance.soundManager.hackSurvol.Stop();
@@ -245,12 +245,12 @@ public class MouseController : Controller
 
                 TimeManager.resetSlowMotion();
 
-				//StartCoroutine(GameManager.instance.MainBar.ToggleHackMessage (3f));
+				GameManager.instance.MainBar.ShowHackMessage ();
             }
             else if (hackPower >= minHackPower)
             {
                 isHacking = true;
-				//StartCoroutine(GameManager.instance.MainBar.ToggleHackMessage (0f));
+				StartCoroutine(GameManager.instance.MainBar.HideHackMessage ());
                 //hackPointer.GetComponent<SpriteRenderer>().enabled = true;
                 TimeManager.doSlowMotion(HackDuration, 0.05f);
                 onHackStart.Invoke();

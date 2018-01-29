@@ -142,6 +142,7 @@
      <Compile Include="Assets\Scripts\TUTO\TutoEnnemySpawner.cs" />
      <Compile Include="Assets\Scripts\TUTO\TutoEnnemyStopper.cs" />
      <Compile Include="Assets\Scripts\TUTO\TutoManager.cs" />
+     <Compile Include="Assets\Scripts\TUTO\TutoRespawn.cs" />
      <Compile Include="Assets\Scripts\TUTO\TutorialUIDisplayer.cs" />
      <Compile Include="Assets\Scripts\TUTO\TutoShipClickFollow.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonHover.cs" />

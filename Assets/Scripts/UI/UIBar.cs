@@ -142,10 +142,16 @@ public class UIBar : MonoBehaviour {
         }
     }
 
-	public IEnumerator ToggleHackMessage(float delay)
+	public IEnumerator HideHackMessage()
 	{
-		yield return new WaitForSeconds (delay);
-		hackMessage.enabled = !hackMessage.enabled;
+		hackMessage.enabled = false;
+		yield return new WaitForSeconds (5f);
+		hackMessage.enabled = true;
+	}
+
+	public void ShowHackMessage()
+	{
+		hackMessage.enabled = true;
 	}
 
 	//set the percentage of the hack bar

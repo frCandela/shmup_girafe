@@ -1000,6 +1000,7 @@ MonoBehaviour:
   _timerDisplay: {fileID: 1092433427}
   _hacking: 0
   _waitingForHack: 0
+  _spawnAgain: 0
 --- !u!1001 &319105590
 Prefab:
   m_ObjectHideFlags: 0
@@ -1379,6 +1380,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 415092918}
+--- !u!1 &430132704 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1372962193621966, guid: 18405aa32166a41dbbc629a1d03e3e67,
+    type: 2}
+  m_PrefabInternal: {fileID: 1445546657}
 --- !u!1001 &433614519
 Prefab:
   m_ObjectHideFlags: 0
@@ -3027,6 +3033,14 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 454917178}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18405aa32166a41dbbc629a1d03e3e67, type: 2}
   m_IsPrefabParent: 0
@@ -3799,6 +3813,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1289609851}
+  - component: {fileID: 1289609852}
   m_Layer: 0
   m_Name: Wave2-DPS
   m_TagString: Untagged
@@ -3820,6 +3835,21 @@ Transform:
   m_Father: {fileID: 32430775}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1289609852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1289609850}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa054c0565564eaa966ff963a43345e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ennemyPrefab: {fileID: 1372962193621966, guid: 18405aa32166a41dbbc629a1d03e3e67,
+    type: 2}
+  _waveEnnemy: {fileID: 430132704}
+  _tuto: {fileID: 317228172}
 --- !u!1 &1301528815
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +4982,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1512733623}
+  - component: {fileID: 1512733624}
   m_Layer: 0
   m_Name: Wave2-Tank
   m_TagString: Untagged
@@ -4973,6 +5004,21 @@ Transform:
   m_Father: {fileID: 32430775}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512733624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512733622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa054c0565564eaa966ff963a43345e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ennemyPrefab: {fileID: 1446717941724620, guid: a3eb8d6865e6641bca5709bbc76cc0e1,
+    type: 2}
+  _waveEnnemy: {fileID: 1859343543}
+  _tuto: {fileID: 317228172}
 --- !u!1 &1537416065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5681,6 +5727,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796158850}
+--- !u!1 &1859343543 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1446717941724620, guid: a3eb8d6865e6641bca5709bbc76cc0e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2118602011}
 --- !u!1001 &1875095792
 Prefab:
   m_ObjectHideFlags: 0
@@ -6097,6 +6148,14 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 454917178}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3eb8d6865e6641bca5709bbc76cc0e1, type: 2}
   m_IsPrefabParent: 0

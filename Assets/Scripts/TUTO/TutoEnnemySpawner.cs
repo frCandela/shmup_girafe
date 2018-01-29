@@ -12,9 +12,11 @@ public class TutoEnnemySpawner : MonoBehaviour
 			wave.SetActive (false);
 	}
 
-	public void SpawnWave(int index)
+	public void SpawnWave(int index, bool spawnLoop)
 	{
 		_waves [index].SetActive (true);
+		if (spawnLoop)
+			_waves [index].GetComponent<TutoRespawn> ().enabled = true;
 		Debug.Log ("Spawned wave " + index);
 	}
 }

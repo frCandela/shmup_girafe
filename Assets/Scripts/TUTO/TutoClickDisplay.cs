@@ -11,11 +11,14 @@ public class TutoClickDisplay : MonoBehaviour
 	[SerializeField]private TankShip _tank;
 	private bool _isDPS = false;
 
-	void Awake()
+	void Start()
 	{
 		_tuto = GameObject.Find ("TutorialManager").GetComponent<TutoManager> ();
 		if (_dps != null)
 			_isDPS = true;
+
+		_leftClickDisplay.SetActive (false);
+		_rightClickDisplay.SetActive (false);
 	}
 
 	void Update ()

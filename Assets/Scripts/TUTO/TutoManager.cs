@@ -36,6 +36,7 @@ public class TutoManager : MonoBehaviour
 	private bool _hackedDPS = false;
 	[HideInInspector]public bool _hacking = false;
 	[HideInInspector] public bool _waitingForHack = false;
+	[HideInInspector] public bool _spawnAgain = false;
 
 	void Start()
 	{
@@ -124,24 +125,25 @@ public class TutoManager : MonoBehaviour
 
 		//show info hack power
 		StartCoroutine (_displayer.DisplayStep (2, true));
+
 		//Fill up hack power
-		_gameManager.PlayerController.virusHackRefillSpeed = 30f;
+		_gameManager.PlayerController.virusHackRefillSpeed = 20f;
 
-		yield return StartCoroutine (WaitForLeftClick ());
-
-		//Spawn first wave of ennemies
-		_spawner.SpawnWave (0);
+		yield return StartCoroutine (WaitForLeftClick (5f));
+		//yield return new WaitForSeconds (5f);
 
 		StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
 
 		while (_gameManager.PlayerController.getHackPowerRatio () < 0.99f)
 			yield return null;
 
+		//Spawn first wave of ennemies
+		_spawner.SpawnWave (0, false);
+
 		//Wait for hack to start
 		yield return StartCoroutine (WaitForRightClick ());
 		_hacking = true;
 		_waitingForHack = false;
-
 
 		while (_hacking)
 			yield return null;
@@ -186,17 +188,22 @@ public class TutoManager : MonoBehaviour
 			yield return null;
 
 		if (_currentShip is DPSShip)
-			_spawner.SpawnWave (1);	//Spawn DPS
+			_spawner.SpawnWave (1, false);	//Spawn DPS
 		else if (_currentShip is TankShip)
-			_spawner.SpawnWave (2);	//spawn tank
+			_spawner.SpawnWave (2, false);	//spawn tank
 
 		while (_gameManager.PlayerController.getHackPowerRatio () < 1f)
 			yield return null;
 		int index = (_currentShip is DPSShip) ? 2 : 1;
-		_spawner.SpawnWave (index);
+		_spawner.SpawnWave (index, true);
 
 		//Show right click to hack
 		_waitingForHack = true;
+
+		//Spawn the ennemy again if killed and not hacked
+		//yield return null;
+		_spawnAgain = true;
+
 		yield return StartCoroutine (WaitForRightClick ());
 		_waitingForHack = false;
 
@@ -205,6 +212,8 @@ public class TutoManager : MonoBehaviour
 
 		while (_hacking)
 			yield return null;
+
+		_spawnAgain = false;	//no need to spawn again
 
 		//Show multi info + score
 		StartCoroutine (_displayer.DisplayStep (9, true));
@@ -228,11 +237,11 @@ public class TutoManager : MonoBehaviour
 
 		Time.timeScale = 1f;
 
-		_spawner.SpawnWave (3);
+		_spawner.SpawnWave (3, false);
 
 		yield return new WaitForSeconds (5f);
 
-		_spawner.SpawnWave (4);
+		_spawner.SpawnWave (4, false);
 
 		//StartGame ();
 	}
@@ -245,9 +254,31 @@ public class TutoManager : MonoBehaviour
 		}
 	}
 
+	IEnumerator WaitForLeftClick(float timer)
+	{
+		float elapsedTime = 0f;
+		while(!Input.GetButtonDown ("Fire"))
+		{
+			if (elapsedTime < timer) {
+				elapsedTime += Time.unscaledDeltaTime;
+				yield return null;
+			} else
+				break;
+			
+		}
+	}
+
 	IEnumerator WaitForRightClick()
 	{
 		while (!Input.GetButtonDown ("Hack")) 
+		{
+			yield return null;
+		}
+	}
+
+	IEnumerator WaitForClick()
+	{
+		while (!Input.GetButtonDown ("Hack") && !Input.GetButtonDown ("Fire")) 
 		{
 			yield return null;
 		}
