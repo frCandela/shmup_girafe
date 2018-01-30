@@ -39,6 +39,17 @@ public class LeaderboardText : MonoBehaviour {
     public void UpdateScore(int i) {
         StartCoroutine(OnlineScore.GetScores(leaders, i));
     }
+
+	public void ResetLeaderboard(string init)
+	{
+		leaders.Clear ();
+		text.text = init;
+	}
+
+	public string InitLeaderboard()
+	{
+		return GetComponent<Text> ().text;
+	}
 }
 
 public struct Record {

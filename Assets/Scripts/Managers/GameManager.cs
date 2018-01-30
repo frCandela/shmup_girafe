@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour {
     private const int checkpointCount = 12;
     private int checkpointId = 0;
    	private float levelDuration = 200;
-    private float timeLevel = 0;
+	private string leaderInit;
+    //private float timeLevel = 0;
 
     //Sound
     FMODUnity.StudioEventEmitter music;
@@ -158,6 +159,7 @@ public class GameManager : MonoBehaviour {
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
 
+		leaderInit = Leaderboard.InitLeaderboard ();
     }
     
     private void Update()
@@ -166,7 +168,7 @@ public class GameManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape))
 			BackToMenu ();
 		
-        timeLevel += Time.deltaTime;
+       // timeLevel += Time.deltaTime;
 
         foreach (Light light in lights) {
             light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
@@ -301,7 +303,10 @@ public class GameManager : MonoBehaviour {
 	public void ResetGameState()
 	{
 		score = 0;
-		timeLevel = 0f;
+		timerCheckpoint = checkpointRefreshTime;
+		checkpointId = 0;
+		Leaderboard.ResetLeaderboard (leaderInit);
+		PlayerController.addHackPower (-100f);
 	}
 
     public void saveScore(int check) { scores[check] = score; }

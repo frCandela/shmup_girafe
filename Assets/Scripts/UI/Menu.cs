@@ -59,7 +59,7 @@ public class Menu : MonoBehaviour {
 
     public void PlayGame()
     {
-        AsyncOperation async = SceneManager.LoadSceneAsync("Tutorial");
+        AsyncOperation async = SceneManager.LoadSceneAsync("TutoTest");
 		tutoriel.SetActive (false);
 		background.SetActive (false);
         loading.SetActive(true);

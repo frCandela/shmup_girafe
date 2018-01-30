@@ -274,8 +274,10 @@ public class MouseController : Controller
     public void addHackPower( float value )
     {
         hackPower += value;
-        if (hackPower > maxHackPower)
-            hackPower = maxHackPower;
+		if (hackPower > maxHackPower)
+			hackPower = maxHackPower;
+		else if (hackPower < 0f)
+			hackPower = 0f;
     }
 
     /*public void resetHack()

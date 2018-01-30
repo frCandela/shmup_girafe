@@ -32,8 +32,6 @@ public class TutoManager : MonoBehaviour
 	private TimeManager _timeManager;
 	private Pawn _currentShip = null;
 
-	private bool _continue = false;
-	private bool _hackedDPS = false;
 	private bool _wasClicked = false;
 	[HideInInspector]public bool _hacking = false;
 	[HideInInspector] public bool _waitingForHack = false;
@@ -73,7 +71,7 @@ public class TutoManager : MonoBehaviour
 		_timerDisplay.SetActive (true);
 
 		Time.timeScale = 1f;
-
+		_gameManager.ResetGameState ();
 		gameObject.SetActive (false);
 	}
 
@@ -257,7 +255,6 @@ public class TutoManager : MonoBehaviour
 		StartCoroutine (_displayer.DisplayStep (12, true));
 
 		_gameManager.PlayerController.virusHackRefillSpeed = 0f;
-		_gameManager.ResetGameState ();
 
 		yield return StartCoroutine (WaitForLeftClick ());
 

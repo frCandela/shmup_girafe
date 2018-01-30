@@ -145,6 +145,7 @@
      <Compile Include="Assets\Scripts\TUTO\TutoRespawn.cs" />
      <Compile Include="Assets\Scripts\TUTO\TutorialUIDisplayer.cs" />
      <Compile Include="Assets\Scripts\TUTO\TutoShipClickFollow.cs" />
+     <Compile Include="Assets\Scripts\TUTO\TutoStepDisplay.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonHover.cs" />
      <Compile Include="Assets\Scripts\UI\FeedbackBarFill.cs" />
      <Compile Include="Assets\Scripts\UI\FollowHack.cs" />
