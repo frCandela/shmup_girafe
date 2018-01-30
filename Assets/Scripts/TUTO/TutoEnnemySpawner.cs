@@ -17,6 +17,5 @@ public class TutoEnnemySpawner : MonoBehaviour
 		_waves [index].SetActive (true);
 		if (spawnLoop)
 			_waves [index].GetComponent<TutoRespawn> ().enabled = true;
-		Debug.Log ("Spawned wave " + index);
 	}
 }

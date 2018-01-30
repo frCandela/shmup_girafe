@@ -297,6 +297,13 @@ public class GameManager : MonoBehaviour {
         score += scoreGained;
         return scoreGained;
     }
+
+	public void ResetGameState()
+	{
+		score = 0;
+		timeLevel = 0f;
+	}
+
     public void saveScore(int check) { scores[check] = score; }
     public int[] getScores() { return scores; }
 

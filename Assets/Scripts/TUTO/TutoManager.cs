@@ -34,6 +34,7 @@ public class TutoManager : MonoBehaviour
 
 	private bool _continue = false;
 	private bool _hackedDPS = false;
+	private bool _wasClicked = false;
 	[HideInInspector]public bool _hacking = false;
 	[HideInInspector] public bool _waitingForHack = false;
 	[HideInInspector] public bool _spawnAgain = false;
@@ -132,13 +133,20 @@ public class TutoManager : MonoBehaviour
 		yield return StartCoroutine (WaitForLeftClick (5f));
 		//yield return new WaitForSeconds (5f);
 
-		StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
+		//StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
 
 		while (_gameManager.PlayerController.getHackPowerRatio () < 0.99f)
 			yield return null;
 
+
 		//Spawn first wave of ennemies
 		_spawner.SpawnWave (0, false);
+
+		if(!_wasClicked)
+		{
+			yield return StartCoroutine (WaitForClick ());
+			StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
+		}
 
 		//Wait for hack to start
 		yield return StartCoroutine (WaitForRightClick ());
@@ -242,8 +250,22 @@ public class TutoManager : MonoBehaviour
 		yield return new WaitForSeconds (5f);
 
 		_spawner.SpawnWave (4, false);
+		
+		while (!(_gameManager.PlayerController.PossessedPawn is Virus))
+			yield return null;
 
-		//StartGame ();
+		StartCoroutine (_displayer.DisplayStep (12, true));
+
+		_gameManager.PlayerController.virusHackRefillSpeed = 0f;
+		_gameManager.ResetGameState ();
+
+		yield return StartCoroutine (WaitForLeftClick ());
+
+		StartCoroutine (_displayer.DisplayStep (12, false));
+
+		yield return new WaitForSeconds (1f);
+
+		StartGame ();
 	}
 
 	IEnumerator WaitForLeftClick()
@@ -253,18 +275,20 @@ public class TutoManager : MonoBehaviour
 			yield return null;
 		}
 	}
-
+		
 	IEnumerator WaitForLeftClick(float timer)
 	{
 		float elapsedTime = 0f;
-		while(!Input.GetButtonDown ("Fire"))
+		while(elapsedTime < timer)
 		{
-			if (elapsedTime < timer) {
-				elapsedTime += Time.unscaledDeltaTime;
-				yield return null;
-			} else
+			elapsedTime += Time.unscaledDeltaTime;
+			if (Input.GetButtonDown ("Fire"))
+			{
+				StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
+				_wasClicked = true;
 				break;
-			
+			}	
+			yield return null;
 		}
 	}
 
@@ -291,6 +315,5 @@ public class TutoManager : MonoBehaviour
 		_displayer.ToggleInfo (6, false);
 		_displayer.ToggleInfo (7, false);
 		_currentShip = _gameManager.PlayerController.PossessedPawn;
-		print ("Now controlling a "+_currentShip.ToString ());
 	}
 }
