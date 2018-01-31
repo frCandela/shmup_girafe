@@ -6777,7 +6777,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2023628335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -154.34962, y: 39.949787, z: 0}
+  m_LocalPosition: {x: -154.34955, y: 39.949768, z: 0}
   m_LocalScale: {x: 0.99999535, y: 0.99999535, z: 0.99999535}
   m_Children: []
   m_Father: {fileID: 1658786172}
@@ -7281,7 +7281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Left click to launch game
+  m_Text: Left click to lAunch gAme
 --- !u!222 &2107798856
 CanvasRenderer:
   m_ObjectHideFlags: 0
