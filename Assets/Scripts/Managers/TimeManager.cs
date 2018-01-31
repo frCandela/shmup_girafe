@@ -72,6 +72,7 @@ public class TimeManager : MonoBehaviour
 	{
 		if (_countdownDisplay) 
 		{
+			FMODUnity.RuntimeManager.PlayOneShot("event:/54321", GameManager.instance.MainCameraController.transform.position);
 			while(_elapsedCD < _countdownDuration)
 			{
 				_countdownLeft = _countdownDuration - Mathf.Floor (_elapsedCD);
