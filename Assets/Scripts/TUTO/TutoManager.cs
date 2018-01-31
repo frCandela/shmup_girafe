@@ -113,27 +113,33 @@ public class TutoManager : MonoBehaviour
 
 		//Show intro
 		StartCoroutine (_displayer.DisplayStep (0, true));
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (WaitForLeftClick ());
 
 		//Hide intro
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (0, false));
 
 		yield return new WaitForSeconds (0.2f);
 
 		//show movement
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (1, true));
 	
 		yield return StartCoroutine (WaitForLeftClick ());
 
 		//Hide movement
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (1, false));
 
 		yield return new WaitForSeconds (0.2f);
 
 		//Show UI bar
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		_uI.SetActive (true);
 
 		//show info hack power
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (2, true));
 
 		//Fill up hack power
@@ -152,6 +158,7 @@ public class TutoManager : MonoBehaviour
 		if(!_wasClicked)
 		{
 			yield return StartCoroutine (WaitForClick ());
+			FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 			StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
 		}
 
@@ -167,16 +174,20 @@ public class TutoManager : MonoBehaviour
 		Time.timeScale = 0f;
 
 		//Show hack results
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (5, true));
 
 		yield return WaitForLeftClick ();
 
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (5, false));	//hide hack results
 		int shipHacked = (_currentShip is DPSShip) ? 10 : 11;
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (shipHacked, true));	//show hacked ship controls
 
 		yield return WaitForLeftClick ();
 
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (shipHacked, false));	//hide ship controls
 
 		Time.timeScale = 1f;
@@ -192,9 +203,11 @@ public class TutoManager : MonoBehaviour
 		GameManager.instance.MainCameraController.trauma = 0f;
 
 		//show "kill ennemies to get hack power"
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (8, true));
 
 		yield return StartCoroutine (WaitForLeftClick ());
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (8, false));
 
 		Time.timeScale = 1f;
@@ -231,6 +244,7 @@ public class TutoManager : MonoBehaviour
 		_spawnAgain = false;	//no need to spawn again
 
 		//Show multi info + score
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (9, true));
 		_scoreDisplay.SetActive (true);
 		_scorePopup.SetActive (true);
@@ -240,8 +254,10 @@ public class TutoManager : MonoBehaviour
 
 		yield return WaitForLeftClick ();
 
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (9, false));	//hide hack results
 		shipHacked = (_currentShip is DPSShip) ? 10 : 11;
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		yield return StartCoroutine (_displayer.DisplayStep (shipHacked, true));	//show hacked ship controls
 
 		yield return WaitForLeftClick ();
@@ -261,12 +277,14 @@ public class TutoManager : MonoBehaviour
 		while (!(_gameManager.PlayerController.PossessedPawn is Virus))
 			yield return null;
 
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (12, true));
 
 		_gameManager.PlayerController.virusHackRefillSpeed = 0f;
 
 		yield return StartCoroutine (WaitForLeftClick ());
 
+		FMODUnity.RuntimeManager.PlayOneShot("event:/hit_enemy", _gameManager.MainCameraController.transform.position);
 		StartCoroutine (_displayer.DisplayStep (12, false));
 		StartCoroutine (_displayer.DisplayStep (13, false));
 
