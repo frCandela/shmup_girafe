@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour {
     public FMODUnity.StudioEventEmitter music;
 
-    public GameObject credits, loading, leader;
+    public GameObject credits, loading, leader, tutoriel, background;
     public Text pseudos, scores;
 
     private List<Record> leaders;
+
+    public GameObject[] slide;
+    public GameObject button;
+    private int slideId = 0;
 
     void Awake()
     {
@@ -55,9 +59,30 @@ public class Menu : MonoBehaviour {
 
     public void PlayGame()
     {
-        AsyncOperation async = SceneManager.LoadSceneAsync("Tutorial");
+        AsyncOperation async = SceneManager.LoadSceneAsync("TutoTest");
+		tutoriel.SetActive (false);
+		background.SetActive (false);
         loading.SetActive(true);
         async.completed += OnLoad;
+    }
+
+    public void Tutoriel()
+    {
+        tutoriel.SetActive(true);
+    }
+
+    public void NextSlide()
+    {
+        slideId++;
+        if (slideId == slide.Length - 1)
+            button.SetActive(false);
+        if (slideId == slide.Length)
+            PlayGame();
+        else
+        {
+            slide[slideId - 1].SetActive(false);
+            slide[slideId].SetActive(true);
+        }
     }
 
     private void OnLoad(AsyncOperation obj)

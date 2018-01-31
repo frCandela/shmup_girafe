@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,20 +22,25 @@ public class UIBar : MonoBehaviour {
     public Image multi;
     public Image multiBefore;
     public Image multiAfter;
+	public Image multiBarUp;
+	public Image multiBarDown;
     public Sprite[] multiText;
 
-    [Header("Linked gamebjects :")]
+    [Header("Linked GameObjects :")]
     public MouseController mouseController;
     public Health health;
+    public GameObject leader;
+    public InputField input;
+	public GameObject leaderBoard;
+	public GameObject newHighScore;
 
-	private float currentHackPower = 0f;
-	private Image hackGlow;
+    private float currentHackPower = 0.1f;
 	private Animator outGlowAnim;
 
 	void Start()
 	{
 		outGlowAnim = outerGlow.GetComponent<Animator> ();
-		hackGlow = outerGlow.GetComponent<Image> ();
+		currentHackPower = 0.01f;
 	}
 
     // Update is called once per frame
@@ -48,19 +54,29 @@ public class UIBar : MonoBehaviour {
     }
 
     //Set the multiplierText
-    public void setMulti(int value)
+    public void setMulti(int value, int hack)
     {
+        int array = value + hack;
+        if (value == 3)
+            array++;
+        if (value == 4)
+            array = multiText.Length - 1;
         multiBefore.enabled = true;
-        if (value > 0)
-            multiBefore.sprite = multiText[value - 1];
+        if (array > 0)
+            multiBefore.sprite = multiText[array - 1];
         else
             multiBefore.enabled = false;
 
-        multi.sprite = multiText[value];
+        multi.sprite = multiText[array];
+		if(array == 0 || array == 1 || array == 2 || array == 4 || array == 7)
+		{
+			multi.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+			multiBarUp.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+			multiBarDown.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");}
 
         multiAfter.enabled = true;
-        if (value < 3)
-            multiAfter.sprite = multiText[value + 1];
+        if (array < multiText.Length - 1)
+            multiAfter.sprite = multiText[array + 1];
         else
             multiAfter.enabled = false;
     }
@@ -119,12 +135,24 @@ public class UIBar : MonoBehaviour {
             anim.SetTrigger("showHack");
             hackShow = true;
         }
-        else if(value < 1f && hackShow)
+		else if(value < 1f && hackShow)
         {
             anim.SetTrigger("endHack");
             hackShow = false;
         }
     }
+
+	public IEnumerator HideHackMessage()
+	{
+		hackMessage.enabled = false;
+		yield return new WaitForSeconds (5f);
+		hackMessage.enabled = true;
+	}
+
+	public void ShowHackMessage()
+	{
+		hackMessage.enabled = true;
+	}
 
 	//set the percentage of the hack bar
 	void SetHackPercentage(float per)
@@ -143,5 +171,33 @@ public class UIBar : MonoBehaviour {
 			else 
 				inGlow.SetBool ("isGlowing", false);
 		}
+	}
+
+    public void showLeaderScreen()
+    {
+        leader.SetActive(true);
+		StartCoroutine (CheckHighScore ());
+    }
+
+	IEnumerator CheckHighScore()
+	{
+		List<Record> leaders = new List<Record> ();
+		yield return StartCoroutine (OnlineScore.GetScores (leaders, 11));
+		int higherScore = leaders [0].score;
+		if (GameManager.instance.getScore () > higherScore)
+			newHighScore.SetActive (true);
+	}
+
+    public void sendScore()
+    {
+		StartCoroutine (SubmitAndMenu ());
+    }
+
+	IEnumerator SubmitAndMenu()
+	{
+		GameManager.instance.saveScore(11);
+		yield return StartCoroutine(OnlineScore.SetScores(GameManager.instance.getScores(), input.text));
+		leader.SetActive (false);
+		leaderBoard.SetActive (true);
 	}
 }

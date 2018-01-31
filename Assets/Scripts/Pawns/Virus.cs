@@ -7,11 +7,13 @@ public class Virus : Ship
 {
     private  float glitchTimer;
     private float glitchDelta;
+    private bool wrongSoundPlayed;
 
     private void Start()
     {
         glitchTimer = 0F;
         glitchDelta = 0F;
+        wrongSoundPlayed = false;
 
         transform.position = GameManager.instance.getMouseWorldPosition();
     }
@@ -38,7 +40,22 @@ public class Virus : Ship
     //Makes the ship shoot ! 
     public override void Fire(Quaternion angle)
     {
+        //Play a sound when the player tries to Fire
+        if (!GameManager.instance.soundManager.wrong.IsPlaying() &&  ! wrongSoundPlayed)
+        {
+            wrongSoundPlayed = true;
+            if(GameManager.instance._playWrong)GameManager.instance.soundManager.wrong.Play();
+        }
+            
     }
+
+    //When the player realease the FIRE key
+    public override void UnFire()
+    {
+        base.UnFire();
+        wrongSoundPlayed = false;
+    }
+
 
     private void OnEnable()
     {

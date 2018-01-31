@@ -15,12 +15,12 @@ public class Ship : Pawn
     [Header("Prefabs:")]
     public GameObject explosionPrefab;
 
-    
+    [Header("Parameters")]
     [Range(0.0f, 100.0f)]public float playerSpeed = 0.5f;  //Movement speed of the ship
 
     //Stun
     public bool canBeStunned = true;
-    private bool isPlayerControlled = false;
+	private bool isPlayerControlled = false;
 
     //Speed
     public float scrollingSpeed;
@@ -82,10 +82,10 @@ public class Ship : Pawn
             {
                 otherHealth.takeDamage(otherHealth.health, this);
 
-                if (myHealth.health == 1)
-                    myHealth.takeDamage(1, this);
+				if (myHealth.health == 1 || GetComponent<TankShip>())
+					myHealth.takeDamage (1, this);
                 else
-                    myHealth.takeDamage(myHealth.health - 1, this);
+					myHealth.takeDamage (myHealth.health - 1, this);
             }
         }
     }
@@ -154,11 +154,11 @@ public class Ship : Pawn
 
     protected void OnDestroy()
     {
-        GameManager.instance.PlayerController.addHackPower(hackbonus);
+        /*GameManager.instance.PlayerController.addHackPower(hackbonus);
         if( isPlayerControlled)
             FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
         else
-            FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);*/
     }
 
     public virtual void Destroy()
@@ -172,6 +172,11 @@ public class Ship : Pawn
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
 		}
+		GameManager.instance.PlayerController.addHackPower(hackbonus);
+		if( isPlayerControlled)
+			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
+		else
+			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
     }
 
 	public IEnumerator HackImmunity()
@@ -180,7 +185,6 @@ public class Ship : Pawn
 		yield return new WaitForSeconds (1f);
 		health.immortal = false;
 	}
-
 
     public bool IsPlayerControlled() { return isPlayerControlled; }
     public void SetPlayerControlled( bool value) { isPlayerControlled = value; }

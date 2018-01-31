@@ -11,41 +11,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
   m_Name: DPSAttack_x8
   m_EditorClassIdentifier: 
-  rate: 10
+  rate: 20
   bursts:
-  - amount: 4
-    spread: 91
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
-  - amount: 4
-    spread: 101
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
-  - amount: 4
-    spread: 95
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+  - amount: 5
+    spread: 32
+    angle: 2.8624024
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 5
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 5
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 5
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
   - amount: 0
-    spread: 11
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
   - amount: 0
-    spread: 11
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
   - amount: 0
-    spread: 11
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
   - amount: 0
-    spread: 11
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
   - amount: 0
-    spread: 11
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
   - amount: 0
-    spread: 11
-    angle: 0
-    prefab: {fileID: 1620326717983798, guid: 92fb2219fe07c4b5d8b4f7442dda29fc, type: 2}
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}
+  - amount: 0
+    spread: 32
+    angle: -2.8624094
+    prefab: {fileID: 1620326717983798, guid: 0017bf80c1c414a01beb7f2f8aee05ff, type: 2}

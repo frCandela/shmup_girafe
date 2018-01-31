@@ -201,7 +201,6 @@ public class TankShip : Ship
         chargeCircle.transform.localScale = new Vector3(newScale, newScale, newScale);
     }
 
-
     public override void MoveTowards(Vector3 point)
     {
         if (!IsStunned() && !loadingCharge && !isCharging)

@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour {
     [Header("Score:")]
     private int hackPerCombo;
     public int scorePeerHack = 50;
+
+	[HideInInspector]public bool _playWrong = true;
+	[HideInInspector] public bool _tutoPlaying = false;
     
     private int score = 0;
     private int[] scores;
@@ -59,8 +62,9 @@ public class GameManager : MonoBehaviour {
     private float checkpointRefreshTime;
     private const int checkpointCount = 12;
     private int checkpointId = 0;
-    public float levelDuration = 200;
-    private float timeLevel = 0;
+   	private float levelDuration = 200;
+	private string leaderInit;
+    //private float timeLevel = 0;
 
     //Sound
     FMODUnity.StudioEventEmitter music;
@@ -75,12 +79,17 @@ public class GameManager : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-            AwakeGame();
+            //AwakeGame();
         } 
         else if (instance != this)
             Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
+
+	void OnEnable()
+	{
+		AwakeGame ();
+	}
 
     //Initializes the game for each level.
     void AwakeGame() {
@@ -90,6 +99,8 @@ public class GameManager : MonoBehaviour {
             throw new Exception("Error : no main camera selected");
         if (!TextPopupsGen)
             throw new Exception("Error : no TextPopupsGenerator selected");
+
+        levelDuration = GetComponent<TimeManager>()._gameDuration;
 
         PostProcessing = MainCameraController.gameObject.GetComponent<PostProcessingBehaviour>();
 
@@ -110,7 +121,7 @@ public class GameManager : MonoBehaviour {
 
         //initialise ui
         MainBar.mouseController = (MouseController)PlayerController;
-        MainBar.setMulti(0);
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         //Post Processing reset
         UserLutModel.Settings set = PostProcessing.profile.userLut.settings;
@@ -150,12 +161,18 @@ public class GameManager : MonoBehaviour {
 
         timerCheckpoint = checkpointRefreshTime;
         checkpointId = 0;
-        Leaderboard.UpdateScore(checkpointId);
+
+		leaderInit = Leaderboard.InitLeaderboard ();
     }
     
     private void Update()
     {
-        timeLevel += Time.deltaTime;
+		//Press escape to go to menu
+		if (Input.GetKeyDown (KeyCode.Escape))
+			BackToMenu ();
+		
+       // timeLevel += Time.deltaTime;
+
         foreach (Light light in lights) {
             light.color = Color.Lerp(light.color, currentColor.color, Time.deltaTime);
             light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
@@ -167,10 +184,10 @@ public class GameManager : MonoBehaviour {
             timerCheckpoint = checkpointRefreshTime;
             if (checkpointId < checkpointCount - 1)
                 saveScore(checkpointId);
-            checkpointId++;
+			Leaderboard.UpdateScore(checkpointId);
+			checkpointId++;
             if (checkpointId >= checkpointCount)
                 checkpointId = checkpointCount - 1;
-            Leaderboard.UpdateScore(checkpointId);
         }
     }
 
@@ -221,7 +238,6 @@ public class GameManager : MonoBehaviour {
                 hackPerCombo = 0;
             else
                 hackPerCombo = comboMultiplier-1;
-            MainBar.setMulti(comboMultiplier);
             PlayTrack(comboMultiplier);
             SetLights(comboMultiplier);
 
@@ -234,6 +250,7 @@ public class GameManager : MonoBehaviour {
 
             music.SetParameter("combo", comboMultiplier+0.1f);
         }
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         music.SetParameter("hack", 0);
 
@@ -258,7 +275,7 @@ public class GameManager : MonoBehaviour {
         comboMultiplier = 0;
 
         //initialise ui
-        MainBar.setMulti(0);
+        MainBar.setMulti(comboMultiplier, hackCount);
 
         //Music
         music.SetParameter("combo", 0);
@@ -285,7 +302,19 @@ public class GameManager : MonoBehaviour {
         score += scoreGained;
         return scoreGained;
     }
+
+	public void ResetGameState()
+	{
+		score = 0;
+		timerCheckpoint = checkpointRefreshTime;
+		checkpointId = 0;
+		Leaderboard.ResetLeaderboard (leaderInit);
+		PlayerController.addHackPower (-100f);
+		_tutoPlaying = false;
+	}
+
     public void saveScore(int check) { scores[check] = score; }
+    public int[] getScores() { return scores; }
 
     void SetLights(int mult) {
         currentColor = lightColors[mult];
@@ -303,13 +332,11 @@ public class GameManager : MonoBehaviour {
 		float timing = 0.5f;
 		float intensity = mainLight.intensity;
 		Quaternion rotation = mainLight.transform.rotation;
-		//mainLight.intensity = 40f;
 		while(elapsedTime < timing)
 		{
 			if (mainLight.intensity < 40f)
 				mainLight.intensity += 20f*Time.deltaTime;
 			mainLight.transform.Rotate (0, 2160f*Time.deltaTime, 0);
-			Debug.Log ("kjsgdfihjqsdf");
 			elapsedTime += Time.unscaledDeltaTime;
 			yield return new WaitForEndOfFrame ();
 		}
@@ -322,6 +349,11 @@ public class GameManager : MonoBehaviour {
 			yield return new WaitForEndOfFrame ();
 		}
 		mainLight.intensity = intensity;
+	}
+
+	public void BackToMenu()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("Title");
 	}
 
     #region POST-EFFECT

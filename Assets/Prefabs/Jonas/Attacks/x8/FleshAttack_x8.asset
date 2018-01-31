@@ -16,12 +16,12 @@ MonoBehaviour:
   - amount: 2
     spread: 45
     angle: 30.465546
-    prefab: {fileID: 1465794500378430, guid: 2ff9fcae3177449aa8e26b4530d1ea89, type: 2}
+    prefab: {fileID: 1465794500378430, guid: 79f8239c03c544132a05afe52d0f70a0, type: 2}
   - amount: 2
     spread: 45
     angle: 0
-    prefab: {fileID: 1465794500378430, guid: 2ff9fcae3177449aa8e26b4530d1ea89, type: 2}
+    prefab: {fileID: 1465794500378430, guid: 79f8239c03c544132a05afe52d0f70a0, type: 2}
   - amount: 2
     spread: 45
     angle: -29.744886
-    prefab: {fileID: 1465794500378430, guid: 2ff9fcae3177449aa8e26b4530d1ea89, type: 2}
+    prefab: {fileID: 1465794500378430, guid: 79f8239c03c544132a05afe52d0f70a0, type: 2}

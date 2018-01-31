@@ -68,7 +68,7 @@ public class CameraController : MonoBehaviour
         //Set the size of the camera trigger 
         cameraTrigger.size = new Vector2(2*widthCamera, 5*heightCamera);
 
-        cameraTrigger.offset = new Vector2(0, 2.5f*heightCamera);
+        cameraTrigger.offset = new Vector2(0, 2f*heightCamera);
     }
 
     // Update is called once per frame
@@ -82,6 +82,7 @@ public class CameraController : MonoBehaviour
     //Object entering the camera view
     private void OnTriggerEnter2D(Collider2D collision)
     {
+		print ("collide");
         //Adds the ship to the shipsInCameraView dictionary
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if(ship)

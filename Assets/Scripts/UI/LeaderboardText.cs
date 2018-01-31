@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
 public class LeaderboardText : MonoBehaviour {
-    private Text text;
+	[SerializeField] private int _scoresDisplayed = 3;
+	private Text text;
     private List<Record> leaders;
 
     void Awake() {
@@ -15,11 +16,13 @@ public class LeaderboardText : MonoBehaviour {
 
     void Update() {
         if(leaders.Count > 0) {
-            text.text = "<color=grey>Leaderboard:</color>\n";
+            text.text = "<color=grey>LeAderboArd:</color>\n";
             int count = 1;
             int playerScore = GameManager.instance.getScore();
             bool showPlayer = false;
-            foreach (Record r in leaders) {
+			for (int i = 0 ; i < _scoresDisplayed; i++)
+			{
+				Record r = leaders [i];
                 if(playerScore > r.score && !showPlayer) {
                     text.text += "<color=red>" + (count++) + ". YOU " + playerScore + "</color>\n";
                     showPlayer = true;
@@ -36,6 +39,17 @@ public class LeaderboardText : MonoBehaviour {
     public void UpdateScore(int i) {
         StartCoroutine(OnlineScore.GetScores(leaders, i));
     }
+
+	public void ResetLeaderboard(string init)
+	{
+		leaders.Clear ();
+		text.text = init;
+	}
+
+	public string InitLeaderboard()
+	{
+		return GetComponent<Text> ().text;
+	}
 }
 
 public struct Record {

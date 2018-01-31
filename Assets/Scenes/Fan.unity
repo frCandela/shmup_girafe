@@ -127,12 +127,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 325.5
+      value: 432.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 183
+      value: 243.5
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -222,27 +222,27 @@ Prefab:
     - target: {fileID: 224070500053441674, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 215.99527
+      value: 1002.2804
       objectReference: {fileID: 0}
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 949.99994
+      value: 950.00006
       objectReference: {fileID: 0}
     - target: {fileID: 224038267204298266, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 476.87665
+      value: 2343.8955
       objectReference: {fileID: 0}
     - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 939.99994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224748931594314606, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -492.87665
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224635261286602298, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -268,6 +268,11 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224905429289150384, guid: cd9ae7963527bec44bb5a5221b77a287,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2363.3054
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cd9ae7963527bec44bb5a5221b77a287, type: 2}
@@ -472,7 +477,6 @@ MonoBehaviour:
   screenLimit: 7
   VirusShipPrefab: {fileID: 114690295686379222, guid: bdebec36fcf96445184889ed13943d6d,
     type: 2}
-  virusShip: {fileID: 0}
   hackPointerPrefab: {fileID: 1089466291376836, guid: 5b12a8fab29e0674f93acddbfc6288b6,
     type: 2}
   hackPointer: {fileID: 0}
@@ -566,6 +570,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 81065963}
   m_Script: {fileID: 11500000, guid: 1e00d9a41c4b98f4ea3b0f3b0b462785, type: 3}
+--- !u!1001 &656678918
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 454917181}
+    m_Modifications:
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e9f2418b6b0662444ab24d789a1541a9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &891582798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1262,7 @@ MonoBehaviour:
   - Multi x2
   - Multi x4
   - Multi x8
+  mainLight: {fileID: 0}
   lights:
   - {fileID: 1103002388}
   - {fileID: 1776019604}
@@ -1238,7 +1285,6 @@ MonoBehaviour:
   - -20
   scoreLossHitVirus: 1000
   scorePeerHack: 500
-  levelDuration: 200
   initComboMultiplier: 0
 --- !u!114 &1301998662
 MonoBehaviour:
@@ -1253,6 +1299,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameDuration: 180
   _timerText: {fileID: 0}
+  _countdown: 1
+  _countdownDuration: 5
+  _countdownDisplay: {fileID: 0}
+  _countdownImages: []
 --- !u!4 &1301998663
 Transform:
   m_ObjectHideFlags: 0
@@ -1331,48 +1381,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 51.3, y: 0, z: 0}
---- !u!1 &1681368126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1681368127}
-  - component: {fileID: 1681368128}
-  m_Layer: 0
-  m_Name: SoundManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1681368127
+--- !u!4 &1681368127 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1681368126}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2068811731}
-  m_Father: {fileID: 454917181}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1681368128
+  m_PrefabParentObject: {fileID: 4314881363982438, guid: e9f2418b6b0662444ab24d789a1541a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 656678918}
+--- !u!114 &1681368128 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1681368126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114925816566470744, guid: e9f2418b6b0662444ab24d789a1541a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 656678918}
   m_Script: {fileID: 11500000, guid: 6a15f07b6d4868740a25fad3e6f19993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hackSurvol: {fileID: 2068811732}
 --- !u!1 &1776019603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,54 +1463,3 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 81065963}
   m_Script: {fileID: 11500000, guid: 5f142d5dbdca49c4bb1c084dca4598e0, type: 3}
---- !u!1 &2068811730
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2068811731}
-  - component: {fileID: 2068811732}
-  m_Layer: 0
-  m_Name: Survol
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2068811731
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2068811730}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1681368127}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2068811732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2068811730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/hack/hack_survol
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
