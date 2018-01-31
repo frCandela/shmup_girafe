@@ -53,6 +53,8 @@ public class TutoManager : MonoBehaviour
 
 		_gameManager.PlayerController.virusHackRefillSpeed = 0f;
 
+		_gameManager._playWrong = false;
+
 		//Start Tutorial
 		StartCoroutine (Tutorial ());
 	}
@@ -72,6 +74,7 @@ public class TutoManager : MonoBehaviour
 
 		Time.timeScale = 1f;
 		_gameManager.ResetGameState ();
+		_gameManager._playWrong = true;
 		gameObject.SetActive (false);
 	}
 
@@ -99,10 +102,18 @@ public class TutoManager : MonoBehaviour
 
 	IEnumerator Tutorial()
 	{
+		_gameManager._tutoPlaying = true;
+
+		if (PlayerPrefs.HasKey ("PlayerDidTutorial"))
+			StartCoroutine (_displayer.DisplayStep (13, true));
+		
+		yield return new WaitForSeconds (1f);
+
+		_gameManager._playWrong = false;
+
 		//Show intro
 		StartCoroutine (_displayer.DisplayStep (0, true));
 		yield return StartCoroutine (WaitForLeftClick ());
-
 
 		//Hide intro
 		yield return StartCoroutine (_displayer.DisplayStep (0, false));
@@ -129,13 +140,11 @@ public class TutoManager : MonoBehaviour
 		_gameManager.PlayerController.virusHackRefillSpeed = 20f;
 
 		yield return StartCoroutine (WaitForLeftClick (5f));
-		//yield return new WaitForSeconds (5f);
-
-		//StartCoroutine (_displayer.DisplayStep (2, false));	//hide hack power info
 
 		while (_gameManager.PlayerController.getHackPowerRatio () < 0.99f)
 			yield return null;
 
+		_gameManager._playWrong = true;
 
 		//Spawn first wave of ennemies
 		_spawner.SpawnWave (0, false);
@@ -259,6 +268,9 @@ public class TutoManager : MonoBehaviour
 		yield return StartCoroutine (WaitForLeftClick ());
 
 		StartCoroutine (_displayer.DisplayStep (12, false));
+		StartCoroutine (_displayer.DisplayStep (13, false));
+
+		PlayerPrefs.SetInt ("PlayerDidTutorial", 1);
 
 		yield return new WaitForSeconds (1f);
 

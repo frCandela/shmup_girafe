@@ -44,7 +44,7 @@ public class Virus : Ship
         if (!GameManager.instance.soundManager.wrong.IsPlaying() &&  ! wrongSoundPlayed)
         {
             wrongSoundPlayed = true;
-            GameManager.instance.soundManager.wrong.Play();
+            if(GameManager.instance._playWrong)GameManager.instance.soundManager.wrong.Play();
         }
             
     }

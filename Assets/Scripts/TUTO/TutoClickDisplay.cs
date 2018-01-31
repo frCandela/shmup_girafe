@@ -29,12 +29,12 @@ public class TutoClickDisplay : MonoBehaviour
 			{
 				if(_isDPS)
 				{
-					if(!_dps.isPlayerControlled)
+					if(!_dps.IsPlayerControlled())
 						_leftClickDisplay.SetActive (true);
 					else
 						_leftClickDisplay.SetActive (false);
 				}
-				else if (!_tank.isPlayerControlled)
+				else if (!_tank.IsPlayerControlled())
 					_leftClickDisplay.SetActive (true);
 				else _leftClickDisplay.SetActive (false);
 			}
@@ -45,10 +45,10 @@ public class TutoClickDisplay : MonoBehaviour
 			{
 				if (_isDPS)
 				{
-					if (_dps.isPlayerControlled)
+					if (_dps.IsPlayerControlled())
 						_rightClickDisplay.SetActive (true);
 					else _rightClickDisplay.SetActive (false);
-				} else if (_tank.isPlayerControlled)
+				} else if (_tank.IsPlayerControlled())
 					_rightClickDisplay.SetActive (true);
 				else
 					_rightClickDisplay.SetActive (false);

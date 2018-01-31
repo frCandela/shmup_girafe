@@ -20,7 +20,7 @@ public class Ship : Pawn
 
     //Stun
     public bool canBeStunned = true;
-	public bool isPlayerControlled = false;	//was private
+	private bool isPlayerControlled = false;
 
     //Speed
     public float scrollingSpeed;
@@ -185,7 +185,6 @@ public class Ship : Pawn
 		yield return new WaitForSeconds (1f);
 		health.immortal = false;
 	}
-
 
     public bool IsPlayerControlled() { return isPlayerControlled; }
     public void SetPlayerControlled( bool value) { isPlayerControlled = value; }

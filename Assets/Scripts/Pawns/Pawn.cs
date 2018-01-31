@@ -37,7 +37,6 @@ public class Pawn : MonoBehaviour
     public virtual void MoveVertical    ( float axisValue) {}
     public virtual void MoveTowards(Vector3 point){}
 
-
     public virtual void Fire ( Quaternion angle ) {}
     public virtual void UnFire() {}
 }

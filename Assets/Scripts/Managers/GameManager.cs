@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour {
     [Header("Score:")]
     private int hackPerCombo;
     public int scorePeerHack = 50;
+
+	[HideInInspector]public bool _playWrong = true;
+	[HideInInspector] public bool _tutoPlaying = false;
     
     private int score = 0;
     private int[] scores;
@@ -307,6 +310,7 @@ public class GameManager : MonoBehaviour {
 		checkpointId = 0;
 		Leaderboard.ResetLeaderboard (leaderInit);
 		PlayerController.addHackPower (-100f);
+		_tutoPlaying = false;
 	}
 
     public void saveScore(int check) { scores[check] = score; }

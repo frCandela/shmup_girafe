@@ -21,6 +21,8 @@ public class MouseController : Controller
     [Range(0F, 1F)] public float TimeScaleFactor = 0.1F;
     [Range(0F, 100F)] public float hackRefillSpeed = 1F;
     [Range(0F, 100F)] public float virusHackRefillSpeed = 15F;
+	[SerializeField] private GameObject RightClickPopup;
+	[SerializeField] private float _popupDuration = 5f;
 
     [Header("Other parameters:")]
     public bool shootVertically = true;
@@ -38,6 +40,7 @@ public class MouseController : Controller
     private bool isHacking = false;
     private Ship targetHack;
     private bool HackSoundTrigerred = false;
+	private bool popup = false;
 
     private void Awake()
     {
@@ -93,6 +96,13 @@ public class MouseController : Controller
                 HackSoundTrigerred = true;
                 FMODUnity.RuntimeManager.PlayOneShot("event:/jaugeHackPleine", GameManager.instance.MainCameraController.transform.position);
             }
+
+			//"Right click to hack" popup
+			if(!popup && !(PossessedPawn is Virus) && GameManager.instance.getMulti () != 8 && !GameManager.instance._tutoPlaying) 
+			{
+				popup = true;
+				StartCoroutine(PopupRightClick());
+			}
         }
             
 
@@ -146,6 +156,7 @@ public class MouseController : Controller
         {
             if (isHacking)
             {
+				popup = false;
                 isHacking = false;
 
                 if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
@@ -198,7 +209,7 @@ public class MouseController : Controller
                     onHack.Invoke();
                 }
                 else {
-					onHackStop.Invoke ();
+					if(GameManager.instance._playWrong)onHackStop.Invoke ();
 					GameManager.instance.MainBar.ShowHackMessage ();
 				}
 
@@ -238,6 +249,7 @@ public class MouseController : Controller
         {
             if(isHacking)
             {
+				popup = true;
                 onHackStop.Invoke();
 
                 if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
@@ -279,6 +291,27 @@ public class MouseController : Controller
 		else if (hackPower < 0f)
 			hackPower = 0f;
     }
+		
+	IEnumerator PopupRightClick()
+	{
+		GameObject thePopup = (GameObject)Instantiate (RightClickPopup, targetHack.transform.position, Quaternion.identity, targetHack.transform);
+		yield return StartCoroutine(WaitOrClick(_popupDuration));
+		if(thePopup)thePopup.SetActive (false);
+	}
+
+	IEnumerator WaitOrClick(float duration)
+	{
+		float elapsedTime = 0f;
+		while(elapsedTime < duration)
+		{
+			if (Input.GetButtonDown ("Hack")) 
+			{
+				break;
+			}
+			elapsedTime += Time.unscaledDeltaTime;
+			yield return null;
+		}
+	}
 
     /*public void resetHack()
     {

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TutoStepDisplay : MonoBehaviour 
 {
-	[SerializeField] private RectTransform _window;
+	/*[SerializeField] private RectTransform _window;
 	private float xScale;
 	private float yScale;
 	private RectTransform rect;
@@ -42,5 +42,5 @@ public class TutoStepDisplay : MonoBehaviour
 			_window.localScale = new Vector3 (xScale, yScale, 1f);
 			gameObject.SetActive (false);
 		}
-	}
+	}*/
 }

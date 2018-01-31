@@ -31,7 +31,7 @@ public class FollowHack : MonoBehaviour {
         {
             infos.enabled = true;
 			HP.SetActive (true);
-			amountHP.GetComponent<Text>().text = targetShip.GetComponent<Health> ().health.ToString ();
+			amountHP.GetComponent<Text>().text = targetShip.GetComponent<Health> ().getMaxHealth ().ToString ();
             if(targetShip.GetType() == typeof(DPSShip))
                 spec.sprite = specDPS;
             else if (targetShip.GetType() == typeof(TankShip))
