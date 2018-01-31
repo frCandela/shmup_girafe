@@ -1,17 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TUTO/TutoManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/Menu.cs">
     <Files>
-      <File FileName="Assets/Scripts/TUTO/TutoRespawn.cs" Line="22" Column="3" />
-      <File FileName="Assets/Scripts/TUTO/TutoManager.cs" Line="143" Column="33" />
-      <File FileName="Assets/Scripts/TUTO/TutoEnnemyStopper.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TUTO/TutoClickDisplay.cs" Line="21" Column="40" />
-      <File FileName="Assets/Scripts/TUTO/TutoEnnemySpawner.cs" Line="19" Column="63" />
-      <File FileName="Assets/Scripts/UI/UIBar.cs" Line="153" Column="3" />
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="202" Column="54" />
-      <File FileName="Assets/Scripts/Score.cs" Line="12" Column="51" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="304" Column="18" />
-      <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="164" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="313" Column="24" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="297" Column="117" />
+      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="179" Column="29" />
+      <File FileName="Assets/Scripts/TUTO/HackPrompt.cs" Line="20" Column="77" />
+      <File FileName="Assets/Scripts/TUTO/TutoStepDisplay.cs" Line="45" Column="5" />
+      <File FileName="Assets/Scripts/TUTO/TutoManager.cs" Line="105" Column="36" />
+      <File FileName="Assets/Scripts/Attack/Attack.cs" Line="29" Column="46" />
+      <File FileName="Assets/Scripts/Blink.cs" Line="62" Column="42" />
+      <File FileName="Assets/Scripts/Health.cs" Line="80" Column="46" />
+      <File FileName="Assets/Scripts/Pawns/TankShip.cs" Line="145" Column="38" />
+      <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="47" Column="47" />
+      <File FileName="Assets/FollowPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/FollowPlayer.cs" Line="24" Column="52" />
+      <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="71" Column="48" />
+      <File FileName="Assets/Scripts/UI/Menu.cs" Line="62" Column="72" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
