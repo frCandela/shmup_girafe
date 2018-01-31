@@ -149,6 +149,7 @@
      <Compile Include="Assets\Scripts\UI\ButtonHover.cs" />
      <Compile Include="Assets\Scripts\UI\FeedbackBarFill.cs" />
      <Compile Include="Assets\Scripts\UI\FollowHack.cs" />
+     <Compile Include="Assets\Scripts\UI\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\UI\LeaderboardText.cs" />
      <Compile Include="Assets\Scripts\UI\Menu.cs" />
      <Compile Include="Assets\Scripts\UI\ScoreText.cs" />

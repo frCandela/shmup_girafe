@@ -294,7 +294,8 @@ public class MouseController : Controller
 		
 	IEnumerator PopupRightClick()
 	{
-		GameObject thePopup = (GameObject)Instantiate (RightClickPopup, targetHack.transform.position, Quaternion.identity, targetHack.transform);
+		GameObject thePopup = (GameObject)Instantiate (RightClickPopup, targetHack.transform.position, Quaternion.identity);
+		thePopup.GetComponent<FollowPlayer> ().SetPlayerPosition (targetHack.gameObject);
 		yield return StartCoroutine(WaitOrClick(_popupDuration));
 		if(thePopup)thePopup.SetActive (false);
 	}
