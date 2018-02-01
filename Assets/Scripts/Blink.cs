@@ -20,6 +20,7 @@ public class Blink : MonoBehaviour
     private float BlinkDeltaTime;
     private bool BlinkState;
 	private bool isBlinking = false; //Jonas
+	private GlitchEffect _glitch;
 
     private void Awake() {
         shipHealth = GetComponent<Health>();
@@ -28,11 +29,17 @@ public class Blink : MonoBehaviour
     private void Start()
     {
         enabled = false;
+		_glitch = GameManager.instance.MainCameraController.gameObject.GetComponent<GlitchEffect> ();
     }
 
     //BlinkCoroutine
     IEnumerator BlinkCoroutine()
     {
+		//START GLITCH EFFECT
+		_glitch.intensity = 1f;
+		_glitch.flipIntensity = 0.4f;
+		_glitch.colorIntensity = 0.4f;
+
         while( Time.time < BlinkEndTime )
         {
             foreach (SpriteRenderer renderer in SpriteRenderers)
@@ -45,6 +52,11 @@ public class Blink : MonoBehaviour
 
         shipHealth.immortal = false;
 		isBlinking = false;
+
+		//END GLITCH EFFECT
+		_glitch.intensity = 0f;
+		_glitch.flipIntensity = 0f;
+		_glitch.colorIntensity = 0f;
     }
 
     //Initialize and stard a blink coroutine
