@@ -528,8 +528,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 235620639}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 650.5, y: 366, z: 0}
-  m_LocalScale: {x: 0.67760414, y: 0.67760414, z: 0.67760414}
+  m_LocalPosition: {x: 649, y: 365, z: 0}
+  m_LocalScale: {x: 0.67604166, y: 0.67604166, z: 0.67604166}
   m_Children:
   - {fileID: 641292802}
   - {fileID: 2106259065}
@@ -1334,12 +1334,12 @@ Prefab:
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 650.5
+      value: 649
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 366
+      value: 365
       objectReference: {fileID: 0}
     - target: {fileID: 224579811896041462, guid: cd9ae7963527bec44bb5a5221b77a287,
         type: 2}
@@ -2541,7 +2541,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 675602349}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 499.76978, y: 150.93835, z: 0}
+  m_LocalPosition: {x: 499.7697, y: 150.70752, z: 0}
   m_LocalScale: {x: 0.99999535, y: 0.99999535, z: 0.99999535}
   m_Children:
   - {fileID: 1658786172}
@@ -3027,7 +3027,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 852626493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 502.8498, y: 210.93839, z: 0}
+  m_LocalPosition: {x: 502.84973, y: 210.70755, z: 0}
   m_LocalScale: {x: 0.99999535, y: 0.99999535, z: 0.99999535}
   m_Children:
   - {fileID: 741191325}
@@ -5483,7 +5483,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1555841103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 499.76978, y: 210.93835, z: 0}
+  m_LocalPosition: {x: 499.7697, y: 210.70752, z: 0}
   m_LocalScale: {x: 0.99999535, y: 0.99999535, z: 0.99999535}
   m_Children:
   - {fileID: 708816126}
@@ -5826,7 +5826,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1703418520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -960.00006, y: 540.13837, z: 0}
+  m_LocalPosition: {x: -960, y: 539.90753, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 235620640}
@@ -6772,7 +6772,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010612737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500.54993, y: 210.93835, z: 0}
+  m_LocalPosition: {x: 500.54987, y: 210.70752, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1875918311}
@@ -7198,7 +7198,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<Size=35>Welcome to bug.exe</size>
 
-    <b>Your goAl is to infiltrAte this corrupted city hAcking As mAny bugs As possible.</b>
+    <b>Your goAl is to infiltrAte this corrupted city by hAcking As mAny bugs As possible.</b>
 
 
 

@@ -56,6 +56,11 @@ public class MouseController : Controller
         return targetHack;
     }
 
+	public void TriggerReadySound()
+	{
+		HackSoundTrigerred = false;
+	}
+
     private void Start()
     {   
         //Hack parameters
@@ -121,6 +126,7 @@ public class MouseController : Controller
             this.Invoke( "PossessVirus", 0.1f);
             onBecomeVirus.Invoke();
             hackPower = 0;
+			HackSoundTrigerred = false;
         }
 
         if( isHacking )
