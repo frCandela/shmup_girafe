@@ -73,8 +73,6 @@ public class Ship : Pawn
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if (ship && ship.tag != tag )
         {
-           
-
             Health otherHealth = ship.GetComponent<Health>();
             Health myHealth = GetComponent<Health>();
 
@@ -171,12 +169,13 @@ public class Ship : Pawn
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
 			Instantiate (GameManager.instance.hackFillerPrefab, transform.position, Quaternion.identity);
-		}
-		GameManager.instance.PlayerController.addHackPower(hackbonus);
-		if( isPlayerControlled)
-			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
-		else
 			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_enemy", transform.position);
+		}
+		else
+		{
+			FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
+		}
+			GameManager.instance.PlayerController.addHackPower(hackbonus);
     }
 
 	public IEnumerator HackImmunity()

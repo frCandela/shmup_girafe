@@ -21,8 +21,7 @@ public class Blink : MonoBehaviour
     private float BlinkDeltaTime;
     private bool BlinkState;
 	private bool isBlinking = false; //Jonas
-	private GlitchEffect _glitch;
-	private float glitchDuration = 0.3f;
+	private Glitcher _glitch;
 
     private void Awake() {
         shipHealth = GetComponent<Health>();
@@ -30,8 +29,8 @@ public class Blink : MonoBehaviour
 
     private void Start()
     {
+		_glitch = GameManager.instance.MainCameraController.GetComponent<Glitcher> ();
         enabled = false;
-		_glitch = GameManager.instance.MainCameraController.gameObject.GetComponent<GlitchEffect> ();
     }
 
     //BlinkCoroutine
@@ -51,28 +50,6 @@ public class Blink : MonoBehaviour
 		isBlinking = false;
     }
 
-	IEnumerator GlitchEffect()
-	{
-		float elapsedTime = 0f;
-		//START GLITCH EFFECT
-		_glitch.enabled = true;
-		//_glitch.intensity = 1f;
-		_glitch.flipIntensity = 1f;
-		_glitch.colorIntensity = 1f;
-
-		while(elapsedTime < glitchDuration)
-		{
-			elapsedTime += Time.unscaledDeltaTime;
-			yield return null;
-		}
-
-		//END GLITCH EFFECT
-		//_glitch.intensity = 0f;
-		_glitch.flipIntensity = 0f;
-		_glitch.colorIntensity = 0f;
-		_glitch.enabled = false;
-	}
-
     //Initialize and stard a blink coroutine
     public void StartBlink()
     {
@@ -87,15 +64,12 @@ public class Blink : MonoBehaviour
 				GameManager.instance.MainCameraController.Shake (screenShakePerHit);	//screenshake
                 FMODUnity.RuntimeManager.PlayOneShot("event:/hit", transform.position);
                 StopAllCoroutines ();
-				_glitch.flipIntensity = 0f;
-				_glitch.colorIntensity = 0f;
-				_glitch.enabled = false;
 				BlinkEndTime = Time.time + BlinkDuration;
 				BlinkDeltaTime = 1f / BlinkFrequency;
 				BlinkState = false;
 				shipHealth.immortal = true;
 				StartCoroutine ("BlinkCoroutine");
-				StartCoroutine (GlitchEffect ());
+				_glitch.DoGlitchEffect ();
 			}
 		}
     }
@@ -104,7 +78,7 @@ public class Blink : MonoBehaviour
     {
         if (SpriteRenderers != null)
         {
-            StopAllCoroutines();
+			StopCoroutine ("BlinkCoroutine");
             foreach (SpriteRenderer renderer in SpriteRenderers)
                 renderer.enabled = false;
         }

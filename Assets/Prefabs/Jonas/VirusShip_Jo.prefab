@@ -39,11 +39,11 @@ GameObject:
   - component: {fileID: 4634272954382646}
   - component: {fileID: 50150358434819556}
   - component: {fileID: 114117157822653960}
+  - component: {fileID: 114140930360449962}
   - component: {fileID: 114690295686379222}
   - component: {fileID: 95024271419405900}
   - component: {fileID: 212655479108382476}
   - component: {fileID: 61375117386959030}
-  - component: {fileID: 114140930360449962}
   - component: {fileID: 114554646527199972}
   - component: {fileID: 114815195354879260}
   m_Layer: 10
@@ -327,7 +327,6 @@ MonoBehaviour:
     type: 2}
   playerSpeed: 15
   canBeStunned: 1
-  isPlayerControlled: 0
   scrollingSpeed: 0
 --- !u!114 &114815195354879260
 MonoBehaviour:

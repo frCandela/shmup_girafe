@@ -23,10 +23,7 @@ public class TutoRespawn : MonoBehaviour
 			if (_tuto._spawnAgain)
 			{
 				GameObject bla = Instantiate (_ennemyPrefab, _spawnPosition, _spawnRotation);
-				bla.name = "bla";
-				//bla.SetActive (true);
 				_waveEnnemy = bla;
-				print ("bla");
 			}
 		}
 	}

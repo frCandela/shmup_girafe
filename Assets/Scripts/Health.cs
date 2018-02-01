@@ -73,11 +73,12 @@ public class Health : MonoBehaviour
         {
             if (health == 1 )
             {
-				//More screenshake!
-				GameManager.instance.MainCameraController.Shake (0.2f); //0.2f + value from Blink
                 Ship ship = GetComponent<Ship>();
-                if (ship && ship.IsPlayerControlled())
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/lowhealth", ship.transform.position);
+                if (ship && ship.IsPlayerControlled()) {
+					FMODUnity.RuntimeManager.PlayOneShot ("event:/lowhealth", ship.transform.position);
+					//More screenshake!
+					GameManager.instance.MainCameraController.Shake (0.2f); //0.2f + value from Blink
+				}
             }
 
         }

@@ -59,7 +59,6 @@ public class Virus : Ship
 
     private void OnEnable()
     {
-        //transform.position = GameManager.instance.getMouseWorldPosition();
         GetComponent<SpriteRenderer>().enabled = true;
         foreach(Collider2D collider in GetComponents<Collider2D>())
             collider.enabled = true;
