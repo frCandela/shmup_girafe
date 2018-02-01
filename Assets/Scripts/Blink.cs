@@ -11,6 +11,7 @@ public class Blink : MonoBehaviour
     [Header("Blink parameters:")]
     public float BlinkDuration = 1;
     public float BlinkFrequency = 10;
+
 	float screenShakePerHit = 0.3f;
     public SpriteRenderer[] SpriteRenderers;
     public Health shipHealth;
@@ -21,6 +22,7 @@ public class Blink : MonoBehaviour
     private bool BlinkState;
 	private bool isBlinking = false; //Jonas
 	private GlitchEffect _glitch;
+	private float glitchDuration = 0.3f;
 
     private void Awake() {
         shipHealth = GetComponent<Health>();
@@ -35,11 +37,6 @@ public class Blink : MonoBehaviour
     //BlinkCoroutine
     IEnumerator BlinkCoroutine()
     {
-		//START GLITCH EFFECT
-		_glitch.intensity = 1f;
-		_glitch.flipIntensity = 0.4f;
-		_glitch.colorIntensity = 0.4f;
-
         while( Time.time < BlinkEndTime )
         {
             foreach (SpriteRenderer renderer in SpriteRenderers)
@@ -52,12 +49,29 @@ public class Blink : MonoBehaviour
 
         shipHealth.immortal = false;
 		isBlinking = false;
+    }
+
+	IEnumerator GlitchEffect()
+	{
+		float elapsedTime = 0f;
+		//START GLITCH EFFECT
+		_glitch.enabled = true;
+		//_glitch.intensity = 1f;
+		_glitch.flipIntensity = 1f;
+		_glitch.colorIntensity = 1f;
+
+		while(elapsedTime < glitchDuration)
+		{
+			elapsedTime += Time.unscaledDeltaTime;
+			yield return null;
+		}
 
 		//END GLITCH EFFECT
-		_glitch.intensity = 0f;
+		//_glitch.intensity = 0f;
 		_glitch.flipIntensity = 0f;
 		_glitch.colorIntensity = 0f;
-    }
+		_glitch.enabled = false;
+	}
 
     //Initialize and stard a blink coroutine
     public void StartBlink()
@@ -73,11 +87,15 @@ public class Blink : MonoBehaviour
 				GameManager.instance.MainCameraController.Shake (screenShakePerHit);	//screenshake
                 FMODUnity.RuntimeManager.PlayOneShot("event:/hit", transform.position);
                 StopAllCoroutines ();
+				_glitch.flipIntensity = 0f;
+				_glitch.colorIntensity = 0f;
+				_glitch.enabled = false;
 				BlinkEndTime = Time.time + BlinkDuration;
 				BlinkDeltaTime = 1f / BlinkFrequency;
 				BlinkState = false;
 				shipHealth.immortal = true;
 				StartCoroutine ("BlinkCoroutine");
+				StartCoroutine (GlitchEffect ());
 			}
 		}
     }
