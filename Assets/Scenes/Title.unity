@@ -1095,7 +1095,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.14
-  m_Text: LOADING...
+  m_Text: LOADiNG...
 --- !u!222 &651496081
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2106,8 +2106,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1832970211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 631, y: 355, z: 0}
-  m_LocalScale: {x: 0.65729165, y: 0.65729165, z: 0.65729165}
+  m_LocalPosition: {x: 584, y: 365, z: 0}
+  m_LocalScale: {x: 0.60833335, y: 0.60833335, z: 0.60833335}
   m_Children:
   - {fileID: 2095216054}
   - {fileID: 1569044155}
