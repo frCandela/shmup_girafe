@@ -525,6 +525,9 @@
         <property name="lowGain">
             <value>-3.5</value>
         </property>
+        <property name="lowCrossover">
+            <value>240</value>
+        </property>
         <property name="crossoverSlope">
             <value>2</value>
         </property>
@@ -584,7 +587,7 @@
             <value>1</value>
         </property>
         <property name="value">
-            <value>-80</value>
+            <value>-76.0000076</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{d722ddd5-2d89-4e38-965d-8e1b85e4d090}">
