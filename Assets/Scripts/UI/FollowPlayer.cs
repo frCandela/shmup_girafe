@@ -5,12 +5,6 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour 
 {
 	private GameObject _player;
-	private Vector3 _offset;
-
-	void Start()
-	{
-		_offset = transform.position;
-	}
 
 	public void SetPlayerPosition(GameObject player)
 	{

@@ -11,6 +11,7 @@ public class Blink : MonoBehaviour
     [Header("Blink parameters:")]
     public float BlinkDuration = 1;
     public float BlinkFrequency = 10;
+
 	float screenShakePerHit = 0.3f;
     public SpriteRenderer[] SpriteRenderers;
     public Health shipHealth;
@@ -20,6 +21,7 @@ public class Blink : MonoBehaviour
     private float BlinkDeltaTime;
     private bool BlinkState;
 	private bool isBlinking = false; //Jonas
+	private Glitcher _glitch;
 
     private void Awake() {
         shipHealth = GetComponent<Health>();
@@ -27,6 +29,7 @@ public class Blink : MonoBehaviour
 
     private void Start()
     {
+		_glitch = GameManager.instance.MainCameraController.GetComponent<Glitcher> ();
         enabled = false;
     }
 
@@ -66,6 +69,7 @@ public class Blink : MonoBehaviour
 				BlinkState = false;
 				shipHealth.immortal = true;
 				StartCoroutine ("BlinkCoroutine");
+				_glitch.DoGlitchEffect ();
 			}
 		}
     }
@@ -74,7 +78,7 @@ public class Blink : MonoBehaviour
     {
         if (SpriteRenderers != null)
         {
-            StopAllCoroutines();
+			StopCoroutine ("BlinkCoroutine");
             foreach (SpriteRenderer renderer in SpriteRenderers)
                 renderer.enabled = false;
         }

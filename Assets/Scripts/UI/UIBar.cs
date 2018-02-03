@@ -10,6 +10,7 @@ public class UIBar : MonoBehaviour {
     public GameObject healthPrefab;
     public GameObject healthBackPrefab;
     public List<Image> healthPoints;
+	public Color _lowHealthColor;
 
     public Animator anim;
 
@@ -94,8 +95,8 @@ public class UIBar : MonoBehaviour {
         for (int i = 0; i < value; i++)
             healthPoints.Add(Instantiate(healthPrefab, healthContainer.transform).GetComponent<Image>());
 
-        if (value == 0)
-            Instantiate(healthBackPrefab, healthContainer.transform);
+		if (value == 0)
+			Instantiate (healthBackPrefab, healthContainer.transform);
 
         numberPV = value;
     }
@@ -111,7 +112,9 @@ public class UIBar : MonoBehaviour {
             else
                 healthPoints[i].color = new Color(1, 1, 1, 0.5f);
         }
-
+			
+		if(value ==1) healthPoints [0].color = _lowHealthColor;
+			
         if (value == 1 && !lowHealthShow)
         {
             anim.SetTrigger("showHealth");
@@ -177,6 +180,7 @@ public class UIBar : MonoBehaviour {
     {
         leader.SetActive(true);
 		StartCoroutine (CheckHighScore ());
+		GameManager.instance.enabled = false;
     }
 
 	IEnumerator CheckHighScore()

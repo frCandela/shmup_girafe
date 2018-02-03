@@ -82,7 +82,6 @@ public class CameraController : MonoBehaviour
     //Object entering the camera view
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		print ("collide");
         //Adds the ship to the shipsInCameraView dictionary
         Ship ship = collision.gameObject.GetComponent<Ship>();
         if(ship)

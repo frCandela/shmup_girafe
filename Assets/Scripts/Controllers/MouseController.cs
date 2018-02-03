@@ -56,6 +56,11 @@ public class MouseController : Controller
         return targetHack;
     }
 
+	public void TriggerReadySound()
+	{
+		HackSoundTrigerred = false;
+	}
+
     private void Start()
     {   
         //Hack parameters
@@ -121,6 +126,7 @@ public class MouseController : Controller
             this.Invoke( "PossessVirus", 0.1f);
             onBecomeVirus.Invoke();
             hackPower = 0;
+			HackSoundTrigerred = false;
         }
 
         if( isHacking )
@@ -202,6 +208,8 @@ public class MouseController : Controller
                     targetHack.setHackAnim(true);
 
                     targetHack.scrollingSpeed = 0F;
+
+					GameManager.instance.MainCameraController.GetComponent<GlitchEffect> ().enabled = false;
 
 					//Make the ship immune for a second
 					StartCoroutine (targetHack.HackImmunity ());
@@ -294,10 +302,14 @@ public class MouseController : Controller
 		
 	IEnumerator PopupRightClick()
 	{
-		GameObject thePopup = (GameObject)Instantiate (RightClickPopup, targetHack.transform.position, Quaternion.identity);
-		thePopup.GetComponent<FollowPlayer> ().SetPlayerPosition (targetHack.gameObject);
-		yield return StartCoroutine(WaitOrClick(_popupDuration));
-		if(thePopup)thePopup.SetActive (false);
+		if (targetHack) {
+			GameObject thePopup = (GameObject)Instantiate (RightClickPopup, targetHack.transform.position, Quaternion.identity);
+			thePopup.GetComponent<FollowPlayer> ().SetPlayerPosition (targetHack.gameObject);
+			yield return StartCoroutine (WaitOrClick (_popupDuration));
+			if (thePopup)
+				thePopup.SetActive (false);
+		} else
+			yield return null;
 	}
 
 	IEnumerator WaitOrClick(float duration)
