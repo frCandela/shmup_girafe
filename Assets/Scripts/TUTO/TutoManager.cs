@@ -273,6 +273,7 @@ public class TutoManager : MonoBehaviour
 		yield return new WaitForSeconds (5f);
 
 		_spawner.SpawnWave (4, false);
+		_currentShip.GetComponent<Blink> ().enabled = false;
 		
 		while (!(_gameManager.PlayerController.PossessedPawn is Virus))
 			yield return null;

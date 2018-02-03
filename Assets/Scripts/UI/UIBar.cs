@@ -180,6 +180,7 @@ public class UIBar : MonoBehaviour {
     {
         leader.SetActive(true);
 		StartCoroutine (CheckHighScore ());
+		GameManager.instance.enabled = false;
     }
 
 	IEnumerator CheckHighScore()

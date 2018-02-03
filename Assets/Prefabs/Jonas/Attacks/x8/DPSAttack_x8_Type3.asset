@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53637a1ddfc8fc6499ab22845d6839de, type: 3}
   m_Name: DPSAttack_x8_Type3
   m_EditorClassIdentifier: 
-  rate: 15
+  rate: 8
   bursts:
   - amount: 2
     spread: 8

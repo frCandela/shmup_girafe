@@ -8,6 +8,7 @@ public class LeaderboardText : MonoBehaviour {
 	[SerializeField] private int _scoresDisplayed = 3;
 	private Text text;
     private List<Record> leaders;
+	private int checkpoint = 0;
 
     void Awake() {
         text = GetComponent<Text>();
@@ -34,9 +35,15 @@ public class LeaderboardText : MonoBehaviour {
                 text.text += "<color=red>" + (count++) + ". YOU " + playerScore + "</color>\n";
             }
         }
+		else 
+		{
+			if(checkpoint != 0)
+				text.text = "<color=grey>LeAderboArd:</color>\n<Size=30><i>No internet connection...\nPlAying offline...</i></Size>";
+		}
     }
 
     public void UpdateScore(int i) {
+		checkpoint = i;
         StartCoroutine(OnlineScore.GetScores(leaders, i));
     }
 

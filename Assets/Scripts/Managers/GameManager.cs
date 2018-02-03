@@ -283,9 +283,6 @@ public class GameManager : MonoBehaviour {
 
         PlayTrack(0);
         SetLights(0);
-
-		//Stop glitch effect
-		//MainCameraController.GetComponent<GlitchEffect> ().StopGlitch ();
     }
 
     public int getScore(){ return score; }
