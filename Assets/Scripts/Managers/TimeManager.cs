@@ -120,35 +120,50 @@ public class TimeManager : MonoBehaviour
 
 	IEnumerator EndAnimation()
 	{
+		//music
 		FMODUnity.StudioEventEmitter music = GameManager.instance.MainCameraController.GetComponent<FMODUnity.StudioEventEmitter> ();
+
 		GameManager.instance.scoreLossHitVirus = 0;
+
+		//duration
 		float timing = 3f;
 		float elapsedTime = 0f;
+
+		//camera speed
 		float speed = 0f;
+
+		//black fadeout
 		float fadeOut = 0f;
+
+		//music volume
+		float volume = 1f;
+
 		while(elapsedTime < timing)
 		{
-			//Fade out music
+			GameManager.instance._playWrong = false;
 
 			//speed up camera
 			speed = Mathf.Lerp (0, 100f, elapsedTime / timing);
 			GameManager.instance.MainCameraController.VerticalSpeed = speed;
 
-			//fade out
+			//fade to black
 			fadeOut = Mathf.Lerp (0, 1f, elapsedTime / timing);
 			_fadeOutImage.color = new Color (0f, 0f, 0f, fadeOut);
+
+			//fade out music
+			volume = Mathf.Lerp (1f, .4f, elapsedTime / timing);
+			music.SetParameter ("volume", volume);
 
 			elapsedTime += Time.unscaledDeltaTime;
 			yield return new WaitForEndOfFrame ();
 		}
 		GameManager.instance.MainCameraController.VerticalSpeed = 100f;
 		_fadeOutImage.color = Color.black;
+		music.SetParameter ("volume", 0f);
+		music.Stop ();
 		//pop up leaderboard
 		GameManager.instance.MainBar.showLeaderScreen ();
-		music.Stop ();
-		music.Event = "event:/music/menu";
-		print (music.Event);
-		music.Play ();
+		GameManager.instance.soundManager.menuMusic.Play ();
 	}
 
     //Resets the slow motion
