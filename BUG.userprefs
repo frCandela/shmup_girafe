@@ -1,11 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FillLeaderBoardScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TUTO/TutoManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/FillLeaderBoardScreen.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UIBar.cs" Line="183" Column="40" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="285" Column="22" />
+      <File FileName="Assets/Scripts/TUTO/TutoManager.cs" Line="108" Column="55" />
+      <File FileName="Assets/Scripts/TUTO/TutorialUIDisplayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

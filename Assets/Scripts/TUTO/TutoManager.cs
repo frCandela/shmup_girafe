@@ -104,7 +104,7 @@ public class TutoManager : MonoBehaviour
 	{
 		_gameManager._tutoPlaying = true;
 
-		if (PlayerPrefs.HasKey ("PlayerDidTutorial"))
+		if (PlayerPrefs.GetInt("PlayerDidTutorial", 0) == 1)
 			StartCoroutine (_displayer.DisplayStep (13, true));
 		
 		yield return new WaitForSeconds (1f);
