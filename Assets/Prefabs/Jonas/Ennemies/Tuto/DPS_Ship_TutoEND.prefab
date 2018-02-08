@@ -294,7 +294,6 @@ MonoBehaviour:
     type: 2}
   playerSpeed: 15
   canBeStunned: 1
-  isPlayerControlled: 0
   scrollingSpeed: -5
   cannonPosition: {fileID: 4850603482806432}
   cannonPosition2: {fileID: 4602438077225644}
@@ -314,7 +313,7 @@ MonoBehaviour:
   immortal: 0
   immuneToDamage: 0
   immuneToShipCollisions: 0
-  health: 4
+  health: 50
   onDie:
     m_PersistentCalls:
       m_Calls:

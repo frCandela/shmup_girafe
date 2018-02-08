@@ -37,6 +37,7 @@ public class TextPopupsGenerator : MonoBehaviour
         else
             return;
 
+		position.y += 1f;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(position);
         popup.transform.position = screenPos;
     }

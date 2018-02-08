@@ -3,20 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//1. spawn virus + introduction ("Welcome to BUG.exe...")
-
-//2. spawn 2 ennemies + UI bar + explanations
-
-//3. Hack 1st ennemy + kill other -> "kill ennemies to fill your hack power bar"
-//(controls for dps/tank explained)
-
-//4. New wave : hack 2nd ennemy -> "Hack ennemies to increase your combo multiplier"
-//(controls for dps/tank explained)
-
-//5. New wave : kill the player -> "Upon destruction of the ennemy you're hacking, you're ejected back to virus form, get ready..."
-
-//6. Start countdown + game.
-
 public class TutoManager : MonoBehaviour 
 {
 	[SerializeField] private GameObject _manager;
@@ -61,6 +47,10 @@ public class TutoManager : MonoBehaviour
 
 	void StartGame()
 	{
+		StopAllCoroutines ();
+		if (!(_currentShip is Virus))
+			_gameManager.PlayerController.PossessVirus ();
+
 		_timeManager.enabled = true;
 		_gameManager.GetComponent<UnityEngine.Playables.PlayableDirector> ().enabled = true;
 		_gameManager.PlayerController.virusHackRefillSpeed = 20f;
@@ -229,7 +219,6 @@ public class TutoManager : MonoBehaviour
 		_waitingForHack = true;
 
 		//Spawn the ennemy again if killed and not hacked
-		//yield return null;
 		_spawnAgain = true;
 
 		yield return StartCoroutine (WaitForRightClick ());
@@ -282,6 +271,7 @@ public class TutoManager : MonoBehaviour
 		StartCoroutine (_displayer.DisplayStep (12, true));
 
 		_gameManager.PlayerController.virusHackRefillSpeed = 0f;
+		yield return new WaitForSeconds (1f);
 
 		yield return StartCoroutine (WaitForLeftClick ());
 

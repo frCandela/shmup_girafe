@@ -854,7 +854,6 @@ MonoBehaviour:
     type: 2}
   playerSpeed: 15
   canBeStunned: 1
-  isPlayerControlled: 0
   scrollingSpeed: -5
   cannonPosition: {fileID: 4869725202905220}
   cannonPosition2: {fileID: 4528447222606708}

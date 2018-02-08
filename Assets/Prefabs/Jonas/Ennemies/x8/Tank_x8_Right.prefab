@@ -253,9 +253,9 @@ MonoBehaviour:
   scrollingSpeed: -5
   chargeCircle: {fileID: 212626107043399378}
   targetSprite: {fileID: 212014846031605218}
-  maxDistance: 7
+  maxDistance: 6.5
   initialDistance: 1
-  loadDuration: 0.3
+  loadDuration: 0.25
   chargeSpeed: 70
   deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 3b48d87257389414e83547deac8bed23, type: 2}

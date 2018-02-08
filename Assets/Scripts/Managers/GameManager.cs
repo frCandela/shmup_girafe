@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour {
             light.intensity = Mathf.Lerp(light.intensity, currentColor.intensity, Time.deltaTime);
         }
 
-        timerCheckpoint -= Time.deltaTime;
+        if(!_tutoPlaying) timerCheckpoint -= Time.deltaTime;
         if(timerCheckpoint < 0)
         {
             timerCheckpoint = checkpointRefreshTime;
@@ -306,6 +306,7 @@ public class GameManager : MonoBehaviour {
 	public void ResetGameState()
 	{
 		score = 0;
+		playerBecameVirus ();
 		timerCheckpoint = checkpointRefreshTime;
 		checkpointId = 0;
 		Leaderboard.ResetLeaderboard (leaderInit);

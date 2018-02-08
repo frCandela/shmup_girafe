@@ -255,7 +255,7 @@ MonoBehaviour:
   targetSprite: {fileID: 212014846031605218}
   maxDistance: 5
   initialDistance: 0
-  loadDuration: 0.5
+  loadDuration: 0.35
   chargeSpeed: 50
   deltaRotationSpeed: 5
   pattern: {fileID: 11400000, guid: 2cb493653ed3f484fa05c864dfb81b6b, type: 2}
