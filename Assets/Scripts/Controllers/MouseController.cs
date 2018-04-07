@@ -158,15 +158,16 @@ public class MouseController : Controller
 
 
 
-        if (Input.GetButton("Fire"))
+        if (Input.GetButtonDown("Fire"))
         {
             if (isHacking)
             {
-				popup = false;
-                isHacking = false;
-
                 if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
                 {
+					popup = false;
+					isHacking = false;
+					DoHack ();
+					/*
                     //misc
                     HackSoundTrigerred = false;
                     hackPower -= targetHack.hackCost;
@@ -215,16 +216,23 @@ public class MouseController : Controller
 					StartCoroutine (targetHack.HackImmunity ());
 
                     onHack.Invoke();
+
+					//Jonas 7/04
+					TimeManager.resetSlowMotion();
+					*/
                 }
-                else {
+				else FMODUnity.RuntimeManager.PlayOneShot ("event:/wrong", GameManager.instance.MainCameraController.transform.position);
+				
+               /*else
+				{
 					if(GameManager.instance._playWrong)onHackStop.Invoke ();
 					GameManager.instance.MainBar.ShowHackMessage ();
-				}
+				}*/
 
-                if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
-                    GameManager.instance.soundManager.hackSurvol.Stop();
+                //if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+                  //  GameManager.instance.soundManager.hackSurvol.Stop();
 
-                TimeManager.resetSlowMotion();
+                //TimeManager.resetSlowMotion();
                 //hackPointer.GetComponent<SpriteRenderer>().enabled = false;
             }
             else
@@ -241,9 +249,22 @@ public class MouseController : Controller
                 
         }
 
+		if(Input.GetButton ("Fire") && !isHacking)
+		{
+			float angle = 0f;
+			//Angle to shoot verticaly camerawise
+			if (shootVertically)
+			{
+				Vector3 direction = PossessedPawn.transform.position - GameManager.instance.MainCameraController.transform.position;
+				angle = Vector3.Angle(direction.normalized, new Vector3(1, 0, 0)) - 90f;
+			}
+			PossessedPawn.Fire(Quaternion.Euler(0, 0, angle / 2));
+		}
+
         if (Input.GetButtonUp("Fire"))
             PossessedPawn.UnFire();
 
+		/*
         //Hack timeout
         if (isHacking && !TimeManager.inSlowMotion())
         {
@@ -251,13 +272,25 @@ public class MouseController : Controller
             //hackPointer.GetComponent<SpriteRenderer>().enabled = false;
             onHackStop.Invoke();
         }
+		*/
 
         //Starts the hack !
         if (Input.GetButtonDown("Hack"))
         {
             if(isHacking)
             {
-				popup = true;
+				if (targetHack && targetHack.hackCost <= hackPower && targetHack != PossessedPawn && targetHack.isHackable)
+				{
+					popup = false;
+					isHacking = false;
+					DoHack ();
+				}
+				else FMODUnity.RuntimeManager.PlayOneShot("event:/wrong", GameManager.instance.MainCameraController.transform.position);
+
+				//if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+				//	GameManager.instance.soundManager.hackSurvol.Stop();
+
+				/*popup = true;
                 onHackStop.Invoke();
 
                 if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
@@ -265,7 +298,9 @@ public class MouseController : Controller
 
                 TimeManager.resetSlowMotion();
 
-				GameManager.instance.MainBar.ShowHackMessage ();
+				GameManager.instance.MainBar.ShowHackMessage ();*/
+
+
             }
             else if (hackPower >= minHackPower)
             {
@@ -279,6 +314,66 @@ public class MouseController : Controller
 
         }
     }
+
+	void DoHack()
+	{
+		//misc
+		HackSoundTrigerred = false;
+		hackPower -= targetHack.hackCost;
+		if (hackPower < 0F)
+			hackPower = 0F;
+		GameManager.instance.MainBar.health = targetHack.GetComponent<Health>();
+
+		//Destroy the old pawn
+		PossessedPawn.hackbonus = 0;
+		((Ship)PossessedPawn).Destroy();
+
+
+		//Possess the new ship
+		targetHack.gameObject.tag = this.gameObject.tag;
+		this.Possess(targetHack);
+		targetHack.transform.rotation = Quaternion.Euler(0F, 0F, 0F);
+		targetHack.SetPlayerControlled(true);
+		hackPointer.GetComponent<ParticleSystem>().Play();
+
+		//Reduce hitbox size except for tank ships
+		if (!targetHack.GetComponent<TankShip>()) targetHack.GetComponent<CapsuleCollider2D>().size /= 2;
+
+		//Set events
+		targetHack.GetComponent<Health>().onTakeDamage.AddListener(targetHack.GetComponent<Blink>().StartBlink);
+
+		//Set Health
+		Health targetHealth = targetHack.GetComponent<Health>();
+		if (targetHealth)
+			targetHealth.RestoreHealth();
+		if( targetHealth.health == 1 )
+			FMODUnity.RuntimeManager.PlayOneShot("event:/lowhealth", GameManager.instance.MainCameraController.transform.position);
+
+		//No score gained when possessed ship is destroyed
+		Score score = targetHack.GetComponent<Score>();
+		if (score)
+			Destroy(score);
+
+		//Set anim
+		targetHack.setHackAnim(true);
+
+		targetHack.scrollingSpeed = 0F;
+
+		GameManager.instance.MainCameraController.GetComponent<GlitchEffect> ().enabled = false;
+
+		//Make the ship immune for a second
+		StartCoroutine (targetHack.HackImmunity ());
+
+		onHack.Invoke();
+
+
+		//Jonas 7/04
+		PossessedPawn.UnFire();
+		TimeManager.resetSlowMotion();
+
+		if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+			GameManager.instance.soundManager.hackSurvol.Stop();
+	}
 
     internal void PossessVirus()
     {

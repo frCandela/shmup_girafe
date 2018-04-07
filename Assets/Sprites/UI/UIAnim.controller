@@ -13,25 +13,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: endHack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: showHealth
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: endHealth
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Hack
@@ -631,7 +631,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102122024596148692}
-    m_Position: {x: 336, y: 276, z: 0}
+    m_Position: {x: 504, y: 276, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102163719071467746}
     m_Position: {x: 324, y: 72, z: 0}
@@ -643,13 +643,13 @@ AnimatorStateMachine:
     m_Position: {x: 216, y: 156, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102698406345215040}
-    m_Position: {x: 240, y: 216, z: 0}
+    m_Position: {x: 180, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102490143221752364}
-    m_Position: {x: 275, y: 281, z: 0}
+    m_Position: {x: 252, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102733978538323146}
-    m_Position: {x: 310, y: 346, z: 0}
+    m_Position: {x: 480, y: 360, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

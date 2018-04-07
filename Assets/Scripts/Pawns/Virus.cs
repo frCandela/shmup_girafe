@@ -45,8 +45,7 @@ public class Virus : Ship
         {
             wrongSoundPlayed = true;
             if(GameManager.instance._playWrong)GameManager.instance.soundManager.wrong.Play();
-        }
-            
+       	}	
     }
 
     //When the player realease the FIRE key
