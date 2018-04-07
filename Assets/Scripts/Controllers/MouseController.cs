@@ -221,6 +221,16 @@ public class MouseController : Controller
 					TimeManager.resetSlowMotion();
 					*/
                 }
+				else if (targetHack == PossessedPawn)
+				{
+					popup = false;
+					isHacking = false;
+					onHackStop.Invoke ();
+					TimeManager.resetSlowMotion();
+
+					if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+						GameManager.instance.soundManager.hackSurvol.Stop();
+				}
 				else FMODUnity.RuntimeManager.PlayOneShot ("event:/wrong", GameManager.instance.MainCameraController.transform.position);
 				
                /*else
@@ -284,6 +294,16 @@ public class MouseController : Controller
 					popup = false;
 					isHacking = false;
 					DoHack ();
+				}
+				else if (targetHack == PossessedPawn)
+				{
+					popup = false;
+					isHacking = false;
+					onHackStop.Invoke ();
+					TimeManager.resetSlowMotion();
+
+					if (GameManager.instance.soundManager.hackSurvol.IsPlaying())
+						GameManager.instance.soundManager.hackSurvol.Stop();
 				}
 				else FMODUnity.RuntimeManager.PlayOneShot("event:/wrong", GameManager.instance.MainCameraController.transform.position);
 

@@ -21,6 +21,7 @@ public class UIBar : MonoBehaviour {
 	public Animator inGlow;
 
     public Image multi;
+	public Image multiMessage;
     public Image multiBefore;
     public Image multiAfter;
 	public Image multiBarUp;
@@ -70,11 +71,14 @@ public class UIBar : MonoBehaviour {
             multiBefore.enabled = false;
 
         multi.sprite = multiText[array];
-		if(array == 0 || array == 1 || array == 2 || array == 4 || array == 7)
+		if(array == 1 || array == 2 || array == 4 || array == 7)
 		{
 			multi.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 			multiBarUp.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 			multiBarDown.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+
+			//alert middle screen
+			anim.SetTrigger("showMulti");
 		}
 
         multiAfter.enabled = true;
