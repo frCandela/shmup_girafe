@@ -15,7 +15,8 @@ public class LeaderboardText : MonoBehaviour {
         leaders = new List<Record>();
     }
 
-    void Update() {
+    void Update()
+	{
         if(leaders.Count > 0) {
             text.text = "<color=grey>LeAderboArd:</color>\n";
             int count = 1;
