@@ -36,11 +36,13 @@ public class GameManager : MonoBehaviour {
 
     [Header("Multiplier Effects:")]
 	public Light mainLight;
+	public Color alertColor;
 	public Light[] lights;
     public LightParameter[] lightColors;
     private LightParameter currentColor;
     private float currentSpeed;
     public float[] tunnelSpeeds;
+	private bool _isFlashing;
 
     private PostProcessingBehaviour PostProcessing;
 
@@ -267,22 +269,51 @@ public class GameManager : MonoBehaviour {
         director.Play();
     }
 
-    public void playerBecameVirus()
+	public void DecreaseMulti()
+	{
+		hackCount = 0;
+		--comboMultiplier;
+		if (comboMultiplier == 1)
+			hackPerCombo = 0;
+		else
+			hackPerCombo = comboMultiplier - 1;
+		PlayTrack (comboMultiplier);
+		SetLights (comboMultiplier);
+
+		//feedback light effect
+		StartCoroutine (ComboFlash ());
+
+		music.SetParameter ("combo", comboMultiplier + 0.1f);
+
+		MainBar.setMulti (comboMultiplier, hackCount);
+
+		music.SetParameter ("hack", 0);
+
+		FMODUnity.RuntimeManager.PlayOneShot("event:/explosion_player", transform.position);
+	}
+
+	public void playerBecameVirus()
     {
-        //Reset the combo
-        hackCount = 0;
-        hackPerCombo = 0;
-        comboMultiplier = 0;
+		//feedback light effect
+		if(!_isFlashing)
+		{
+			StartCoroutine (ComboFlash ());
 
-        //initialise ui
-        MainBar.setMulti(comboMultiplier, hackCount);
+			//Reset the combo
+			hackCount = 0;
+			hackPerCombo = 0;
+			comboMultiplier = 0;
 
-        //Music
-        music.SetParameter("combo", 0);
-        //FMODUnity.RuntimeManager.PlayOneShot("event:/demult", MainCameraController.transform.position);
+			//initialise ui
+			MainBar.setMulti (comboMultiplier, hackCount);
 
-        PlayTrack(0);
-        SetLights(0);
+			//Music
+			music.SetParameter ("combo", 0);
+			//FMODUnity.RuntimeManager.PlayOneShot("event:/demult", MainCameraController.transform.position);
+
+			PlayTrack (0);
+			SetLights (0);
+		}
     }
 
     public int getScore(){ return score; }
@@ -306,7 +337,20 @@ public class GameManager : MonoBehaviour {
 	public void ResetGameState()
 	{
 		score = 0;
-		playerBecameVirus ();
+		//Reset the combo
+		hackCount = 0;
+		hackPerCombo = 0;
+		comboMultiplier = 0;
+
+		//initialise ui
+		MainBar.setMulti(comboMultiplier, hackCount);
+
+		//Music
+		music.SetParameter("combo", 0);
+		//FMODUnity.RuntimeManager.PlayOneShot("event:/demult", MainCameraController.transform.position);
+
+		PlayTrack(0);
+		SetLights(0);
 		timerCheckpoint = checkpointRefreshTime;
 		checkpointId = 0;
 		Leaderboard.ResetLeaderboard (leaderInit);
@@ -350,6 +394,40 @@ public class GameManager : MonoBehaviour {
 			yield return new WaitForEndOfFrame ();
 		}
 		mainLight.intensity = intensity;
+	}
+
+	IEnumerator ComboFlash()
+	{
+		_isFlashing = true;
+		Color originalColor = mainLight.color;
+		mainLight.color = alertColor;
+
+		float elapsedTime = 0f;
+		float timing = 0.5f;
+		float intensity = mainLight.intensity;
+
+		while(elapsedTime < timing)
+		{
+			if (mainLight.intensity < 5f)
+				mainLight.intensity += 10f*Time.deltaTime;
+			elapsedTime += Time.unscaledDeltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+	
+		while (mainLight.intensity > 0)
+		{
+			mainLight.intensity -= 10f*Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+
+		mainLight.color = originalColor;
+		while (mainLight.intensity < intensity)
+		{
+			mainLight.intensity += 10f*Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+
+		_isFlashing = false;
 	}
 
 	public void BackToMenu()

@@ -65,16 +65,25 @@ public class Health : MonoBehaviour
 
         if (health <= 0 && !dead)
         {
-            onDie.Invoke();
-            dead = true; // Prevent multiple die before destroy
-            GetComponent<Ship>().Destroy();
+			Ship ship = GetComponent<Ship>();
+			if (ship && ship.IsPlayerControlled() && GameManager.instance.getMulti () > 1)
+			{
+				GameManager.instance.DecreaseMulti ();
+			}
+			else
+			{
+				onDie.Invoke();
+				dead = true; // Prevent multiple die before destroy
+				ship.Destroy ();
+			}
         }
         else
         {
             if (health == 1 )
             {
                 Ship ship = GetComponent<Ship>();
-                if (ship && ship.IsPlayerControlled()) {
+                if (ship && ship.IsPlayerControlled())
+				{
 					FMODUnity.RuntimeManager.PlayOneShot ("event:/lowhealth", ship.transform.position);
 					//More screenshake!
 					GameManager.instance.MainCameraController.Shake (0.2f); //0.2f + value from Blink
