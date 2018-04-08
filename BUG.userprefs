@@ -1,14 +1,25 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/UIBar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="309" Column="24" />
-      <File FileName="Assets/Scripts/TUTO/TutoManager.cs" Line="221" Column="52" />
-      <File FileName="Assets/Scripts/Health.cs" Line="68" Column="13" />
-      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="162" Column="25" />
-      <File FileName="Assets/Scripts/UI/UIBar.cs" Line="153" Column="3" />
-      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="273" Column="56" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="419" Column="29" />
+      <File FileName="Assets/Scripts/TUTO/TutoManager.cs" Line="52" Column="44" />
+      <File FileName="Assets/Scripts/Health.cs" Line="77" Column="14" />
+      <File FileName="Assets/Scripts/Pawns/Ship.cs" Line="176" Column="4" />
+      <File FileName="Assets/Scripts/UI/UIBar.cs" Line="60" Column="5" />
+      <File FileName="Assets/Scripts/Managers/TimeManager.cs" Line="185" Column="9" />
+      <File FileName="Assets/Scripts/Pawns/Virus.cs" Line="80" Column="24" />
+      <File FileName="Assets/Scripts/Controllers/MouseController.cs" Line="128" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/Controller.cs" Line="13" Column="23" />
+      <File FileName="Assets/Scripts/Pawns/Pawn.cs" Line="23" Column="24" />
     </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>this.comboMultiplier</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

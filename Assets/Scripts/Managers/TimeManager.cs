@@ -64,7 +64,7 @@ public class TimeManager : MonoBehaviour
             resetSlowMotion();
         
 		DisplayTimer ();
-        if(_gameStarted)
+        if(_gameStarted) 
 			_elapsedTime += Time.unscaledDeltaTime;
     }
 
@@ -83,7 +83,18 @@ public class TimeManager : MonoBehaviour
 			_countdownImage.sprite = _countdownImages [0];
 			_elapsedCD = 0f;
 			_gameStarted = true;
-			yield return new WaitForSeconds (1f);
+			//yield return new WaitForSeconds (1f);
+
+			while(_elapsedCD < 2f)
+			{
+				_elapsedCD += Time.unscaledDeltaTime;
+				if (Input.GetButtonDown ("Hack"))
+				{
+					break;
+				}	
+				yield return null;
+			}
+			_elapsedCD = 0f;
 			_countdownDisplay.SetActive (false);
 
 		} else 

@@ -40,6 +40,8 @@ public class UIBar : MonoBehaviour {
     private float currentHackPower = 0.1f;
 	private Animator outGlowAnim;
 
+	private bool _isMaxCombo = false;
+
 	void Start()
 	{
 		outGlowAnim = outerGlow.GetComponent<Animator> ();
@@ -71,15 +73,24 @@ public class UIBar : MonoBehaviour {
             multiBefore.enabled = false;
 
         multi.sprite = multiText[array];
-		if(array == 1 || array == 2 || array == 4 || array == 7)
-		{
+		if (array == 1 || array == 2 || array == 4) {
 			multi.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 			multiBarUp.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 			multiBarDown.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
 
 			//alert middle screen
-			anim.SetTrigger("showMulti");
-		}
+			anim.SetTrigger ("showMulti");
+		} else if (array == 7 && !_isMaxCombo) {
+			_isMaxCombo = true;
+
+			multi.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+			multiBarUp.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+			multiBarDown.gameObject.GetComponent<Animator> ().SetTrigger ("Flash");
+
+			//alert middle screen
+			anim.SetTrigger ("showMulti");
+		} else
+			_isMaxCombo = false;
 
         multiAfter.enabled = true;
         if (array < multiText.Length - 1)
