@@ -137,6 +137,7 @@
      <Compile Include="Assets\Scripts\Spawn\SpawnBehavior.cs" />
      <Compile Include="Assets\Scripts\Spawn\SpawnClip.cs" />
      <Compile Include="Assets\Scripts\Spawn\Spawner.cs" />
+     <Compile Include="Assets\Scripts\TrailGenerator.cs" />
      <Compile Include="Assets\Scripts\Turn.cs" />
      <Compile Include="Assets\Scripts\TUTO\Glitcher.cs" />
      <Compile Include="Assets\Scripts\TUTO\HackPrompt.cs" />

@@ -9,6 +9,8 @@ public class Virus : Ship
     private float glitchDelta;
     private bool wrongSoundPlayed;
 
+	public bool CheckPossessed { get; set;}
+
     private void Start()
     {
         glitchTimer = 0F;
@@ -21,8 +23,13 @@ public class Virus : Ship
     protected override void Update()
     {
         base.Update();
-        if (!isPossessed())
-            this.enabled = false;
+        if (CheckPossessed && !isPossessed()) 
+		{
+			this.enabled = false;
+			trail.enabled = false;
+			line.enabled = false;
+			CheckPossessed = false;
+		}
 
         //Glitch animation
         glitchTimer += Time.deltaTime;

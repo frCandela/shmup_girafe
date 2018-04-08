@@ -11926,9 +11926,9 @@ MonoBehaviour:
     exposedName: dbc67994797bd4af091ce7f9a8172c62
     defaultValue: {fileID: 0}
   enemies:
-  - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
-    position: {x: -0.68, y: 0.744}
-    angle: 93
+  - enemy: {fileID: 1351586955025634, guid: ced52118b1627404490e9b9cf9cca2a2, type: 2}
+    position: {x: -0.56, y: 0.72}
+    angle: 131
     col: {r: 0, g: 0.09139824, b: 1, a: 0.526156}
   - enemy: {fileID: 1671544709107808, guid: 44f40f48df99442fe86c08d880467618, type: 2}
     position: {x: 0.64, y: 0.752}

@@ -34,6 +34,9 @@ public class Ship : Pawn
     protected Health health;
     protected SpriteRenderer sprite;
 
+	protected TrailGenerator trail;
+	protected LineRenderer line;
+
     // Use this for initialization
     void Awake()
     {
@@ -47,6 +50,8 @@ public class Ship : Pawn
         attack = GetComponent<Attack>();
         health = GetComponent<Health>();
         sprite = GetComponent<SpriteRenderer>();
+		trail = GetComponent<TrailGenerator> ();
+		line = GetComponent<LineRenderer> ();
     }
 
     private void Start()
@@ -186,5 +191,12 @@ public class Ship : Pawn
 	}
 
     public bool IsPlayerControlled() { return isPlayerControlled; }
-    public void SetPlayerControlled( bool value) { isPlayerControlled = value; }
+    public void SetPlayerControlled( bool value)
+	{ 
+		isPlayerControlled = value; 
+		if (trail)
+			trail.enabled = true;
+		if (line)
+			line.enabled = true;
+	}
 }

@@ -386,8 +386,6 @@ public class MouseController : Controller
 
 		onHack.Invoke();
 
-
-		//Jonas 7/04
 		PossessedPawn.UnFire();
 		TimeManager.resetSlowMotion();
 
@@ -399,6 +397,9 @@ public class MouseController : Controller
     {
         GameManager.instance.MainBar.health = virusShip.GetComponent<Health>();
         virusShip.enabled = true;
+		virusShip.CheckPossessed = true;
+		virusShip.GetComponent<TrailGenerator> ().enabled = true;
+		virusShip.GetComponent<LineRenderer> ().enabled = true;
         virusShip.transform.position = GameManager.instance.getMouseWorldPosition();
         Possess(virusShip);
     }
